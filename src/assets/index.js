@@ -18,6 +18,8 @@ import jQuery from "./tech/jQuery.png";
 import vanillajs from "./tech/vanillajs.png";
 import php from "./tech/php.png";
 import sql from "./tech/sql.png";
+import java from "./tech/java.png";
+
 
 import emfinity from "./company/emfinity.png";
 import npcil from "./company/npcil.png";
@@ -57,4 +59,5 @@ export {
   boblob,
   jasder,
   smack,
+  java
 };
