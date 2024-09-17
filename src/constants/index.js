@@ -22,6 +22,7 @@ import {
   vanillajs,
   php,
   sql,
+  java
   
 } from "../assets";
 
@@ -112,6 +113,10 @@ const technologies = [
   {
     name: "sql",
     icon: sql,
+  },
+  {
+    name: "java",
+    icon: java,
   }
 ];
 
@@ -121,7 +126,7 @@ const experiences = [
     company_name: "NPCIL",
     icon: npcil,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "May 2024 - July 2024",
     points: [
       "Developed a Process Monitor Module GUI using Python on QtCreator and database using SQL.",
     ],
@@ -131,7 +136,7 @@ const experiences = [
     company_name: "Marquee Equity",
     icon: marquee,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "March 2024 - Present",
     points: [
       "Attended regular Corporate Training Sessions on skills enhancement.",
       "Wrote 01 research report per month on recently concluded funding transactions in MLA Format.",
@@ -142,7 +147,7 @@ const experiences = [
     company_name: "KJSCE",
     icon: kjsce,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "July 2023 - August 2023",
     points: [
       "Made a quiz website.",
     ],
@@ -152,11 +157,12 @@ const experiences = [
     company_name: "GirlScript Summer Of Code",
     icon: gssoc,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: "May 2024 - August 2024",
     points: [
       "Debugging issues in existing codebases and projects and providing solutions.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Finished with a rank of 683 out of 2418 participants.",
     ],
   },
   {
@@ -164,7 +170,7 @@ const experiences = [
     company_name: "Emfinity KJSCE",
     icon: emfinity,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: "September 2023 - August 2024",
     points: [
       "Conducted and attended daily tech sessions.",
       "Made and verified as a team the questions of various council events.",
