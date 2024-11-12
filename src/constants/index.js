@@ -6,6 +6,7 @@ import {
   css,
   jQuery,
   reactjs,
+  typescript,
   npcil,
   marquee,
   kjsce,
@@ -14,15 +15,16 @@ import {
   tailwind,
   nodejs,
   git,
-  figma,
+  cpp,
   boblob,
   jasder,
   smack,
   threejs,
-  vanillajs,
+  python,
   php,
   sql,
-  java
+  java,
+  
   
 } from "../assets";
 
@@ -51,7 +53,7 @@ const services = [
     icon: web,
   },
   {
-    title: "Prompt Engineer Developer",
+    title: "Problem Solver",
     icon: web,
   },
   {
@@ -99,12 +101,12 @@ const technologies = [
     icon: git,
   },
   {
-    name: "figma",
-    icon: figma,
+    name: "python",
+    icon: python,
   },
   {
-    name: "vanillajs",
-    icon: vanillajs,
+    name: "cpp",
+    icon: cpp,
   },
   {
     name: "php",
@@ -117,7 +119,12 @@ const technologies = [
   {
     name: "java",
     icon: java,
-  }
+  },
+{
+  name: "typescript",
+  icon: typescript,
+},
+
 ];
 
 const experiences = [
@@ -129,27 +136,6 @@ const experiences = [
     date: "May 2024 - July 2024",
     points: [
       "Developed a Process Monitor Module GUI using Python on QtCreator and database using SQL.",
-    ],
-  },
-  {
-    title: "Investment Banking Fellow",
-    company_name: "Marquee Equity",
-    icon: marquee,
-    iconBg: "#E6DEDD",
-    date: "March 2024 - Present",
-    points: [
-      "Attended regular Corporate Training Sessions on skills enhancement.",
-      "Wrote 01 research report per month on recently concluded funding transactions in MLA Format.",
-    ],
-  },
-  {
-    title: "Engineer Intern",
-    company_name: "KJSCE",
-    icon: kjsce,
-    iconBg: "#383E56",
-    date: "July 2023 - August 2023",
-    points: [
-      "Made a quiz website.",
     ],
   },
   {
@@ -176,6 +162,30 @@ const experiences = [
       "Made and verified as a team the questions of various council events.",
       "Content(math-based) development for college students.",
     ],
+  },
+  
+  {
+    title: "Engineer Intern",
+    company_name: "KJSCE",
+    icon: kjsce,
+    iconBg: "#383E56",
+    date: "July 2023 - August 2023",
+    points: [
+      "Made a quiz website.",
+    ],
+  },
+  
+  
+  {
+    title: "Investment Banking Fellow",
+    company_name: "Marquee Equity",
+    icon: marquee,
+    iconBg: "#E6DEDD",
+    date: "March 2024 - Present",
+    points: [
+      "Attended regular Corporate Training Sessions on skills enhancement.",
+      "Wrote 01 research report per month on recently concluded funding transactions in MLA Format.",
+    ],
   }
 ];
 
@@ -183,14 +193,13 @@ const achievements = [
   {
     name: "TechGig Code Gladiators 2024 Finalist",
     description:
-      "Finale.Had to solve competitive programming problem within a stipulated duration.Finished in the top 1% of registrations.",
+      "Had to solve competitive programming problem within a stipulated duration.Finished in the top 1% of registrations.",
     
   },
-
   {
-    name: "1st Team Branch in KJSCE Tech Shield",
+    name: "2 ⭐ @ CodeChef, a coding platform",
     description:
-      "Was a treasure hunt sort of event where we had to solve puzzles and riddles to reach the final destination.",
+      "Gave 10 consecutive contests on CodeChef and improved my rating till 2 ⭐.Used C++, sometimes Python,for solving .",
     
   },
   {
@@ -202,9 +211,9 @@ const achievements = [
 
 const projects = [
   {
-    name: "Quiz Website",
+    name: "Web Terminal Emulator",
     description:
-      "Accessibility & Best Practices: 100/100,Performance: 93/100 ,SEO: 90/100.",
+      "Implemented session storage and local storage for command history persistence, along with an enhanced user experience.",
     tags: [
       {
         name: "html",
@@ -220,13 +229,13 @@ const projects = [
       },
     ],
     image: smack,
-    source_code_link: "https://github.com/Soumilgit/Simple-random-Quote-Machine",
+    source_code_link: "https://github.com/Soumilgit/Coded_A_Responsive_Terminal",
   },
 
   {
-    name: "Conservation Compass",
+    name: "Screen Record Extension",
     description:
-      "Best Practices: 100/100,Performance: 93/100,Accessibility: 92/100",
+      "Planned to improve transparency in online education by providing a screen recording tool for students.",
     tags: [
       {
         name: "html",
@@ -237,43 +246,54 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "vanillajs",
+        name: "javascript",
         color: "pink-text-gradient",
       },
     ],
     image: jasder,
-    source_code_link: "https://github.com/Soumilgit/YourStory-Digital-Innovation-Hackathon",
+    source_code_link: "https://github.com/Soumilgit/Screen-Recorder_ChromeExtension",
   },
   {
-    name: "LMS-Edunest",
+    name: "Meditation App",
     description:
-      "Improved total blocking time by 100%. Performance: 98/100,Best Practices: 96/100",
+      " A meditation app made using React Native and Expo, useful for tracking one's meditation habits and keep a record with affirmations.",
     tags: [
       {
-        name: "html",
+        name: "reactjs",
         color: "blue-text-gradient",
       },
       {
-        name: "css",
+        name: "javascript",
         color: "green-text-gradient",
       },
       {
-        name: "js",
+        name: "typescript",
         color: "pink-text-gradient",
       },
-      {
-        name: "php",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "sql",
-        color: "pink-text-gradient",
-      }
+      
 
     ],
     image: boblob,
-    source_code_link: "https://github.com/Soumilgit/mp-new-Soumil-use",
+    source_code_link: "https://github.com/Soumilgit/Meditation-App_React-Native",
+  },
+];
+const certificates = [
+  {
+    name: "Object-Oriented Data Structures in C++(Coursera)",
+    description:
+      "Learnt about C Programming Language Family, Computer Programming, Object-Oriented Programming and gained insights on Theoretical Computer Science.",
+  },
+
+  {
+    name: "Postman API Fundamentals Student Expert",
+    description:
+      "Became proficient in using Postman to work with APIs, making GET, POST, PATCH and DELETE requests.,basic scripting and learnt using APIs in applications.",
+  },
+  {
+    name: "JavaScript Algorithms and Data Structures(Beta)",
+    description:
+      "As part of the program, I learnt about JavaScript, ES6, Regular Expressions,Data Structures, Algorithms, Object-Oriented Programming and built 5 projects.",
   },
 ];
 
-export { services, technologies, experiences, achievements, projects };
+export { services, technologies, experiences, achievements, projects,certificates};
