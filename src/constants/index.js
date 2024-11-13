@@ -197,9 +197,9 @@ const achievements = [
     
   },
   {
-    name: "2 ⭐ @ CodeChef, a coding platform",
+    name: "3 ⭐ @ CodeChef, a coding platform",
     description:
-      "Gave 10 consecutive contests on CodeChef and improved my rating till 2 ⭐.Used C++, sometimes Python,for solving .",
+      "Gave 15 consecutive contests on CodeChef and improved my rating to 1623.Used C++, sometimes Python, and Java for solving .",
     
   },
   {
