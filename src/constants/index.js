@@ -24,6 +24,7 @@ import {
   php,
   sql,
   java,
+  cv,
   
   
 } from "../assets";
@@ -123,6 +124,10 @@ const technologies = [
 {
   name: "typescript",
   icon: typescript,
+},
+{
+  name: "Computer Vision",
+  icon: cv,
 },
 
 ];
@@ -233,25 +238,21 @@ const projects = [
   },
 
   {
-    name: "Screen Record Extension",
+    name: "Hand Gesture Detection",
     description:
-      "Planned to improve transparency in online education by providing a screen recording tool for students.",
+      "Developed using Python and OpenCV, achieving a high accuracy w.r.t the keypoint and point history classifier datasets.",
     tags: [
       {
-        name: "html",
+        name: "python",
         color: "blue-text-gradient",
       },
       {
-        name: "css",
+        name: "Computer Vision",
         color: "green-text-gradient",
-      },
-      {
-        name: "javascript",
-        color: "pink-text-gradient",
       },
     ],
     image: jasder,
-    source_code_link: "https://github.com/Soumilgit/Screen-Recorder_ChromeExtension",
+    source_code_link: "https://github.com/Soumilgit/Gesture-Sign-Language-Detection-using-Python",
   },
   {
     name: "Meditation App",
