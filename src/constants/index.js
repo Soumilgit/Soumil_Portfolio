@@ -240,7 +240,7 @@ const projects = [
   {
     name: "Hand Gesture Detection",
     description:
-      "Developed using Python and OpenCV, achieving a high accuracy w.r.t the keypoint and point history classifier datasets.",
+      "Developed using Python, achieving 95% accuracy using a score checker code; used keypoint and point history classifier datasets.",
     tags: [
       {
         name: "python",
