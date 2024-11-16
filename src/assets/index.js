@@ -19,7 +19,8 @@ import cpp from "./tech/cpp.png";
 import php from "./tech/php.png";
 import sql from "./tech/sql.png";
 import java from "./tech/java.png";
-
+import typescript from "./tech/typescript.png";
+import cv from "./tech/cv.png";
 
 import emfinity from "./company/emfinity.png";
 import npcil from "./company/npcil.png";
@@ -50,6 +51,7 @@ export {
   cpp,
   php,
   sql,
+  cv,
   emfinity,
   npcil,
   marquee,
@@ -58,5 +60,6 @@ export {
   boblob,
   jasder,
   smack,
-  java
+  java,
+  typescript
 };
