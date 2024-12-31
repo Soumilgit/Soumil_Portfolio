@@ -9,7 +9,7 @@ import {
   typescript,
   npcil,
   marquee,
-  kjsce,
+  meshcraft,
   gssoc,
   emfinity,
   tailwind,
@@ -144,6 +144,17 @@ const experiences = [
     ],
   },
   {
+    title: "SWE Intern",
+    company_name: "MeshCraft",
+    icon: meshcraft,
+    iconBg: "#383E56",
+    date: "Dec 2024 - Present",
+    points: [
+      "Working as a full-stack MERN developer intern, on the company portfolio and website , 3D animations.",
+      "Got selected among the top 12.5% of applications.",
+    ],
+  },
+  {
     title: "Contributor",
     company_name: "GirlScript Summer Of Code",
     icon: gssoc,
@@ -169,16 +180,7 @@ const experiences = [
     ],
   },
   
-  {
-    title: "Engineer Intern",
-    company_name: "KJSCE",
-    icon: kjsce,
-    iconBg: "#383E56",
-    date: "July 2023 - August 2023",
-    points: [
-      "Made a quiz website.",
-    ],
-  },
+ 
   
   
   {
