@@ -25,7 +25,7 @@ import cv from "./tech/cv.png";
 import emfinity from "./company/emfinity.png";
 import npcil from "./company/npcil.png";
 import gssoc from "./company/gssoc.png";
-import kjsce from "./company/kjsce.png";
+import meshcraft from "./company/meshcraft.png";
 import marquee from "./company/marquee.png";
 
 import boblob from "./boblob.png";
@@ -56,7 +56,7 @@ export {
   npcil,
   marquee,
   gssoc,
-  kjsce,
+  meshcraft,
   boblob,
   jasder,
   smack,
