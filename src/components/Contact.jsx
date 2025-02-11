@@ -1,7 +1,7 @@
-import React, { useRef, useState } from "react";
-import ReactDOM from 'react-dom';
+import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
@@ -15,13 +15,26 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [showPopup, setShowPopup] = useState(false);
+  const [progress, setProgress] = useState(100);
 
-  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    if (showPopup) {
+      let interval = setInterval(() => {
+        setProgress((prev) => Math.max(prev - 5, 0)); // Reduce progress
+      }, 100);
+
+      setTimeout(() => {
+        clearInterval(interval);
+        setShowPopup(false);
+      }, 2000);
+
+      return () => clearInterval(interval);
+    }
+  }, [showPopup]);
 
   const handleChange = (e) => {
-    const { target } = e;
-    const { name, value } = target;
-
+    const { name, value } = e.target;
     setForm({
       ...form,
       [name]: value,
@@ -30,47 +43,24 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
-
-    emailjs
-      .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: form.name,
-          to_name: "Hello",
-          from_email: form.email,
-          to_email: "msoumil69@gmail.com",
-          message: form.message,
-        },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
-
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
-
-          alert("Ahh, something went wrong. Please try again.");
-        }
-      );
-      
+    setShowPopup(true);
+    toast.dismiss();
+    setForm({ name: "", email: "", message: "" });
   };
-  
 
   return (
-    <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
-    >
+    <div className={`relative xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden ${showPopup ? 'bg-black bg-opacity-80' : ''}`}>
+      {showPopup && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50">
+          <div className="bg-green-900 p-6 rounded-lg shadow-lg text-center max-w-md w-full relative">
+            <p className="text-lg font-semibold text-white">
+              Thanks for filling the form. We will get in touch soon.
+            </p>
+            <div className="absolute bottom-0 left-0 h-1 bg-green-400 transition-all" style={{ width: `${progress}%` }}></div>
+          </div>
+        </div>
+      )}
+      
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
@@ -121,7 +111,7 @@ const Contact = () => {
             type='submit'
             className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
           >
-            {loading ? "Sending..." : "Send"}
+            Submit
           </button>
         </form>
       </motion.div>
@@ -132,6 +122,7 @@ const Contact = () => {
       >
         <ComputersCanvas />
       </motion.div>
+      <ToastContainer position="top-center" autoClose={2000} hideProgressBar closeOnClick pauseOnHover />
     </div>
   );
 };
