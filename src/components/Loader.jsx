@@ -4,20 +4,21 @@ const CanvasLoader = () => {
   const { progress } = useProgress();
   return (
     <Html
-      as='div'
+      as="div"
       center
       style={{
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
+        background: "transparent",
       }}
     >
-      <span className='canvas-loader'></span>
+      <span className="canvas-loader"></span>
       <p
         style={{
           fontSize: 14,
-          color: "#F1F1F1",
+          color: "rgba(241, 241, 241, 0.7)", // Fixes text being fully transparent
           fontWeight: 800,
           marginTop: 40,
         }}
