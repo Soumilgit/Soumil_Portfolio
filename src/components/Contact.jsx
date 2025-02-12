@@ -13,15 +13,17 @@ const Contact = () => {
   const [form, setForm] = useState({
     name: "",
     email: "",
+    mobile: "",
     message: "",
   });
+  const [errors, setErrors] = useState({});
   const [showPopup, setShowPopup] = useState(false);
   const [progress, setProgress] = useState(100);
 
   useEffect(() => {
     if (showPopup) {
       let interval = setInterval(() => {
-        setProgress((prev) => Math.max(prev - 5, 0)); // Reduce progress
+        setProgress((prev) => Math.max(prev - 5, 0));
       }, 100);
 
       setTimeout(() => {
@@ -33,19 +35,47 @@ const Contact = () => {
     }
   }, [showPopup]);
 
+  const validateForm = () => {
+    let newErrors = {};
+    if (!form.name.trim()) {
+      newErrors.name = "Name is required";
+    } else if (/\d/.test(form.name)) {
+      newErrors.name = "Name cannot contain numbers";
+    }
+
+    if (!form.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(form.email)) {
+      newErrors.email = "Enter a valid email address";
+    }
+
+    if (form.mobile.trim() && !/^\d{10}$/.test(form.mobile)) {
+      newErrors.mobile = "Enter a valid 10-digit mobile number";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({
       ...form,
       [name]: value,
     });
+
+    if (errors[name]) {
+      setErrors({ ...errors, [name]: "" });
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!validateForm()) return;
+
     setShowPopup(true);
     toast.dismiss();
-    setForm({ name: "", email: "", message: "" });
+    setForm({ name: "", email: "", mobile: "", message: "" });
   };
 
   return (
@@ -68,45 +98,63 @@ const Contact = () => {
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
 
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
-        >
+        <form ref={formRef} onSubmit={handleSubmit} className='mt-12 flex flex-col gap-6'>
+          {/* Name Field */}
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Name</span>
+            <span className='text-white font-medium mb-2'>Your Name <span className="text-red-500">*</span></span>
             <input
               type='text'
               name='name'
               value={form.name}
               onChange={handleChange}
               placeholder="What's your good name?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className={`bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium ${errors.name ? "border-2 border-red-500" : ""}`}
             />
+            {errors.name && <p className="text-red-400 text-sm mt-1">{errors.name}</p>}
           </label>
+
+          {/* Email Field */}
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your email</span>
+            <span className='text-white font-medium mb-2'>Your Email <span className="text-red-500">*</span></span>
             <input
               type='email'
               name='email'
               value={form.email}
               onChange={handleChange}
-              placeholder="What's your web address?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              placeholder="What's your email address?"
+              className={`bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium ${errors.email ? "border-2 border-red-500" : ""}`}
             />
+            {errors.email && <p className="text-red-400 text-sm mt-1">{errors.email}</p>}
           </label>
+
+          {/* Mobile Number Field (Optional) */}
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Message</span>
+            <span className='text-white font-medium mb-2'>Your Mobile Number</span>
+            <input
+              type='text'
+              name='mobile'
+              value={form.mobile}
+              onChange={handleChange}
+              placeholder="Enter 10-digit mobile number (Optional)"
+              className={`bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium ${errors.mobile ? "border-2 border-red-500" : ""}`}
+            />
+            {errors.mobile && <p className="text-red-400 text-sm mt-1">{errors.mobile}</p>}
+          </label>
+
+          {/* Message Field */}
+          <label className='flex flex-col'>
+            <span className='text-white font-medium mb-2'>Your Message</span>
             <textarea
-              rows={7}
+              rows={5}
               name='message'
               value={form.message}
               onChange={handleChange}
-              placeholder='What you want to say?'
+              placeholder='What do you want to say?'
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
 
+          {/* Submit Button */}
           <button
             type='submit'
             className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
@@ -116,12 +164,14 @@ const Contact = () => {
         </form>
       </motion.div>
 
+      {/* Right Side - Animation */}
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
         className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
       >
         <ComputersCanvas />
       </motion.div>
+      
       <ToastContainer position="top-center" autoClose={2000} hideProgressBar closeOnClick pauseOnHover />
     </div>
   );
