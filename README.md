@@ -2,11 +2,10 @@ My personal 3D portfolio version 1.0 .
 # Folder Structure :
 Here is the folder structure of the repository :
 ```
-
-.gitignore
+├─ .gitignore
 ├─ LICENSE
-README.md
-index.html
+├─ README.md
+├─ index.html
 ├─ package-lock.json
 ├─ package.json
 ├─ postcss.config.cjs
@@ -66,45 +65,45 @@ index.html
 │  │     ├─ Material.074_baseColor.png
 │  │     ├─ Material_baseColor.jpeg
 │  │     ├─ Material_metallicRoughness.png
-│  │     ├─ Tasten_2_baseColor.jpeg
-│  │     └─ r
-logo.svg
-planet
-│     ├─ license.txt
-│     ├─ scene.bin
-│     ├─ scene.gltf
-│     └─ textures
-│        ├─ Clouds_baseColor.png
-│        └─ Planet_baseColor.png
+│  │     └─ Tasten_2_baseColor.jpeg
+│  └─ logo.svg
 ├─ src
-App.jsx
-assets
+│  ├─ App.jsx
+│  ├─ Marquees
+│  │  ├─ downloadCVMarquee.jsx
+│  │  └─ e
+│  ├─ assets
 │  │  ├─ Desktop1.png
 │  │  ├─ Desktop2.png
-backend.png
-boblob.png
-close.svg
-codeglad.png
-company
+│  │  ├─ boblob.png
+│  │  ├─ close.svg
+│  │  ├─ codechef.png
+│  │  ├─ company
 │  │  │  ├─ emfinity.png
 │  │  │  ├─ gssoc.png
-│  │  │  ├─ kjsce.png
 │  │  │  ├─ marquee.png
+│  │  │  ├─ meshcraft.png
 │  │  │  └─ npcil.png
-creator.png
-dish_antenna.glb
-github.png
-github1.png
-herobg.png
-index.js
-jasder.png
-kjsce1.png
-│  │  ├─ kkk.png
+│  │  ├─ contentcreator.png
+│  │  ├─ cp.png
+│  │  ├─ creator.png
+│  │  ├─ data.png
+│  │  ├─ dish_antenna.glb
+│  │  ├─ github.png
+│  │  ├─ githubk.png
+│  │  ├─ index.js
+│  │  ├─ jasder.png
+│  │  ├─ jsi.png
+│  │  ├─ kjsce1.png
 │  │  ├─ logo.svg
 │  │  ├─ menu.svg
 │  │  ├─ mobile.png
+│  │  ├─ oods.png
+│  │  ├─ postman.png
+│  │  ├─ problemsolver.png
 │  │  ├─ smack.png
 │  │  ├─ tech
+│  │  │  ├─ cpp.png
 │  │  │  ├─ css.png
 │  │  │  ├─ cv.png
 │  │  │  ├─ docker.png
@@ -112,19 +111,25 @@ kjsce1.png
 │  │  │  ├─ git.png
 │  │  │  ├─ html.png
 │  │  │  ├─ jQuery.png
+│  │  │  ├─ java.png
 │  │  │  ├─ javascript.png
+│  │  │  ├─ mongodb.png
 │  │  │  ├─ nodejs.png
 │  │  │  ├─ php.png
+│  │  │  ├─ python.png
 │  │  │  ├─ reactjs.png
 │  │  │  ├─ redux.png
 │  │  │  ├─ sql.png
 │  │  │  ├─ tailwind.png
+│  │  │  ├─ threejs.png
 │  │  │  ├─ threejs.svg
+│  │  │  ├─ typescript.png
 │  │  │  └─ vanillajs.png
 │  │  └─ web.png
 │  ├─ components
 │  │  ├─ About.jsx
 │  │  ├─ Achieve.jsx
+│  │  ├─ Certf.jsx
 │  │  ├─ Contact.jsx
 │  │  ├─ Experience.jsx
 │  │  ├─ Feedbacks.jsx
@@ -140,7 +145,8 @@ kjsce1.png
 │  │  │  ├─ Stars.jsx
 │  │  │  ├─ dish_antenna.gltf
 │  │  │  └─ index.js
-│  │  └─ index.js
+│  │  ├─ index.js
+│  │  └─ mypic.jpg
 │  ├─ constants
 │  │  ├─ New folder_portfolio.code-workspace
 │  │  └─ index.js
@@ -150,8 +156,12 @@ kjsce1.png
 │  ├─ index.css
 │  ├─ main.jsx
 │  ├─ styles.js
+│  ├─ svg
+│  │  ├─ arrow.jsx
+│  │  └─ e
 │  └─ utils
 │     └─ motion.js
 ├─ tailwind.config.cjs
 └─ vite.config.js
+
 ```
