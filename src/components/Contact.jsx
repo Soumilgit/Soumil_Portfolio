@@ -1,9 +1,7 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
-import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
@@ -17,161 +15,164 @@ const Contact = () => {
     message: "",
   });
   const [errors, setErrors] = useState({});
-  const [showPopup, setShowPopup] = useState(false);
-  const [progress, setProgress] = useState(100);
-
-  useEffect(() => {
-    if (showPopup) {
-      let interval = setInterval(() => {
-        setProgress((prev) => Math.max(prev - 5, 0));
-      }, 100);
-
-      setTimeout(() => {
-        clearInterval(interval);
-        setShowPopup(false);
-      }, 2000);
-
-      return () => clearInterval(interval);
-    }
-  }, [showPopup]);
+  const [submitted, setSubmitted] = useState(false);
 
   const validateForm = () => {
     let newErrors = {};
-    if (!form.name.trim()) {
-      newErrors.name = "Name is required";
-    } else if (/\d/.test(form.name)) {
-      newErrors.name = "Name cannot contain numbers";
-    }
+    if (!form.name.trim()) newErrors.name = "ACCESS DENIED: Name Required";
+    else if (/\d/.test(form.name)) newErrors.name = "INVALID INPUT: Name cannot have numbers";
 
-    if (!form.email.trim()) {
-      newErrors.email = "Email is required";
-    } else if (!/\S+@\S+\.\S+/.test(form.email)) {
-      newErrors.email = "Enter a valid email address";
-    }
+    if (!form.email.trim()) newErrors.email = "ACCESS DENIED: Email Required";
+    else if (!/\S+@\S+\.\S+/.test(form.email)) newErrors.email = "INVALID INPUT: Enter a valid email";
 
-    if (form.mobile.trim() && !/^\d{10}$/.test(form.mobile)) {
-      newErrors.mobile = "Enter a valid 10-digit mobile number";
-    }
+    if (form.mobile.trim() && !/^\d{10}$/.test(form.mobile)) newErrors.mobile = "ERROR: Invalid 10-digit number";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setForm({
-      ...form,
-      [name]: value,
-    });
-
-    if (errors[name]) {
-      setErrors({ ...errors, [name]: "" });
-    }
+    setForm({ ...form, [e.target.name]: e.target.value });
+    if (errors[e.target.name]) setErrors({ ...errors, [e.target.name]: "" });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!validateForm()) return;
 
-    setShowPopup(true);
     toast.dismiss();
-    setForm({ name: "", email: "", mobile: "", message: "" });
+    setTimeout(() => setSubmitted(true), 300);
+  };
+
+  const styles = {
+    container: {
+      display: "flex",
+      flexDirection: "column",
+      gap: "10px",
+      background: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(10,10,25,1) 100%)",
+      padding: "20px",
+      borderRadius: "10px",
+      boxShadow: "0px 0px 15px #0ff",
+      border: "2px solid #0ff",
+    },
+    label: {
+      color: "#0ff",
+      fontWeight: "bold",
+      fontFamily: "'Orbitron', sans-serif",
+    },
+    input: {
+      background: "transparent",
+      border: "2px solid #0ff",
+      color: "#0ff",
+      padding: "10px",
+      borderRadius: "5px",
+      outline: "none",
+      fontFamily: "'Orbitron', sans-serif",
+      width: "100%",
+    },
+    errorText: {
+      color: "red",
+      fontSize: "12px",
+      textShadow: "0 0 5px red",
+    },
+    button: {
+      background: "transparent",
+      border: "2px solid #0ff",
+      padding: "10px 15px",
+      color: "#0ff",
+      fontWeight: "bold",
+      cursor: "pointer",
+      transition: "0.3s",
+      textShadow: "0 0 5px #0ff, 0 0 15px #00f",
+    },
+    buttonHover: {
+      background: "#0ff",
+      color: "black",
+      boxShadow: "0 0 20px #0ff",
+    },
+    successMessage: {
+      fontSize: "18px",
+      color: "lime",
+      textShadow: "0 0 10px lime",
+      textAlign: "center",
+    },
   };
 
   return (
-    <div className={`relative xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden ${showPopup ? 'bg-black bg-opacity-80' : ''}`}>
-      {showPopup && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50">
-          <div className="bg-green-900 p-6 rounded-lg shadow-lg text-center max-w-md w-full relative">
-            <p className="text-lg font-semibold text-white">
-              Thanks for filling the form. We will get in touch soon.
-            </p>
-            <div className="absolute bottom-0 left-0 h-1 bg-green-400 transition-all" style={{ width: `${progress}%` }}></div>
-          </div>
-        </div>
-      )}
-      
-      <motion.div
-        variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
-      >
-        <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
-
-        <form ref={formRef} onSubmit={handleSubmit} className='mt-12 flex flex-col gap-6'>
-          {/* Name Field */}
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-2'>Your Name <span className="text-red-500">*</span></span>
-            <input
-              type='text'
-              name='name'
-              value={form.name}
-              onChange={handleChange}
-              placeholder="What's your good name?"
-              className={`bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium ${errors.name ? "border-2 border-red-500" : ""}`}
-            />
-            {errors.name && <p className="text-red-400 text-sm mt-1">{errors.name}</p>}
-          </label>
-
-          {/* Email Field */}
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-2'>Your Email <span className="text-red-500">*</span></span>
-            <input
-              type='email'
-              name='email'
-              value={form.email}
-              onChange={handleChange}
-              placeholder="What's your email address?"
-              className={`bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium ${errors.email ? "border-2 border-red-500" : ""}`}
-            />
-            {errors.email && <p className="text-red-400 text-sm mt-1">{errors.email}</p>}
-          </label>
-
-          {/* Mobile Number Field (Optional) */}
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-2'>Your Mobile Number</span>
-            <input
-              type='text'
-              name='mobile'
-              value={form.mobile}
-              onChange={handleChange}
-              placeholder="Enter 10-digit mobile number (Optional)"
-              className={`bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium ${errors.mobile ? "border-2 border-red-500" : ""}`}
-            />
-            {errors.mobile && <p className="text-red-400 text-sm mt-1">{errors.mobile}</p>}
-          </label>
-
-          {/* Message Field */}
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-2'>Your Message</span>
-            <textarea
-              rows={5}
-              name='message'
-              value={form.message}
-              onChange={handleChange}
-              placeholder='What do you want to say?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-            />
-          </label>
-
-          {/* Submit Button */}
-          <button
-            type='submit'
-            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
+    <div className="relative xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden">
+      {/* Cyberpunk Neon Form */}
+      <div className="relative flex-[0.75] bg-transparent w-full">
+        {!submitted ? (
+          <motion.div
+            variants={slideIn("left", "tween", 0.2, 1)}
+            style={styles.container}
           >
-            Submit
-          </button>
-        </form>
-      </motion.div>
+            <p style={{ ...styles.label, fontSize: "14px" }}>🔐 AUTHORIZED ACCESS REQUIRED</p>
+            <h3 style={{ ...styles.label, fontSize: "24px", fontWeight: "bold" }}>CYBERNETIC CONTACT FORM</h3>
 
-      {/* Right Side - Animation */}
+            <form ref={formRef} onSubmit={handleSubmit} className="mt-6 flex flex-col gap-6">
+              <label className="flex flex-col">
+                <span style={styles.label}>USERNAME <span style={{ color: "red" }}>*</span></span>
+                <input type="text" name="name" value={form.name} onChange={handleChange}
+                  placeholder="Enter Codename..."
+                  style={{ ...styles.input, borderColor: errors.name ? "red" : "#0ff" }}
+                />
+                {errors.name && <p style={styles.errorText}>{errors.name}</p>}
+              </label>
+
+              <label className="flex flex-col">
+                <span style={styles.label}>EMAIL <span style={{ color: "red" }}>*</span></span>
+                <input type="email" name="email" value={form.email} onChange={handleChange}
+                  placeholder="Enter Secure Address..."
+                  style={{ ...styles.input, borderColor: errors.email ? "red" : "#0ff" }}
+                />
+                {errors.email && <p style={styles.errorText}>{errors.email}</p>}
+              </label>
+
+              <label className="flex flex-col">
+                <span style={styles.label}>MOBILE (Optional)</span>
+                <input type="text" name="mobile" value={form.mobile} onChange={handleChange}
+                  placeholder="Enter Secure Line..."
+                  style={{ ...styles.input, borderColor: errors.mobile ? "red" : "#0ff" }}
+                />
+                {errors.mobile && <p style={styles.errorText}>{errors.mobile}</p>}
+              </label>
+
+              <label className="flex flex-col">
+                <span style={styles.label}>MESSAGE</span>
+                <textarea rows={4} name="message" value={form.message} onChange={handleChange}
+                  placeholder="Enter Encrypted Transmission..."
+                  style={styles.input}
+                />
+              </label>
+
+              <button type="submit"
+                style={styles.button}
+                onMouseEnter={(e) => e.target.style.background = "#0ff"}
+                onMouseLeave={(e) => e.target.style.background = "transparent"}
+              >
+                TRANSMIT MESSAGE
+              </button>
+            </form>
+          </motion.div>
+        ) : (
+          <motion.div
+            variants={slideIn("left", "tween", 0.2, 1)}
+            style={styles.container}
+          >
+            <p style={styles.successMessage}>✅ TRANSMISSION SUCCESSFUL! MESSAGE RECEIVED.</p>
+          </motion.div>
+        )}
+      </div>
+
+      {/* Right Side - 3D Cyberpunk Computer */}
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
+        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
         <ComputersCanvas />
       </motion.div>
-      
+
       <ToastContainer position="top-center" autoClose={2000} hideProgressBar closeOnClick pauseOnHover />
     </div>
   );
