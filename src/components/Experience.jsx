@@ -12,7 +12,6 @@ import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 
-
 const darkGreen = '#002020';
 
 const ExperienceCard = ({ experience }) => {
@@ -49,7 +48,7 @@ const ExperienceCard = ({ experience }) => {
         {experience.points.map((point, index) => (
           <li
             key={`experience-point-${index}`}
-            className='text-white-100 text-[14px] pl-1 tracking-wider'
+            className='text-white-100 text-[16px] pl-1 tracking-wider'
           >
             {point}
           </li>
@@ -67,7 +66,7 @@ const Experience = () => {
           What I have done so far
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
-          Work Experience.
+          Work Experience
         </h2>
       </motion.div>
 
