@@ -1,6 +1,8 @@
 import {
   creator,
   web,
+  data,
+  problem,
   javascript,
   html,
   css,
@@ -39,6 +41,22 @@ export const navLinks = [
     title: "Work",
   },
   {
+    id: "technologies",
+    title: "Skillset",
+  },
+  {
+    id: "achievement",
+    title: "Achievements",
+  },
+  {
+    id: "projects",
+    title: "Projects",
+  },
+  {
+    id: "certf",
+    title: "Certifications",
+  },
+  {
     id: "contact",
     title: "Contact",
   },
@@ -50,12 +68,12 @@ const services = [
     icon: web,
   },
   {
-    title: "React Developer",
-    icon: web,
+    title: "Data Analyst",
+    icon: data,
   },
   {
     title: "Problem Solver",
-    icon: web,
+    icon: problem,
   },
   {
     title: "Content Creator",
@@ -98,10 +116,6 @@ const technologies = [
     icon: threejs,
   },
   {
-    name: "git",
-    icon: git,
-  },
-  {
     name: "python",
     icon: python,
   },
@@ -118,17 +132,13 @@ const technologies = [
     icon: sql,
   },
   {
-    name: "java",
-    icon: java,
+   name: "typescript",
+   icon: typescript,
   },
-{
-  name: "typescript",
-  icon: typescript,
-},
-{
-  name: "Computer Vision",
-  icon: cv,
-},
+  {
+   name: "Computer Vision",
+   icon: cv,
+  }
 
 ];
 
@@ -200,19 +210,19 @@ const achievements = [
   {
     name: "TechGig Code Gladiators 2024 Finalist",
     description:
-      "Had to solve competitive programming problem within a stipulated duration.Finished in the top 1% of registrations.",
+      "Had to solve competitive programming problem within a stipulated duration.Finished among the top 1% of registrations.",
     
   },
   {
-    name: "3 ⭐ @ CodeChef, a coding platform",
+    name: "3 ⭐ on CodeChef, a coding platform",
     description:
-      "Gave 15 consecutive contests on CodeChef and improved my rating to 1623.Used C++, sometimes Python, and Java for solving .",
+      "Gave 15 consecutive contests on CodeChef and improved my rating to 1623.Used C++, sometimes Python, and Java for solving.",
     
   },
   {
     name: "Over 1000+ contributions on GitHub",
     description:
-      "Have been an active member of Gitub community and have contributed to various open source projects.",
+      "Have been an active member of GitHub community and have contributed to various open source projects, along with my own projects.",
   },
 ];
 
@@ -242,7 +252,7 @@ const projects = [
   {
     name: "Hand Gesture Detection",
     description:
-      "Developed using Python, achieving 95% accuracy using a score checker code; used keypoint and point history classifier datasets.",
+      "Used Python, achieving 95% accuracy using a score checker ; used keypoint and point history classifier datasets.",
     tags: [
       {
         name: "python",
@@ -259,7 +269,7 @@ const projects = [
   {
     name: "Meditation App",
     description:
-      " A meditation app made using React Native and Expo, useful for tracking one's meditation habits and keep a record with affirmations.",
+      " Developed using React Native and Expo, useful for tracking one's meditation habits and keep a record with affirmations.",
     tags: [
       {
         name: "reactjs",
@@ -282,7 +292,7 @@ const projects = [
 ];
 const certificates = [
   {
-    name: "Object-Oriented Data Structures in C++(Coursera)",
+    name: "Object-Oriented Data Structures in C++",
     description:
       "Learnt about C Programming Language Family, Computer Programming, Object-Oriented Programming and gained insights on Theoretical Computer Science.",
   },
