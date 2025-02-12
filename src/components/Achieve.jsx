@@ -14,11 +14,11 @@ import githubk from "../assets/githubk.png";
 // Map images to achievements
 const icons = [cp, codechef, githubk];
 
-const Achievements = ({ index, name, description }) => {
+const AchievementCard = ({ index, name, description }) => {
   return (
     <motion.div
       variants={fadeIn("up", "spring", index * 0.3, 0.75)}
-      className="relative bg-black p-[2px] rounded-lg shadow-lg transition-transform hover:scale-105 neon-box w-[360px]" // Ensuring uniform width
+      className="relative bg-black p-[2px] rounded-lg shadow-lg transition-transform hover:scale-105 neon-box w-full max-w-[360px]"
     >
       <div className="bg-[#1e1e1e] p-5 rounded-lg flex flex-col items-center shadow-md w-full">
         {/* Icon with Neon Glow */}
@@ -60,14 +60,23 @@ const Achieve = () => {
       </style>
 
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText}`}>My Achievements</p>
-        <h2 className={`${styles.sectionHeadText}`}>Honours & Achievements</h2>
+        <p className={`${styles.sectionSubText} text-center`}>My Achievements</p>
+        <h2 className={`${styles.sectionHeadText} text-center`}>Honours & Achievements</h2>
       </motion.div>
 
-      {/* Achievements in a Single Row */}
-      <div className="mt-16 flex flex-row justify-center gap-8">
+      <div className="w-full flex justify-center">
+        <motion.p
+          variants={fadeIn("", "", 0.1, 1)}
+          className="mt-3 text-secondary text-[20px] max-w-3xl leading-[30px] text-center"
+        >
+          Here are some of my top achievements that highlight my journey.
+        </motion.p>
+      </div>
+
+      {/* Responsive Achievement Cards */}
+      <div className="mt-20 flex flex-wrap justify-center gap-8">
         {achievements.map((achievement, index) => (
-          <Achievements key={`achievement-${index}`} index={index} {...achievement} />
+          <AchievementCard key={`achievement-${index}`} index={index} {...achievement} />
         ))}
       </div>
     </>
