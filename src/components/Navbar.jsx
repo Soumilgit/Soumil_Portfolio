@@ -13,7 +13,6 @@ const Navbar = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 100);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -34,6 +33,33 @@ const Navbar = () => {
             border: 2px solid #37b54a;
             box-shadow: 0 0 15px #37b54a;
           }
+          .nav-links, .navbar-title {
+            display: flex;
+            gap: 1rem;
+          }
+          @media (max-width: 768px) {
+            .nav-links, .navbar-title {
+              display: none;
+            }
+            .mobile-menu {
+              position: absolute;
+              top: 4rem;
+              left: 1rem;
+              background: rgba(0, 0, 0, 0.9);
+              backdrop-filter: blur(8px);
+              padding: 1rem;
+              border-radius: 10px;
+              display: flex;
+              flex-direction: column;
+              gap: 1rem;
+              box-shadow: 0px 0px 10px #37b54a;
+            }
+          }
+          @media (min-width: 600px) {
+            .mobile-menu {
+              display: none !important;
+            }
+          }
         `}
       </style>
 
@@ -51,7 +77,7 @@ const Navbar = () => {
         <div className="w-full flex justify-between items-center max-w-7xl mx-auto px-6">
           <Link
             to="/"
-            className="flex items-center gap-2 ml-12"
+            className="navbar-title flex items-center gap-2 ml-12"
             onClick={() => {
               setActive("");
               window.scrollTo(0, 0);
@@ -66,7 +92,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navbar */}
-          <ul className="hidden sm:flex flex-row gap-8">
+          <ul className="nav-links">
             {navLinks.map((nav) => (
               <motion.li
                 key={nav.id}
@@ -76,7 +102,9 @@ const Navbar = () => {
                   textShadow: "0px 0px 15px #37b54a",
                 }}
                 className={`text-lg font-semibold cursor-pointer transition-all ${
-                  active === nav.title ? "text-[#37b54a] drop-shadow-lg" : "text-gray-300"
+                  active === nav.title
+                    ? "text-[#37b54a] drop-shadow-lg"
+                    : "text-gray-300"
                 }`}
                 onClick={() => setActive(nav.title)}
               >
@@ -95,34 +123,40 @@ const Navbar = () => {
               onClick={() => setToggle(!toggle)}
             />
 
-            <motion.div
-              initial={{ x: 150, opacity: 0 }}
-              animate={toggle ? { x: 0, opacity: 1 } : { x: 150, opacity: 0 }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
-              className={`fixed top-16 right-4 p-6 bg-black/90 backdrop-blur-md rounded-xl shadow-lg neon-box ${
-                toggle ? "block" : "hidden"
-              }`}
-            >
-              <ul className="flex flex-col gap-4">
-                {navLinks.map((nav) => (
-                  <motion.li
-                    key={nav.id}
-                    whileHover={{
-                      scale: 1.1,
-                      color: "#37b54a",
-                      textShadow: "0px 0px 10px #37b54a",
-                    }}
-                    className="text-white text-lg font-medium cursor-pointer transition-all"
-                    onClick={() => {
-                      setToggle(false);
-                      setActive(nav.title);
-                    }}
-                  >
-                    <a href={`#${nav.id}`}>{nav.title}</a>
-                  </motion.li>
-                ))}
-              </ul>
-            </motion.div>
+            {toggle && (
+              <motion.div
+                initial={{ y: -20, opacity: 0 }}
+                animate={toggle ? { y: 0, opacity: 1 } : { y: -20, opacity: 0 }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+                className="mobile-menu neon-box"
+              >
+                <Link
+                  to="/"
+                  className="text-[#37b54a] font-extrabold cursor-pointer text-2xl tracking-wide drop-shadow-lg text-center"
+                >
+                  Soumil Mukhopadhyay
+                </Link>
+                <ul>
+                  {navLinks.map((nav) => (
+                    <motion.li
+                      key={nav.id}
+                      whileHover={{
+                        scale: 1.1,
+                        color: "#37b54a",
+                        textShadow: "0px 0px 10px #37b54a",
+                      }}
+                      className="text-white text-lg font-medium cursor-pointer transition-all"
+                      onClick={() => {
+                        setToggle(false);
+                        setActive(nav.title);
+                      }}
+                    >
+                      <a href={`#${nav.id}`}>{nav.title}</a>
+                    </motion.li>
+                  ))}
+                </ul>
+              </motion.div>
+            )}
           </div>
         </div>
       </motion.nav>
