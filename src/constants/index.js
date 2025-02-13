@@ -164,13 +164,24 @@ const experiences = [
     ],
   },
   {
+    title: "Investment Banking Fellow",
+    company_name: "Marquee Equity",
+    icon: marquee,
+    iconBg: "#E6DEDD",
+    date: "March 2024 - Present",
+    points: [
+      "Attended regular Corporate Training Sessions on skills enhancement.",
+      "Wrote 01 research report per month.",
+    ],
+  },
+  {
     title: "Contributor",
-    company_name: "GirlScript Summer Of Code",
+    company_name: "GirlScript SOC",
     icon: gssoc,
     iconBg: "#E6DEDD",
     date: "May 2024 - August 2024",
     points: [
-      "Collaborating with cross-functional teams.",
+      "Collaborating with cross-functional teams on software projects through GitHub.",
       "Ranked 683 out of 2418 people.",
     ],
   },
@@ -181,26 +192,12 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "September 2023 - August 2024",
     points: [
-      "Conducted and attended daily tech sessions.",
+      "Conducted and attended daily tech sessions, working on Math-based content development for students.",
       "Made and verified as a team the questions of various council events.",
       
     ],
-  },
-  
- 
-  
-  
-  {
-    title: "Investment Banking Fellow",
-    company_name: "Marquee Equity",
-    icon: marquee,
-    iconBg: "#E6DEDD",
-    date: "March 2024 - Present",
-    points: [
-      "Attended regular Corporate Training Sessions on skills enhancement.",
-      "Wrote 01 research report per month.",
-    ],
   }
+
 ];
 
 const achievements = [
