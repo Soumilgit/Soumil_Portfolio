@@ -54,7 +54,7 @@ const ComputersCanvas = () => {
       shadows
       dpr={[1, 2]}
       camera={{
-        position: [30, 3, 5],
+        position: [20, 3, 5],
         fov: 30,
         near: 0.1,
         far: 2000,
