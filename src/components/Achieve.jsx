@@ -67,7 +67,7 @@ const Achieve = () => {
       <div className="w-full flex justify-center">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-secondary text-[20px] max-w-3xl leading-[30px] text-center"
+          className="mt-3 text-secondary text-[22px] max-w-3xl leading-[30px] text-center"
         >
           Here are some of my top achievements that highlight my journey.
         </motion.p>
