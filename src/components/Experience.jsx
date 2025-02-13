@@ -9,11 +9,11 @@ const ExperienceCard = ({ experience, index }) => {
   return (
     <motion.div
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-      className="relative border-2 p-6 rounded-2xl shadow-lg mb-10 border-[#00FF7F] transition-transform duration-300 hover:scale-105 neon-box w-full h-64 flex flex-col justify-between"
+      className="relative border-2 p-6 rounded-2xl shadow-lg mb-10 border-[#00FF7F] transition-transform duration-300 hover:scale-105 neon-box w-full h-94 flex flex-col justify-between"
     >
       <div className="flex items-center gap-4">
         <div className="w-16 h-16 bg-black flex justify-center items-center rounded-full shadow-lg">
-          <img src={experience.icon} alt={experience.company_name} className="w-10 h-10 object-contain" />
+          <img src={experience.icon} alt={experience.company_name} className="w-30 h-30 object-contain" />
         </div>
         <div>
           <h3 className="text-white text-2xl font-bold pb-1 neon-glow">{experience.title}</h3>
@@ -21,7 +21,7 @@ const ExperienceCard = ({ experience, index }) => {
         </div>
       </div>
       <p className="text-gray-300 mt-3 italic">{experience.date}</p>
-      <ul className="mt-4 list-disc list-inside text-gray-200 text-l space-y-2">
+      <ul className="mt-4 list-disc list-inside text-gray-200 text-xl space-y-2">
         {experience.points.map((point, index) => (
           <li key={index}>{point}</li>
         ))}
