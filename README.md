@@ -1,4 +1,4 @@
-My personal 3D portfolio version 1.0 .
+My personal 3D portfolio version 3.0 (updated).
 # Folder Structure :
 Here is the folder structure of the repository :
 ```
