@@ -21,7 +21,7 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? [2.0, 2.0, 2.0] : [2.5, 2.5, 2.5]} 
+        scale={isMobile ? [2.75,2.75,2.75] : [4.0, 4.0, 4.0]} 
         position={isMobile ? [-0.5, -2.5, -2] : [-0.6, -3, -1.5]} 
         rotation={[0.0, 0.0, 0.0]}
       />
@@ -53,7 +53,7 @@ const ComputersCanvas = () => {
       shadows
       dpr={[1, 2]}
       camera={{
-        position: [16, 6, 9], 
+        position: [20, 6, 9], 
         fov: 30,
         near: 0.1,
         far: 2000,
