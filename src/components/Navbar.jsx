@@ -101,7 +101,7 @@ const Navbar = () => {
                   color: "#37b54a",
                   textShadow: "0px 0px 15px #37b54a",
                 }}
-                className={`text-lg font-semibold cursor-pointer transition-all ${
+                className={`text-xl font-semibold cursor-pointer transition-all ${
                   active === nav.title
                     ? "text-[#37b54a] drop-shadow-lg"
                     : "text-gray-300"
@@ -145,7 +145,7 @@ const Navbar = () => {
                         color: "#37b54a",
                         textShadow: "0px 0px 10px #37b54a",
                       }}
-                      className="text-white text-lg font-medium cursor-pointer transition-all"
+                      className="text-white text-xl font-medium cursor-pointer transition-all"
                       onClick={() => {
                         setToggle(false);
                         setActive(nav.title);
