@@ -46,12 +46,12 @@ const ProjectCard = ({
           <h3 className="text-white font-bold text-[22px] text-center transition-all duration-300 neon-glow">
             {name}
           </h3>
-          <p className="mt-2 text-secondary text-[16px] text-center">{description}</p>
+          <p className="mt-2 text-secondary text-[20px] text-center">{description}</p>
         </div>
 
         <div className="mt-4 flex flex-wrap justify-center gap-2">
           {tags.map((tag) => (
-            <p key={`${name}-${tag.name}`} className={`text-[14px] ${tag.color}`}>
+            <p key={`${name}-${tag.name}`} className={`text-[20px] ${tag.color}`}>
               #{tag.name}
             </p>
           ))}
@@ -92,7 +92,7 @@ const Works = () => {
       <div className="w-full flex justify-center">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-secondary text-[18px] max-w-4xl leading-[30px] text-center"
+          className="mt-3 text-secondary text-[21px] max-w-4xl leading-[30px] text-center"
         >
           Following projects showcase my skills and experience through
           real-world examples of my work.
