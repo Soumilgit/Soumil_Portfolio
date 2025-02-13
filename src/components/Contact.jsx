@@ -52,18 +52,18 @@ const Contact = () => {
       background: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(10,10,25,1) 100%)",
       padding: "20px",
       borderRadius: "10px",
-      boxShadow: "0px 0px 15px #0ff",
-      border: "2px solid #0ff",
+      boxShadow: "0px 0px 15px #34d680",
+      border: "2px solid #34d680",
     },
     label: {
-      color: "#0ff",
+      color: "#34d680",
       fontWeight: "bold",
       fontFamily: "'Orbitron', sans-serif",
     },
     input: {
       background: "transparent",
-      border: "2px solid #0ff",
-      color: "#0ff",
+      border: "2px solid #34d680",
+      color: "#34d680",
       padding: "10px",
       borderRadius: "5px",
       outline: "none",
@@ -77,18 +77,18 @@ const Contact = () => {
     },
     button: {
       background: "transparent",
-      border: "2px solid #0ff",
+      border: "2px solid #34d680",
       padding: "10px 15px",
-      color: "#0ff",
+      color: "#90EE90",
       fontWeight: "bold",
       cursor: "pointer",
       transition: "0.3s",
-      textShadow: "0 0 5px #0ff, 0 0 15px #00f",
+      textShadow: "0 0 2px #34d680, 0 0 5px #34d680",
     },
     buttonHover: {
-      background: "#0ff",
+      background: "#edf9eb",
       color: "black",
-      boxShadow: "0 0 20px #0ff",
+      boxShadow: "0 0 20px #edf9eb",
     },
     successMessage: {
       fontSize: "18px",
@@ -115,7 +115,7 @@ const Contact = () => {
                 <span style={styles.label}>USERNAME <span style={{ color: "red" }}>*</span></span>
                 <input type="text" name="name" value={form.name} onChange={handleChange}
                   placeholder="Enter Codename..."
-                  style={{ ...styles.input, borderColor: errors.name ? "red" : "#0ff" }}
+                  style={{ ...styles.input, borderColor: errors.name ? "red" : "#34d680" }}
                 />
                 {errors.name && <p style={styles.errorText}>{errors.name}</p>}
               </label>
@@ -124,7 +124,7 @@ const Contact = () => {
                 <span style={styles.label}>EMAIL <span style={{ color: "red" }}>*</span></span>
                 <input type="email" name="email" value={form.email} onChange={handleChange}
                   placeholder="Enter Secure Address..."
-                  style={{ ...styles.input, borderColor: errors.email ? "red" : "#0ff" }}
+                  style={{ ...styles.input, borderColor: errors.email ? "red" : "#34d680" }}
                 />
                 {errors.email && <p style={styles.errorText}>{errors.email}</p>}
               </label>
@@ -133,7 +133,7 @@ const Contact = () => {
                 <span style={styles.label}>MOBILE (Optional)</span>
                 <input type="text" name="mobile" value={form.mobile} onChange={handleChange}
                   placeholder="Enter Secure Line..."
-                  style={{ ...styles.input, borderColor: errors.mobile ? "red" : "#0ff" }}
+                  style={{ ...styles.input, borderColor: errors.mobile ? "red" : "#34d680" }}
                 />
                 {errors.mobile && <p style={styles.errorText}>{errors.mobile}</p>}
               </label>
@@ -148,7 +148,7 @@ const Contact = () => {
 
               <button type="submit"
                 style={styles.button}
-                onMouseEnter={(e) => e.target.style.background = "#0ff"}
+                onMouseEnter={(e) => e.target.style.background = "#34d680"}
                 onMouseLeave={(e) => e.target.style.background = "transparent"}
               >
                 TRANSMIT MESSAGE
