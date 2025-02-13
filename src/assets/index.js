@@ -10,7 +10,6 @@ import close from "./close.svg";
 import html from "./tech/html.png";
 import css from "./tech/css.png";
 import python from "./tech/python.png";
-import git from "./tech/git.png";
 
 import javascript from "./tech/javascript.png";
 import nodejs from "./tech/nodejs.png";
@@ -21,7 +20,6 @@ import jQuery from "./tech/jQuery.png";
 import cpp from "./tech/cpp.png";
 import php from "./tech/php.png";
 import sql from "./tech/sql.png";
-import java from "./tech/java.png";
 import typescript from "./tech/typescript.png";
 import cv from "./tech/cv.png";
 
@@ -54,7 +52,6 @@ export {
   html,
   css,
   python,
-  git,
   javascript,
   nodejs,
   reactjs,
@@ -73,7 +70,6 @@ export {
   boblob,
   jasder,
   smack,
-  java,
   typescript,
   codechef,
   cp,
