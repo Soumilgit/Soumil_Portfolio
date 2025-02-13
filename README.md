@@ -2,6 +2,7 @@ My personal 3D portfolio version 1.0 .
 # Folder Structure :
 Here is the folder structure of the repository :
 ```
+📦 
 ├─ .gitignore
 ├─ LICENSE
 ├─ README.md
@@ -70,8 +71,7 @@ Here is the folder structure of the repository :
 ├─ src
 │  ├─ App.jsx
 │  ├─ Marquees
-│  │  ├─ downloadCVMarquee.jsx
-│  │  └─ e
+│  │  └─ downloadCVMarquee.jsx
 │  ├─ assets
 │  │  ├─ Desktop1.png
 │  │  ├─ Desktop2.png
@@ -143,12 +143,10 @@ Here is the folder structure of the repository :
 │  │  │  ├─ Computers.jsx
 │  │  │  ├─ Earth.jsx
 │  │  │  ├─ Stars.jsx
-│  │  │  ├─ dish_antenna.gltf
 │  │  │  └─ index.js
 │  │  ├─ index.js
 │  │  └─ mypic.jpg
 │  ├─ constants
-│  │  ├─ New folder_portfolio.code-workspace
 │  │  └─ index.js
 │  ├─ hoc
 │  │  ├─ SectionWrapper.jsx
@@ -157,11 +155,9 @@ Here is the folder structure of the repository :
 │  ├─ main.jsx
 │  ├─ styles.js
 │  ├─ svg
-│  │  ├─ arrow.jsx
-│  │  └─ e
+│  │  └─ arrow.jsx
 │  └─ utils
 │     └─ motion.js
 ├─ tailwind.config.cjs
 └─ vite.config.js
-
 ```
