@@ -16,7 +16,6 @@ import {
   emfinity,
   tailwind,
   nodejs,
-  git,
   cpp,
   boblob,
   jasder,
@@ -25,7 +24,6 @@ import {
   python,
   php,
   sql,
-  java,
   cv,
   
   
@@ -151,6 +149,7 @@ const experiences = [
     date: "May 2024 - July 2024",
     points: [
       "Developed a Process Monitor Module GUI using Python on QtCreator and database using SQL.",
+      "Ran checks for 10+ categories."
     ],
   },
   {
@@ -161,7 +160,7 @@ const experiences = [
     date: "Dec 2024 - Present",
     points: [
       "Working as a full-stack MERN developer intern, on the company portfolio and website , 3D animations.",
-      "Got selected among the top 12.5% of applications.",
+      "Among the top 12.5% applications.",
     ],
   },
   {
@@ -171,10 +170,8 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "May 2024 - August 2024",
     points: [
-      "Debugging issues in existing codebases and projects and providing solutions.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Finished with a rank of 683 out of 2418 participants.",
+      "Collaborating with cross-functional teams.",
+      "Ranked 683 out of 2418 people.",
     ],
   },
   {
@@ -186,7 +183,7 @@ const experiences = [
     points: [
       "Conducted and attended daily tech sessions.",
       "Made and verified as a team the questions of various council events.",
-      "Content(math-based) development for college students.",
+      
     ],
   },
   
@@ -201,7 +198,7 @@ const experiences = [
     date: "March 2024 - Present",
     points: [
       "Attended regular Corporate Training Sessions on skills enhancement.",
-      "Wrote 01 research report per month on recently concluded funding transactions in MLA Format.",
+      "Wrote 01 research report per month.",
     ],
   }
 ];
