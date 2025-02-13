@@ -52,7 +52,7 @@ const About = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-lg max-w-3xl leading-7"
+        className="mt-4 text-secondary text-xl max-w-3xl leading-7"
       >
         Innovative and passionate Computer Engineering student with multiple internships, scholarships, and projects. Skilled in data analytics, web development, data structures, algorithms, and investment banking. Proficient in HTML, CSS, Python, C++, SQL, Excel, Tableau, and AutoCAD.
       </motion.p>
