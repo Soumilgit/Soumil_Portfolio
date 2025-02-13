@@ -9,7 +9,7 @@ const Computers = ({ isMobile }) => {
 
   return (
     <group>
-      <hemisphereLight intensity={0.15} groundColor='black' />
+      <hemisphereLight intensity={0.15} groundColor="black" />
       <spotLight
         position={[-20, 50, 10]}
         angle={0.12}
@@ -21,9 +21,9 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? [2.75,2.75,2.75] : [3.0, 3.0, 3.0]} 
-        position={isMobile ? [-0.5, -2.5, -2] : [-0.6, -3, -1.5]} 
-        rotation={[0.0, 0.0, 0.0]}
+        scale={isMobile ? [2.5, 2.5, 2.5] : [2.5, 2.5, 2.5]}
+        position={isMobile ? [0, -2.5, -2] : [0, -3, -1.5]} 
+        rotation={[0, 0, 0]}
       />
     </group>
   );
@@ -49,11 +49,11 @@ const ComputersCanvas = () => {
 
   return (
     <Canvas
-      frameloop='demand'
+      frameloop="demand"
       shadows
       dpr={[1, 2]}
       camera={{
-        position: [18, 6, 9], 
+        position: [0, 8, 18],
         fov: 30,
         near: 0.1,
         far: 2000,
