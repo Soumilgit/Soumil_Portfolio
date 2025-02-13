@@ -32,7 +32,7 @@ const CertificationCard = ({ index, name, description }) => {
           <h3 className="text-white font-bold text-[22px] transition-all duration-300 neon-glow">
             {name}
           </h3>
-          <p className="mt-2 text-secondary text-[16px]">{description}</p>
+          <p className="mt-2 text-secondary text-[20px]">{description}</p>
         </div>
       </div>
     </motion.div>
@@ -67,7 +67,7 @@ const Certf = () => {
       <div className="w-full flex justify-center">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-secondary text-[20px] max-w-3xl leading-[30px] text-center"
+          className="mt-3 text-secondary text-[22px] max-w-3xl leading-[30px] text-center"
         >
           Here are some of my top certifications that showcase my expertise.
         </motion.p>
