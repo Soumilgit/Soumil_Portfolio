@@ -67,7 +67,7 @@ const Navbar = () => {
       <motion.nav
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.2, ease: "easeOut" }}
         className={`fixed top-0 w-full z-50 py-4 transition-all ${
           scrolled
             ? "bg-black/90 shadow-xl border-b border-[#37b54a] neon-glow"
