@@ -127,11 +127,11 @@ const Hero = () => {
         {/* Download Resume Button */}
         <div className="mt-4">
   <a href="/SoumilM_KJSCE_Resume.pdf" target="_blank" rel="noopener noreferrer">
-    <div className="w-32 sm:w-36 h-8 border border-[#34d680] rounded-full hover:bg-white transition duration-300 flex items-center justify-center">
+    <div className="w-32 sm:w-36 h-8 border border-[#34d680] rounded-full hover:bg-white text-[#34d680] transition duration-300 flex items-center justify-center">
       <DownloadCVMarquee />
     </div>
   </a>
-          <div className="relative mt-9 flex items-center gap-1" style={{ transform: "rotate(14deg)" }}>
+          <div className="relative mt-12 flex items-center gap-1" style={{ transform: "rotate(18deg)" }}>
             <div style={{ transform: "rotate(180deg)" }}>
               <Arrow />
             </div>
