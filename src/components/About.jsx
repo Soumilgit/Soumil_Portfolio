@@ -3,12 +3,16 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
-import { textVariant } from "../utils/motion"; // Removed fadeIn
+import { textVariant, fadeIn } from "../utils/motion"; // Added fadeIn
 
-const ServiceCard = ({ title, icon }) => (
+const ServiceCard = ({ title, icon, index }) => (
   <motion.div
+    variants={fadeIn("up", "spring", index * 0.3, 0.75)} // Scroll animation
+    initial="hidden"
+    whileInView="show"
+    viewport={{ once: true, amount: 0.1 }}
     className="relative bg-black p-[2px] rounded-lg shadow-lg transition-transform duration-150 neon-box"
-    whileHover={{ scaleY: 1.05 }} // Expands only along vertical diameter
+    whileHover={{ scaleY: 1.05 }} // Expands only along vertical axis
   >
     <div className="bg-[#1e1e1e] p-5 rounded-lg flex flex-col items-center shadow-md h-full">
       <div className="w-30 h-30 bg-black rounded-full flex items-center justify-center p-3 shadow-lg neon-icon">
@@ -47,19 +51,26 @@ const About = ({ setAboutLoaded }) => {
         `}
       </style>
 
-      <motion.div variants={textVariant()}>
+      {/* Scroll Animation for Title & Subtext */}
+      <motion.div variants={textVariant()} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview</h2>
       </motion.div>
 
-      <p className="mt-4 text-secondary text-xl max-w-3xl leading-7">
+      <motion.p
+        variants={fadeIn("up", "spring", 0.2, 0.75)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.1 }}
+        className="mt-4 text-secondary text-xl max-w-3xl leading-7"
+      >
         Innovative and passionate Computer Engineering student with multiple internships, scholarships, and projects. Skilled in data analytics, web development, data structures, algorithms, and investment banking.
-      </p>
+      </motion.p>
 
-      {/* Responsive Grid */}
+      {/* Responsive Grid with Scroll Animation */}
       <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        {services.map((service) => (
-          <ServiceCard key={service.title} {...service} />
+        {services.map((service, index) => (
+          <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
     </>
