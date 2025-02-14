@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { certificates } from "../constants";
-import { fadeIn, textVariant } from "../utils/motion";
+import { textVariant } from "../utils/motion"; // Removed fadeIn
 import jsi from "../assets/jsi.png";
 import postman from "../assets/postman.png";
 import oods from "../assets/oods.png";
@@ -12,9 +12,8 @@ const icons = [jsi, postman, oods];
 
 const CertificationCard = ({ index, name, description }) => (
   <motion.div
-    variants={fadeIn("up", "spring", index * 0.5, 0.75)}
     className="relative bg-black p-[2px] rounded-lg shadow-lg transition-transform neon-box"
-    whileHover={{ scale: 1.02, width: "102%" }}
+    whileHover={{ scaleY: 1.05 }} // Expands vertically only
   >
     <div className="bg-[#1e1e1e] p-5 rounded-lg shadow-md w-full text-center">
       <div className="w-16 h-16 bg-white p-2 rounded-full flex items-center justify-center mx-auto">
