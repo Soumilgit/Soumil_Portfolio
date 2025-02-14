@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { achievements } from "../constants";
-import { textVariant } from "../utils/motion"; // Removed fadeIn
+import { textVariant, fadeIn } from "../utils/motion"; // Added fadeIn
 
 // Import images
 import cp from "../assets/cp.png";
@@ -16,6 +16,10 @@ const icons = [cp, codechef, githubk];
 
 const AchievementCard = ({ index, name, description }) => (
   <motion.div
+    variants={fadeIn("up", "spring", index * 0.3, 0.75)} // Scroll animation
+    initial="hidden"
+    whileInView="show"
+    viewport={{ once: true, amount: 0.1 }}
     className="relative bg-black p-[2px] rounded-lg shadow-lg transition-transform duration-150 neon-box w-full max-w-[360px]"
     whileHover={{ scaleY: 1.05 }} // Expands only along vertical diameter
   >
@@ -57,7 +61,8 @@ const Achieve = () => {
         `}
       </style>
 
-      <motion.div variants={textVariant()}>
+      {/* Scroll Animation for Title & Subtext */}
+      <motion.div variants={textVariant()} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }}>
         <p className={`${styles.sectionSubText} text-center`}>My Achievements</p>
         <h2 className={`${styles.sectionHeadText} text-center`}>Honours & Achievements</h2>
       </motion.div>
@@ -68,7 +73,7 @@ const Achieve = () => {
         </p>
       </div>
 
-      {/* Responsive Achievement Cards */}
+      {/* Responsive Achievement Cards with Scroll Animation */}
       <div className="mt-20 flex flex-wrap justify-center gap-8">
         {achievements.map((achievement, index) => (
           <AchievementCard key={`achievement-${index}`} index={index} {...achievement} />
