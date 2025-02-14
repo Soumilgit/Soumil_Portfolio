@@ -1,5 +1,5 @@
 import {
-  creator,
+  app,
   web,
   data,
   problem,
@@ -74,8 +74,8 @@ const services = [
     icon: problem,
   },
   {
-    title: "Content Creator",
-    icon: creator,
+    title: "App Developer",
+    icon: app,
   },
 ];
 
@@ -214,7 +214,7 @@ const achievements = [
     
   },
   {
-    name: "Over 1000+ contributions on GitHub",
+    name: "Over 2000+ contributions on GitHub",
     description:
       "Have been an active member of GitHub community and have contributed to various open source projects, along with my own projects.",
   },
