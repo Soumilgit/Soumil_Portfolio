@@ -104,7 +104,7 @@ const Contact = () => {
       <div className="relative flex-[0.75] bg-transparent w-full">
         {!submitted ? (
           <motion.div
-            variants={slideIn("left", "tween", 0.2, 0.35)}
+            variants={slideIn("left", "tween", 0.15, 0.3)}
             style={styles.container}
           >
             <p style={{ ...styles.label, fontSize: "14px" }}>🔐 AUTHORIZED ACCESS REQUIRED</p>
@@ -157,7 +157,7 @@ const Contact = () => {
           </motion.div>
         ) : (
           <motion.div
-            variants={slideIn("left", "tween", 0.2, 0.35)}
+            variants={slideIn("left", "tween", 0.15, 0.3)}
             style={styles.container}
           >
             <p style={styles.successMessage}>✅ TRANSMISSION SUCCESSFUL! MESSAGE RECEIVED.</p>
@@ -167,7 +167,7 @@ const Contact = () => {
 
       {/* Right Side - 3D Cyberpunk Computer */}
       <motion.div
-        variants={slideIn("right", "tween", 0.2, 0.35)}
+        variants={slideIn("right", "tween", 0.15, 0.3)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
         <ComputersCanvas />
