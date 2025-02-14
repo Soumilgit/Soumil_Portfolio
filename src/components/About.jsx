@@ -7,7 +7,7 @@ import { textVariant, fadeIn } from "../utils/motion"; // Added fadeIn
 
 const ServiceCard = ({ title, icon, index }) => (
   <motion.div
-    variants={fadeIn("up", "spring", index * 0.3, 0.75)} // Scroll animation
+    variants={fadeIn("up", "spring", index * 0.2, 0.35)} // Scroll animation
     initial="hidden"
     whileInView="show"
     viewport={{ once: true, amount: 0.1 }}
@@ -58,7 +58,7 @@ const About = ({ setAboutLoaded }) => {
       </motion.div>
 
       <motion.p
-        variants={fadeIn("up", "spring", 0.2, 0.75)}
+        variants={fadeIn("up", "spring", 0.2, 0.35)}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.1 }}
