@@ -18,7 +18,8 @@ const AchievementCard = ({ index, name, description }) => {
   return (
     <motion.div
       variants={fadeIn("up", "spring", index * 0.3, 0.75)}
-      className="relative bg-black p-[2px] rounded-lg shadow-lg transition-transform hover:scale-105 neon-box w-full max-w-[360px]"
+      className="relative bg-black p-[2px] rounded-lg shadow-lg transition-all hover:scale-102 neon-box w-full max-w-[360px]"
+      whileHover={{ scale: 1.02, width: "102%" }}
     >
       <div className="bg-[#1e1e1e] p-5 rounded-lg flex flex-col items-center shadow-md w-full">
         {/* Icon with Neon Glow */}
