@@ -34,7 +34,7 @@ const Tech = () => {
         {technologies.map((technology, index) => (
           <motion.div
             key={technology.name}
-            variants={fadeIn("up", "spring", index * 0.3, 0.75)}
+            variants={fadeIn("up", "spring", index * 0.2, 0.35)}
             className="flex justify-center items-center"
             style={{ transform: `translateX(${positions[index].x}px)` }} // Apply horizontal movement
           >
