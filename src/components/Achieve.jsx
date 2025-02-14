@@ -1,52 +1,81 @@
 import React from "react";
 import { motion } from "framer-motion";
+
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
-import { certificates } from "../constants";
-import { fadeIn, textVariant } from "../utils/motion";
-import jsi from "../assets/jsi.png";
-import postman from "../assets/postman.png";
-import oods from "../assets/oods.png";
+import { achievements } from "../constants";
+import { textVariant } from "../utils/motion"; // Removed fadeIn
 
-const icons = [jsi, postman, oods];
+// Import images
+import cp from "../assets/cp.png";
+import codechef from "../assets/codechef.png";
+import githubk from "../assets/githubk.png";
 
-const CertificationCard = ({ index, name, description }) => (
+// Map images to achievements
+const icons = [cp, codechef, githubk];
+
+const AchievementCard = ({ index, name, description }) => (
   <motion.div
-    variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-    className="relative bg-black p-[2px] rounded-lg shadow-lg transition-transform neon-box"
-    whileHover={{ scale: 1.02, width: "102%" }}
+    className="relative bg-black p-[2px] rounded-lg shadow-lg transition-transform duration-150 neon-box w-full max-w-[360px]"
+    whileHover={{ scaleY: 1.05 }} // Expands only along vertical diameter
   >
-    <div className="bg-[#1e1e1e] p-5 rounded-lg shadow-md w-full text-center">
-      <div className="w-16 h-16 bg-white p-2 rounded-full flex items-center justify-center mx-auto">
-        <img src={icons[index]} alt={name} className="w-10 h-10 object-contain" />
+    <div className="bg-[#1e1e1e] p-5 rounded-lg flex flex-col items-center shadow-md w-full">
+      {/* Icon with Neon Glow */}
+      <div className="w-20 h-20 bg-black rounded-full flex items-center justify-center p-3 shadow-lg neon-icon">
+        <img src={icons[index]} alt={name} className="w-16 h-16 object-contain" />
       </div>
 
-      <div className="mt-5">
-        <h3 className="text-white font-bold text-[22px] transition-all duration-300 neon-glow">
-          {name}
-        </h3>
-        <p className="mt-2 text-secondary text-[20px]">{description}</p>
-      </div>
+      {/* Achievement Details */}
+      <h3 className="text-white text-xl font-bold mt-4 text-center neon-glow">
+        {name}
+      </h3>
+      <p className="mt-2 text-secondary text-lg text-center">{description}</p>
     </div>
   </motion.div>
 );
 
-const Certf = () => {
+const Achieve = () => {
   return (
     <>
+      {/* Neon Glow Styles */}
+      <style>
+        {`
+          .neon-glow {
+            transition: all 0.3s ease-in-out;
+          }
+          .neon-glow:hover {
+            color: #37b54a;
+            text-shadow: 0 0 10px #37b54a, 0 0 40px #37b54a;
+          }
+          .neon-icon {
+            filter: drop-shadow(0px 0px 8px #37b54a);
+          }
+          .neon-box {
+            border: 2px solid #37b54a;
+            box-shadow: 0 0 15px #37b54a;
+          }
+        `}
+      </style>
+
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-center`}>My Certifications</p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>Top Certifications</h2>
+        <p className={`${styles.sectionSubText} text-center`}>My Achievements</p>
+        <h2 className={`${styles.sectionHeadText} text-center`}>Honours & Achievements</h2>
       </motion.div>
 
-      {/* Responsive Grid */}
-      <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {certificates.map((certificate, index) => (
-          <CertificationCard key={`certificate-${index}`} index={index} {...certificate} />
+      <div className="w-full flex justify-center">
+        <p className="mt-3 text-secondary text-[22px] max-w-3xl leading-[30px] text-center">
+          Here are some of my top achievements that highlight my journey.
+        </p>
+      </div>
+
+      {/* Responsive Achievement Cards */}
+      <div className="mt-20 flex flex-wrap justify-center gap-8">
+        {achievements.map((achievement, index) => (
+          <AchievementCard key={`achievement-${index}`} index={index} {...achievement} />
         ))}
       </div>
     </>
   );
 };
 
-export default SectionWrapper(Certf, "certf");
+export default SectionWrapper(Achieve, "achievement");
