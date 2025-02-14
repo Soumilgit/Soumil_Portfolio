@@ -2,12 +2,16 @@ import React from "react";
 import { motion } from "framer-motion";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
-import { textVariant } from "../utils/motion"; // Removed fadeIn
+import { textVariant, fadeIn } from "../utils/motion"; // Added fadeIn
 import { styles } from "../styles";
 
 const ExperienceCard = ({ experience, index }) => {
   return (
     <motion.div
+      variants={fadeIn("up", "spring", index * 0.3, 0.75)} // Scroll animation
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.1 }}
       className="relative border-2 p-6 rounded-2xl shadow-lg mb-10 border-[#00FF7F] transition-transform duration-150 neon-box w-full flex flex-col justify-between"
       whileHover={{ scaleY: 1.05 }} // Expands vertically only
     >
@@ -33,11 +37,13 @@ const ExperienceCard = ({ experience, index }) => {
 const Experience = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      {/* Scroll Animation for Title & Subtext */}
+      <motion.div variants={textVariant()} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }}>
         <p className={`${styles.sectionSubText} text-center`}>What I have done so far</p>
         <h2 className={`${styles.sectionHeadText} text-center`}>Work Experience</h2>
       </motion.div>
 
+      {/* Responsive Grid with Scroll Animation */}
       <div className="mt-16 grid md:grid-cols-2 gap-8">
         {experiences.map((experience, index) => (
           <ExperienceCard key={index} experience={experience} index={index} />
