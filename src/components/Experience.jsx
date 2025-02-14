@@ -9,7 +9,8 @@ const ExperienceCard = ({ experience, index }) => {
   return (
     <motion.div
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-      className="relative border-2 p-6 rounded-2xl shadow-lg mb-10 border-[#00FF7F] transition-transform duration-300 hover:scale-105 neon-box w-full h-94 flex flex-col justify-between"
+      className="relative border-2 p-6 rounded-2xl shadow-lg mb-10 border-[#00FF7F] transition-all duration-300 hover:scale-102 neon-box w-full h-94 flex flex-col justify-between"
+      whileHover={{ scale: 1.02, width: "102%" }}
     >
       <div className="flex items-center gap-4">
         <div className="w-16 h-16 bg-black flex justify-center items-center rounded-full shadow-lg">
