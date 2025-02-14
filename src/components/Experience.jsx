@@ -8,7 +8,7 @@ import { styles } from "../styles";
 const ExperienceCard = ({ experience, index }) => {
   return (
     <motion.div
-      variants={fadeIn("up", "spring", index * 0.3, 0.75)} // Scroll animation
+      variants={fadeIn("up", "spring", index * 0.2, 0.35)} // Scroll animation
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.1 }}
