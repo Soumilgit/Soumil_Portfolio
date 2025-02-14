@@ -3,7 +3,9 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { certificates } from "../constants";
-import { textVariant } from "../utils/motion"; // Removed fadeIn
+import { textVariant, fadeIn } from "../utils/motion"; // Added fadeIn
+
+// Import certificate images
 import jsi from "../assets/jsi.png";
 import postman from "../assets/postman.png";
 import oods from "../assets/oods.png";
@@ -12,6 +14,10 @@ const icons = [jsi, postman, oods];
 
 const CertificationCard = ({ index, name, description }) => (
   <motion.div
+    variants={fadeIn("up", "spring", index * 0.3, 0.75)} // Scroll animation
+    initial="hidden"
+    whileInView="show"
+    viewport={{ once: true, amount: 0.1 }}
     className="relative bg-black p-[2px] rounded-lg shadow-lg transition-transform neon-box"
     whileHover={{ scaleY: 1.05 }} // Expands vertically only
   >
@@ -33,12 +39,13 @@ const CertificationCard = ({ index, name, description }) => (
 const Certf = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      {/* Scroll Animation for Title & Subtext */}
+      <motion.div variants={textVariant()} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }}>
         <p className={`${styles.sectionSubText} text-center`}>My Certifications</p>
         <h2 className={`${styles.sectionHeadText} text-center`}>Top Certifications</h2>
       </motion.div>
 
-      {/* Responsive Grid */}
+      {/* Responsive Grid with Scroll Animation */}
       <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {certificates.map((certificate, index) => (
           <CertificationCard key={`certificate-${index}`} index={index} {...certificate} />
