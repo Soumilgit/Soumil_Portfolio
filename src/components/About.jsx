@@ -1,21 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
+import { textVariant } from "../utils/motion"; // Removed fadeIn
 
-const ServiceCard = ({ index, title, icon }) => (
+const ServiceCard = ({ title, icon }) => (
   <motion.div
-    variants={fadeIn("up", "spring", index * 0.3, 0.75)}
-    className="relative bg-black p-[2px] rounded-lg shadow-lg transition-all neon-box"
-    whileHover={{ scale: 1.02, width: "102%" }}
+    className="relative bg-black p-[2px] rounded-lg shadow-lg transition-transform duration-150 neon-box"
+    whileHover={{ scaleY: 1.05 }} // Expands only along vertical diameter
   >
     <div className="bg-[#1e1e1e] p-5 rounded-lg flex flex-col items-center shadow-md h-full">
       <div className="w-30 h-30 bg-black rounded-full flex items-center justify-center p-3 shadow-lg neon-icon">
         <img src={icon} alt={title} className="w-24 h-24 object-contain" />
       </div>
-      <h3 className="text-white text-xl font-bold mt-4 text-center transition-all duration-300 neon-glow">
+      <h3 className="text-white text-xl font-bold mt-4 text-center neon-glow">
         {title}
       </h3>
     </div>
@@ -24,7 +23,6 @@ const ServiceCard = ({ index, title, icon }) => (
 
 const About = ({ setAboutLoaded }) => {
   useEffect(() => {
-    // Simulate loading delay
     setTimeout(() => setAboutLoaded(true), 500);
   }, []);
 
@@ -48,22 +46,20 @@ const About = ({ setAboutLoaded }) => {
           }
         `}
       </style>
+
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview</h2>
       </motion.div>
 
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-xl max-w-3xl leading-7"
-      >
+      <p className="mt-4 text-secondary text-xl max-w-3xl leading-7">
         Innovative and passionate Computer Engineering student with multiple internships, scholarships, and projects. Skilled in data analytics, web development, data structures, algorithms, and investment banking.
-      </motion.p>
+      </p>
 
       {/* Responsive Grid */}
       <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
+        {services.map((service) => (
+          <ServiceCard key={service.title} {...service} />
         ))}
       </div>
     </>
