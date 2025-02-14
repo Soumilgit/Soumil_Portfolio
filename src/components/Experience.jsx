@@ -2,15 +2,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
-import { textVariant, fadeIn } from "../utils/motion";
+import { textVariant } from "../utils/motion"; // Removed fadeIn
 import { styles } from "../styles";
 
 const ExperienceCard = ({ experience, index }) => {
   return (
     <motion.div
-      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-      className="relative border-2 p-6 rounded-2xl shadow-lg mb-10 border-[#00FF7F] transition-all duration-300 hover:scale-102 neon-box w-full h-94 flex flex-col justify-between"
-      whileHover={{ scale: 1.02, width: "102%" }}
+      className="relative border-2 p-6 rounded-2xl shadow-lg mb-10 border-[#00FF7F] transition-transform duration-150 neon-box w-full flex flex-col justify-between"
+      whileHover={{ scaleY: 1.05 }} // Expands vertically only
     >
       <div className="flex items-center gap-4">
         <div className="w-16 h-16 bg-black flex justify-center items-center rounded-full shadow-lg">
