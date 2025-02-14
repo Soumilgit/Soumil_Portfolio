@@ -9,7 +9,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
   return (
     <motion.div
-      variants={fadeIn("up", "spring", index * 0.2, 0.35)} // Scroll animation
+      variants={fadeIn("up", "spring", index * 0.15, 0.3)} // Scroll animation
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.1 }}
@@ -59,7 +59,7 @@ const Works = () => {
 
       <div className="w-full flex justify-center">
         <motion.p 
-          variants={fadeIn("up", "spring", 0.2, 1)} 
+          variants={fadeIn("up", "spring", 0.15, 0.3)} 
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.1 }}
