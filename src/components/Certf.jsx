@@ -14,7 +14,7 @@ const icons = [jsi, postman, oods];
 
 const CertificationCard = ({ index, name, description }) => (
   <motion.div
-    variants={fadeIn("up", "spring", index * 0.2, 0.35)} // Scroll animation
+    variants={fadeIn("up", "spring", index * 0.15, 0.3)} // Scroll animation
     initial="hidden"
     whileInView="show"
     viewport={{ once: true, amount: 0.1 }}
