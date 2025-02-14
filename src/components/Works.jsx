@@ -9,7 +9,10 @@ import { fadeIn, textVariant } from "../utils/motion";
 const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
   return (
     <motion.div
-      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+      variants={fadeIn("up", "spring", index * 0.2, 0.35)} // Scroll animation
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.1 }}
       className="relative bg-black p-[2px] rounded-lg shadow-lg transition-transform neon-box"
       whileHover={{ scaleY: 1.05 }} // Expands vertically only
     >
@@ -48,18 +51,25 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
 const Works = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      {/* Scroll Animation for Title & Subtext */}
+      <motion.div variants={textVariant()} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }}>
         <p className={`${styles.sectionSubText} text-center`}>My Work</p>
         <h2 className={`${styles.sectionHeadText} text-center`}>Projects</h2>
       </motion.div>
 
       <div className="w-full flex justify-center">
-        <motion.p variants={fadeIn("", "", 0.1, 1)} className="mt-3 text-secondary text-[21px] max-w-4xl leading-[30px] text-center">
+        <motion.p 
+          variants={fadeIn("up", "spring", 0.2, 1)} 
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.1 }}
+          className="mt-3 text-secondary text-[21px] max-w-4xl leading-[30px] text-center"
+        >
           Following projects showcase my skills and experience through real-world examples of my work.
         </motion.p>
       </div>
 
-      {/* Responsive Grid */}
+      {/* Responsive Grid with Scroll Animation */}
       <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
