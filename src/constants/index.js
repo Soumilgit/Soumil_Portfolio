@@ -294,7 +294,7 @@ const certificates = [
   {
     name: "Postman API Fundamentals Student Expert",
     description:
-      "Became proficient in using Postman to work with APIs, making GET, POST, PATCH and DELETE requests.,basic scripting and learnt using APIs in applications.",
+      "Became proficient in using Postman to work with APIs, making GET, POST, PATCH and DELETE requests, basic scripting and learnt using APIs in applications.",
   },
   {
     name: "JavaScript Algorithms and Data Structures(Beta)",
