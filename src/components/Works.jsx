@@ -11,7 +11,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
     <motion.div
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
       className="relative bg-black p-[2px] rounded-lg shadow-lg transition-transform neon-box"
-      whileHover={{ scale: 1.02, width: "102%" }}
+      whileHover={{ scaleY: 1.05 }} // Expands vertically only
     >
       <div className="bg-[#1e1e1e] p-5 rounded-lg shadow-md w-full">
         <div className="relative w-full h-[230px] rounded-lg overflow-hidden">
