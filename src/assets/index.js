@@ -1,5 +1,5 @@
 
-import creator from "./contentcreator.png";
+import app from "./app.png";
 import web from "./web.png";
 import data from "./data.png";
 import problem from "./problemsolver.png";
@@ -42,7 +42,7 @@ import githubk from "./githubk.png";
 
 
 export {
-  creator,
+  app,
   web,
   data,
   problem,
