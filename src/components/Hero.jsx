@@ -119,7 +119,7 @@ const Hero = () => {
 
       {/* Right Side - Text + Resume Button */}
      {/* Right Side - Text + Resume Button */}
-<div className="flex flex-col items-center md:items-start gap-4 md:ml-[-85px] md:self-center">
+<div className="flex flex-col items-center md:items-start gap-4 md:ml-[-88px] md:self-center">
   <h1 className={`${styles.heroHeadText} text-lime-500`}>
     Hi, I'm <span className="text-[#50c33c]">Soumil!</span>
   </h1>
