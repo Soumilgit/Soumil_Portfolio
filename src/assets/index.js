@@ -39,6 +39,7 @@ import jsi from "./jsi.png";
 import oods from "./oods.png";
 import postman from "./postman.png";
 import githubk from "./githubk.png";
+import mypic from "./mypic.png";
 
 
 export {
@@ -76,6 +77,7 @@ export {
   jsi,
   oods,
   postman,
-  githubk
+  githubk,
+  mypic
 
 };
