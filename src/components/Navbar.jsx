@@ -64,102 +64,103 @@ const Navbar = () => {
       </style>
 
       {/* Navbar Component */}
-      <motion.nav
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.2, ease: "easeOut" }}
-        className={`fixed top-0 w-full z-50 py-4 transition-all ${
-          scrolled
-            ? "bg-black/90 shadow-xl border-b border-[#37b54a] neon-glow"
-            : "bg-transparent"
-        }`}
+
+<motion.nav
+  initial={{ y: -100, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  transition={{ duration: 0.2, ease: "easeOut" }}
+  className={`fixed top-0 w-full z-50 py-4 transition-all ${
+    scrolled
+      ? "bg-black/90 shadow-xl border-b border-[#37b54a] neon-glow"
+      : "bg-transparent"
+  }`}
+>
+  <div className="w-full flex justify-between items-center max-w-7xl mx-auto px-6">
+    <Link
+      to="/"
+      className="navbar-title flex items-center gap-2 ml-12"
+      onClick={() => {
+        setActive("");
+        window.scrollTo(0, 0);
+      }}
+    >
+      <motion.p
+        whileHover={{ scale: 1.1, textShadow: "0px 0px 20px #37b54a" }}
+        className="text-[#37b54a] font-extrabold cursor-pointer text-3xl tracking-wide drop-shadow-lg"
       >
-        <div className="w-full flex justify-between items-center max-w-7xl mx-auto px-6">
+        Soumil Mukhopadhyay
+      </motion.p>
+    </Link>
+
+    {/* Desktop Navbar */}
+    <ul className="nav-links ml-12" style={{ marginRight: "-98px" }}> 
+      {navLinks.map((nav) => (
+        <motion.li
+          key={nav.id}
+          whileHover={{
+            scale: 1.2,
+            color: "#37b54a",
+            textShadow: "0px 0px 15px #37b54a",
+          }}
+          className={`text-xl font-semibold cursor-pointer transition-all ${
+            active === nav.title
+              ? "text-[#37b54a] drop-shadow-lg"
+              : "text-gray-300"
+          }`}
+          onClick={() => setActive(nav.title)}
+        >
+          <a href={`#${nav.id}`}>{nav.title}</a>
+        </motion.li>
+      ))}
+    </ul>
+
+    {/* Mobile Navbar */}
+    <div className="sm:hidden flex items-center">
+      <motion.img
+        src={toggle ? close : menu}
+        alt="menu"
+        whileTap={{ scale: 0.8 }}
+        className="w-8 h-8 object-contain cursor-pointer neon-icon"
+        onClick={() => setToggle(!toggle)}
+      />
+
+      {toggle && (
+        <motion.div
+          initial={{ y: -20, opacity: 0 }}
+          animate={toggle ? { y: 0, opacity: 1 } : { y: -20, opacity: 0 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="mobile-menu neon-box"
+        >
           <Link
             to="/"
-            className="navbar-title flex items-center gap-2 ml-12"
-            onClick={() => {
-              setActive("");
-              window.scrollTo(0, 0);
-            }}
+            className="text-[#37b54a] font-extrabold cursor-pointer text-2xl tracking-wide drop-shadow-lg text-center"
           >
-            <motion.p
-              whileHover={{ scale: 1.1, textShadow: "0px 0px 20px #37b54a" }}
-              className="text-[#37b54a] font-extrabold cursor-pointer text-3xl tracking-wide drop-shadow-lg"
-            >
-              Soumil Mukhopadhyay
-            </motion.p>
+            Soumil Mukhopadhyay
           </Link>
-
-          {/* Desktop Navbar */}
-          <ul className="nav-links">
+          <ul>
             {navLinks.map((nav) => (
               <motion.li
                 key={nav.id}
                 whileHover={{
-                  scale: 1.2,
+                  scale: 1.1,
                   color: "#37b54a",
-                  textShadow: "0px 0px 15px #37b54a",
+                  textShadow: "0px 0px 10px #37b54a",
                 }}
-                className={`text-xl font-semibold cursor-pointer transition-all ${
-                  active === nav.title
-                    ? "text-[#37b54a] drop-shadow-lg"
-                    : "text-gray-300"
-                }`}
-                onClick={() => setActive(nav.title)}
+                className="text-white text-xl font-medium cursor-pointer transition-all"
+                onClick={() => {
+                  setToggle(false);
+                  setActive(nav.title);
+                }}
               >
                 <a href={`#${nav.id}`}>{nav.title}</a>
               </motion.li>
             ))}
           </ul>
-
-          {/* Mobile Navbar */}
-          <div className="sm:hidden flex items-center">
-            <motion.img
-              src={toggle ? close : menu}
-              alt="menu"
-              whileTap={{ scale: 0.8 }}
-              className="w-8 h-8 object-contain cursor-pointer neon-icon"
-              onClick={() => setToggle(!toggle)}
-            />
-
-            {toggle && (
-              <motion.div
-                initial={{ y: -20, opacity: 0 }}
-                animate={toggle ? { y: 0, opacity: 1 } : { y: -20, opacity: 0 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-                className="mobile-menu neon-box"
-              >
-                <Link
-                  to="/"
-                  className="text-[#37b54a] font-extrabold cursor-pointer text-2xl tracking-wide drop-shadow-lg text-center"
-                >
-                  Soumil Mukhopadhyay
-                </Link>
-                <ul>
-                  {navLinks.map((nav) => (
-                    <motion.li
-                      key={nav.id}
-                      whileHover={{
-                        scale: 1.1,
-                        color: "#37b54a",
-                        textShadow: "0px 0px 10px #37b54a",
-                      }}
-                      className="text-white text-xl font-medium cursor-pointer transition-all"
-                      onClick={() => {
-                        setToggle(false);
-                        setActive(nav.title);
-                      }}
-                    >
-                      <a href={`#${nav.id}`}>{nav.title}</a>
-                    </motion.li>
-                  ))}
-                </ul>
-              </motion.div>
-            )}
-          </div>
-        </div>
-      </motion.nav>
+        </motion.div>
+      )}
+    </div>
+  </div>
+</motion.nav>
     </>
   );
 };
