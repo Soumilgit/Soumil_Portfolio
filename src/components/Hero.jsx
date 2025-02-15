@@ -12,7 +12,7 @@ const Hero = () => {
       {/* Left Side - Flippable ID Card */}
       <div className="relative flex justify-center items-center mt-6 md:mt-0">
         <div
-          className="relative w-72 h-[26em] sm:w-96 sm:h-[30rem] cursor-pointer perspective-1000"
+          className="relative w-72 h-[28em] sm:w-96 sm:h-[30rem] cursor-pointer perspective-1000"
           onClick={() => setFlipped(!flipped)}
         >
           <motion.div
