@@ -12,7 +12,7 @@ const Hero = () => {
       {/* Left Side - Flippable ID Card */}
       <div className="relative flex justify-center items-center mt-6 md:mt-0">
         <div
-          className="relative w-72 h-[26rem] sm:w-96 sm:h-[30rem] cursor-pointer perspective-1000"
+          className="relative w-72 h-[26em] sm:w-96 sm:h-[30rem] cursor-pointer perspective-1000"
           onClick={() => setFlipped(!flipped)}
         >
           <motion.div
@@ -58,7 +58,9 @@ const Hero = () => {
                 <p className="text-l text-gray-400 pl-14">📅DOB: 30 October 2004</p>
                 <p className="text-l text-gray-400 pl-14">📧Email: msoumil69@gmail.com</p>
                 <p className="text-l text-gray-400 pl-14">📞Phone: 9405727673</p>
+                <div className="mb-5"></div>
               </div>
+              
             </motion.div>
 
             {/* Back Side */}
@@ -102,9 +104,9 @@ const Hero = () => {
     target="_blank" 
     className="text-blue-400 hover:underline block font-semibold text-sm md:text-base"
   >📍 Google Maps</a>
-  <div className="w-full flex justify-center mt-3">
+   <div className="mb-5"></div>
   
-</div>
+
 
  
 </motion.div>
@@ -116,29 +118,33 @@ const Hero = () => {
       </div>
 
       {/* Right Side - Text + Resume Button */}
-      <div className="flex flex-col items-center md:items-start gap-5">
-        <h1 className={`${styles.heroHeadText} text-lime-500`}>
-          Hi, I'm <span className="text-[#50c33c]">Soumil!</span>
-        </h1>
-        <p className={`${styles.heroSubText} mt-16 text-white-100`}>
-          I like programming, exploring tech stuff, and nature.
-        </p>
+     {/* Right Side - Text + Resume Button */}
+<div className="flex flex-col items-center md:items-start gap-4 md:ml-[-85px] md:self-center">
+  <h1 className={`${styles.heroHeadText} text-lime-500`}>
+    Hi, I'm <span className="text-[#50c33c]">Soumil!</span>
+  </h1>
+  <p className={`${styles.heroSubText} mt-10 text-white-100`}>
+    I like programming, exploring tech stuff, and nature.
+  </p>
 
-        {/* Download Resume Button */}
-        <div className="mt-4">
-  <a href="/SoumilM_KJSCE_Resume.pdf" target="_blank" rel="noopener noreferrer">
-    <div className="w-32 sm:w-36 h-8 border border-[#34d680] rounded-full hover:bg-white text-[#34d680] transition duration-300 flex items-center justify-center">
-      <DownloadCVMarquee />
-    </div>
-  </a>
-          <div className="relative mt-12 flex items-center gap-1" style={{ transform: "rotate(18deg)" }}>
-            <div style={{ transform: "rotate(180deg)" }}>
-              <Arrow />
-            </div>
-            <p className="text-[#34d680] font-semibold text-sm sm:text-xl">Gotcha, it IS a button!</p>
-          </div>
-        </div>
+  {/* Download Resume Button */}
+  <div className="mt-4">
+    <a href="/SoumilM_KJSCE_Resume.pdf" target="_blank" rel="noopener noreferrer">
+      <div className="w-32 sm:w-36 h-8 border border-[#34d680] rounded-full hover:bg-white text-[#34d680] transition duration-300 flex items-center justify-center">
+        <DownloadCVMarquee />
       </div>
+    </a>
+
+    {/* Arrow and Gotcha Text */}
+    <div className="relative mt-10 flex items-center gap-1 md:ml-[-6px]" style={{ transform: "rotate(15.26deg)" }}>
+      <div style={{ transform: "rotate(180deg)" }}>
+        <Arrow />
+      </div>
+      <p className="text-[#34d680] font-semibold text-sm sm:text-xl">Gotcha, it IS a button!</p>
+    </div>
+  </div>
+</div>
+
     </section>
   );
 };
