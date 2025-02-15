@@ -25,9 +25,12 @@ import {
   php,
   sql,
   cv,
+  mypic,
   
   
 } from "../assets";
+
+
 
 export const navLinks = [
   {
@@ -60,6 +63,12 @@ export const navLinks = [
   },
 ];
 
+const hero = [
+  {
+    title : "Soumil Mukhopadhyay",
+    icon : mypic,
+  },
+]
 const services = [
   {
     title: "Web Developer",
@@ -303,4 +312,4 @@ const certificates = [
   },
 ];
 
-export { services, technologies, experiences, achievements, projects,certificates};
+export { hero ,services, technologies, experiences, achievements, projects,certificates};
