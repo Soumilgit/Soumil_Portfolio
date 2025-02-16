@@ -2,7 +2,7 @@ export const Arrow = () => {
   return (
     <svg
       className="ml-0 relative"
-      style={{ top: "10px", transform: "rotate(15.6deg)" }}
+      style={{ top: "10px", transform: "rotate(16.6deg)" }}
       xmlns="http://www.w3.org/2000/svg"
       height="10"
       width="70"
