@@ -83,8 +83,8 @@ const Hero = () => {
 
       {/* Right Side (Text, Button, Arrow) */}
 <div className="flex flex-col items-center md:items-start gap-4 md:ml-[14.4px] md:self-center mt-8"> 
-  <h1 className={`${styles.heroHeadText} text-lime-500`}> 
-    Hi, I'm <span className="text-[#50c33c]">Soumil!</span> 
+  <h1 className={`${styles.heroHeadText} text-[#34d680] `}> 
+    Hi, I'm <span className="text-[#9ACD32]">Soumil!</span> 
   </h1> 
   <p className={`${styles.heroSubText} mt-4 text-white-100 text-left`}> 
     I like programming, exploring tech stuff, and nature. 
@@ -95,7 +95,7 @@ const Hero = () => {
         <DownloadCVMarquee /> 
       </div> 
     </a> 
-    <div className="relative mt-10 flex items-center gap-1" style={{ transform: "rotate(14.6deg)" }}> 
+    <div className="relative mt-14 flex items-center gap-1" style={{ transform: "rotate(19.6deg)" }}> 
       <div style={{ transform: "rotate(180deg)" }}> 
         <Arrow /> 
       </div> 
