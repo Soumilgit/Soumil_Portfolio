@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import Ball from "./canvas/Ball"; // Update the import to the new Ball component
+import Ball from "./canvas/Ball"; 
 import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
 import { motion } from "framer-motion";
-import { styles } from "../styles"; // Ensure you import styles if needed
-import { textVariant, fadeIn } from "../utils/motion"; // Ensure you import fadeIn
+import { styles } from "../styles";
+import { textVariant, fadeIn } from "../utils/motion"; 
 
 const Tech = () => {
   const [positions, setPositions] = useState(
-    technologies.map(() => ({ x: 0 })) // Initialize positions for each technology
+    technologies.map(() => ({ x: 0 }))
   );
 
   const handleDrag = (e, index) => {
