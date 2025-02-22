@@ -19,7 +19,10 @@ module.exports = {
         xs: "450px",
       },
       backgroundImage: {
-        "hero-pattern": "url('/src/assets/Desktop1.png')",
+        "hero-pattern": "url('/src/assets/iot.gif')",    
+      },
+      backgroundSize: {
+        'full-cover': '100% 100%',
       },
     },
   },
