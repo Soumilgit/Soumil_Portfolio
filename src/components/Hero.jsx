@@ -11,7 +11,7 @@ const Hero = () => {
   const { title, icon } = hero[0]; 
 
   return ( 
-    <section className="grid grid-cols-1 md:grid-cols-2 h-auto justify-start items-center px-2 sm:px-2 bg-cover bg-center"> 
+    <section className="grid grid-cols-1 md:grid-cols-2 h-auto justify-start items-center px-2 sm:px-2 bg-cover bg-center mt-10"> 
       
       {/* Left Side (ID Card) */}
       <div className="flex justify-left items-center mt-1 md:mt-0"> 
