@@ -93,7 +93,7 @@ const Navbar = () => {
     </Link>
 
     {/* Desktop Navbar */}
-    <ul className="nav-links ml-12" style={{ marginRight: "-95px" }}> 
+    <ul className="nav-links ml-12" style={{ marginRight: "-93.05px" }}> 
       {navLinks.map((nav) => (
         <motion.li
           key={nav.id}
@@ -133,7 +133,7 @@ const Navbar = () => {
         >
           <Link
             to="/"
-            className="text-[#37b54a] font-extrabold cursor-pointer text-2xl tracking-wide drop-shadow-lg text-center"
+            className="text-[#37b54a] font-extrabold cursor-pointer text-3xl tracking-wide drop-shadow-lg text-center"
           >
             Soumil Mukhopadhyay
           </Link>
