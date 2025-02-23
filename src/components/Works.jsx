@@ -16,7 +16,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
       className="relative bg-black p-[2px] rounded-lg shadow-lg transition-transform neon-box"
       whileHover={{ scaleY: 1.05 }} // Expands vertically only
     >
-      <div className="bg-[#1e1e1e] p-5 rounded-lg shadow-md w-full">
+      <div className="bg-black p-5 rounded-lg shadow-md w-full">
         <div className="relative w-full h-[230px] rounded-lg overflow-hidden">
           <img src={image} alt="project_image" className="w-full h-full object-cover rounded-lg" />
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
