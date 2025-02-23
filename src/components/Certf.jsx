@@ -21,7 +21,7 @@ const CertificationCard = ({ index, name, description }) => (
     className="relative bg-black p-[2px] rounded-lg shadow-lg transition-transform neon-box"
     whileHover={{ scaleY: 1.05 }} // Expands vertically only
   >
-    <div className="bg-[#1e1e1e] p-5 rounded-lg shadow-md w-full text-center">
+    <div className="bg-black p-5 rounded-lg shadow-md w-full text-center">
       <div className="w-16 h-16 bg-white p-2 rounded-full flex items-center justify-center mx-auto">
         <img src={icons[index]} alt={name} className="w-10 h-10 object-contain" />
       </div>
