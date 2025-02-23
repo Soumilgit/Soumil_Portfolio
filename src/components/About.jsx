@@ -14,7 +14,7 @@ const ServiceCard = ({ title, icon, index }) => (
     className="relative bg-black p-[2px] rounded-lg shadow-lg transition-transform duration-150 neon-box"
     whileHover={{ scaleY: 1.05 }} // Expands only along vertical axis
   >
-    <div className="bg-[#1e1e1e] p-5 rounded-lg flex flex-col items-center shadow-md h-full">
+    <div className="bg-black p-5 rounded-lg flex flex-col items-center shadow-md h-full">
       <div className="w-30 h-30 bg-black rounded-full flex items-center justify-center p-3 shadow-lg neon-icon">
         <img src={icon} alt={title} className="w-24 h-24 object-contain" />
       </div>
