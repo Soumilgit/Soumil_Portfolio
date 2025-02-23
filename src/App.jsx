@@ -6,12 +6,17 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className='relative z-0 bg-primary'>
-        <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
-          <Navbar />
-          <Hero />
-        </div>
-        
-      
+      <div
+  className="bg-hero-pattern bg-cover bg-no-repeat bg-center"
+  style={{
+    
+    backgroundBlendMode: "overlay",
+    backgroundColor: "rgba(255, 255, 255,0)",
+  }}
+>
+  <Navbar />
+  <Hero />
+</div>
         <About />
         <Experience />
         <Tech />
