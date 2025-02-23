@@ -23,7 +23,7 @@ const AchievementCard = ({ index, name, description }) => (
     className="relative bg-black p-[2px] rounded-lg shadow-lg transition-transform duration-150 neon-box w-full max-w-[360px]"
     whileHover={{ scaleY: 1.05 }} // Expands only along vertical diameter
   >
-    <div className="bg-[#1e1e1e] p-5 rounded-lg flex flex-col items-center shadow-md w-full">
+    <div className="bg-black p-5 rounded-lg flex flex-col items-center shadow-md w-full">
       {/* Icon with Neon Glow */}
       <div className="w-20 h-20 bg-black rounded-full flex items-center justify-center p-3 shadow-lg neon-icon">
         <img src={icons[index]} alt={name} className="w-16 h-16 object-contain" />
