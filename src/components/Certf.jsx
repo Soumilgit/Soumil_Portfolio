@@ -6,11 +6,12 @@ import { certificates } from "../constants";
 import { textVariant, fadeIn } from "../utils/motion"; // Added fadeIn
 
 // Import certificate images
+import oods from "../assets/oods.png";
 import jsi from "../assets/jsi.png";
 import postman from "../assets/postman.png";
-import oods from "../assets/oods.png";
 
-const icons = [jsi, postman, oods];
+
+const icons = [oods, jsi, postman];
 
 const CertificationCard = ({ index, name, description }) => (
   <motion.div
