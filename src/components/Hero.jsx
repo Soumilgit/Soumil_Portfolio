@@ -106,11 +106,14 @@ const Hero = () => {
           I like programming, exploring tech stuff, and nature. 
         </p> 
         <div className="mt-4"> 
-          <a href="/SoumilM_KJSCE_Resume.pdf" target="_blank" rel="noopener noreferrer"> 
-            <div className="w-32 sm:w-36 h-8 border border-[#37b54a] rounded-full hover:bg-white text-[#34d680] transition duration-300 flex items-center justify-center"> 
-              <DownloadCVMarquee /> 
-            </div> 
-          </a> 
+        <a href="/SoumilM_KJSCE_Resume.pdf" target="_blank" rel="noopener noreferrer"className="group">
+        <div className="w-32 sm:w-36 h-10 border border-[#37b54a] rounded-full bg-[#37b54a] text-white flex items-center justify-center transition duration-300 
+              hover:bg-white hover:text-[#37b54a] shadow-md hover:shadow-[#37b54a]/50">
+        <DownloadCVMarquee /> 
+        </div>
+        </a>
+
+ 
           <div className="relative mt-14 flex items-center gap-1" style={{ transform: "rotate(19.6deg)" }}> 
             <div style={{ transform: "rotate(180deg)" }}> 
               <Arrow /> 
