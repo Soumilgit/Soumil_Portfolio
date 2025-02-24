@@ -10,12 +10,21 @@ const Hero = () => {
   const [flipped, setFlipped] = useState(false); 
   const { title, icon } = hero[0]; 
 
+  const handleCardClick = () => {
+    setFlipped(!flipped);
+  };
+
+  const handleLinkClick = (e) => {
+    e.stopPropagation(); // Prevent the card from flipping back
+    // Optionally, you can also setFlipped(false) if you want to flip back after clicking a link
+  };
+
   return ( 
     <section className="grid grid-cols-1 md:grid-cols-2 h-auto justify-start items-center px-2 sm:px-2 bg-cover bg-center mt-20"> 
       
       {/* Left Side (ID Card) */}
       <div className="flex justify-left items-center mt-1 md:mt-0"> 
-        <div className="relative w-72 h-[40em] sm:w-96 sm:h-[38rem] cursor-pointer perspective-1000" onClick={() => setFlipped(!flipped)}> 
+        <div className="relative w-72 h-[40em] sm:w-96 sm:h-[38rem] cursor-pointer perspective-1000" onClick={handleCardClick}> 
           <motion.div className="relative w-full h-full" animate={{ rotateY: flipped ? 180 : 0 }} transition={{ duration: 0.6 }} style={{ transformStyle: "preserve-3d" }}> 
             
             {/* Front Side */}
@@ -54,11 +63,18 @@ const Hero = () => {
                 Find me online! 
               </h2> 
               <div className="flex flex-col items-center md:items-start w-full text-sm md:text-base space-y-1"> 
-                <a href="https://linktr.ee/FlowRM" target="_blank" className="text-blue-400 hover:underline font-semibold">🦄 My startup, FlowRM's socials</a> 
-                <a href="https://www.linkedin.com/in/soumilm30/" target="_blank" className="text-blue-400 hover:underline font-semibold">🔗 LinkedIn</a> 
-                <a href="https://github.com/Soumilgit" target="_blank" className="text-blue-400 hover:underline font-semibold">💻 GitHub</a> 
-                <a href="https://twitter.com/SoumilMukh6476/" target="_blank" className="text-blue-400 hover:underline font-semibold">🐦 Twitter</a> 
-                <a href="https://www.codechef.com/users/spry_deer_42" target="_blank" className="text-blue-400 hover:underline font-semibold">🏅 CodeChef</a> 
+                <a 
+                  href="https://linktr.ee/FlowRM" 
+                  target="_blank" 
+                  onClick={handleLinkClick} // Prevent card from flipping back
+                  className="text-blue-400 hover:underline font-semibold"
+                >
+                  🦄 My startup, FlowRM's socials
+                </a> 
+                <a href="https://www.linkedin.com/in/soumilm30/" target="_blank" onClick={handleLinkClick} className="text-blue-400 hover:underline font-semibold">🔗 LinkedIn</a> 
+                <a href="https://github.com/Soumilgit" target="_blank" onClick={handleLinkClick} className="text-blue-400 hover:underline font-semibold">💻 GitHub</a> 
+                <a href="https://twitter.com/SoumilMukh6476/" target="_blank" onClick={handleLinkClick} className="text-blue-400 hover:underline font-semibold">🐦 Twitter</a> 
+                <a href="https://www.codechef.com/users/spry_deer_42" target="_blank" onClick={handleLinkClick} className="text-blue-400 hover:underline font-semibold">🏅 CodeChef</a> 
               </div> 
               <h2 className="text-lg md:text-xl font-semibold mt-4 mb-3 self-center w-full text-center border-b-2 border-gray-300 pb-1"> 
                 My Hobbies 
@@ -72,7 +88,7 @@ const Hero = () => {
               <h2 className="text-lg md:text-xl font-semibold mt-4 mb-3 self-center w-full text-center border-b-2 border-gray-300 pb-1"> 
                 My Travels 
               </h2> 
-              <a href="https://maps.app.goo.gl/QLHqDchdPjH6bQdb8?g_st=ac" target="_blank" className="text-blue-400 hover:underline font-semibold text-sm md:text-base self-start"> 
+              <a href="https://maps.app.goo.gl/QLHqDchdPjH6bQdb8?g_st=ac" target="_blank" onClick={handleLinkClick} className="text-blue-400 hover:underline font-semibold text-sm md:text-base self-start"> 
                 📍 Google Maps 
               </a> 
               <div className="mb-5"></div> 
@@ -82,28 +98,29 @@ const Hero = () => {
       </div> 
 
       {/* Right Side (Text, Button, Arrow) */}
-<div className="flex flex-col items-center md:items-start gap-4 md:ml-[14.4px] md:self-center mt-8"> 
-  <h1 className={`${styles.heroHeadText}  `}> 
-    Hi, I'm <span className="text-[#37b54a]">Soumil!</span> 
-  </h1> 
-  <p className={`${styles.heroSubText} mt-4 text-white-100 text-left`}> 
-    I like programming, exploring tech stuff, and nature. 
-  </p> 
-  <div className="mt-4"> 
-    <a href="/SoumilM_KJSCE_Resume.pdf" target="_blank" rel="noopener noreferrer"> 
-      <div className="w-32 sm:w-36 h-8 border border-[#37b54a] rounded-full hover:bg-white text-[#34d680] transition duration-300 flex items-center justify-center"> 
-        <DownloadCVMarquee /> 
+      <div className="flex flex-col items-center md:items-start gap-4 md:ml-[14.4px] md:self-center mt-8"> 
+        <h1 className={`${styles.heroHeadText}  `}> 
+          Hi, I'm <span className="text-[#37b54a]">Soumil!</span> 
+        </h1> 
+        <p className={`${styles.heroSubText} mt-4 text-white-100 text-left`}> 
+          I like programming, exploring tech stuff, and nature. 
+        </p> 
+        <div className="mt-4"> 
+          <a href="/SoumilM_KJSCE_Resume.pdf" target="_blank" rel="noopener noreferrer"> 
+            <div className="w-32 sm:w-36 h-8 border border-[#37b54a] rounded-full hover:bg-white text-[#34d680] transition duration-300 flex items-center justify-center"> 
+              <DownloadCVMarquee /> 
+            </div> 
+          </a> 
+          <div className="relative mt-14 flex items-center gap-1" style={{ transform: "rotate(19.6deg)" }}> 
+            <div style={{ transform: "rotate(180deg)" }}> 
+              <Arrow /> 
+            </div> 
+            <p className="text-[#37b54a] font-semibold text-sm sm:text-xl">Gotcha, it IS a button!</p> 
+          </div> 
+        </div> 
       </div> 
-    </a> 
-    <div className="relative mt-14 flex items-center gap-1" style={{ transform: "rotate(19.6deg)" }}> 
-      <div style={{ transform: "rotate(180deg)" }}> 
-        <Arrow /> 
-      </div> 
-      <p className="text-[#37b54a] font-semibold text-sm sm:text-xl">Gotcha, it IS a button!</p> 
-    </div> 
-  </div> 
-</div> 
-</section>
-  );}
+    </section>
+  ); 
+}
 
 export default SectionWrapper(Hero, "hero");
