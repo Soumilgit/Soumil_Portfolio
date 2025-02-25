@@ -6,7 +6,7 @@ const styles = {
   heroHeadText:
   "font-black text-[#90ef91] lg:text-[55px] sm:text-[50px] xs:text-[45px] text-[40px] lg:leading-[95px] mt-2",
   heroSubText:
-  "text-[#ccfd7f] font-medium lg:text-[25px] sm:text-[25px] xs:text-[25px] text-[25px] lg:leading-[22.5px]",
+  "text-[#ccfd7f] font-medium lg:text-[21px] sm:text-[21px] xs:text-[21px] text-[21px] lg:leading-[20px]",
 
 
   sectionHeadText:
