@@ -5,6 +5,7 @@ import { DownloadCVMarquee } from "../Marquees/downloadCVMarquee";
 import { Arrow } from "../svg/arrow"; 
 import { hero } from "../constants"; 
 import { SectionWrapper } from "../hoc"; 
+import { ScrambledText } from "./ScrambledText";
 
 const Hero = () => { 
   const [flipped, setFlipped] = useState(false); 
@@ -16,7 +17,6 @@ const Hero = () => {
 
   const handleLinkClick = (e) => {
     e.stopPropagation(); // Prevent the card from flipping back
-    // Optionally, you can also setFlipped(false) if you want to flip back after clicking a link
   };
 
   return ( 
@@ -59,14 +59,14 @@ const Hero = () => {
               <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-[#34d680] px-3 py-1 text-black font-bold rounded-md shadow-md"> 
                 Flip it! 
               </div> 
-              <h2 className="text-lg md:text-xl font-bold mb-3 self-center w-full text-center border-b-2 border-gray-300 pb-1"> 
+              <h2 className="text-lg md:text -xl font-bold mb-3 self-center w-full text-center border-b-2 border-gray-300 pb-1"> 
                 Find me online! 
               </h2> 
               <div className="flex flex-col items-center md:items-start w-full text-sm md:text-base space-y-1"> 
                 <a 
                   href="https://linktr.ee/FlowRM" 
                   target="_blank" 
-                  onClick={handleLinkClick} // Prevent card from flipping back
+                  onClick={handleLinkClick} 
                   className="text-blue-400 hover:underline font-semibold"
                 >
                   🦄 My startup, FlowRM's socials
@@ -99,26 +99,27 @@ const Hero = () => {
 
       {/* Right Side (Text, Button, Arrow) */}
       <div className="flex flex-col items-center md:items-start gap-4 md:ml-[14.4px] md:self-center mt-8"> 
-        <h1 className={`${styles.heroHeadText}  `}> 
-          Hi, I'm <span className="text-[#37b54a]">Soumil!</span> 
-        </h1> 
-        <p className={`${styles.heroSubText} mt-4 text-white-100 text-left`}> 
-          I like programming, exploring tech stuff, and nature. 
-        </p> 
-        <div className="mt-4"> 
-        <a href="/SoumilM_KJSCE_Resume.pdf" target="_blank" rel="noopener noreferrer"className="group">
-        <div className="w-32 sm:w-36 h-10 border border-[#37b54a] rounded-full bg-[#37b54a] text-white flex items-center justify-center transition duration-300 
-              hover:bg-white hover:text-[#37b54a] shadow-md hover:shadow-[#37b54a]/50">
-        <DownloadCVMarquee /> 
-        </div>
-        </a>
+      <h1 className={`${styles.heroHeadText}`}>
+       <ScrambledText text="Hi, I'm Soumil!" duration={1500} />
+      </h1>
 
- 
+      <p className={`${styles.heroSubText} mt-4 text-white-100 text-left`}>
+      <ScrambledText text="I like programming, exploring tech stuff, and nature." duration={1500} />
+     </p>
+
+        <div className="mt-4"> 
+          <a href="/SoumilM_KJSCE_Resume.pdf" target="_blank" rel="noopener noreferrer" className="group">
+            <div className="w-32 sm:w-36 h-10 border border-[#37b54a] rounded-full bg-[#37b54a] text-white flex items-center justify-center transition duration-300 
+                  hover:bg-white hover:text-[#37b54a] shadow-md hover:shadow-[#37b54a]/50">
+              <DownloadCVMarquee /> 
+            </div>
+          </a>
+
           <div className="relative mt-14 flex items-center gap-1" style={{ transform: "rotate(19.6deg)" }}> 
             <div style={{ transform: "rotate(180deg)" }}> 
               <Arrow /> 
             </div> 
-            <p className="text-[#37b54a] font-semibold text-sm sm:text-xl">Gotcha, it IS a button!</p> 
+            <p className="text-[#9ACD32] font-semibold text-sm sm:text-xl">Gotcha, it IS a button!</p> 
           </div> 
         </div> 
       </div> 
