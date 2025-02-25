@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export const ScrambledText = ({ text, duration = 1000 }) => {
+export const ScrambledText = ({ text, duration = 1800 }) => {
   const [scrambledText, setScrambledText] = useState(text);
   const [isLoaded, setIsLoaded] = useState(false);
 
