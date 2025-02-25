@@ -88,9 +88,9 @@ const Hero = () => {
               <h2 className="text-lg md:text-xl font-semibold mt-4 mb-3 self-center w-full text-center border-b-2 border-gray-300 pb-1"> 
                 My Travels 
               </h2> 
-              <a href="https://maps.app.goo.gl/QLHqDchdPjH6bQdb8?g_st=ac" target="_blank" onClick={handleLinkClick} className="text-blue-400 hover:underline font-semibold text-sm md:text-base self-start"> 
-                📍 Google Maps 
-              </a> 
+              <a href="https://maps.app.goo.gl/QLHqDchdPjH6bQdb8?g_st=ac" target="_blank" onClick={handleLinkClick} className="text-blue-400 hover:underline font-semibold text-sm flex flex-col items-center md:items-start w-full md:text-base "> 
+             📍 Google Maps 
+              </a>
               <div className="mb-5"></div> 
             </motion.div> 
           </motion.div> 
