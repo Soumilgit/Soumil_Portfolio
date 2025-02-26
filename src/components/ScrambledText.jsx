@@ -9,7 +9,7 @@ export const ScrambledText = ({ text, duration = 1800 }) => {
   const scrambleText = (originalText) => {
     return originalText
       .split("")
-      .map((char) => (char === " " ? " " : characters.charAt(Math.floor(Math.random() * characters.length))))
+      .map((char) => (char.trim() === "" ? char : characters.charAt(Math.floor(Math.random() * characters.length))))
       .join("");
   };
 
@@ -17,7 +17,7 @@ export const ScrambledText = ({ text, duration = 1800 }) => {
     let interval;
     if (!isLoaded) {
       interval = setInterval(() => {
-        setScrambledText(scrambleText(text));
+        setScrambledText((prevText) => scrambleText(prevText));
       }, 100);
     }
 
