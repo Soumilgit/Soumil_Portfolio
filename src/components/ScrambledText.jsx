@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export const ScrambledText = ({ text, duration = 1800 }) => {
+export const ScrambledText = ({ text, duration = 1500 }) => {
   const [scrambledText, setScrambledText] = useState(text);
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -18,7 +18,7 @@ export const ScrambledText = ({ text, duration = 1800 }) => {
     if (!isLoaded) {
       interval = setInterval(() => {
         setScrambledText((prevText) => scrambleText(prevText));
-      }, 100);
+      }, 0);
     }
 
     const timeout = setTimeout(() => {
