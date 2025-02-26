@@ -49,7 +49,7 @@ const Hero = () => {
                   <p className="text-l text-gray-400 pl-5 sm:pl-14">📅 DOB: 30 October 2004</p> 
                   <p className="text-l text-gray-400 pl-5 sm:pl-14">📧 Email: msoumil69@gmail.com</p> 
                   <p className="text-l text-gray-400 pl-5 sm:pl-14">📞 Phone: 9405727673</p> 
-                  <div className="mb-5"></div> 
+                  <div className="mb-0"></div> 
                 </div> 
               </div> 
             </motion.div> 
@@ -59,7 +59,7 @@ const Hero = () => {
               <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-[#34d680] px-3 py-1 text-black font-bold rounded-md shadow-md"> 
                 Flip it! 
               </div> 
-              <h2 className="text-lg md:text -xl font-bold mb-3 self-center w-full text-center border-b-2 border-gray-300 pb-1"> 
+              <h2 className="text-lg md:text-xl font-bold mb-3 self-center w-full text-center border-b-2 border-gray-300 pb-1"> 
                 Find me online! 
               </h2> 
               <div className="flex flex-col items-center md:items-start w-full text-sm md:text-base space-y-1"> 
@@ -71,27 +71,28 @@ const Hero = () => {
                 >
                   🦄 My startup, FlowRM's socials
                 </a> 
-                <a href="https://www.linkedin.com/in/soumilm30/" target="_blank" onClick={handleLinkClick} className="text-blue-400 hover:underline font-semibold">🔗 LinkedIn</a> 
-                <a href="https://github.com/Soumilgit" target="_blank" onClick={handleLinkClick} className="text-blue-400 hover:underline font-semibold">💻 GitHub</a> 
-                <a href="https://twitter.com/SoumilMukh6476/" target="_blank" onClick={handleLinkClick} className="text-blue-400 hover:underline font-semibold">🐦 Twitter</a> 
-                <a href="https://www.codechef.com/users/spry_deer_42" target="_blank" onClick={handleLinkClick} className="text-blue-400 hover:underline font-semibold">🏅 CodeChef</a> 
+                <a href="https://www.linkedin.com/in/soumilm30/" target="_blank" onClick={handleLinkClick} className="text-blue-400 hover:underline font-semibold">💼LinkedIn</a> 
+                <a href="https://github.com/Soumilgit" target="_blank" onClick={handleLinkClick} className="text-blue-400 hover:underline font-semibold">💻GitHub</a>
+                <a href="https://www.codechef.com/users/spry_deer_42" target="_blank" onClick={handleLinkClick} className="text-blue-400 hover:underline font-semibold">🏅CodeChef</a> 
+                <a href="https://twitter.com/SoumilMukh6476/" target="_blank" onClick={handleLinkClick} className="text-blue-400 hover:underline font-semibold">🐦Twitter</a>
+                <a href="https://www.instagram.com/soumil_m.exe/" target="_blank" onClick={handleLinkClick} className="text-blue-400 hover:underline font-semibold">📸Instagram</a>  
               </div> 
               <h2 className="text-lg md:text-xl font-semibold mt-4 mb-3 self-center w-full text-center border-b-2 border-gray-300 pb-1"> 
                 My Hobbies 
               </h2> 
               <div className="text-gray-300 flex flex-col items-center md:items-start w-full text-sm md:text-base space-y-1"> 
-                <p className="font-semibold">🦜 Birdwatching</p> 
-                <p className="font-semibold">📰 Newspaper Reading</p> 
-                <p className="font-semibold">🏓 Table Tennis</p> 
-                <p className="font-semibold">⚽ Football</p> 
+                <p className="font-semibold">🦜Birdwatching</p> 
+                <p className="font-semibold">📰Newspaper Reading</p> 
+                <p className="font-semibold">🏓Table Tennis</p> 
+                <p className="font-semibold">⚽Football</p> 
               </div> 
               <h2 className="text-lg md:text-xl font-semibold mt-4 mb-3 self-center w-full text-center border-b-2 border-gray-300 pb-1"> 
                 My Travels 
               </h2> 
               <a href="https://maps.app.goo.gl/QLHqDchdPjH6bQdb8?g_st=ac" target="_blank" onClick={handleLinkClick} className="text-blue-400 hover:underline font-semibold text-sm flex flex-col items-center md:items-start w-full md:text-base "> 
-             📍 Google Maps 
+                📍Google Maps 
               </a>
-              <div className="mb-5"></div> 
+              <div className="mb-0"></div> 
             </motion.div> 
           </motion.div> 
         </div> 
@@ -99,13 +100,13 @@ const Hero = () => {
 
       {/* Right Side (Text, Button, Arrow) */}
       <div className="flex flex-col items-center md:items-start gap-4 md:ml-[18px] md:self-center mt-8"> 
-      <h1 className={`${styles.heroHeadText}`}>
-       <ScrambledText text="Hi, I'm Soumil!" duration={1300} />
-      </h1>
+        <h1 className={`${styles.heroHeadText}`}>
+          <ScrambledText text="Hi, I'm Soumil!" duration={1300} />
+        </h1>
 
-      <p className={`${styles.heroSubText} mt-4 text-white-100 text-left`}>
-      <ScrambledText text="I like programming, tech and nature." duration={1300} />
-     </p>
+        <p className={`${styles.heroSubText} mt-4 text-white-100 text-left`}>
+          <ScrambledText text="I like programming, tech and nature." duration={1300} />
+        </p>
 
         <div className="mt-4"> 
           <a href="/SoumilM_KJSCE_Resume.pdf" target="_blank" rel="noopener noreferrer" className="group">
