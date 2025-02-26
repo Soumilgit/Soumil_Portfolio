@@ -19,7 +19,7 @@ module.exports = {
         xs: "450px",
       },
       backgroundImage: {
-        "hero-pattern": "url('/src/assets/what.avif')",    
+        "hero-pattern": "url('/src/assets/what.avifs')",    
       },
       backgroundSize: {
         'full-cover': '100% 100%',
