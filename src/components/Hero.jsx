@@ -98,7 +98,7 @@ const Hero = () => {
       </div> 
 
       {/* Right Side (Text, Button, Arrow) */}
-      <div className="flex flex-col items-center md:items-start gap-4 md:ml-[14.4px] md:self-center mt-8"> 
+      <div className="flex flex-col items-center md:items-start gap-4 md:ml-[18px] md:self-center mt-8"> 
       <h1 className={`${styles.heroHeadText}`}>
        <ScrambledText text="Hi, I'm Soumil!" duration={1300} />
       </h1>
