@@ -128,7 +128,7 @@ Here is the folder structure of the repository :
 │  │  │  ├─ typescript.png
 │  │  │  └─ vanillajs.png
 │  │  ├─ web.png
-│  │  └─ what.avif
+│  │  └─ what.avifs
 │  ├─ components
 │  │  ├─ About.jsx
 │  │  ├─ Achieve.jsx
