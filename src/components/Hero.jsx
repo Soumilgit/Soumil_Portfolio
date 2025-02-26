@@ -104,7 +104,7 @@ const Hero = () => {
       </h1>
 
       <p className={`${styles.heroSubText} mt-4 text-white-100 text-left`}>
-      <ScrambledText text="I like programming, exploring tech stuff, and nature." duration={1300} />
+      <ScrambledText text="I like programming, tech and nature." duration={1300} />
      </p>
 
         <div className="mt-4"> 
