@@ -26,6 +26,7 @@ import {
   sql,
   cv,
   mypic,
+  kjsce,
   
   
 } from "../assets";
@@ -68,6 +69,7 @@ const hero = [
     title : "Soumil Mukhopadhyay",
     icon : mypic,
   },
+  
 ]
 const services = [
   {
@@ -158,7 +160,7 @@ const experiences = [
     date: "May 2024 - July 2024",
     points: [
       "Developed a Process Monitor Module GUI using Python on QtCreator and database using SQL.",
-      "Ran checks for 10+ categories."
+      "Ran checks for 10+ categories and tracked 10+ processes with resources monitoring."
     ],
   },
   {
@@ -168,8 +170,8 @@ const experiences = [
     iconBg: "#383E56",
     date: "Dec 2024 - Present",
     points: [
-      "Working as a full-stack MERN developer intern, on the company portfolio and website , 3D animations.",
-      "Among the top 12.5% applications.",
+      "Working as a full-stack MERN developer intern, on the company portfolio and website, 3D animations.",
+      "Among the top 12.5% of applications, currently working on 10+ 3D assets and animations.",
     ],
   },
   {
@@ -179,8 +181,8 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "March 2024 - Present",
     points: [
-      "Attended regular Corporate Training Sessions on skills enhancement.",
-      "Wrote 01 research report per month.",
+      "Completed 8+ corporate training sessions on financial modeling and deal structuring",
+      "Wrote 5+ research reports on recently concluded funding transactions in MLA Format.",
     ],
   },
   {
@@ -190,8 +192,8 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "May 2024 - August 2024",
     points: [
-      "Collaborating with cross-functional teams on software projects through GitHub.",
-      "Ranked 683 out of 2418 people.",
+      "Collaborating with cross-functional teams on software projects through GitHub, earning 5+ badges.",
+      "Ranked 683 out of 2418 people,having earned 500+ points and neing Postman API certified.",
     ],
   },
   {
@@ -201,11 +203,22 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "September 2023 - August 2024",
     points: [
-      "Conducted and attended daily tech sessions, working on Math-based content development for students.",
-      "Made and verified as a team the questions of various council events.",
+      "Conducted and attended daily tech sessions, designing 200+ Math questions.",
+      "Organized 5+ activities,  engaged 450+ students and boosted social media following by 20%.",
       
     ],
-  }
+  },
+  {
+    title: "Engineer Intern",
+    company_name: "KJSCE",
+    icon: kjsce,
+    iconBg: "#E6DEDD",
+    date: "July 2023 - September 2023",
+    points:[
+      "Developed a quiz web app using HTML, CSS and Vanilla JavaScript, having worked for 100+ hours.",
+      "Displays 10+ questions and a final score, with a 1% penalty for any of the multiple retakes."
+    ]
+  },
 
 ];
 
