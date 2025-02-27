@@ -28,6 +28,7 @@ import npcil from "./company/npcil.png";
 import gssoc from "./company/gssoc.png";
 import meshcraft from "./company/meshcraft.png";
 import marquee from "./company/marquee.png";
+import kjsce from "./company/kjsce.png";
 
 import boblob from ".//boblob.png";
 import jasder from "./jasder.png";
@@ -78,6 +79,7 @@ export {
   oods,
   postman,
   githubk,
-  mypic
+  mypic,
+  kjsce,
 
 };
