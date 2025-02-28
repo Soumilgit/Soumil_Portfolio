@@ -55,39 +55,10 @@ const About = ({ setAboutLoaded }) => {
           .hover-effect:hover {
             text-shadow: 0 0 8px #50c878, 0 0 12px #50c878;
             transform: scale(1.05);
-          }
-          .highlight-box {
-            background-color: rgba(80, 200, 120, 0.3); 
-            padding: 12px 20px;
-            border-radius: 15px; 
-            display: inline-block;
-            font-size: 1.5rem; 
-            font-weight: bold;
-            color: #37b54a;
-            text-align: center;
-            transition: all 0.3s ease-in-out;
-            max-width: 80%;
-            margin: 0 auto;
-          }
-          .highlight-box:hover {
-            background-color: rgba(80, 200, 120, 0.4);
-            transform: scale(1.05);
-          }
         `}
       </style>
 
-      {/* Positioned Hover Message Just Below the Hero Component */}
-      <motion.div
-        variants={fadeIn("up", "spring", 0.1, 0.3)}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.1 }}
-        className="flex justify-center mt-[-30px] mb-6" 
-      >
-        <p className="highlight-box">
-          ✨ Go ahead, hover over the title-like text elements in all cards below and watch my portfolio light up with neon hues! ✨
-        </p>
-      </motion.div>
+      
 
       {/* Scroll Animation for Title & Subtext */}
       <motion.div
@@ -101,14 +72,25 @@ const About = ({ setAboutLoaded }) => {
       </motion.div>
 
       <motion.p
-        variants={fadeIn("up", "spring", 0.15, 0.3)}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.1 }}
-        className="mt-4 text-secondary text-xl max-w-3xl leading-7"
-      >
-        Innovative and passionate Computer Engineering student with multiple internships, scholarships, and projects. Skilled in data analytics, web development, data structures, algorithms, and investment banking.
-      </motion.p>
+  variants={fadeIn("up", "spring", 0.15, 0.3)}
+  initial="hidden"
+  whileInView="show"
+  viewport={{ once: true, amount: 0.1 }}
+  className="mt-4 text-secondary text-xl max-w-3xl leading-7"
+>
+  Innovative and passionate Computer Engineering student with multiple internships, scholarships, and projects. Skilled in data analytics, web development, data structures, algorithms, and investment banking.
+</motion.p>
+
+<motion.p
+  variants={fadeIn("up", "spring", 0.2, 0.3)}
+  initial="hidden"
+  whileInView="show"
+  viewport={{ once: true, amount: 0.1 }}
+  className="mt-2 text-secondary text-xl max-w-3xl leading-7"
+>
+  Oh, and yes, have fun experiencing neon glow effects by hovering on title-like text elements on all cards below !
+</motion.p>
+
 
       {/* Responsive Grid with Scroll Animation */}
       <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
