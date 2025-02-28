@@ -27,7 +27,13 @@ import {
   cv,
   mypic,
   kjsce,
-  
+  git,
+  github,
+  mongodb,
+  express,
+  postmanapi,
+  flask,
+  latex,
   
 } from "../assets";
 
@@ -147,7 +153,35 @@ const technologies = [
   {
    name: "Computer Vision",
    icon: cv,
-  }
+  },
+  {
+    name: "git",
+    icon: git,
+  },
+  {
+    name: "github",
+    icon: github,
+  },
+  {
+    name: "mongodb",
+    icon: mongodb,
+  },
+  {
+    name: "express",
+    icon: express,
+  },
+  {
+    name: "postmanapi",
+    icon: postmanapi,
+  },
+  {
+    name: "flask",
+    icon: flask,
+  },
+  {
+    name: "latex",
+    icon: latex,
+  },
 
 ];
 
