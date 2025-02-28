@@ -82,7 +82,7 @@ const About = ({ setAboutLoaded }) => {
 </motion.p>
 
 <motion.p
-  variants={fadeIn("up", "spring", 0.2, 0.3)}
+  variants={fadeIn("up", "spring", 0.15, 0.3)}
   initial="hidden"
   whileInView="show"
   viewport={{ once: true, amount: 0.1 }}
@@ -90,6 +90,7 @@ const About = ({ setAboutLoaded }) => {
 >
   Oh, and yes, enjoy experiencing neon glow effects while hovering on title-like text elements on all cards below, just like on THIS exact sentence !
 </motion.p>
+
 
       {/* Responsive Grid with Scroll Animation */}
       <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
