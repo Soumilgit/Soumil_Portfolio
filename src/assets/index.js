@@ -45,9 +45,9 @@ import cp from "./cp.png";
 import jsi from "./jsi.png";
 import oods from "./oods.png";
 import postman from "./postman.png";
-import githubk from "./githubk.png";
+import githubo from "./githubo.png";
 import mypic from "./mypic.png";
-
+import githubk from "./githubk.png";
 
 export {
   app,
@@ -83,6 +83,7 @@ export {
   jsi,
   oods,
   postman,
+  githubo,
   githubk,
   git,
   github,
@@ -93,4 +94,5 @@ export {
   latex,
   mypic,
   kjsce,
+
 };
