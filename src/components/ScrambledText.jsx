@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 
-export const ScrambledText = ({ text, duration = 1000 }) => {
+export const ScrambledText = ({ text }) => {
   const [scrambledText, setScrambledText] = useState(text);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [duration, setDuration] = useState(975);
 
   const characters = "ABCDEFGHIJKLMNOPQRSTabcdefghijklmnopqrst0123456789?/_&@#%$*+-^<[>({}}|))]:;.,!~`";
 
@@ -12,6 +13,20 @@ export const ScrambledText = ({ text, duration = 1000 }) => {
       .map((char) => (char.trim() === "" ? char : characters.charAt(Math.floor(Math.random() * characters.length))))
       .join("");
   };
+
+  useEffect(() => {
+    // Adjust duration based on screen width
+    const handleResize = () => {
+      setDuration(window.innerWidth <= 768 ? 4500 : 975);
+    };
+
+    handleResize(); // Set on first render
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     let interval;
