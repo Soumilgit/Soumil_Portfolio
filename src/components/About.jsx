@@ -48,11 +48,54 @@ const About = ({ setAboutLoaded }) => {
             border: 2px solid #37b54a;
             box-shadow: 0 0 15px #37b54a;
           }
+          .hover-effect {
+            color: #50c878;
+            transition: all 0.3s ease-in-out;
+          }
+          .hover-effect:hover {
+            text-shadow: 0 0 8px #50c878, 0 0 12px #50c878;
+            transform: scale(1.05);
+          }
+          .highlight-box {
+            background-color: rgba(80, 200, 120, 0.3); 
+            padding: 12px 20px;
+            border-radius: 15px; 
+            display: inline-block;
+            font-size: 1.5rem; 
+            font-weight: bold;
+            color: #37b54a;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+            max-width: 80%;
+            margin: 0 auto;
+          }
+          .highlight-box:hover {
+            background-color: rgba(80, 200, 120, 0.4);
+            transform: scale(1.05);
+          }
         `}
       </style>
 
+      {/* Positioned Hover Message Just Below the Hero Component */}
+      <motion.div
+        variants={fadeIn("up", "spring", 0.1, 0.3)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.1 }}
+        className="flex justify-center mt-[-30px] mb-6" 
+      >
+        <p className="highlight-box">
+          ✨ Go ahead, hover over the title-like text elements in all cards below and watch my portfolio light up with neon hues! ✨
+        </p>
+      </motion.div>
+
       {/* Scroll Animation for Title & Subtext */}
-      <motion.div variants={textVariant()} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }}>
+      <motion.div
+        variants={textVariant()}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.1 }}
+      >
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview</h2>
       </motion.div>
