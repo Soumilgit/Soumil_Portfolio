@@ -5,7 +5,7 @@ export const ScrambledText = ({ text }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [duration, setDuration] = useState(975);
 
-  const characters = "ABCDEFGHIJKLMNOPQRSTabcdefghijklmnopqrst0123456789?/_&@#%$*+-^<[>({}}|))]:;.,!~`";
+  const characters = "ABCDEFGHIJKLMNOPQRSTabcdefghijklmnopqrst012345?()}{!`'?";
 
   const scrambleText = (originalText) => {
     return originalText
@@ -17,7 +17,7 @@ export const ScrambledText = ({ text }) => {
   useEffect(() => {
     // Adjust duration based on screen width
     const handleResize = () => {
-      setDuration(window.innerWidth <= 768 ? 2700 : 975);
+      setDuration(window.innerWidth <= 768 ? 4500 : 975);
     };
 
     handleResize(); // Set on first render
