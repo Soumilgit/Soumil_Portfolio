@@ -157,10 +157,10 @@ const experiences = [
     company_name: "NPCIL",
     icon: npcil,
     iconBg: "#383E56",
-    date: "May 2024 - July 2024",
+    date: "May 2024 - Jul 2024",
     points: [
-      "Developed a Process Monitor Module GUI using Python on QtCreator and database using SQL.",
-      "Ran checks for 10+ categories and tracked 10+ processes with resources monitoring."
+      "Developed a Process Monitor Module GUI with Python, on QtCreator IDE and SQL as database.",
+      "Ran checks for 10+ categories and processes with resources monitored."
     ],
   },
   {
@@ -171,7 +171,7 @@ const experiences = [
     date: "Dec 2024 - Present",
     points: [
       "Working as a full-stack MERN developer intern, on the company portfolio and website, 3D animations.",
-      "Among the top 12.5% of applications, currently working on 10+ 3D assets and animations.",
+      "Among the top 12.5% of applications, currently working on 10+ 3D assets.",
     ],
   },
   {
@@ -179,10 +179,10 @@ const experiences = [
     company_name: "Marquee Equity",
     icon: marquee,
     iconBg: "#E6DEDD",
-    date: "March 2024 - Present",
+    date: "Mar 2024 - Present",
     points: [
-      "Completed 8+ corporate training sessions on financial modeling and deal structuring",
-      "Wrote 5+ research reports on recently concluded funding transactions in MLA Format.",
+      "Completed 8+ corporate training sessions, learning financial modeling and deal structuring as well.",
+      "Wrote 5+ research reports on concluded funding transactions in MLA Format.",
     ],
   },
   {
@@ -190,10 +190,10 @@ const experiences = [
     company_name: "GirlScript SOC",
     icon: gssoc,
     iconBg: "#E6DEDD",
-    date: "May 2024 - August 2024",
+    date: "May 2024 - Aug 2024",
     points: [
-      "Collaborating with cross-functional teams on software projects through GitHub, earning 5+ badges.",
-      "Ranked 683 out of 2418 people,having earned 500+ points and neing Postman API certified.",
+      "Collaborated with cross-functional teams on software projects through GitHub, earning 5+ badges.",
+      "Ranked 683 out of 2418 people,having earned 500+ points and getting certified.",
     ],
   },
   {
@@ -201,10 +201,10 @@ const experiences = [
     company_name: "Emfinity KJSCE",
     icon: emfinity,
     iconBg: "#E6DEDD",
-    date: "September 2023 - August 2024",
+    date: "Sep 2023 - Aug 2024",
     points: [
-      "Conducted and attended daily tech sessions, designing 200+ Math questions.",
-      "Organized 5+ activities,  engaged 450+ students and boosted social media following by 20%.",
+      "Conducted and attended daily tech sessions, designed 200+ Math questions and organized 5+ events.",
+      "Engaged 450+ students and boosted social media following by 20%.",
       
     ],
   },
@@ -213,10 +213,10 @@ const experiences = [
     company_name: "KJSCE",
     icon: kjsce,
     iconBg: "#E6DEDD",
-    date: "July 2023 - September 2023",
+    date: "Jul 2023 - Sep 2023",
     points:[
       "Developed a quiz web app using HTML, CSS and Vanilla JavaScript, having worked for 100+ hours.",
-      "Displays 10+ questions and a final score, with a 1% penalty for any of the multiple retakes."
+      "Displays 10+ questions and a final score, with a 1% penalty for a retake."
     ]
   },
 
@@ -226,19 +226,19 @@ const achievements = [
   {
     name: "TechGig Code Gladiators 2024 Finalist",
     description:
-      "Had to solve competitive programming problem within a stipulated duration.Finished among the top 1% of registrations.",
+      "Solved competitive programming problems within a stipulated duration.Finished among the top 1% of registrations.",
     
   },
   {
     name: "3 ⭐ on CodeChef, a coding platform",
     description:
-      "Gave 15 consecutive contests on CodeChef and improved my rating to 1623.Used C++, sometimes Python, and Java for solving.",
+      "Gave 15+ contests on CodeChef and improved my rating to 1622. Solved almost 70 problems using C++, Python and Java.",
     
   },
   {
     name: "Over 2000+ contributions on GitHub",
     description:
-      "Have been an active member of GitHub community and have contributed to various open source projects, along with my own projects.",
+      "Have been an active member of GitHub community and have contributed and worked on 40+ projects.",
   },
 ];
 
@@ -310,18 +310,18 @@ const certificates = [
   {
     name: "Object-Oriented Data Structures in C++",
     description:
-      "Learnt about C Programming Language Family, Computer Programming, Object-Oriented Programming and gained insights on Theoretical Computer Science.",
+      "Learnt about C Programming Language Family, Computer Programming, Object-Oriented Programming and gained insights on Theoretical CS.",
   },
 
   {
     name: "Postman API Fundamentals Student Expert",
     description:
-      "Became proficient in using Postman to work with APIs, making GET, POST, PATCH and DELETE requests, basic scripting and learnt using APIs in applications.",
+      "Became proficient in using Postman to work with APIs, making GET, POST, PATCH and DELETE requests, basic scripting and applications.",
   },
   {
     name: "JavaScript Algorithms and Data Structures(Beta)",
     description:
-      "As part of the program, I learnt about JavaScript, ES6, Regular Expressions,Data Structures, Algorithms, Object-Oriented Programming and built 5 projects.",
+      "During this course, I learnt about JavaScript, Reg-Ex, Data Structures, Algorithms, Object-Oriented Programming, building 5 projects as well.",
   },
 ];
 
