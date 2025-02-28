@@ -17,7 +17,7 @@ export const ScrambledText = ({ text }) => {
   useEffect(() => {
     // Adjust duration based on screen width
     const handleResize = () => {
-      setDuration(window.innerWidth <= 768 ? 4500 : 975);
+      setDuration(window.innerWidth <= 768 ? 2700 : 975);
     };
 
     handleResize(); // Set on first render
