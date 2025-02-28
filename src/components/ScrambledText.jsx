@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 
-export const ScrambledText = ({ text, duration = 1500 }) => {
+export const ScrambledText = ({ text, duration = 1000 }) => {
   const [scrambledText, setScrambledText] = useState(text);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  const characters = "ABCDEFGHIJKLMNOPQRSTabcdefghijklmnopqrst012345";
+  const characters = "ABCDEFGHIJKLMNOPQRSTabcdefghijklmnopqrst012345?/_&@#%$*+-^[({}}|))]:;.,!~`";
 
   const scrambleText = (originalText) => {
     return originalText
