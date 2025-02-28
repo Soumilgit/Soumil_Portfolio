@@ -86,10 +86,12 @@ const About = ({ setAboutLoaded }) => {
   initial="hidden"
   whileInView="show"
   viewport={{ once: true, amount: 0.1 }}
-  className="mt-2 text-secondary text-xl max-w-3xl leading-7"
+  className="mt-2 text-[#6EEB7A] text-xl max-w-3xl leading-7"
 >
   Oh, and yes, have fun experiencing neon glow effects by hovering on title-like text elements on all cards below !
 </motion.p>
+
+
 
 
       {/* Responsive Grid with Scroll Animation */}
