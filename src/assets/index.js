@@ -4,7 +4,6 @@ import web from "./web.png";
 import data from "./data.png";
 import problem from "./problemsolver.png";
 
-import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 import html from "./tech/html.png";
@@ -22,6 +21,13 @@ import php from "./tech/php.png";
 import sql from "./tech/sql.png";
 import typescript from "./tech/typescript.png";
 import cv from "./tech/cv.png";
+import git from "./tech/git.png";
+import github from "./tech/github.png";
+import mongodb from "./tech/mongodb.png";
+import express from "./tech/express.png";
+import postmanapi from "./tech/postmanapi.png";
+import flask from "./tech/flask.png";
+import latex from "./tech/latex.png";
 
 import emfinity from "./company/emfinity.png";
 import npcil from "./company/npcil.png";
@@ -48,7 +54,6 @@ export {
   web,
   data,
   problem,
-  github,
   menu,
   close,
   html,
@@ -79,7 +84,13 @@ export {
   oods,
   postman,
   githubk,
+  git,
+  github,
+  mongodb,
+  express,
+  postmanapi,
+  flask,
+  latex,
   mypic,
   kjsce,
-
 };
