@@ -4,7 +4,7 @@ export const ScrambledText = ({ text, duration = 1000 }) => {
   const [scrambledText, setScrambledText] = useState(text);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  const characters = "ABCDEFGHIJKLMNOPQRSTabcdefghijklmnopqrst012345?/_&@#%$*+-^[({}}|))]:;.,!~`";
+  const characters = "ABCDEFGHIJKLMNOPQRSTabcdefghijklmnopqrst0123456789?/_&@#%$*+-^<[>({}}|))]:;.,!~`";
 
   const scrambleText = (originalText) => {
     return originalText
