@@ -48,7 +48,7 @@ export const ScrambledText = ({ text, className }) => {
   }, [isLoaded, text, duration]);
 
   return (
-    <span className={className} style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+    <span className={className} style={{ whiteSpace: 'nowrap', overflow: 'visible', textOverflow: 'ellipsis' }}>
       {scrambledText}
     </span>
   );
