@@ -7,7 +7,7 @@ const styles = {
     "font-black text-[#90ef91] lg:text-[43px] sm:text-[42px] xs:text-[35px] text-[34px] lg:leading-[88px] mt-2",
   
   // New style for mobile font size
-  heroHeadTextMobile: "text-[27.5px] sm:text-[29px] lg:text-[34px] font-black text-[#90ef91] lg:leading-[88px] mt-2",
+  heroHeadTextMobile: "text-[26.75px] sm:text-[29px] sm:text-[34px] font-black text-[#90ef91] lg:leading-[88px] mt-2",
 
   heroSubText:
     "text-[#ccfd7f] font-medium lg:text-[27px] sm:text-[25px] xs:text-[21px] text-[21px] lg:leading-[20px]",
