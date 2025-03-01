@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/react"; //Displays web analytics once deployed!
 
 import { Hero, About, Contact, Experience, Feedbacks, Navbar, Tech, Achieve, Works, Certf, StarsCanvas } from "./components";
 
