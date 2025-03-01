@@ -4,10 +4,10 @@ const styles = {
   padding: "sm:px-16 px-6 sm:py-16 py-10",
 
   heroHeadText:
-    "font-black text-[#90ef91] lg:text-[46px] sm:text-[42px] xs:text-[35px] text-[34px] lg:leading-[88px] mt-2",
+    "font-black text-[#90ef91] lg:text-[43px] sm:text-[42px] xs:text-[35px] text-[34px] lg:leading-[88px] mt-2",
   
   // New style for mobile font size
-  heroHeadTextMobile: "text-[29px] sm:text-[30px] lg:text-[38px] font-black text-[#90ef91] lg:leading-[88px] mt-2",
+  heroHeadTextMobile: "text-[30px] sm:text-[29px] lg:text-[34px] font-black text-[#90ef91] lg:leading-[88px] mt-2",
 
   heroSubText:
     "text-[#ccfd7f] font-medium lg:text-[27px] sm:text-[25px] xs:text-[21px] text-[21px] lg:leading-[20px]",
