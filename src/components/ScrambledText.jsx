@@ -13,7 +13,7 @@ export const ScrambledText = ({ text, className }) => {
 
     
     const truncatedText = isMobile && originalText.length > 10
-      ? originalText.slice(0, -4) 
+      ? originalText.slice(0, -2) 
       : originalText;
 
     return truncatedText
