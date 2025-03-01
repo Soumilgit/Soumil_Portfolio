@@ -35,5 +35,5 @@ const App = () => {
     </>
   );
 }
-
-export default App;
+//Didn't add custom scrollbar because of expected non-responsiveness of it.
+export default App; 
