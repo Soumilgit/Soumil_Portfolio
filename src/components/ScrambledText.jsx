@@ -8,7 +8,15 @@ export const ScrambledText = ({ text, className }) => {
   const characters = "ABCDEFGHIJKLMNOPQRSTabcdefghijklmnopqrst012345";
 
   const scrambleText = (originalText) => {
-    return originalText
+    // Determine if the device is mobile
+    const isMobile = window.innerWidth <= 768;
+
+    
+    const truncatedText = isMobile && originalText.length > 10
+      ? originalText.slice(0, -4) 
+      : originalText;
+
+    return truncatedText
       .split("")
       .map((char) => (char.trim() === "" ? char : characters.charAt(Math.floor(Math.random() * characters.length))))
       .join("");
