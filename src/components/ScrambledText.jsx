@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export const ScrambledText = ({ text }) => {
+export const ScrambledText = ({ text, className }) => {
   const [scrambledText, setScrambledText] = useState(text);
   const [isLoaded, setIsLoaded] = useState(false);
   const [duration, setDuration] = useState(975);
@@ -15,12 +15,12 @@ export const ScrambledText = ({ text }) => {
   };
 
   useEffect(() => {
-    // Adjust duration based on screen width
+    // Adjusted duration based on screen width
     const handleResize = () => {
-      setDuration(window.innerWidth <= 768 ? 1500 : 975);
+      setDuration(window.innerWidth <= 768 ? 2250 : 975);
     };
 
-    handleResize(); // Set on first render
+    handleResize(); 
     window.addEventListener("resize", handleResize);
 
     return () => {
@@ -47,5 +47,9 @@ export const ScrambledText = ({ text }) => {
     };
   }, [isLoaded, text, duration]);
 
-  return <span>{scrambledText}</span>;
+  return (
+    <span className={className} style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+      {scrambledText}
+    </span>
+  );
 };
