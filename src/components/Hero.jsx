@@ -95,12 +95,12 @@ const Hero = () => {
 
       {/* Right Side (Text, Button, Arrow) */}
       <div className="flex flex-col items-center md:items-start gap-4 md:ml-[18px] md:self-center mt-8">
-        <h1 className={`${styles.heroHeadText}`}>
-          <ScrambledText text="Hi, I'm Soumil!" />
-        </h1>
+      <h1 className={`${styles.heroHeadText} ${styles.heroHeadTextMobile}`}>
+      <ScrambledText text="Hi, I'm Soumil!" />
+      </h1>
 
         <p className={`${styles.heroSubText} mt-4 text-white-100 text-left`}>
-          <ScrambledText text="I like programming, tech and nature." />
+          <ScrambledText text="I like tech & exploration." />
         </p>
 
         <div className="mt-4">
