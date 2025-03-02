@@ -255,24 +255,24 @@ const experiences = [
   },
 
 ];
-
 const achievements = [
   {
     name: "TechGig Code Gladiators 2024 Finalist",
     description:
-      "Solved competitive programming problems within a stipulated duration.Finished among the top 1% of registrations.",
-    
+      "Solved competitive programming problems within a stipulated duration. Finished among the top 1% of registrations.",
+    link: "https://drive.google.com/file/d/1hR8uerT5PpBbdq-92SsJzxEK4t_1Xn9E/view?usp=sharing", 
   },
   {
     name: "3 ⭐ on CodeChef, a coding platform",
     description:
       "Gave 15+ contests on CodeChef and improved my rating to 1622. Solved almost 70 problems using C++, Python and Java.",
-    
+    link: "https://www.codechef.com/users/spry_deer_42", 
   },
   {
     name: "Over 2500+ contributions on GitHub",
     description:
       "Have been an active member of GitHub community and have contributed and worked on 40+ projects.",
+    link: "https://github.com/Soumilgit", 
   },
 ];
 
@@ -339,24 +339,26 @@ const projects = [
     image: boblob,
     source_code_link: "https://github.com/Soumilgit/Meditation-App_React-Native",
   },
-];
-const certificates = [
+];const certificates = [
   {
     name: "Object-Oriented Data Structures in C++",
     description:
       "Learnt about C Programming Language Family, Computer Programming, Object-Oriented Programming and gained insights on Theoretical CS.",
+    link: "https://coursera.org/share/50a5c6e76904b3933cdad727410557f3",
   },
-
   {
     name: "Postman API Fundamentals Student Expert",
     description:
       "Became proficient in using Postman to work with APIs, making GET, POST, PATCH and DELETE requests, basic scripting and applications.",
+    link: "https://api.badgr.io/public/assertions/Icc9D88_SV-iLyVKVf7Zeg?identity__email=soumil.m%40somaiya.edu",
   },
   {
     name: "JavaScript Algorithms and Data Structures(Beta)",
     description:
       "During this course, I learnt about JavaScript, Reg-Ex, Data Structures, Algorithms, Object-Oriented Programming, building 5 projects as well.",
+    link: "https://www.freecodecamp.org/certification/fcc5d3e895f-c402-4487-8450-9735997f3ac7/javascript-algorithms-and-data-structures-v8",
   },
 ];
+
 
 export { hero ,services, technologies, experiences, achievements, projects,certificates};
