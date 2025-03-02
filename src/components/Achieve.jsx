@@ -9,7 +9,6 @@ import { textVariant, fadeIn } from "../utils/motion";
 import cp from "../assets/cp.png";
 import codechef from "../assets/codechef.png";
 import githubk from "../assets/githubk.png";
-import linkIcon from "../assets/ABC.png"; 
 
 // Map images to achievements
 const icons = [cp, codechef, githubk];
@@ -24,9 +23,11 @@ const AchievementCard = ({ index, name, description, link }) => (
     whileHover={{ scaleY: 1.05 }}
   >
     <div className="bg-black p-5 rounded-lg flex flex-col items-center shadow-md w-full relative">
-      {/* Certificate Icon in Top-Right Corner */}
+      {/* Neon Green Button in Top-Right Corner */}
       <a href={link} target="_blank" rel="noopener noreferrer" className="absolute top-4 right-4">
-        <img src={linkIcon} alt="Certificate Link" className="w-12 h-12 hover:opacity-80 transition-opacity" />
+        <button className="px-3 py-1.5 text-base font-bold text-[#37b54a] border-2 border-[#37b54a] bg-black rounded-lg shadow-[0_0_5px_#37b54a] transition-transform duration-200 hover:scale-105 hover:shadow-[0_0_10px_#37b54a]">
+          LINK
+        </button>
       </a>
       
       <div className="w-20 h-20 bg-black rounded-full flex items-center justify-center p-3 shadow-lg neon-icon">
