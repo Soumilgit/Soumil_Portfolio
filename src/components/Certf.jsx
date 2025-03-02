@@ -25,7 +25,9 @@ const CertificationCard = ({ index, name, description, link }) => (
     <div className="bg-black p-5 rounded-lg shadow-md w-full text-center relative">
       {/* Certificate Icon in Top-Right Corner */}
       <a href={link} target="_blank" rel="noopener noreferrer" className="absolute top-4 right-4">
-        <img src={certificateIcon} alt="Certificate Link" className="w-12 h-12 hover:opacity-80 transition-opacity" />
+        <button className="px-3 py-1.5 text-base font-bold text-[#37b54a] border-2 border-[#37b54a] bg-black rounded-lg shadow-[0_0_5px_#37b54a] transition-transform duration-200 hover:scale-105 hover:shadow-[0_0_10px_#37b54a]">
+          LINK
+        </button>
       </a>
       
       <div className="flex items-center justify-center">
