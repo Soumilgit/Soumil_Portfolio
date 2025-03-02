@@ -24,7 +24,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
               onClick={() => window.open(source_code_link, "_blank")}
               className="black-gradient w-12 h-12 rounded-full flex justify-center items-center cursor-pointer neon-icon"
             >
-              <img src={githubo} alt="source code" className="w-1/2 h-1/2 object-contain" />
+              <img src={githubo} alt="source code" className="object-contain" />
             </div>
           </div>
         </div>
