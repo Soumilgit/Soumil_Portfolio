@@ -9,9 +9,8 @@ export const ScrambledText = ({ text, className }) => {
 
   const scrambleText = (originalText) => {
     // Determine if the device is mobile
-    const isMobile = window.innerWidth <= 768;
+    const isMobile = window.innerWidth <= 968;
 
-    
     const truncatedText = isMobile && originalText.length > 10
       ? originalText.slice(0, -2) 
       : originalText;
@@ -25,7 +24,7 @@ export const ScrambledText = ({ text, className }) => {
   useEffect(() => {
     // Adjusted duration based on screen width
     const handleResize = () => {
-      setDuration(window.innerWidth <= 768 ? 2250 : 975);
+      setDuration(window.innerWidth <= 968 ? 1000 : 975);
     };
 
     handleResize(); 
