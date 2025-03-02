@@ -278,25 +278,25 @@ const achievements = [
 
 const projects = [
   {
-    name: "Web Terminal Emulator",
+    name: "Legal Ally",
     description:
-      "Implemented session storage and local storage for command history persistence, along with an enhanced user experience.",
+      "AI-powered legal assistant, built with Flask and MERN, simplifies case lookup, contract review, and document validation.",
     tags: [
       {
-        name: "html",
+        name: "flask",
         color: "blue-text-gradient",
       },
       {
-        name: "css",
+        name: "javascript",
         color: "green-text-gradient",
       },
       {
-        name: "javascript",
+        name: "typescript",
         color: "pink-text-gradient",
       },
     ],
     image: smack,
-    source_code_link: "https://github.com/Soumilgit/Coded_A_Responsive_Terminal",
+    source_code_link: "https://github.com/Soumilgit/TSEC-Hacks_Legal-Ally",
   },
 
   {
