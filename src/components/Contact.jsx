@@ -2,8 +2,8 @@ import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { useForm, ValidationError } from "@formspree/react"; 
 import { slideIn } from "../utils/motion";
-import { ComputersCanvas } from "./canvas"; // Retained as per your requirement
-import { SectionWrapper } from "../hoc"; // Retained as per your requirement
+import { ComputersCanvas } from "./canvas"; 
+import { SectionWrapper } from "../hoc"; 
 
 const Contact = () => {
   const formRef = useRef();
