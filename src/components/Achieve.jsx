@@ -26,7 +26,7 @@ const AchievementCard = ({ index, name, description, link }) => (
       {/* Neon Green Button in Top-Right Corner */}
       <a href={link} target="_blank" rel="noopener noreferrer" className="absolute top-4 right-4">
         <button className="px-3 py-1.5 text-base font-bold text-[#37b54a] border-2 border-[#37b54a] bg-black rounded-lg shadow-[0_0_5px_#37b54a] transition-transform duration-200 hover:scale-105 hover:shadow-[0_0_10px_#37b54a]">
-          LINK
+          VIEW
         </button>
       </a>
       
