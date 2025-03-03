@@ -1,11 +1,9 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { ComputersCanvas } from "./canvas";
-import { SectionWrapper } from "../hoc";
-import { slideIn } from "../utils/motion";
 import { useForm, ValidationError } from "@formspree/react"; 
+import { slideIn } from "../utils/motion";
+import { ComputersCanvas } from "./canvas"; // Retained as per your requirement
+import { SectionWrapper } from "../hoc"; // Retained as per your requirement
 
 const Contact = () => {
   const formRef = useRef();
@@ -37,6 +35,13 @@ const Contact = () => {
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
     if (errors[e.target.name]) setErrors({ ...errors, [e.target.name]: "" });
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    if (validateForm()) {
+      handleSubmit(e);
+    }
   };
 
   return (
@@ -80,12 +85,12 @@ const Contact = () => {
               CYBERNETIC CONTACT FORM
             </h3>
 
-            <form ref={formRef} onSubmit={handleSubmit} action="https://formspree.io/f/xvgzeqla" method="POST"
+            <form ref={formRef} onSubmit={handleFormSubmit} action="https://formspree.io/f/xvgzeqla" method="POST"
               className="mt-6 flex flex-col gap-6"
             >
               <label className="flex flex-col">
                 <span style={{ color: "#34d680", fontWeight: "bold", fontFamily: "'Orbitron', sans-serif" }}>
-                  USERNAME <span style={{ color: "red" }}>*</span>
+                  USERNAME <span style ={{ color: "red" }}>*</span>
                 </span>
                 <input type="text" name="name" value={form.name} onChange={handleChange} required
                   placeholder="Enter Codename..."
