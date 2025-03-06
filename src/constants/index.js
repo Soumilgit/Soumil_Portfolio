@@ -269,7 +269,7 @@ const achievements = [
     link: "https://www.codechef.com/users/spry_deer_42", 
   },
   {
-    name: "Over 2500+ contributions on GitHub",
+    name: "Over 2000+ contributions on GitHub",
     description:
       "Have been an active member of GitHub community and have contributed and worked on 40+ projects.",
     link: "https://github.com/Soumilgit", 
