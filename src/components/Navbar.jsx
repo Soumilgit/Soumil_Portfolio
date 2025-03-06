@@ -93,7 +93,7 @@ const Navbar = () => {
     </Link>
 
     {/* Desktop Navbar */}
-    <ul className="nav-links ml-12" style={{ marginRight: "-78.3px" }}> 
+    <ul className="nav-links ml-12" style={{ marginRight: "-79.2px" }}> 
       {navLinks.map((nav) => (
         <motion.li
           key={nav.id}
