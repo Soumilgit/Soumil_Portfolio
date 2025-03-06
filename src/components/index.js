@@ -24,7 +24,6 @@ export {
   Feedbacks,
   Contact,
   CanvasLoader,
-  EarthCanvas, 
   BallCanvas, 
   ComputersCanvas, 
   StarsCanvas
