@@ -218,7 +218,7 @@ const Hero = () => {
           </div>
 
           {/* Right Side (Text, Button, Arrow) */}
-          <div className="flex flex-col items-center md:items-start gap-4 md:ml-[18px] md:self-center mt-8 order-2 md:w-1/2">
+          <div className="flex flex-col items-center md:items-start gap-4 md:ml-[14.4px] md:self-center mt-8 order-2 md:w-1/2">
             <h1 className={`${styles.heroHeadText} ${styles.heroHeadTextMobile}`}>
               <ScrambledText text="Hi, I'm Soumil!" className={styles.scrambledText} />
             </h1>
