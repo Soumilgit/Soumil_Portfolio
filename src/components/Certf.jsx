@@ -9,7 +9,6 @@ import { textVariant, fadeIn } from "../utils/motion";
 import oods from "../assets/oods.png";
 import postman from "../assets/postman.png";
 import jsi from "../assets/jsi.png";
-import certificateIcon from "../assets/ABC.png"; 
 
 const icons = [oods, postman, jsi];
 
