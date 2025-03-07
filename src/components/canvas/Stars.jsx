@@ -18,7 +18,7 @@ const Stars = (props) => {
         <PointMaterial
           transparent
           color="#f272c8"
-          size={0.002}
+          size={0.00125} // Scaled down star size
           sizeAttenuation={true}
           depthWrite={false}
         />
@@ -44,7 +44,7 @@ const StarsCanvas = () => {
   return (
     <div className="w-full h-auto absolute inset-0 z-[-1]">
       {showStars && (
-        <Canvas camera={{ position: [0, 0, 1] }}>
+        <Canvas camera={{ position: [0, 0, 0.5] }}> {/* Scaled down camera position */}
           <Suspense fallback={null}>
             <Stars />
           </Suspense>
