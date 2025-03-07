@@ -6,7 +6,6 @@ import {
   About,
   Contact,
   Experience,
-  Feedbacks,
   Navbar,
   Tech,
   Achieve,
@@ -39,7 +38,6 @@ const App = () => {
               <Achieve />
               <Works />
               <Certf />
-              <Feedbacks />
               <Contact />
             </div>
           </div>
