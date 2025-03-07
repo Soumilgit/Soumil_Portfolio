@@ -8,7 +8,7 @@ const Stars = (props) => {
 
   const baseRadius = window.innerWidth < 768 ? 1.2 : 1.2;
   const scaleY = window.innerWidth < 768 ? 0.2 : 1.0;
-  const pointCount = window.innerWidth < 768 ? 5500 : 5000;
+  const pointCount = window.innerWidth < 768 ? 7500 : 5000;
 
 
   const [sphere] = useState(() => {
@@ -20,15 +20,15 @@ const Stars = (props) => {
   });
 
   useFrame((state, delta) => {
-    const rotationSpeedX = window.innerWidth < 768 ? delta / 3 : delta / 5;
-    const rotationSpeedY = window.innerWidth < 768 ? delta / 5 : delta / 7.5;
+    const rotationSpeedX = window.innerWidth < 768 ? delta / 8 : delta / 10;
+    const rotationSpeedY = window.innerWidth < 768 ? delta / 10 : delta / 15;
     ref.current.rotation.x -= rotationSpeedX;
     ref.current.rotation.y -= rotationSpeedY;
   });
 
   let starSize = 0.001 / window.devicePixelRatio;
   if (window.innerWidth < 768) {
-    starSize *= 0.61;
+    starSize *= 0.4;
   }
 
   return (
