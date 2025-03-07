@@ -30,10 +30,12 @@ const Stars = (props) => {
 const StarsCanvas = () => {
   const [showStars, setShowStars] = useState(false);
   const [aspectRatio, setAspectRatio] = useState(window.innerWidth / window.innerHeight);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
     const handleResize = () => {
       setAspectRatio(window.innerWidth / window.innerHeight);
+      setIsMobile(window.innerWidth < 768);
     };
 
     window.addEventListener("resize", handleResize);
@@ -55,7 +57,12 @@ const StarsCanvas = () => {
   return (
     <div className="w-full h-auto absolute inset-0 z-[-1]">
       {showStars && (
-        <Canvas camera={{ position: [0, 0, 0.4], aspect: aspectRatio }}> 
+        <Canvas
+          camera={{
+            position: [0, 0, 0.4],
+            aspect: isMobile ? 1 : aspectRatio, // Ensure perfect circles on all devices
+          }}
+        > 
           <Suspense fallback={null}>
             <Stars />
           </Suspense>
