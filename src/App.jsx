@@ -30,10 +30,10 @@ const App = () => {
             <Navbar />
             <Hero />
           </div>
-          <div className='relative z-2'>
+          <div className='relative z-[-15]'>
             <StarsCanvas />
             <div className='relative z-10'>
-              <About />
+              <About setAboutLoaded={() => {}} />
               <Experience />
               <Tech />
               <Achieve />
