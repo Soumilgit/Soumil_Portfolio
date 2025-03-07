@@ -8,11 +8,11 @@ import { styles } from "../styles";
 const ExperienceCard = ({ experience, index }) => {
   return (
     <motion.div
-      variants={fadeIn("up", "spring", index * 0.15, 0.3)} // Scroll animation
+      variants={fadeIn("up", "spring", index * 0.1, 0.2)} // Scroll animation
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.1 }}
-      className="relative border-2 p-6 rounded-2xl shadow-lg mb-10 border-[#00FF7F] transition-transform duration-150 neon-box w-full flex flex-col justify-between"
+      className="relative border-2 p-6 rounded-2xl shadow-lg mb-10 border-[#00FF7F] transition-transform duration-150 neon-box w-full flex flex-col justify-between bg-black/80 backdrop-blur-md"
       whileHover={{ scaleY: 1.05 }} // Expands vertically only
     >
       <div className="flex items-center gap-4">
@@ -36,20 +36,23 @@ const ExperienceCard = ({ experience, index }) => {
 
 const Experience = () => {
   return (
-    <>
-      {/* Scroll Animation for Title & Subtext */}
-      <motion.div variants={textVariant()} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }}>
-        <p className={`${styles.sectionSubText} text-center`}>What I have done so far</p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>Work Experience</h2>
-      </motion.div>
+    <div className="relative">
+      
+      <div className="relative z-10">
+        {/* Scroll Animation for Title & Subtext */}
+        <motion.div variants={textVariant()} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }}>
+          <p className={`${styles.sectionSubText} text-center`}>What I have done so far</p>
+          <h2 className={`${styles.sectionHeadText} text-center`}>Work Experience</h2>
+        </motion.div>
 
-      {/* Responsive Grid with Scroll Animation */}
-      <div className="mt-16 grid md:grid-cols-2 gap-8">
-        {experiences.map((experience, index) => (
-          <ExperienceCard key={index} experience={experience} index={index} />
-        ))}
+        {/* Responsive Grid with Scroll Animation */}
+        <div className="mt-16 grid md:grid-cols-2 gap-8">
+          {experiences.map((experience, index) => (
+            <ExperienceCard key={index} experience={experience} index={index} />
+          ))}
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 
