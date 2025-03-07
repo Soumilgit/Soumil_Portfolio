@@ -30,7 +30,7 @@ const App = () => {
             <Navbar />
             <Hero />
           </div>
-          <div className='relative z-[-15]'>
+          <div className='relative z-0'>
             <StarsCanvas />
             <div className='relative z-10'>
               <About setAboutLoaded={() => {}} />
