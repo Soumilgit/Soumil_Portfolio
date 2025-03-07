@@ -8,9 +8,19 @@ const Stars = (props) => {
   const [sphere] = useState(() => random.inSphere(new Float32Array(5000), { radius: 1.2 }));
 
   useFrame((state, delta) => {
-    ref.current.rotation.x -= delta / 6.5; 
-    ref.current.rotation.y -= delta / 9.5; 
+    // Determine rotation speed based on window width
+    const rotationSpeedX = window.innerWidth < 768 ? delta / 3 : delta / 5; 
+    const rotationSpeedY = window.innerWidth < 768 ? delta / 5 : delta / 7.5; 
+
+    ref.current.rotation.x -= rotationSpeedX; 
+    ref.current.rotation.y -= rotationSpeedY; 
   });
+
+  let starSize = 0.001 / window.devicePixelRatio;
+  
+  if (window.innerWidth < 768) {
+    starSize *= 0.75; 
+  }
 
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
@@ -18,7 +28,7 @@ const Stars = (props) => {
         <PointMaterial
           transparent
           color="#f272c8"
-          size={0.0008} // Scaled down star size
+          size={starSize} 
           sizeAttenuation={true}
           depthWrite={false}
         />
@@ -29,19 +39,6 @@ const Stars = (props) => {
 
 const StarsCanvas = () => {
   const [showStars, setShowStars] = useState(false);
-  const [aspectRatio, setAspectRatio] = useState(window.innerWidth / window.innerHeight);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setAspectRatio(window.innerWidth / window.innerHeight);
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,12 +54,7 @@ const StarsCanvas = () => {
   return (
     <div className="w-full h-auto absolute inset-0 z-[-1]">
       {showStars && (
-        <Canvas
-          camera={{
-            position: [0, 0, 0.4],
-            aspect: isMobile ? 1 : aspectRatio, // Ensure perfect circles on all devices
-          }}
-        > 
+        <Canvas camera={{ position: [0, 0, 0.4] }}> {/* Scaled down camera position */}
           <Suspense fallback={null}>
             <Stars />
           </Suspense>
