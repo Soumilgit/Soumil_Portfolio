@@ -5,33 +5,36 @@ import * as random from "maath/random/dist/maath-random.esm";
 
 const Stars = (props) => {
   const ref = useRef();
-  const [sphere] = useState(() => random.inSphere(new Float32Array(5000), { radius: 1.2 }));
+
+  const baseRadius = window.innerWidth < 768 ? 1.2 : 1.2;
+  const scaleY = window.innerWidth < 768 ? 0.2 : 1.0;
+  const pointCount = window.innerWidth < 768 ? 5500 : 5000;
+
+
+  const [sphere] = useState(() => {
+    const positions = random.inSphere(new Float32Array(pointCount * 3), { radius: baseRadius });
+    for (let i = 1; i < positions.length; i += 3) {
+      positions[i] *= scaleY; 
+    }
+    return positions;
+  });
 
   useFrame((state, delta) => {
-    // Determine rotation speed based on window width
-    const rotationSpeedX = window.innerWidth < 768 ? delta / 3 : delta / 5; 
-    const rotationSpeedY = window.innerWidth < 768 ? delta / 5 : delta / 7.5; 
-
-    ref.current.rotation.x -= rotationSpeedX; 
-    ref.current.rotation.y -= rotationSpeedY; 
+    const rotationSpeedX = window.innerWidth < 768 ? delta / 3 : delta / 5;
+    const rotationSpeedY = window.innerWidth < 768 ? delta / 5 : delta / 7.5;
+    ref.current.rotation.x -= rotationSpeedX;
+    ref.current.rotation.y -= rotationSpeedY;
   });
 
   let starSize = 0.001 / window.devicePixelRatio;
-  
   if (window.innerWidth < 768) {
-    starSize *= 0.75; 
+    starSize *= 0.61;
   }
 
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
       <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
-        <PointMaterial
-          transparent
-          color="#f272c8"
-          size={starSize} 
-          sizeAttenuation={true}
-          depthWrite={false}
-        />
+        <PointMaterial transparent color="#f272c8" size={starSize} sizeAttenuation depthWrite={false} />
       </Points>
     </group>
   );
@@ -54,7 +57,7 @@ const StarsCanvas = () => {
   return (
     <div className="w-full h-auto absolute inset-0 z-[-1]">
       {showStars && (
-        <Canvas camera={{ position: [0, 0, 0.4] }}> {/* Scaled down camera position */}
+        <Canvas camera={{ position: [0, 0, 0.4] }}>
           <Suspense fallback={null}>
             <Stars />
           </Suspense>
