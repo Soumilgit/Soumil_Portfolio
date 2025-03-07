@@ -8,8 +8,8 @@ const Stars = (props) => {
   const [sphere] = useState(() => random.inSphere(new Float32Array(5000), { radius: 1.2 }));
 
   useFrame((state, delta) => {
-    ref.current.rotation.x -= delta / 10;
-    ref.current.rotation.y -= delta / 15;
+    ref.current.rotation.x -= delta / 6.5; 
+    ref.current.rotation.y -= delta / 9.5; 
   });
 
   return (
@@ -18,7 +18,7 @@ const Stars = (props) => {
         <PointMaterial
           transparent
           color="#f272c8"
-          size={0.00125} // Scaled down star size
+          size={0.0008} // Scaled down star size
           sizeAttenuation={true}
           depthWrite={false}
         />
@@ -29,6 +29,17 @@ const Stars = (props) => {
 
 const StarsCanvas = () => {
   const [showStars, setShowStars] = useState(false);
+  const [aspectRatio, setAspectRatio] = useState(window.innerWidth / window.innerHeight);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setAspectRatio(window.innerWidth / window.innerHeight);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,7 +55,7 @@ const StarsCanvas = () => {
   return (
     <div className="w-full h-auto absolute inset-0 z-[-1]">
       {showStars && (
-        <Canvas camera={{ position: [0, 0, 0.5] }}> {/* Scaled down camera position */}
+        <Canvas camera={{ position: [0, 0, 0.4], aspect: aspectRatio }}> 
           <Suspense fallback={null}>
             <Stars />
           </Suspense>
