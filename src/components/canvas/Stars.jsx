@@ -9,7 +9,7 @@ const Stars = (props) => {
   const aspectRatio = window.innerWidth / window.innerHeight;
   const baseRadius = 1.2;
   const scaleY = aspectRatio < 1 ? 0.2 * (1 / aspectRatio) : 1.0;
-  const pointCount = window.innerWidth < 768 ? 8500 : 5000;
+  const pointCount = window.innerWidth < 768 ? 8500 : 3500;
 
   const [sphere] = useState(() => {
     const positions = random.inSphere(new Float32Array(pointCount * 3), { radius: baseRadius });
