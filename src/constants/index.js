@@ -50,11 +50,11 @@ export const navLinks = [
   },
   {
     id: "technologies",
-    title: "Skillset",
+    title: "Tech",
   },
   {
     id: "achievement",
-    title: "Achievements",
+    title: "Feats",
   },
   {
     id: "projects",
@@ -62,7 +62,7 @@ export const navLinks = [
   },
   {
     id: "certf",
-    title: "Certifications",
+    title: "Certs",
   },
   {
     id: "contact",
