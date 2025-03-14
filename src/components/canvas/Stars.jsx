@@ -8,7 +8,7 @@ const Stars = (props) => {
 
   const aspectRatio = window.innerWidth / window.innerHeight;
   const baseRadius = 1.0;
-  const scaleY = aspectRatio < 0.68 ? 0.16 * (1 / aspectRatio) : 0.68;
+  const scaleY = aspectRatio < 1.0 ? 0.4 * (1 / aspectRatio) : 1.0;
   const pointCount = window.innerWidth < 768 ? 8500 : 3200;
 
   const [sphere] = useState(() => {
@@ -26,9 +26,9 @@ const Stars = (props) => {
     ref.current.rotation.y -= rotationSpeedY;
   });
 
-  let starSize = 0.0005 / window.devicePixelRatio;
+  let starSize = 0.00075 / window.devicePixelRatio;
   if (window.innerWidth < 768) {
-    starSize *= 0.7;
+    starSize *= 0.54;
   }
 
   return (
