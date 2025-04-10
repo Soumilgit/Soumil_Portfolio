@@ -265,11 +265,11 @@ const achievements = [
   {
     name: "3 ⭐ on CodeChef, a coding platform",
     description:
-      "Gave 15+ contests on CodeChef and improved my rating to 1622. Solved almost 70 problems using C++, Python and Java.",
+      "Gave 15+ contests on CodeChef and improved my rating to 1675. Solved 70+ problems using C++, Python and Java.",
     link: "https://www.codechef.com/users/spry_deer_42", 
   },
   {
-    name: "Over 2000+ contributions on GitHub",
+    name: "Over 2500+ contributions on GitHub",
     description:
       "Have been an active member of GitHub community and have contributed and worked on 40+ projects.",
     link: "https://github.com/Soumilgit", 
