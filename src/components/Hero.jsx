@@ -110,7 +110,6 @@ const Hero = () => {
                   <div className="flex flex-col items-center md:items-start w-full text-sm md:text-base space-y-1">
                     <a href="https://github.com/Soumilgit" target="_blank" onClick={handleLinkClick} className="text-blue-400 hover:underline font-semibold">💻GitHub</a>
                     <a href="https://www.linkedin.com/in/soumilm30/" target="_blank" onClick={handleLinkClick} className="text-blue-400 hover:underline font-semibold">💼LinkedIn</a>
-                    <a href="https://www.codechef.com/users/spry_deer_42" target="_blank" onClick={handleLinkClick} className="text-blue-400 hover:underline font-semibold">🏅CodeChef</a>
                     <a href="https://twitter.com/SoumilMukh6476/" target="_blank" onClick={handleLinkClick} className="text-blue-400 hover:underline font-semibold">🐦Twitter</a>
                     <a href="https://www.instagram.com/soumil_m.exe/" target="_blank" onClick={handleLinkClick} className="text-blue-400 hover:underline font-semibold">📸Instagram</a>
                   </div>
@@ -188,7 +187,6 @@ const Hero = () => {
                   <div className="flex flex-col items-center md:items-start w-full text-sm md:text-base space-y-1">
                     <a href="https://github.com/Soumilgit" target="_blank" onClick={handleLinkClick} className="text-blue-400 hover:underline font-semibold">💻GitHub</a>
                     <a href="https://www.linkedin.com/in/soumilm30/" target="_blank" onClick={handleLinkClick} className="text-blue-400 hover:underline font-semibold">💼LinkedIn</a>
-                    <a href="https://www.codechef.com/users/spry_deer_42" target="_blank" onClick={handleLinkClick} className="text-blue-400 hover:underline font-semibold">🏅CodeChef</a>
                     <a href="https://twitter.com/SoumilMukh6476/" target="_blank" onClick={handleLinkClick} className="text-blue-400 hover:underline font-semibold">🐦Twitter</a>
                     <a href="https://www.instagram.com/soumil_m.exe/" target="_blank" onClick={handleLinkClick} className="text-blue-400 hover:underline font-semibold">📸Instagram</a>
                   </div>
