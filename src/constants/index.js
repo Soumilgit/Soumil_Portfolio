@@ -259,7 +259,7 @@ const achievements = [
   {
     name: "TechGig Code Gladiators 2024 Finalist",
     description:
-      "Solved competitive programming problems within a stipulated duration. Finished among the top 1% of registrations.",
+      "Solved competitive programming problems within a stipulated duration. Finished among the top 3% of registrations.",
     link: "https://drive.google.com/file/d/1hR8uerT5PpBbdq-92SsJzxEK4t_1Xn9E/view?usp=sharing", 
   },
   {
