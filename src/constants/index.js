@@ -263,10 +263,10 @@ const achievements = [
     link: "https://drive.google.com/file/d/1hR8uerT5PpBbdq-92SsJzxEK4t_1Xn9E/view?usp=sharing", 
   },
   {
-    name: "3 ⭐ on CodeChef, a coding platform",
+    name: "Standard Milestone in Google Cloud Arcade '24",
     description:
-      "Gave 15+ contests on CodeChef and improved my rating to 1675. Solved 70+ problems using C++, Python and Java.",
-    link: "https://www.codechef.com/users/spry_deer_42", 
+      "Completed cloud labs on topics like Vertex AI, Prompt Design, deploying Python apps, achieving 15+ Arcade points.",
+    link: "https://www.cloudskillsboost.google/public_profiles/cff658e9-f40a-4f6b-9ba4-c6709f008956", 
   },
   {
     name: "Over 2500+ contributions on GitHub",
