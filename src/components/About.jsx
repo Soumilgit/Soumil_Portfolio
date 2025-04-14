@@ -7,7 +7,7 @@ import { textVariant, fadeIn } from "../utils/motion"; // Added fadeIn
 
 const ServiceCard = ({ title, icon, index }) => (
   <motion.div
-    variants={fadeIn("up", "spring", index * 0.15, 0.3)} // Scroll animation
+    variants={fadeIn("up", "spring", index * 0.1, 0.2)} // Scroll animation
     initial="hidden"
     whileInView="show"
     viewport={{ once: true, amount: 0.1 }}
@@ -34,6 +34,12 @@ const About = ({ setAboutLoaded }) => {
     <>
       <style>
         {`
+.bg-black-clean {
+  background-color: #000; /* solid dark background */
+  background-image: none !important; /* disables any starry or patterned background */
+  backdrop-filter: none !important;
+}
+
           .neon-glow {
             transition: all 0.3s ease-in-out;
           }
@@ -61,28 +67,33 @@ const About = ({ setAboutLoaded }) => {
       
 
       {/* Scroll Animation for Title & Subtext */}
-      <motion.div
-        variants={textVariant()}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.1 }}
-      >
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview</h2>
-      </motion.div>
+      <div className="bg-black bg-opacity-80 rounded-lg p-6 backdrop-blur-sm shadow-md">
+  <motion.div
+    variants={textVariant()}
+    initial="hidden"
+    whileInView="show"
+    viewport={{ once: true, amount: 0.1 }}
+  >
+    <p className={`${styles.sectionSubText} text-[#A3F7B5] transition duration-300`}>
+      Introduction
+    </p>
+    <h2 className={`${styles.sectionHeadText} text-white transition duration-300`}>
+      Overview
+    </h2>
+  </motion.div>
 
-      <motion.p
-  variants={fadeIn("up", "spring", 0.15, 0.3)}
-  initial="hidden"
-  whileInView="show"
-  viewport={{ once: true, amount: 0.1 }}
-  className="mt-4 text-secondary text-xl max-w-3xl leading-7"
->
-  Innovative and passionate Computer Engineering student with multiple internships, scholarships, and projects. Skilled in data analytics, web development, data structures, algorithms, and investment banking.
-</motion.p>
+  <motion.p
+    variants={fadeIn("up", "spring", 0.1, 0.2)}
+    initial="hidden"
+    whileInView="show"
+    viewport={{ once: true, amount: 0.1 }}
+    className="mt-4 text-[#d1f7e3] text-xl max-w-3xl leading-7 transition duration-300"
+  >
+    Innovative and passionate Computer Engineering student with multiple internships, scholarships, and projects. Skilled in data analytics, web development, data structures, algorithms, and investment banking.
+  </motion.p>
 
-<motion.p
-  variants={fadeIn("up", "spring", 0.15, 0.3)}
+  <motion.p
+  variants={fadeIn("up", "spring", 0.1, 0.2)}
   initial="hidden"
   whileInView="show"
   viewport={{ once: true, amount: 0.1 }}
@@ -90,6 +101,9 @@ const About = ({ setAboutLoaded }) => {
 >
   Oh, and yes, enjoy experiencing neon glow effects while hovering on title-like text elements on all cards below, just like on THIS exact sentence !
 </motion.p>
+
+</div>
+
       {/* Responsive Grid with Scroll Animation */}
       <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {services.map((service, index) => (
