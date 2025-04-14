@@ -9,7 +9,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
   return (
     <motion.div
-      variants={fadeIn("up", "spring", index * 0.15, 0.3)} // Scroll animation
+      variants={fadeIn("up", "spring", index * 0.1, 0.2)} // Scroll animation
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.1 }}
@@ -47,29 +47,39 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
     </motion.div>
   );
 };
-
 const Works = () => {
   return (
     <>
-      {/* Scroll Animation for Title & Subtext */}
-      <motion.div variants={textVariant()} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }}>
-        <p className={`${styles.sectionSubText} text-center`}>My Work</p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>Projects</h2>
+      {/* Styled heading section */}
+      <motion.div
+        variants={textVariant()}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.1 }}
+        className="mx-auto w-fit px-6 py-4 mt-10 bg-black/80 rounded-xl shadow-lg backdrop-blur-md"
+      >
+        <p className={`${styles.sectionSubText} text-center text-[#ABF7B1]`}>
+          My Work
+        </p>
+        <h2 className={`${styles.sectionHeadText} text-center text-white`}>
+          Projects
+        </h2>
       </motion.div>
 
+      {/* Styled description */}
       <div className="w-full flex justify-center">
         <motion.p 
-          variants={fadeIn("up", "spring", 0.15, 0.3)} 
+          variants={fadeIn("up", "spring", 0.1, 0.2)} 
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.1 }}
-          className="mt-3 text-secondary text-[21px] max-w-4xl leading-[30px] text-center"
+          className="mt-6 text-secondary text-[21px] max-w-4xl leading-[30px] text-center bg-black/80 rounded-xl px-6 py-4 shadow-lg backdrop-blur-md"
         >
-          Following projects showcase my skills and experience through real-world examples of my work.
+          Following projects showcase my skills and experience through examples of my work.
         </motion.p>
       </div>
 
-      {/* Responsive Grid with Scroll Animation */}
+      {/* Cards */}
       <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
@@ -78,5 +88,6 @@ const Works = () => {
     </>
   );
 };
+
 
 export default SectionWrapper(Works, "projects");
