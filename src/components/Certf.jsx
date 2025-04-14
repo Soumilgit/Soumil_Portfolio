@@ -8,7 +8,7 @@ import { textVariant, fadeIn } from "../utils/motion";
 // Import certificate images
 import oods from "../assets/oods.png";
 import postman from "../assets/postman.png";
-import jsi from "../assets/jsi.png";
+import jsi from "../assets/jsi.png"; 
 
 const icons = [oods, postman, jsi];
 
@@ -48,18 +48,33 @@ const CertificationCard = ({ index, name, description, link }) => (
 const Certf = () => {
   return (
     <>
-      <motion.div variants={textVariant()} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }}>
-        <p className={`${styles.sectionSubText} text-center`}>My Certifications</p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>Top Certifications</h2>
+      <motion.div
+        variants={textVariant()}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.1 }}
+        className="mx-auto w-fit px-6 py-4 mt-10 bg-black/80 rounded-xl shadow-lg backdrop-blur-md"
+      >
+        <p className={`${styles.sectionSubText} text-center text-[#ABF7B1]`}>
+          My Certifications
+        </p>
+        <h2 className={`${styles.sectionHeadText} text-center text-white`}>
+          Top Certifications
+        </h2>
       </motion.div>
 
       <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {certificates.map((certificate, index) => (
-          <CertificationCard key={`certificate-${index}`} index={index} {...certificate} />
+          <CertificationCard
+            key={`certificate-${index}`}
+            index={index}
+            {...certificate}
+          />
         ))}
       </div>
     </>
   );
 };
+
 
 export default SectionWrapper(Certf, "certf");
