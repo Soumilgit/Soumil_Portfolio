@@ -41,21 +41,33 @@ const AchievementCard = ({ index, name, description, link }) => (
     </div>
   </motion.div>
 );
-
 const Achieve = () => {
   return (
     <>
-      <motion.div variants={textVariant()} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }}>
-        <p className={`${styles.sectionSubText} text-center`}>My Achievements</p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>Honours & Achievements</h2>
+      {/* Heading with blurred dark background for clear visibility */}
+      <motion.div
+        variants={textVariant()}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.1 }}
+        className="mx-auto w-fit px-6 py-4 mt-10 bg-black/80 rounded-xl shadow-lg backdrop-blur-md"
+      >
+        <p className={`${styles.sectionSubText} text-center text-[#ABF7B1]`}>
+          My Achievements
+        </p>
+        <h2 className={`${styles.sectionHeadText} text-center text-white`}>
+          Honours & Achievements
+        </h2>
       </motion.div>
 
+      {/* Description with same background styling */}
       <div className="w-full flex justify-center">
-        <p className="mt-3 text-secondary text-[22px] max-w-3xl leading-[30px] text-center">
+        <p className="mt-6 text-secondary text-[22px] max-w-3xl leading-[30px] text-center bg-black/80 rounded-xl px-6 py-4 shadow-lg backdrop-blur-md">
           Here are some of my top achievements that highlight my journey.
         </p>
       </div>
 
+      {/* Cards */}
       <div className="mt-20 flex flex-wrap justify-center gap-8">
         {achievements.map((achievement, index) => (
           <AchievementCard key={`achievement-${index}`} index={index} {...achievement} />
@@ -64,5 +76,6 @@ const Achieve = () => {
     </>
   );
 };
+
 
 export default SectionWrapper(Achieve, "achievement");
