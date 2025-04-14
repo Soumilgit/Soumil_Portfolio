@@ -131,23 +131,23 @@ const technologies = [
     icon: threejs,
   },
   {
-    name: "python",
+    name: "Python",
     icon: python,
   },
   {
-    name: "cpp",
+    name: "C++",
     icon: cpp,
   },
   {
-    name: "php",
+    name: "PHP",
     icon: php,
   },
   {
-    name: "sql",
+    name: "MySQL",
     icon: sql,
   },
   {
-   name: "typescript",
+   name: "TypeScript",
    icon: typescript,
   },
   {
@@ -155,31 +155,31 @@ const technologies = [
    icon: cv,
   },
   {
-    name: "git",
+    name: "Git",
     icon: git,
   },
   {
-    name: "github",
+    name: "GitHub",
     icon: github,
   },
   {
-    name: "mongodb",
+    name: "MongoDB",
     icon: mongodb,
   },
   {
-    name: "express",
+    name: "Express",
     icon: express,
   },
   {
-    name: "postmanapi",
+    name: "PostmanAPI",
     icon: postmanapi,
   },
   {
-    name: "flask",
+    name: "Flask",
     icon: flask,
   },
   {
-    name: "latex",
+    name: "LaTeX",
     icon: latex,
   },
 
