@@ -62,7 +62,7 @@ const Tech = () => {
         viewport={{ once: true, amount: 0.1 }}
         className="mx-auto w-fit px-6 py-4 mt-10 bg-black/80 rounded-xl shadow-lg backdrop-blur-md"
       >
-        <p className={`${styles.sectionSubText} text-center text-[#ABF7B1]`}>
+        <p className={`${styles.sectionSubText} text-center text-white`}>
           Technologies worked with
         </p>
         <h2 className={`${styles.sectionHeadText} text-center text-white`}>
@@ -86,9 +86,9 @@ const Tech = () => {
               <p className="text-red-500">Missing Icon</p>
             )}
 
-            {/* Skill name text with matching background, below the icon */}
-            <div
-              className={`mt-2 px-2 py-1 rounded-md ${getTechColor(technology.name)} text-black text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 ease-in-out`}
+            {/* Skill name text with matching background */}
+            <div 
+              className={`mt-2 px-2 py-1 rounded-md ${getTechColor(technology.name)} text-black text-sm font-bold whitespace-nowrap`}
             >
               {technology.name}
             </div>
