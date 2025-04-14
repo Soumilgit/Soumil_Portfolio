@@ -37,12 +37,21 @@ const ExperienceCard = ({ experience, index }) => {
 const Experience = () => {
   return (
     <div className="relative">
-      
       <div className="relative z-10">
         {/* Scroll Animation for Title & Subtext */}
-        <motion.div variants={textVariant()} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }}>
-          <p className={`${styles.sectionSubText} text-center`}>What I have done so far</p>
-          <h2 className={`${styles.sectionHeadText} text-center`}>Work Experience</h2>
+        <motion.div
+          variants={textVariant()}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.1 }}
+          className="mx-auto w-fit px-6 py-4 mt-10 bg-black/80 rounded-xl shadow-lg backdrop-blur-md"
+        >
+          <p className={`${styles.sectionSubText} text-center text-[#ABF7B1]`}>
+            What I have done so far
+          </p>
+          <h2 className={`${styles.sectionHeadText} text-center text-white`}>
+            Work Experience
+          </h2>
         </motion.div>
 
         {/* Responsive Grid with Scroll Animation */}
@@ -55,5 +64,7 @@ const Experience = () => {
     </div>
   );
 };
+
+
 
 export default SectionWrapper(Experience, "work");
