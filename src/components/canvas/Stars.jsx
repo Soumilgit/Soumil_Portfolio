@@ -12,7 +12,7 @@ const Stars = (props) => {
   const scaleY = aspectRatio < 1.0 ? 0.4 * (1 / aspectRatio) : 1.0;
 
 
-  const pointCount = window.innerWidth < 768 ? 7000 : 3000;
+  const pointCount = window.innerWidth < 768 ? 7500 : 3300;
 
   // Generate stars inside a virtual sphere
   const [sphere] = useState(() => {
@@ -23,7 +23,6 @@ const Stars = (props) => {
     return positions;
   });
 
-  // Gentle motion for subtle animation
   useFrame((state, delta) => {
     const rotationSpeedX = delta / 18;
     const rotationSpeedY = delta / 22;
@@ -31,7 +30,6 @@ const Stars = (props) => {
     ref.current.rotation.y -= rotationSpeedY;
   });
 
-  // Adjust star size based on device pixel ratio
   let starSize = 0.00075 / window.devicePixelRatio;
   if (window.innerWidth < 768) {
     starSize *= 0.54;
