@@ -8,10 +8,10 @@ import { textVariant, fadeIn } from "../utils/motion";
 
 import cp from "../assets/cp.png";
 import googlecloud from "../assets/googlecloud.png";
-import githubk from "../assets/githubk.png";
+import hackerrank from "../assets/hackerrank.png";
 
 // Map images to achievements
-const icons = [cp, googlecloud, githubk];
+const icons = [cp, hackerrank, googlecloud];
 
 const AchievementCard = ({ index, name, description, link }) => (
   <motion.div
