@@ -209,7 +209,7 @@ const experiences = [
     ],
   },
   {
-    title: "Investment Banking Fellow",
+    title: "IB Fellow",
     company_name: "Marquee Equity",
     icon: marquee,
     iconBg: "#E6DEDD",
@@ -220,7 +220,7 @@ const experiences = [
     ],
   },
   {
-    title: "Campus Ambassador Intern",
+    title: "Campus Ambassador",
     company_name: "Emertxe",
     icon: emertxe,
     iconBg: "#E6DEDD",
@@ -263,17 +263,18 @@ const achievements = [
     link: "https://drive.google.com/file/d/1hR8uerT5PpBbdq-92SsJzxEK4t_1Xn9E/view?usp=sharing", 
   },
   {
-    name: "Standard Milestone in Google Cloud Arcade '24",
+    name: "5⭐ Algorithms badge on HackerRank",
     description:
-      "Completed cloud labs on topics like Vertex AI, Prompt Design, deploying Python apps, achieving 15+ Arcade points.",
-    link: "https://www.cloudskillsboost.google/public_profiles/cff658e9-f40a-4f6b-9ba4-c6709f008956", 
+      "Solved 50+ sectional problems to earn it, learnt and practiced different techniques & algorithms, primarily used C++ & Python.",
+    link: "https://www.hackerrank.com/profile/soumil_m", 
   },
   {
-    name: "Over 2500+ contributions on GitHub",
+    name: "Standard Milestone in Google Cloud Arcade '24",
     description:
-      "Have been an active member of GitHub community and have contributed and worked on 40+ projects.",
-    link: "https://github.com/Soumilgit", 
+      "Completed cloud labs on topics like Vertex AI, Prompt Design, deployment, achieving 15+ Arcade points and 4 Google Cloud swags.",
+    link: "https://www.cloudskillsboost.google/public_profiles/cff658e9-f40a-4f6b-9ba4-c6709f008956", 
   },
+  
 ];
 
 const projects = [
