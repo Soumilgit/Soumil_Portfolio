@@ -48,6 +48,7 @@ import githubo from "./githubo.png";
 import mypic from "./mypic.png";
 import githubk from "./githubk.png";
 import emertxe from "./emertxe.png";
+import hackerrank from "./hackerrank.png";
 
 export {
   app,
@@ -94,5 +95,6 @@ export {
   latex,
   mypic,
   kjsce,
+  hackerrank
 
 };
