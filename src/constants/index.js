@@ -12,7 +12,7 @@ import {
   npcil,
   marquee,
   meshcraft,
-  gssoc,
+  emertxe,
   emfinity,
   tailwind,
   nodejs,
@@ -202,10 +202,10 @@ const experiences = [
     company_name: "MeshCraft",
     icon: meshcraft,
     iconBg: "#383E56",
-    date: "Dec 2024 - Present",
+    date: "Dec 2024 - April 2025",
     points: [
-      "Working as a full-stack MERN developer intern, on the company portfolio and website, 3D animations.",
-      "Among the top 12.5% of applications, currently working on 10+ 3D assets.",
+      "Worked as a full-stack MERN developer intern, on the company portfolio and website, 3D animations.",
+      "Among the top 12.5% of applications, worked on 10+ 3D assets and the marketplace & asset pages.",
     ],
   },
   {
@@ -213,21 +213,21 @@ const experiences = [
     company_name: "Marquee Equity",
     icon: marquee,
     iconBg: "#E6DEDD",
-    date: "Mar 2024 - Present",
+    date: "Mar 2024 - April 2025",
     points: [
-      "Completed 8+ corporate training sessions, learning financial modeling and deal structuring as well.",
-      "Wrote 5+ research reports on concluded funding transactions in MLA Format.",
+      "Completed 10+ corporate training sessions, learning financial modeling and deal structuring as well.",
+      "Wrote 10+ research reports on concluded funding transactions in MLA Format; stipend-based pay.",
     ],
   },
   {
-    title: "Contributor",
-    company_name: "GirlScript SOC",
-    icon: gssoc,
+    title: "Campus Ambassador Intern",
+    company_name: "Emertxe",
+    icon: emertxe,
     iconBg: "#E6DEDD",
-    date: "May 2024 - Aug 2024",
+    date: "April 2025 - Present",
     points: [
-      "Collaborated with cross-functional teams on software projects through GitHub, earning 5+ badges.",
-      "Ranked 683 out of 2418 people,having earned 500+ points and getting certified.",
+      "Chosen for Emertxe's stipend-based Campus Ambassador Program across 75 colleges nationally.",
+      "As sole campus rep, I’ll boost tech brand engagement via marketing and maybe land a tech intern role.",
     ],
   },
   {
@@ -259,7 +259,7 @@ const achievements = [
   {
     name: "TechGig Code Gladiators 2024 Finalist",
     description:
-      "Solved competitive programming problems within a stipulated duration. Finished among the top 3% of registrations.",
+      "Solved competitive programming problems within a stipulated duration. Finished among the top 3% of participants.",
     link: "https://drive.google.com/file/d/1hR8uerT5PpBbdq-92SsJzxEK4t_1Xn9E/view?usp=sharing", 
   },
   {
@@ -278,26 +278,28 @@ const achievements = [
 
 const projects = [
   {
-    name: "Legal Ally",
+    name: "Invoicely",
     description:
-      "AI-powered legal assistant, built with Flask and MERN, simplifies case lookup, contract review, and document validation.",
+      "MERN customer invoicing platform with Twilio WhatsApp alerts, chatbot, secure PDF billing, JWT, Postman-tested.",
     tags: [
       {
-        name: "flask",
+        name: "javascript",
+        color: "green-text-gradient", 
+      },
+      {
+        name: "mongodb",
+        color: "text-[#228B22]",
+      },
+      {
+        name: "react",
         color: "blue-text-gradient",
       },
-      {
-        name: "javascript",
-        color: "green-text-gradient",
-      },
-      {
-        name: "typescript",
-        color: "pink-text-gradient",
-      },
+      
     ],
     image: smack,
-    source_code_link: "https://github.com/Soumilgit/TSEC-Hacks_Legal-Ally",
+    source_code_link: "https://github.com/Soumilgit/MP_SemVI_Customer-Invoicing",
   },
+  
 
   {
     name: "Hand Gesture Detection",
