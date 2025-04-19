@@ -74,7 +74,7 @@ const About = ({ setAboutLoaded }) => {
     whileInView="show"
     viewport={{ once: true, amount: 0.1 }}
   >
-    <p className={`${styles.sectionSubText} text-[#A3F7B5] transition duration-300`}>
+    <p className={`${styles.sectionSubText} text-white transition duration-300`}>
       Introduction
     </p>
     <h2 className={`${styles.sectionHeadText} text-white transition duration-300`}>
@@ -87,7 +87,7 @@ const About = ({ setAboutLoaded }) => {
     initial="hidden"
     whileInView="show"
     viewport={{ once: true, amount: 0.1 }}
-    className="mt-4 text-[#d1f7e3] text-xl max-w-3xl leading-7 transition duration-300"
+    className="mt-4 text-white text-xl max-w-3xl leading-7 transition duration-300"
   >
     Innovative and passionate Computer Engineering student with multiple internships, scholarships, and projects. Skilled in data analytics, web development, data structures, algorithms, and investment banking.
   </motion.p>
