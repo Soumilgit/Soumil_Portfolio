@@ -194,7 +194,7 @@ const experiences = [
     date: "May 2024 - Jul 2024",
     points: [
       "Developed a Process Monitor Module GUI with Python, on QtCreator IDE and SQL as database.",
-      "Ran checks for 10+ categories and processes with resources monitored."
+      "Ran checks for 10+ system categories and processes with real-time system resources monitored."
     ],
   },
   {
@@ -209,7 +209,7 @@ const experiences = [
     ],
   },
   {
-    title: "IB Fellow",
+    title: "Investment Banking Fellow",
     company_name: "Marquee Equity",
     icon: marquee,
     iconBg: "#E6DEDD",
@@ -238,7 +238,7 @@ const experiences = [
     date: "Sep 2023 - Aug 2024",
     points: [
       "Conducted and attended daily tech sessions, designed 200+ Math questions and organized 5+ events.",
-      "Engaged 450+ students and boosted social media following by 20%.",
+      "Engaged 450+ students and significantly boosted overall social media following growth by 20%.",
       
     ],
   },
@@ -250,7 +250,7 @@ const experiences = [
     date: "Jul 2023 - Sep 2023",
     points:[
       "Developed a quiz web app using HTML, CSS and Vanilla JavaScript, having worked for 100+ hours.",
-      "Displays 10+ questions and a final score, with a 1% penalty for a retake."
+      "Displays 10+ questions and a final score, with a 1% penalty automatically applied for a retake."
     ]
   },
 
