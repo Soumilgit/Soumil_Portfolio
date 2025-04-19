@@ -31,7 +31,6 @@ import latex from "./tech/latex.png";
 
 import emfinity from "./company/emfinity.png";
 import npcil from "./company/npcil.png";
-import gssoc from "./company/gssoc.png";
 import meshcraft from "./company/meshcraft.png";
 import marquee from "./company/marquee.png";
 import kjsce from "./company/kjsce.png";
@@ -40,7 +39,7 @@ import boblob from ".//boblob.png";
 import jasder from "./jasder.png";
 import smack from "./smack.png";
 
-import codechef from "./codechef.png";
+import googlecloud from "./googlecloud.png";
 import cp from "./cp.png";
 import jsi from "./jsi.png";
 import oods from "./oods.png";
@@ -48,6 +47,7 @@ import postman from "./postman.png";
 import githubo from "./githubo.png";
 import mypic from "./mypic.png";
 import githubk from "./githubk.png";
+import emertxe from "./emertxe.png";
 
 export {
   app,
@@ -72,13 +72,13 @@ export {
   emfinity,
   npcil,
   marquee,
-  gssoc,
+  emertxe,
   meshcraft,
   boblob,
   jasder,
   smack,
   typescript,
-  codechef,
+  googlecloud,
   cp,
   jsi,
   oods,
