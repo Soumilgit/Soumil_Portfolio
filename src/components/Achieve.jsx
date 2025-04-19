@@ -7,11 +7,11 @@ import { achievements } from "../constants";
 import { textVariant, fadeIn } from "../utils/motion";
 
 import cp from "../assets/cp.png";
-import codechef from "../assets/codechef.png";
+import googlecloud from "../assets/googlecloud.png";
 import githubk from "../assets/githubk.png";
 
 // Map images to achievements
-const icons = [cp, codechef, githubk];
+const icons = [cp, googlecloud, githubk];
 
 const AchievementCard = ({ index, name, description, link }) => (
   <motion.div
