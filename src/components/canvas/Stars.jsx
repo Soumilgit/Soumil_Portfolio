@@ -6,26 +6,32 @@ import * as random from "maath/random/dist/maath-random.esm";
 const Stars = (props) => {
   const ref = useRef();
 
-  const aspectRatio = window.innerWidth / window.innerHeight;
-  const baseRadius = 1.0;
-  const scaleY = aspectRatio < 1.0 ? 0.4 * (1 / aspectRatio) : 1.0;
-  const pointCount = window.innerWidth < 768 ? 8500 : 3200;
 
+  const aspectRatio = window.innerWidth / window.innerHeight;
+  const baseRadius = 0.85; 
+  const scaleY = aspectRatio < 1.0 ? 0.4 * (1 / aspectRatio) : 1.0;
+
+
+  const pointCount = window.innerWidth < 768 ? 7000 : 3000;
+
+  // Generate stars inside a virtual sphere
   const [sphere] = useState(() => {
     const positions = random.inSphere(new Float32Array(pointCount * 3), { radius: baseRadius });
     for (let i = 1; i < positions.length; i += 3) {
-      positions[i] *= scaleY; 
+      positions[i] *= scaleY;
     }
     return positions;
   });
 
+  // Gentle motion for subtle animation
   useFrame((state, delta) => {
-    const rotationSpeedX = window.innerWidth < 768 ? delta / 8 : delta / 10;
-    const rotationSpeedY = window.innerWidth < 768 ? delta / 10 : delta / 15;
+    const rotationSpeedX = delta / 18;
+    const rotationSpeedY = delta / 22;
     ref.current.rotation.x -= rotationSpeedX;
     ref.current.rotation.y -= rotationSpeedY;
   });
 
+  // Adjust star size based on device pixel ratio
   let starSize = 0.00075 / window.devicePixelRatio;
   if (window.innerWidth < 768) {
     starSize *= 0.54;
@@ -34,7 +40,14 @@ const Stars = (props) => {
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
       <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
-        <PointMaterial transparent color="#f272c8" size={starSize} sizeAttenuation depthWrite={false} />
+        <PointMaterial
+          transparent
+          color="#f272c8"
+          size={starSize}
+          sizeAttenuation
+          depthWrite={false}
+          opacity={0.4} 
+        />
       </Points>
     </group>
   );
@@ -55,7 +68,7 @@ const StarsCanvas = () => {
   }, []);
 
   return (
-    <div className="w-full h-auto absolute inset-0 z-[-1]">
+    <div className="w-full h-auto absolute inset-0 z-[-1] pointer-events-none">
       {showStars && (
         <Canvas camera={{ position: [0, 0, 0.4] }}>
           <Suspense fallback={null}>
