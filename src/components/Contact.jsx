@@ -15,7 +15,7 @@ const Contact = () => {
   });
   const [errors, setErrors] = useState({});
   
-  const [state, handleSubmit] = useForm("xpwdwvwb");  
+  const [state, handleSubmit] = useForm("mdkgeenj");  
 
   const validateForm = () => {
     let newErrors = {};
@@ -85,7 +85,7 @@ const Contact = () => {
               CYBERNETIC CONTACT FORM
             </h3>
 
-            <form ref={formRef} onSubmit={handleFormSubmit} action="https://formspree.io/f/xpwdwvwb" method="POST"
+            <form ref={formRef} onSubmit={handleFormSubmit} action="https://formspree.io/f/mdkgeenj" method="POST"
               className="mt-6 flex flex-col gap-6"
             >
               <label className="flex flex-col">
