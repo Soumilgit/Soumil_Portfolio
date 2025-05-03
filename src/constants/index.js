@@ -195,7 +195,7 @@ const experiences = [
      iconBg: "#E6DEDD",
      date: "April 2025 - Present",
      points: [
-       "Working on entire frontend using Next.js, React, TypeScript & TailWindCSS across 7+ pages",
+       "Working on entire frontend using Next.js, React, TypeScript & TailWindCSS across 7+ pages.",
        "Building for 4+ sub-sections/sub-pages and resources, covering 5+ verticals with responsive layout.",
      ],
 
@@ -223,18 +223,7 @@ const experiences = [
     ],
   },
   {
-    title: "Campus Rep",
-    company_name: "Emertxe",
-    icon: emertxe,
-    iconBg: "#E6DEDD",
-    date: "April 2025 - Present",
-    points: [
-      "Chosen for stipend-based Campus Ambassador Program across 75 colleges nationally.",
-      "As sole campus rep, I’ll boost brand engagement via marketing and maybe land a tech intern.",
-    ],
-  },
-  {
-    title: "Project Intern",
+    title: "SWE Intern",
     company_name: "NPCIL",
     icon: npcil,
     iconBg: "#383E56",
@@ -246,15 +235,26 @@ const experiences = [
   },
   {
     title: "Tech Team",
-    company_name: "Emfinity KJSCE",
+    company_name: "Emfinity",
     icon: emfinity,
     iconBg: "#E6DEDD",
     date: "Sep 2023 - Aug 2024",
     points: [
       "Conducted and attended daily tech sessions, designed 200+ Math questions and organized 5+ events.",
-      "Engaged 450+ students and significantly boosted overall social media following growth by 20%.",
+      "Engaged 450+ students, significantly boosting overall social media following growth by 20%.",
       
     ],
+  },
+  {
+    title: "SWE Intern",
+    company_name: "KJSCE",
+    icon: kjsce,
+    iconBg: "#E6DEDD",
+    date: "Jul 2023 - Sep 2023",
+    points:[
+      "Developed a quiz web app using HTML, CSS and Vanilla JavaScript, having worked for 100+ hours.",
+      "Displays 10+ questions and a final score, with a 1% penalty for each retaken attempt."
+    ]
   },
 
 ];
