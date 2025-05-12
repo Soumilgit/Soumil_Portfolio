@@ -1,3 +1,4 @@
+import { color } from "framer-motion";
 import {
   app,
   web,
@@ -282,6 +283,27 @@ const achievements = [
 
 const projects = [
   {
+    name: "InterviewAI",
+    description:
+      "Gemini delivers live interview feedback via Next, NeonDB, Docker, Clerk, Stripe & Tailwind integration across 50+ roles.",
+    tags: [
+      {
+        name: "next",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "react",
+        color: "text-[#228B22]",
+      },
+      {
+        name: "tailwind",
+        color: "green-text-gradient",
+      },
+    ],
+    image: jasder,
+    source_code_link: "https://github.com/Soumilgit/Soumilgit-AI-Interview-SAAS",
+  },
+  {
     name: "Missing Person Detn.",
     description:
       "Amazon Rekognition matches 20+ images/minute via AWS Lambda, S3, API Gateway, Python & Formspree integration.",
@@ -304,24 +326,6 @@ const projects = [
     source_code_link: "https://github.com/Soumilgit/Real-Time-Missing-Persons-Detection",
   },
   
-
-  {
-    name: "Hand Gesture Detection",
-    description:
-      "Used Python, achieving 95% accuracy using a score checker ; used keypoint and point history classifier datasets.",
-    tags: [
-      {
-        name: "python",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Computer Vision",
-        color: "green-text-gradient",
-      },
-    ],
-    image: jasder,
-    source_code_link: "https://github.com/Soumilgit/Gesture-Sign-Language-Detection-using-Python",
-  },
   {
     name: "Meditation App",
     description:
