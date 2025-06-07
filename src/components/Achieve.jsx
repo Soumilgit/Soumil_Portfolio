@@ -8,10 +8,10 @@ import { textVariant, simpleFadeIn } from "../utils/motion"; // Use simpleFadeIn
 
 import cp from "../assets/cp.png";
 import googlecloud from "../assets/googlecloud.png";
-import hackerrank from "../assets/hackerrank.png";
+import codolio from "/codolio.svg";
 
 // Map images to achievements
-const icons = [cp, hackerrank, googlecloud];
+const icons = [cp, codolio, googlecloud];
 
 const AchievementCard = ({ index, name, description, link }) => (
   <motion.div
