@@ -7,7 +7,6 @@ import { SectionWrapper } from "../hoc";
 import { ScrambledText } from "./ScrambledText";
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
 import { FaMapMarkerAlt } from 'react-icons/fa';
-import { SiHackerrank } from 'react-icons/si';
 import { FiExternalLink } from 'react-icons/fi';
 import { simpleFadeIn } from "../utils/motion"; // Use simpleFadeIn instead of fadeIn
 
@@ -68,21 +67,21 @@ const Hero = ({ onHeroLoaded }) => {
       )
     },
     {
-      title: "Find Me Online",
-      content: (
-        <div className="space-y-3">
-          <a href="https://github.com/Soumilgit" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#34d680] transition-colors hover:underline font-semibold text-blue-300">
-            <FaGithub className="text-black bg-white rounded-full p-[2px]" size={20} /> GitHub <FiExternalLink />
-          </a>
-          <a href="https://www.hackerrank.com/profile/soumil_m" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#34d680] transition-colors hover:underline font-semibold text-blue-300">
-            <SiHackerrank className="text-white bg-black rounded-[4px] p-[2px]" size={20} /> HackerRank <FiExternalLink />
-          </a>
-          <a href="https://www.linkedin.com/in/soumilm30/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#34d680] transition-colors hover:underline font-semibold text-blue-300">
-            <FaLinkedin className="text-[#0A66C2]" size={20} /> LinkedIn <FiExternalLink />
-          </a>
-        </div>
-      )
-    },
+  title: "Find Me Online",
+  content: (
+    <div className="space-y-3">
+      <a href="https://github.com/Soumilgit" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#34d680] transition-colors hover:underline font-semibold text-blue-300">
+        <FaGithub className="text-black bg-white rounded-full p-[2px]" size={20} /> GitHub <FiExternalLink />
+      </a>
+      <a href="https://codolio.com/profile/uQSHdtbA" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#34d680] transition-colors hover:underline font-semibold text-blue-300">
+        <img src="/codolio.svg" alt="Codolio" className="w-5 h-5" /> Codolio <FiExternalLink />
+      </a>
+      <a href="https://www.linkedin.com/in/soumilm30/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#34d680] transition-colors hover:underline font-semibold text-blue-300">
+        <FaLinkedin className="text-[#0A66C2]" size={20} /> LinkedIn <FiExternalLink />
+      </a>
+    </div>
+  )
+},
     {
       title: "Social & More",
       content: (
