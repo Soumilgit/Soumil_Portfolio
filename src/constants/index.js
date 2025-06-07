@@ -267,10 +267,10 @@ const achievements = [
     link: "https://drive.google.com/file/d/1hR8uerT5PpBbdq-92SsJzxEK4t_1Xn9E/view?usp=sharing", 
   },
   {
-    name: "5⭐ Algorithms badge on HackerRank",
+    name: "Top 4% on Codolio, current global rank 406",
     description:
-      "Solved 50+ sectional problems to earn it, learnt different techniques & algorithms, primarily used C++ & Python.",
-    link: "https://www.hackerrank.com/profile/soumil_m", 
+      "Stats: 350+ problems, 300+ active days, 5 awards, AIR 358 and a current C-Score of 750+, out of 9500+ users globally.",
+    link: "https://codolio.com/profile/uQSHdtbA", 
   },
   {
     name: "Standard Milestone in Google Cloud Arcade '24",
@@ -304,7 +304,7 @@ const projects = [
     source_code_link: "https://github.com/Soumilgit/Soumilgit-AI-Interview-SAAS",
   },
   {
-    name: "Missing Person Detn.",
+    name: "Face Matching",
     description:
       "Amazon Rekognition matches 20+ images/minute via AWS Lambda, S3, API Gateway, Python & Formspree integration.",
     tags: [
