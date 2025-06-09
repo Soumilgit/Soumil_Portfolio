@@ -191,7 +191,7 @@ const technologies = [
 const experiences = [
   {
      title: "SWE Intern",
-     company_name: "1Play Sports",
+     company_name: "1 Play Global",
      icon: oneplay,
      iconBg: "#E6DEDD",
      date: "April 2025 - Present",
@@ -219,7 +219,7 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Mar 2024 - April 2025",
     points: [
-      "Completed 10+ corporate training sessions, learning financial modeling and deal structuring as well.",
+      "Completed 20+ corporate training sessions, learning financial modeling and deal structuring as well.",
       "Wrote 10+ research reports on concluded funding transactions in MLA Format; stipend-based pay.",
     ],
   },
@@ -269,7 +269,7 @@ const achievements = [
   {
     name: "Top 4% on Codolio, current global rank 406",
     description:
-      "Stats: 350+ problems, 300+ active days, 5 awards, AIR 358 and a current C-Score of 750+, out of 9500+ users globally.",
+      "Stats: 400+ problems, 300+ active days, 5 awards, AIR 356 and a current C-Score of 750+, out of 10000+ users globally.",
     link: "https://codolio.com/profile/uQSHdtbA", 
   },
   {
