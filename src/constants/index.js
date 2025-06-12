@@ -304,26 +304,26 @@ const projects = [
     source_code_link: "https://github.com/Soumilgit/Soumilgit-AI-Interview-SAAS",
   },
   {
-    name: "Face Matching",
+    name: "Customer Churn",
     description:
-      "Amazon Rekognition matches 20+ images/minute via AWS Lambda, S3, API Gateway, Python & Formspree integration.",
+      "Analyzes 4,000 bank customer records via Python, HTML/CSS & Mistral 24B, averaging total 82.73% model accuracy.",
     tags: [
       {
-        name: "javascript",
+        name: "xgboost",
         color: "green-text-gradient", 
       },
       {
-        name: "python",
+        name: "svm",
         color: "text-[#228B22]",
       },
       {
-        name: "aws",
+        name: "randomforest",
         color: "blue-text-gradient",
       },
       
     ],
     image: smack,
-    source_code_link: "https://github.com/Soumilgit/Real-Time-Missing-Persons-Detection",
+    source_code_link: "https://github.com/Soumilgit/Datathon_Team-DataP1ac3X.c0m",
   },
   
   {
