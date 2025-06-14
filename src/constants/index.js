@@ -283,7 +283,7 @@ const achievements = [
 
 const projects = [
   {
-    name: "InterviewAI",
+    name: "SimulateRecruitAI",
     description:
       "Gemini delivers live interview feedback via Next, NeonDB, Docker, Clerk, Stripe & Tailwind integration across 50+ roles.",
     tags: [
