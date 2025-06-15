@@ -32,11 +32,12 @@ import {
   mongodb,
   express,
   postmanapi,
-  flask,
+  chart,
   latex,
   oneplay,
   aws,
-  next
+  supabase,
+  next,
   
 } from "../assets";
 
@@ -121,8 +122,8 @@ const technologies = [
     icon: tailwind,
   },
   {
-    name: "jQuery",
-    icon: jQuery,
+    name: "Supabase",
+    icon: supabase,
   },
 
   {
@@ -178,8 +179,8 @@ const technologies = [
     icon: postmanapi,
   },
   {
-    name: "Flask",
-    icon: flask,
+    name: "Chart JS",
+    icon: chart,
   },
   {
     name: "Next JS",
@@ -196,8 +197,8 @@ const experiences = [
      iconBg: "#E6DEDD",
      date: "April 2025 - Present",
      points: [
-       "Working on entire frontend using Next.js, React, TypeScript & TailWindCSS across 7+ pages.",
-       "Building for 4+ sub-sections/sub-pages and resources, covering 5+ verticals with responsive layout.",
+       "Built entire website using Next.js, React, TypeScript, Three.js, TailWind & ShadCN across 7+ pages.",
+       "Building for 4+ sub-sections/sub-pages and resources, covering 5+ verticals responsively.",
      ],
 
   },
@@ -267,15 +268,15 @@ const achievements = [
     link: "https://drive.google.com/file/d/1hR8uerT5PpBbdq-92SsJzxEK4t_1Xn9E/view?usp=sharing", 
   },
   {
-    name: "Top 4% on Codolio, current global rank 406",
+    name: "Top 4% on Codolio, 1st rank in college",
     description:
-      "Stats: 400+ problems, 300+ active days, 5 awards, AIR 356 and a current C-Score of 750+, out of 10000+ users globally.",
+      "Stats: 470+ DSA problems solved, 5+ awards, 3650+ dev contributions & C-Score of 750+ among 12,000+ global users.",
     link: "https://codolio.com/profile/uQSHdtbA", 
   },
   {
     name: "Standard Milestone in Google Cloud Arcade '24",
     description:
-      "Completed cloud labs on topics like Prompt Design and deployment, achieved 15+ Arcade pts. & 4 Google swags.",
+      "Completed 25+ badges on topics like Prompt Design and deployment, achieved 15+ Arcade pts. & 4 Google swags.",
     link: "https://www.cloudskillsboost.google/public_profiles/cff658e9-f40a-4f6b-9ba4-c6709f008956", 
   },
   
@@ -285,7 +286,7 @@ const projects = [
   {
     name: "SimulateRecruitAI",
     description:
-      "Gemini delivers live interview feedback via Next, NeonDB, Docker, Clerk, Stripe & Tailwind integration across 50+ roles.",
+      "Gemini delivers interview feedback via Next, NeonDB, Docker, Clerk, Stripe, Tailwind & ShadCN integration across 50+ roles.",
     tags: [
       {
         name: "next",
@@ -306,14 +307,14 @@ const projects = [
   {
     name: "Customer Churn",
     description:
-      "Analyzes 4,000 bank customer records via Python, HTML/CSS & Mistral 24B, averaging total 82.73% model accuracy.",
+      "Analyzes 4,000 bank customer records via Python, Supabase, HTML/CSS & Qwen 32B, averaging 82.73% accuracy.",
     tags: [
       {
-        name: "xgboost",
+        name: "xgb",
         color: "green-text-gradient", 
       },
       {
-        name: "svm",
+        name: "smote",
         color: "text-[#228B22]",
       },
       {
