@@ -8,10 +8,10 @@ import { styles } from "../styles";
 const ExperienceCard = ({ experience, index }) => {
   return (
     <motion.div
-      variants={simpleFadeIn(index * 0.1, 0.2)} // Only fade in, slight stagger
+      variants={simpleFadeIn(index * 0.01, 0.02)} // Only fade in, slight stagger
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.1 }}
+      viewport={{ once: true, amount: 0.01 }}
       className="relative border-2 p-6 rounded-2xl shadow-lg mb-10 border-[#00FF7F] transition-transform duration-150 neon-box w-full flex flex-col justify-between bg-black/80 backdrop-blur-md"
       whileHover={{ scaleY: 1.05 }}
     >
@@ -41,10 +41,10 @@ const Experience = () => {
       <div className="relative z-10">
         {/* Scroll Animation for Title & Subtext */}
         <motion.div
-  variants={simpleFadeIn(0.1, 0.2)} // Only fade in
+  variants={simpleFadeIn(0.01, 0.02)} // Only fade in
   initial="hidden"
   whileInView="show"
-  viewport={{ once: true, amount: 0.1 }}
+  viewport={{ once: true, amount: 0.01 }}
   className="mx-auto w-fit px-6 py-4 mt-10 bg-black/80 rounded-xl shadow-lg backdrop-blur-md"
 >
   <p className={`${styles.sectionSubText} text-center text-[#ABF7B1]`}>
