@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useForm, ValidationError } from "@formspree/react"; 
 import { slideIn } from "../utils/motion";
@@ -14,8 +14,33 @@ const Contact = () => {
     message: "",
   });
   const [errors, setErrors] = useState({});
+  const [shouldAnimateComputer, setShouldAnimateComputer] = useState(false);
   
   const [state, handleSubmit] = useForm("mdkgeenj");  
+
+  // Scroll detection to trigger computer animation
+  useEffect(() => {
+    const handleScroll = () => {
+      // Get the certifications section element
+      const certSection = document.querySelector('#certf');
+      if (certSection) {
+        const rect = certSection.getBoundingClientRect();
+        // Trigger animation only when certifications section is completely scrolled past
+        const isPastCertifications = rect.bottom < 0;
+        setShouldAnimateComputer(isPastCertifications);
+      }
+    };
+
+    // Initial check
+    handleScroll();
+    
+    // Add scroll listener
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const validateForm = () => {
     let newErrors = {};
@@ -48,7 +73,7 @@ const Contact = () => {
     <div className="relative xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden">
       <div className="relative flex-[0.75] bg-transparent w-full">
         {state.succeeded ? (
-          <motion.div variants={slideIn("left", "tween", 0.15, 0.3)}
+          <motion.div variants={slideIn("left", "tween", 0.05, 0.1)}
             style={{
               display: "flex",
               flexDirection: "column",
@@ -66,7 +91,7 @@ const Contact = () => {
             </p>
           </motion.div>
         ) : (
-          <motion.div variants={slideIn("left", "tween", 0.15, 0.3)}
+          <motion.div variants={slideIn("left", "tween", 0.05, 0.1)}
             style={{
               display: "flex",
               flexDirection: "column",
@@ -141,11 +166,12 @@ const Contact = () => {
         )}
       </div>
 
-      <motion.div variants={slideIn("right", "tween", 0.15, 0.3)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
-      >
-        <ComputersCanvas />
-      </motion.div>
+       <motion.div 
+         variants={slideIn("right", "tween", 0.05, 0.1)}
+         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+       >
+         <ComputersCanvas shouldAutoRotate={shouldAnimateComputer} />
+       </motion.div>
     </div>
   );
 };

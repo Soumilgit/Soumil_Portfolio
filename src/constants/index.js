@@ -7,13 +7,11 @@ import {
   javascript,
   html,
   css,
-  jQuery,
   reactjs,
   typescript,
   npcil,
   marquee,
   meshcraft,
-  emertxe,
   emfinity,
   tailwind,
   nodejs,
@@ -32,12 +30,14 @@ import {
   mongodb,
   express,
   postmanapi,
-  flask,
-  latex,
+  chart,
   oneplay,
   aws,
-  next
-  
+  supabase,
+  next,
+  missing,
+  gesture,
+  latexcheatsheet,
 } from "../assets";
 
 
@@ -121,8 +121,8 @@ const technologies = [
     icon: tailwind,
   },
   {
-    name: "jQuery",
-    icon: jQuery,
+    name: "Supabase",
+    icon: supabase,
   },
 
   {
@@ -178,8 +178,8 @@ const technologies = [
     icon: postmanapi,
   },
   {
-    name: "Flask",
-    icon: flask,
+    name: "Chart JS",
+    icon: chart,
   },
   {
     name: "Next JS",
@@ -194,10 +194,10 @@ const experiences = [
      company_name: "1 Play Global",
      icon: oneplay,
      iconBg: "#E6DEDD",
-     date: "April 2025 - Present",
+     date: "April 2025 - August 2025",
      points: [
-       "Working on entire frontend using Next.js, React, TypeScript & TailWindCSS across 7+ pages.",
-       "Building for 4+ sub-sections/sub-pages and resources, covering 5+ verticals with responsive layout.",
+       "Built entire website using Next.js, React, TypeScript, Three.js, TailWind & ShadCN across 7+ pages.",
+       "Building for 4+ sub-sections/sub-pages and resources, covering 5+ verticals responsively.",
      ],
 
   },
@@ -267,16 +267,35 @@ const achievements = [
     link: "https://drive.google.com/file/d/1hR8uerT5PpBbdq-92SsJzxEK4t_1Xn9E/view?usp=sharing", 
   },
   {
-    name: "Top 4% on Codolio, current global rank 406",
+    name: "Top 3.5% on Codolio, 1st rank in college",
     description:
-      "Stats: 400+ problems, 300+ active days, 5 awards, AIR 356 and a current C-Score of 750+, out of 10000+ users globally.",
+      "Stats: 470+ DSA problems solved, 5+ awards, 3900+ dev contributions & C-Score of 770+ among 17,800+ global users.",
     link: "https://codolio.com/profile/uQSHdtbA", 
   },
   {
     name: "Standard Milestone in Google Cloud Arcade '24",
     description:
-      "Completed cloud labs on topics like Prompt Design and deployment, achieved 15+ Arcade pts. & 4 Google swags.",
+      "Completed 25+ badges on topics like Prompt Design and deployment, achieved 15+ Arcade pts. & 4 Google swags.",
     link: "https://www.cloudskillsboost.google/public_profiles/cff658e9-f40a-4f6b-9ba4-c6709f008956", 
+  },
+  {
+    name: "Joint rank 1st in CWC '25 coding contest",
+    description:
+      "Held via HackerRank platform, the total number of participants were 47, and I solved all 7 questions in C++ within 1 hour.",
+    link: "https://www.hackerrank.com/contests/coffeewithcodecell-on-26th-august/challenges", 
+  },
+  
+  {
+    name: "School rank 1st in Terii Green Olympiad 2019",
+    description:
+      "Got awarded a merit certificate for achieving 60-75 % score, finishing first in my school, AECS-2, as a result of this.",
+    link: "https://drive.google.com/file/d/1MMaH0bnl2JTSsXKD6O3Rzv4r6biLkckB/view?usp=sharing", 
+  },
+  {
+    name: "Rank 1 in KJSCE Tech Hunt, Tech Shield '23",
+    description:
+      "Part of a team of 4, which won first place, competing with 8+ other branch teams, in a tech clue treasure hunt in college.",
+    link: "https://in.linkedin.com/company/kjsce-students-council", 
   },
   
 ];
@@ -285,7 +304,7 @@ const projects = [
   {
     name: "SimulateRecruitAI",
     description:
-      "Gemini delivers live interview feedback via Next, NeonDB, Docker, Clerk, Stripe & Tailwind integration across 50+ roles.",
+      "Gemini delivers interview feedback via Next, NeonDB, Docker, Clerk, Stripe, Tailwind & Radix UI across 50+ roles.",
     tags: [
       {
         name: "next",
@@ -296,7 +315,7 @@ const projects = [
         color: "text-[#228B22]",
       },
       {
-        name: "tailwind",
+        name: "radix-ui",
         color: "green-text-gradient",
       },
     ],
@@ -306,30 +325,28 @@ const projects = [
   {
     name: "Customer Churn",
     description:
-      "Analyzes 4,000 bank customer records via Python, HTML/CSS & Mistral 24B, averaging total 82.73% model accuracy.",
+      "Analyzes 4,000 bank customer records via Python, Supabase, HTML/CSS & Qwen 32B, averaging 82.73% accuracy.",
     tags: [
       {
-        name: "xgboost",
+        name: "xgb",
         color: "green-text-gradient", 
       },
       {
-        name: "svm",
+        name: "smote",
         color: "text-[#228B22]",
       },
       {
-        name: "randomforest",
+        name: "full-stack",
         color: "blue-text-gradient",
       },
-      
     ],
     image: smack,
-    source_code_link: "https://github.com/Soumilgit/Datathon_Team-DataP1ac3X.c0m",
+    source_code_link: "https://github.com/Soumilgit/XYZ-Bank-Customer-Churn-Predictor",
   },
-  
   {
     name: "Meditation App",
     description:
-      " Developed using React Native and Expo, useful for tracking one's meditation habits and keep a record with affirmations.",
+      "Developed using React Native and Expo, useful for tracking one's meditation habits and keep a record with affirmations.",
     tags: [
       {
         name: "react",
@@ -343,13 +360,76 @@ const projects = [
         name: "typescript",
         color: "pink-text-gradient",
       },
-      
-
     ],
     image: boblob,
     source_code_link: "https://github.com/Soumilgit/Meditation-App_React-Native",
   },
-];const certificates = [
+  {
+    name: "Missing Finder",
+    description:
+      "Deployed AWS Lambda/S3 stack with Python & Rekognition for live person matching, ~1s response at 99.9% confidence.",
+    tags: [
+      {
+        name: "aws",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "lambda",
+        color: "green-text-gradient",
+      },
+      {
+        name: "python",
+        color: "text-[#228B22]",
+      },
+    ],
+    image: missing,
+    source_code_link: "https://github.com/Soumilgit/Real-Time-Missing-Persons-Detection",
+  },
+  {
+    name: "Gesture Detector",
+    description:
+      "Achieved 95% accuracy in gesture and sign detection with Python libraries, enabling 20–30 FPS real-time rendering.",
+    tags: [
+      {
+        name: "python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "opencv",
+        color: "green-text-gradient",
+      },
+      {
+        name: "ml",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: gesture,
+    source_code_link: "https://github.com/Soumilgit/Gesture-Sign-Language-Detection-using-Python",
+  },
+  {
+    name: "LaTeX Cheatsheet",
+    description:
+      "Built with HTML, CSS & JS, this covers 50+ LaTeX commands across 10+ categories with GitHub API support.",
+    tags: [
+      {
+        name: "html",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "css",
+        color: "green-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: latexcheatsheet,
+    source_code_link: "https://github.com/Soumilgit/LaTeX-CheatSheet",
+  },
+];
+
+const certificates = [
   {
     name: "Object-Oriented Data Structures in C++",
     description:

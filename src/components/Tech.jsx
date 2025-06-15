@@ -4,7 +4,7 @@ import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { textVariant, simpleFadeIn } from "../utils/motion"; // use simpleFadeIn!
+import { textVariant, simpleFadeIn } from "../utils/motion"; 
 
 const Tech = () => {
   const [positions, setPositions] = useState(
@@ -31,7 +31,7 @@ const Tech = () => {
       "CSS 3": "bg-[#1572B6]",
       "React JS": "bg-[#61DAFB]",
       "Tailwind CSS": "bg-[#06B6D4]",
-      "jQuery": "bg-[#0769AD]",
+      "Supabase": "bg-[#00FC00]",
       "Node JS": "bg-[#339933]",
       "Three JS": "bg-[#FFFFFF]",
       "Python": "bg-[#3776AB]",
@@ -43,7 +43,7 @@ const Tech = () => {
       "MongoDB": "bg-[#47A248]",
       "Express": "bg-[#9E3623]",
       "PostmanAPI": "bg-[#FF6C37]",
-      "Flask": "bg-[#BFBFBF]",
+      "Chart JS": "bg-[#FE777B]",
       "Next JS": "bg-[#B8B8B8]",
     };
     return colorMap[techName] || "bg-gray-600";
@@ -53,10 +53,10 @@ const Tech = () => {
     <div>
       {/* Scroll animated section title with clear readable background */}
       <motion.div
-  variants={simpleFadeIn(0.1, 0.2)} // Simple fade-in
+  variants={simpleFadeIn(0.05, 0.1)} 
   initial="hidden"
   whileInView="show"
-  viewport={{ once: true, amount: 0.1 }}
+  viewport={{ once: true, amount: 0.01 }}
   className="mx-auto w-fit px-6 py-4 mt-10 bg-black/80 rounded-xl shadow-lg backdrop-blur-md"
 >
   <p className={`${styles.sectionSubText} text-center text-white`}>
@@ -73,10 +73,10 @@ const Tech = () => {
       {technologies.map((technology, index) => (
   <motion.div
     key={technology.name}
-    variants={simpleFadeIn(index * 0.1, 0.2)} // Only fade-in, staggered
+    variants={simpleFadeIn(index * 0.05, 0.1)} 
     initial="hidden"
     whileInView="show"
-    viewport={{ once: true, amount: 0.1 }}
+    viewport={{ once: true, amount: 0.01 }}
     className="flex flex-col justify-center items-center relative group"
     style={{ transform: `translateX(${positions[index].x}px)` }}
   >

@@ -8,8 +8,19 @@ import { ScrambledText } from "./ScrambledText";
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
-import { simpleFadeIn } from "../utils/motion"; // Use simpleFadeIn instead of fadeIn
+import { simpleFadeIn } from "../utils/motion"; 
 
+const openTwitter = () => {
+  const appLink = "twitter://user?screen_name=SoumilMukh6476";
+  const webLink = "https://twitter.com/SoumilMukh6476";
+
+  const timeout = setTimeout(() => {
+    window.open(webLink, "_blank");
+  }, 300);
+
+  window.location.href = appLink;
+  window.addEventListener("blur", () => clearTimeout(timeout), { once: true });
+};
 
 const Hero = ({ onHeroLoaded }) => {
   const { title, icon } = hero[0];
@@ -48,10 +59,10 @@ const Hero = ({ onHeroLoaded }) => {
       title: "Education & Passions",
       content: (
         <div className="space-y-2">
-          <p><span className="font-bold">🎓 Degree:</span> Software Engineer</p>
-          <p><span className="font-bold">🌐 First Passion:</span> Web Dev</p>
-          <p><span className="font-bold">🧠 Second Passion:</span> AI-ML</p>
-          <p><span className="font-bold">📈 Third Passion:</span> Algorithms</p>
+          <p><span className="font-bold text-white">🎓 Degree:</span> Software Engineer</p>
+          <p><span className="font-bold text-white">🌐 First Passion:</span> Web Dev</p>
+          <p><span className="font-bold text-white">🧠 Second Passion:</span> AI-ML</p>
+          <p><span className="font-bold text-white">📈 Third Passion:</span> Algorithms</p>
         </div>
       )
     },
@@ -59,10 +70,10 @@ const Hero = ({ onHeroLoaded }) => {
       title: "Personal Info",
       content: (
         <div className="space-y-2">
-          <p>📅 DOB: 30 October 2004</p>
-          <p>📧 Mail: msoumil69@gmail.com</p>
-          <p>📞 Phone: 9405727673</p>
-          <p>✨ Hobby: Birdwatching</p>
+          <p className="text-gray-100">📅 DOB: 30 October 2004</p>
+          <p className="text-gray-100">📧 Mail: msoumil69@gmail.com</p>
+          <p className="text-gray-100">📞 Phone: 9405727673</p>
+          <p className="text-gray-100">✨ Hobby: Birdwatching</p>
         </div>
       )
     },
@@ -70,13 +81,13 @@ const Hero = ({ onHeroLoaded }) => {
   title: "Find Me Online",
   content: (
     <div className="space-y-3">
-      <a href="https://github.com/Soumilgit" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#34d680] transition-colors hover:underline font-semibold text-blue-300">
+      <a href="https://github.com/Soumilgit" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#34d680] transition-colors hover:underline font-semibold text-blue-200">
         <FaGithub className="text-black bg-white rounded-full p-[2px]" size={20} /> GitHub <FiExternalLink />
       </a>
-      <a href="https://codolio.com/profile/uQSHdtbA" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#34d680] transition-colors hover:underline font-semibold text-blue-300">
+      <a href="https://codolio.com/profile/uQSHdtbA" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#34d680] transition-colors hover:underline font-semibold text-blue-200">
         <img src="/codolio.svg" alt="Codolio" className="w-5 h-5" /> Codolio <FiExternalLink />
       </a>
-      <a href="https://www.linkedin.com/in/soumilm30/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#34d680] transition-colors hover:underline font-semibold text-blue-300">
+      <a href="https://www.linkedin.com/in/soumilm30/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#34d680] transition-colors hover:underline font-semibold text-blue-200">
         <FaLinkedin className="text-[#0A66C2]" size={20} /> LinkedIn <FiExternalLink />
       </a>
     </div>
@@ -86,13 +97,16 @@ const Hero = ({ onHeroLoaded }) => {
       title: "Social & More",
       content: (
         <div className="space-y-3">
-          <a href="https://twitter.com/SoumilMukh6476/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#34d680] transition-colors hover:underline font-semibold text-blue-300">
+          <button
+            onClick={openTwitter}
+            className="flex items-center gap-2 hover:text-[#34d680] transition-colors hover:underline font-semibold text-blue-200"
+          >
             <FaTwitter className="text-[#1DA1F2]" size={20} /> Twitter <FiExternalLink />
-          </a>
-          <a href="https://www.instagram.com/soumil_m.exe/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#34d680] transition-colors hover:underline font-semibold text-blue-300">
+          </button>
+          <a href="https://www.instagram.com/soumil_m.exe/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#34d680] transition-colors hover:underline font-semibold text-blue-200">
             <FaInstagram className="text-[#E4405F]" size={20} /> Instagram <FiExternalLink />
           </a>
-          <a href="https://maps.app.goo.gl/QLHqDchdPjH6bQdb8?g_st=ac" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#34d680] transition-colors hover:underline font-semibold text-blue-300">
+          <a href="https://maps.app.goo.gl/QLHqDchdPjH6bQdb8?g_st=ac" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#34d680] transition-colors hover:underline font-semibold text-blue-200">
             <FaMapMarkerAlt className="text-red-600" size={20} /> Google Maps <FiExternalLink />
           </a>
         </div>
@@ -109,7 +123,7 @@ const Hero = ({ onHeroLoaded }) => {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-[#34d680] shadow-lg flex-shrink-0"
+          className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-2 border-[#34d680]/60 shadow-2xl shadow-black/30 flex-shrink-0 backdrop-blur-sm bg-black/10"
         >
           <img 
             src={icon} 
@@ -121,20 +135,20 @@ const Hero = ({ onHeroLoaded }) => {
 
         {/* Main Text */}
         <motion.h1
-  variants={simpleFadeIn(0.1, 0.2)} // Only fade in
+  variants={simpleFadeIn(0.05, 0.1)} 
   initial="hidden"
   whileInView="show"
-  viewport={{ once: true, amount: 0.1 }}
+  viewport={{ once: true, amount: 0.01 }}
   className={`${styles.heroHeadText} h-[84px] overflow-hidden`}
 >
   <ScrambledText text="I'm Soumil!" />
 </motion.h1>
 
 <motion.p
-  variants={simpleFadeIn(0.2, 0.2)} // Slight delay for subtext
+  variants={simpleFadeIn(0.1, 0.1)} 
   initial="hidden"
   whileInView="show"
-  viewport={{ once: true, amount: 0.1 }}
+  viewport={{ once: true, amount: 0.01 }}
   className={`${styles.heroSubText} text-white-100 mt-2 h-[30px] overflow-hidden`}
 >
   <ScrambledText text="I like exploring." />
@@ -153,8 +167,8 @@ const Hero = ({ onHeroLoaded }) => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.25, duration: 0.25 }}
-                className="w-32 sm:w-36 h-10 border border-[#37b54a] rounded-full bg-[#37b54a] text-white flex items-center justify-center transition duration-150 hover:bg-white hover:text-[#37b54a] shadow-md hover:shadow-[#37b54a]/50"
+                transition={{ delay: 0.025, duration: 0.25 }}
+                className="w-32 sm:w-36 h-10 border border-[#37b54a]/70 rounded-full bg-[#37b54a]/90 backdrop-blur-sm text-white flex items-center justify-center transition-all duration-300 hover:bg-white/90 hover:text-[#37b54a] shadow-lg hover:shadow-xl hover:shadow-black/20"
               >
                 <DownloadCVMarquee />
               </motion.div>
@@ -169,15 +183,15 @@ const Hero = ({ onHeroLoaded }) => {
         {infoCards.map((card, index) => (
   <motion.div 
     key={index}
-    variants={simpleFadeIn(index * 0.2, 0.3)} // Only fade in, staggered
+    variants={simpleFadeIn(index * 0.1, 0.03)} 
     initial="hidden"
     whileInView="show"
-    viewport={{ once: true, amount: 0.1 }}
-    className="bg-gray-900/80 rounded-xl p-5 border border-gray-700 hover:border-[#34d680] transition-colors cursor-pointer hover:shadow-lg hover:shadow-[#34d680]/20 flex flex-col"
+    viewport={{ once: true, amount: 0.01 }}
+    className="bg-black/80 backdrop-blur-sm rounded-xl p-5 border border-gray-700/50 hover:border-[#34d680]/70 transition-all duration-300 cursor-pointer hover:shadow-xl hover:shadow-black/20 flex flex-col"
     style={{ minHeight: "220px", minWidth: "100%" }}
   >
     <h3 className="text-[#34d680] font-bold mb-4 text-lg">{card.title}</h3>
-    <div className="text-gray-300 flex-grow overflow-hidden">
+    <div className="text-gray-200 flex-grow overflow-hidden">
       {card.content}
     </div>
   </motion.div>
