@@ -2,16 +2,16 @@ import React from "react";
 import { motion } from "framer-motion";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
-import { textVariant, simpleFadeIn } from "../utils/motion"; // import simpleFadeIn instead of fadeIn
+import { textVariant, simpleFadeIn } from "../utils/motion"; 
 import { styles } from "../styles";
 
 const ExperienceCard = ({ experience, index }) => {
   return (
     <motion.div
-      variants={simpleFadeIn(index * 0.1, 0.2)} // Only fade in, slight stagger
+      variants={simpleFadeIn(index * 0.05, 0.1)} 
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.1 }}
+      viewport={{ once: true, amount: 0.01 }}
       className="relative border-2 p-6 rounded-2xl shadow-lg mb-10 border-[#00FF7F] transition-transform duration-150 neon-box w-full flex flex-col justify-between bg-black/80 backdrop-blur-md"
       whileHover={{ scaleY: 1.05 }}
     >
@@ -41,10 +41,10 @@ const Experience = () => {
       <div className="relative z-10">
         {/* Scroll Animation for Title & Subtext */}
         <motion.div
-  variants={simpleFadeIn(0.1, 0.2)} // Only fade in
+  variants={simpleFadeIn(0.05, 0.1)} 
   initial="hidden"
   whileInView="show"
-  viewport={{ once: true, amount: 0.1 }}
+  viewport={{ once: true, amount: 0.01 }}
   className="mx-auto w-fit px-6 py-4 mt-10 bg-black/80 rounded-xl shadow-lg backdrop-blur-md"
 >
   <p className={`${styles.sectionSubText} text-center text-[#ABF7B1]`}>

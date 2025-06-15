@@ -14,10 +14,10 @@ const icons = [oods, postman, jsi];
 
 const CertificationCard = ({ index, name, description, link }) => (
   <motion.div
-    variants={simpleFadeIn(index * 0.1, 0.2)} // Only fade in with stagger
+    variants={simpleFadeIn(index * 0.05, 0.1)} 
     initial="hidden"
     whileInView="show"
-    viewport={{ once: true, amount: 0.1 }}
+    viewport={{ once: true, amount: 0.01 }}
     className="relative bg-black p-[2px] rounded-lg shadow-lg transition-transform neon-box"
     whileHover={{ scaleY: 1.05 }}
   >
@@ -49,10 +49,10 @@ const Certf = () => {
   return (
     <>
       <motion.div
-        variants={simpleFadeIn(0.1, 0.2)} // Fade in heading too!
+        variants={simpleFadeIn(0.05, 0.1)} 
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.1 }}
+        viewport={{ once: true, amount: 0.01 }}
         className="mx-auto w-fit px-6 py-4 mt-10 bg-black/80 rounded-xl shadow-lg backdrop-blur-md"
       >
         <p className={`${styles.sectionSubText} text-center text-[#ABF7B1]`}>

@@ -9,11 +9,11 @@ import { textVariant, simpleFadeIn } from "../utils/motion"; // Use simpleFadeIn
 const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
   return (
     <motion.div
-      variants={simpleFadeIn(index * 0.1, 0.2)} // Only fade-in with slight stagger
+      variants={simpleFadeIn(index * 0.05, 0.1)} 
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.1 }}
-      className="relative bg-black p-[2px] rounded-lg shadow-lg transition-transform neon-box"r
+      viewport={{ once: true, amount: 0.01 }}
+      className="relative bg-black p-[2px] rounded-lg shadow-lg transition-transform neon-box"
       whileHover={{ scaleY: 1.05 }}
     >
       <div className="bg-black p-5 rounded-lg shadow-md w-full">
@@ -53,10 +53,10 @@ const Works = () => {
     <>
       {/* Styled heading section */}
       <motion.div
-  variants={simpleFadeIn(0.1, 0.2)} // simple fade-in for heading
+  variants={simpleFadeIn(0.05, 0.1)} 
   initial="hidden"
   whileInView="show"
-  viewport={{ once: true, amount: 0.1 }}
+  viewport={{ once: true, amount: 0.01 }}
   className="mx-auto w-fit px-6 py-4 mt-10 bg-black/80 rounded-xl shadow-lg backdrop-blur-md"
 >
   <p className={`${styles.sectionSubText} text-center text-[#ABF7B1]`}>
@@ -69,10 +69,10 @@ const Works = () => {
 
 <div className="w-full flex justify-center">
   <motion.p 
-    variants={simpleFadeIn(0.1, 0.2)} // fade-in description after heading
+    variants={simpleFadeIn(0.05, 0.1)} 
     initial="hidden"
     whileInView="show"
-    viewport={{ once: true, amount: 0.1 }}
+    viewport={{ once: true, amount: 0.01 }}
     className="mt-6 text-secondary text-[21px] max-w-4xl leading-[30px] text-center bg-black/80 rounded-xl px-6 py-4 shadow-lg backdrop-blur-md"
   >
     Following projects showcase my skills and experience through examples of my work.

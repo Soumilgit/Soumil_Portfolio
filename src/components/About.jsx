@@ -8,10 +8,10 @@ import { simpleFadeIn, textVariant } from "../utils/motion"; // import simpleFad
 
 const ServiceCard = ({ title, icon, index }) => (
   <motion.div
-  variants={simpleFadeIn(index * 0.1, 0.2)} // Only fade in, slight stagger
+  variants={simpleFadeIn(index * 0.05, 0.1)} 
   initial="hidden"
   whileInView="show"
-  viewport={{ once: true, amount: 0.1 }}
+  viewport={{ once: true, amount: 0.01 }}
   className="relative bg-black p-[2px] rounded-lg shadow-lg transition-transform duration-150 neon-box"
   whileHover={{ scaleY: 1.05 }} // Hover behavior remains!
 >
@@ -74,7 +74,7 @@ const About = ({ setAboutLoaded }) => {
     variants={textVariant()}
     initial="hidden"
     whileInView="show"
-    viewport={{ once: true, amount: 0.1 }}
+    viewport={{ once: true, amount: 0.01 }}
   >
     <p className={`${styles.sectionSubText} text-white transition duration-300`}>
       Introduction
@@ -85,20 +85,19 @@ const About = ({ setAboutLoaded }) => {
   </motion.div>
 
   <motion.p
-  variants={simpleFadeIn(0.1, 0.2)}
+  variants={simpleFadeIn(0.05, 0.01)}
   initial="hidden"
   whileInView="show"
-  viewport={{ once: true, amount: 0.1 }}
+  viewport={{ once: true, amount: 0.01 }}
   className="mt-2 text-white text-xl max-w-3xl leading-7 transition duration-300"
-> {/* 👈 min-h-[90px] REMOVED */}
-  Computer Engineer building real-time AI tools, scalable apps, and learnt investment banking.
+> Computer Engineer building real-time AI tools, scalable apps, and learnt investment banking.
 </motion.p>
 
 <motion.p
-  variants={simpleFadeIn(0.1, 0.2)}
+  variants={simpleFadeIn(0.05, 0.01)}
   initial="hidden"
   whileInView="show"
-  viewport={{ once: true, amount: 0.1 }}
+  viewport={{ once: true, amount: 0.01 }}
   className="mt-1 text-[#ABF7B1] text-xl max-w-3xl leading-7 duration-0 hover:text-[#37b54a] hover:shadow-[0_0_10px_#39FF14]"
 >
   Oh, and yes, experience neon glows while hovering on title elements below, just like on THIS exact sentence!

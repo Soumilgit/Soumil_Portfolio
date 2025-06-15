@@ -9,16 +9,19 @@ import { textVariant, simpleFadeIn } from "../utils/motion"; // Use simpleFadeIn
 import cp from "../assets/cp.png";
 import googlecloud from "../assets/googlecloud.png";
 import codolio from "/codolio.svg";
+import cwc from "../assets/cwc.png";
+import terii from "../assets/terii.png";
+import techhunt from "../assets/techhunt.png";
 
 // Map images to achievements
-const icons = [cp, codolio, googlecloud];
+const icons = [cp, codolio, googlecloud, cwc, terii, techhunt];
 
 const AchievementCard = ({ index, name, description, link }) => (
   <motion.div
-    variants={simpleFadeIn(index * 0.1, 0.2)} // Only fade in with stagger
+    variants={simpleFadeIn(index * 0.05, 0.1)} 
     initial="hidden"
     whileInView="show"
-    viewport={{ once: true, amount: 0.1 }}
+    viewport={{ once: true, amount: 0.01 }}
     className="relative bg-black p-[2px] rounded-lg shadow-lg transition-transform duration-150 neon-box w-full max-w-[360px]"
     whileHover={{ scaleY: 1.05 }}
   >
@@ -46,10 +49,10 @@ const Achieve = () => {
     <>
       {/* Heading with blurred dark background for clear visibility */}
       <motion.div
-  variants={simpleFadeIn(0.1, 0.2)} // Fade in for heading block
+  variants={simpleFadeIn(0.05, 0.1)} 
   initial="hidden"
   whileInView="show"
-  viewport={{ once: true, amount: 0.1 }}
+  viewport={{ once: true, amount: 0.01 }}
   className="mx-auto w-fit px-6 py-4 mt-10 bg-black/80 rounded-xl shadow-lg backdrop-blur-md"
 >
   <p className={`${styles.sectionSubText} text-center text-[#ABF7B1]`}>
@@ -63,10 +66,10 @@ const Achieve = () => {
 
       {/* Description with same background styling */}
       <motion.div
-  variants={simpleFadeIn(0.1, 0.2)} // Slight delay after heading
+  variants={simpleFadeIn(0.05, 0.1)} 
   initial="hidden"
   whileInView="show"
-  viewport={{ once: true, amount: 0.1 }}
+  viewport={{ once: true, amount: 0.01 }}
   className="w-full flex justify-center"
 >
   <p className="mt-6 text-secondary text-[22px] max-w-3xl leading-[30px] text-center bg-black/80 rounded-xl px-6 py-4 shadow-lg backdrop-blur-md">
