@@ -31,7 +31,7 @@ const Tech = () => {
       "CSS 3": "bg-[#1572B6]",
       "React JS": "bg-[#61DAFB]",
       "Tailwind CSS": "bg-[#06B6D4]",
-      "jQuery": "bg-[#0769AD]",
+      "SQLite": "bg-[#0769AD]",
       "Node JS": "bg-[#339933]",
       "Three JS": "bg-[#FFFFFF]",
       "Python": "bg-[#3776AB]",
@@ -43,7 +43,7 @@ const Tech = () => {
       "MongoDB": "bg-[#47A248]",
       "Express": "bg-[#9E3623]",
       "PostmanAPI": "bg-[#FF6C37]",
-      "Flask": "bg-[#BFBFBF]",
+      "Chart JS": "bg-[#FE777B]",
       "Next JS": "bg-[#B8B8B8]",
     };
     return colorMap[techName] || "bg-gray-600";

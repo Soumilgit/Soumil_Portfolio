@@ -25,10 +25,11 @@ import github from "./tech/github.png";
 import mongodb from "./tech/mongodb.png";
 import express from "./tech/express.png";
 import postmanapi from "./tech/postmanapi.png";
-import flask from "./tech/flask.png";
+import chart from "./tech/chart.png";
 import latex from "./tech/latex.png";
 import aws from "./tech/aws.png";
 import next from "./tech/next.png"; 
+import sqlite from "./tech/sqlite.png";
 
 import emfinity from "./company/emfinity.png";
 import npcil from "./company/npcil.png";
@@ -92,12 +93,13 @@ export {
   mongodb,
   express,
   postmanapi,
-  flask,
+  chart,
   latex,
   mypic,
   kjsce,
   hackerrank,
   oneplay,
   aws,
-  next
+  next,
+  sqlite,
 };
