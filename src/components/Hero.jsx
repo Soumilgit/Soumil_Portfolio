@@ -121,20 +121,20 @@ const Hero = ({ onHeroLoaded }) => {
 
         {/* Main Text */}
         <motion.h1
-  variants={simpleFadeIn(0.1, 0.2)} // Only fade in
+  variants={simpleFadeIn(0.01, 0.02)} // Only fade in
   initial="hidden"
   whileInView="show"
-  viewport={{ once: true, amount: 0.1 }}
+  viewport={{ once: true, amount: 0.01 }}
   className={`${styles.heroHeadText} h-[84px] overflow-hidden`}
 >
   <ScrambledText text="I'm Soumil!" />
 </motion.h1>
 
 <motion.p
-  variants={simpleFadeIn(0.2, 0.2)} // Slight delay for subtext
+  variants={simpleFadeIn(0.02, 0.02)} // Slight delay for subtext
   initial="hidden"
   whileInView="show"
-  viewport={{ once: true, amount: 0.1 }}
+  viewport={{ once: true, amount: 0.01 }}
   className={`${styles.heroSubText} text-white-100 mt-2 h-[30px] overflow-hidden`}
 >
   <ScrambledText text="I like exploring." />
@@ -153,7 +153,7 @@ const Hero = ({ onHeroLoaded }) => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.25, duration: 0.25 }}
+                transition={{ delay: 0.025, duration: 0.25 }}
                 className="w-32 sm:w-36 h-10 border border-[#37b54a] rounded-full bg-[#37b54a] text-white flex items-center justify-center transition duration-150 hover:bg-white hover:text-[#37b54a] shadow-md hover:shadow-[#37b54a]/50"
               >
                 <DownloadCVMarquee />
@@ -169,10 +169,10 @@ const Hero = ({ onHeroLoaded }) => {
         {infoCards.map((card, index) => (
   <motion.div 
     key={index}
-    variants={simpleFadeIn(index * 0.2, 0.3)} // Only fade in, staggered
+    variants={simpleFadeIn(index * 0.02, 0.03)} // Only fade in, staggered
     initial="hidden"
     whileInView="show"
-    viewport={{ once: true, amount: 0.1 }}
+    viewport={{ once: true, amount: 0.01 }}
     className="bg-gray-900/80 rounded-xl p-5 border border-gray-700 hover:border-[#34d680] transition-colors cursor-pointer hover:shadow-lg hover:shadow-[#34d680]/20 flex flex-col"
     style={{ minHeight: "220px", minWidth: "100%" }}
   >

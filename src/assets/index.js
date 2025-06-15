@@ -25,10 +25,11 @@ import github from "./tech/github.png";
 import mongodb from "./tech/mongodb.png";
 import express from "./tech/express.png";
 import postmanapi from "./tech/postmanapi.png";
-import flask from "./tech/flask.png";
+import chart from "./tech/chart.png";
 import latex from "./tech/latex.png";
 import aws from "./tech/aws.png";
 import next from "./tech/next.png"; 
+import supabase from "./tech/supabase.png";
 
 import emfinity from "./company/emfinity.png";
 import npcil from "./company/npcil.png";
@@ -40,6 +41,9 @@ import oneplay from "./company/oneplay.png";
 import boblob from "./boblob.png";
 import jasder from "./jasder.png";
 import smack from "./smack.png";
+import missing from "./missing.png";
+import gesture from "./gesture.png";
+import latexcheatsheet from "./latexcheatsheet.png";
 
 import googlecloud from "./googlecloud.png";
 import cp from "./cp.png";
@@ -51,6 +55,11 @@ import mypic from "./mypic.png";
 import githubk from "./githubk.png";
 import emertxe from "./emertxe.png";
 import hackerrank from "./hackerrank.png";
+
+import cwc from "./cwc.png";
+import terii from "./terii.png";
+import techhunt from "./techhunt.png";
+
 
 export {
   app,
@@ -92,12 +101,19 @@ export {
   mongodb,
   express,
   postmanapi,
-  flask,
+  chart,
   latex,
   mypic,
   kjsce,
   hackerrank,
   oneplay,
   aws,
-  next
+  next,
+  supabase,
+  missing,
+  gesture,
+  latexcheatsheet,
+  cwc,
+  terii,
+  techhunt
 };

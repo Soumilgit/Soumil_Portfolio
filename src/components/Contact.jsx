@@ -48,7 +48,7 @@ const Contact = () => {
     <div className="relative xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden">
       <div className="relative flex-[0.75] bg-transparent w-full">
         {state.succeeded ? (
-          <motion.div variants={slideIn("left", "tween", 0.15, 0.3)}
+          <motion.div variants={slideIn("left", "tween", 0.01, 0.02)}
             style={{
               display: "flex",
               flexDirection: "column",
@@ -66,7 +66,7 @@ const Contact = () => {
             </p>
           </motion.div>
         ) : (
-          <motion.div variants={slideIn("left", "tween", 0.15, 0.3)}
+          <motion.div variants={slideIn("left", "tween", 0.01, 0.02)}
             style={{
               display: "flex",
               flexDirection: "column",
@@ -141,7 +141,7 @@ const Contact = () => {
         )}
       </div>
 
-      <motion.div variants={slideIn("right", "tween", 0.15, 0.3)}
+      <motion.div variants={slideIn("right", "tween", 0.01, 0.02)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
         <ComputersCanvas />
