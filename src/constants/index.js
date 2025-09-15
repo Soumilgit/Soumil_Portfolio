@@ -60,6 +60,10 @@ export const navLinks = [
     title: "Feats",
   },
   {
+    id: "heatmap",
+    title: "Heatmap",
+  },
+  {
     id: "projects",
     title: "Projects",
   },

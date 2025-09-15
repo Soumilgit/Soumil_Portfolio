@@ -6,6 +6,7 @@ import Tech from "./Tech";
 import Experience from "./Experience";
 import Achieve from './Achieve';
 import Certf from './Certf';
+import Heatmap from './Heatmap';
 import Works from "./Works";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
@@ -19,6 +20,7 @@ export {
   Experience,
   Achieve,
   Certf,
+  Heatmap,
   Works,
   Contact,
   CanvasLoader,

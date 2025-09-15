@@ -9,6 +9,7 @@ import {
   Navbar,
   Tech,
   Achieve,
+  Heatmap,
   Works,
   Certf,
   StarsCanvas,
@@ -36,6 +37,7 @@ const App = () => {
               <Experience />
               <Tech />
               <Achieve />
+              <Heatmap />
               <Works />
               <Certf />
               <Contact />
