@@ -134,7 +134,7 @@ const Heatmap = () => {
                   fontSize={14}
                   theme={theme}
                   hideTotalCount={true}
-                  hideColorLegend={false} // ✅ keep "Less → More"
+                  hideColorLegend={false} 
                   style={{
                     width: "100%",
                     display: "block",
