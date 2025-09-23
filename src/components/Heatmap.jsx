@@ -6,15 +6,12 @@ import { styles } from "../styles";
 import GitHubCalendar from "react-github-calendar";
 
 const Heatmap = () => {
-  const accent = "#34d680";
-
   const theme = {
-    light: ["#23272f", accent + "33", accent + "66", accent + "99", accent],
-    dark: ["#18181b", accent + "33", accent + "66", accent + "99", accent],
+    light: ["#23272f","#123d22","#25924a","#2ea043","#3ddc84",],
+    dark: ["#18181b","#123d22","#25924a","#2ea043","#3ddc84",],
   };
 
   useEffect(() => {
-    // Hide ONLY the gradient svg inside the legend
     const hideLegendGradient = () => {
       const legends = document.querySelectorAll(
         ".react-activity-calendar__legend"
@@ -29,23 +26,30 @@ const Heatmap = () => {
 
     hideLegendGradient();
 
-    // Run again after GitHubCalendar finishes rendering async
     const t = setTimeout(hideLegendGradient, 1000);
     return () => clearTimeout(t);
   }, []);
 
   return (
     <div className="relative">
-      {/* Custom Scrollbar Styles */}
       <style>
         {`
+          .react-activity-calendar__rect {
+            transition: all 0.25s ease-in-out;
+            filter: drop-shadow(0 0 1.5px rgba(46,160,67,0.3));
+          }
+          .react-activity-calendar__rect:hover {
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 4px rgba(61,220,132,0.6));
+          }
+
           .heatmap-scrollbar {
-            scrollbar-width: thin;
-            scrollbar-color: #37b54a #1a1a1a;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-color: #25924a #1a1a1a;
           }
           
           .heatmap-scrollbar::-webkit-scrollbar {
-            height: 8px;
+            height: 10px; 
           }
           
           .heatmap-scrollbar::-webkit-scrollbar-track {
@@ -54,21 +58,20 @@ const Heatmap = () => {
           }
           
           .heatmap-scrollbar::-webkit-scrollbar-thumb {
-            background: #37b54a;
+            background: #25924a;
             border-radius: 4px;
-            box-shadow: 0 0 10px #37b54a;
+            box-shadow: 0 0 6px #25924a;
           }
           
           .heatmap-scrollbar::-webkit-scrollbar-thumb:hover {
             background: #2ea043;
-            box-shadow: 0 0 15px #37b54a;
+            box-shadow: 0 0 9px #25924a;
           }
           
-          /* Mobile specific scrollbar */
           @media (max-width: 768px) {
             .heatmap-scrollbar {
               scrollbar-width: auto;
-              scrollbar-color: #37b54a #0a0a0a;
+              scrollbar-color: #25924a #0a0a0a;
             }
             
             .heatmap-scrollbar::-webkit-scrollbar {
@@ -81,16 +84,15 @@ const Heatmap = () => {
             }
             
             .heatmap-scrollbar::-webkit-scrollbar-thumb {
-              background: linear-gradient(90deg, #37b54a, #2ea043);
+              background: linear-gradient(90deg, #25924a, #2ea043);
               border-radius: 6px;
-              box-shadow: 0 0 20px #37b54a;
+              box-shadow: 0 0 10px #25924a;
             }
           }
         `}
       </style>
-      
+
       <div className="relative z-10">
-        {/* Scroll Animation for Title */}
         <motion.div
           variants={simpleFadeIn(0.05, 0.1)}
           initial="hidden"
@@ -103,7 +105,6 @@ const Heatmap = () => {
           </p>
         </motion.div>
 
-        {/* Subtitle */}
         <motion.div
           variants={simpleFadeIn(0.05, 0.1)}
           initial="hidden"
@@ -116,7 +117,6 @@ const Heatmap = () => {
           </h2>
         </motion.div>
 
-        {/* GitHub Calendar Container */}
         <motion.div
           variants={simpleFadeIn(0.05, 0.1)}
           initial="hidden"
@@ -126,22 +126,20 @@ const Heatmap = () => {
         >
           <div className="w-full max-w-6xl">
             <div className="rounded-3xl border border-[#34d680]/20 bg-black/50 backdrop-blur-sm shadow-xl w-full p-8">
-              <div className="w-full overflow-x-auto heatmap-scrollbar">
-                <GitHubCalendar
-                  username="Soumilgit"
-                  blockSize={16}
-                  blockRadius={4}
-                  fontSize={14}
-                  theme={theme}
-                  hideTotalCount={true}
-                  hideColorLegend={false} 
-                  style={{
-                    width: "100%",
-                    display: "block",
-                    minWidth: "800px",
-                  }}
-                />
-              </div>
+              <div className="w-full overflow-x-auto">
+
+          <div className="min-w-[800px]">
+            <GitHubCalendar
+              username="Soumilgit"
+              blockSize={16}
+              blockRadius={4}
+              fontSize={14}
+              theme={theme}
+              hideTotalCount={true}
+              hideColorLegend={false}
+            />
+          </div>
+        </div>
             </div>
           </div>
         </motion.div>
