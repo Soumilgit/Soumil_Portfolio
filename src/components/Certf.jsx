@@ -18,13 +18,13 @@ const CertificationCard = ({ index, name, description, link }) => (
     initial="hidden"
     whileInView="show"
     viewport={{ once: true, amount: 0.01 }}
-    className="relative bg-black p-[2px] rounded-lg shadow-lg transition-transform neon-box"
+    className="relative bg-black p-[2px] rounded-lg transition-transform border border-white/30 hover:border-[#37b54a]"
     whileHover={{ scaleY: 1.05 }}
   >
-    <div className="bg-black p-5 rounded-lg shadow-md w-full text-center relative">
-      {/* Certificate Icon in Top-Right Corner */}
+    <div className="bg-black p-5 rounded-lg w-full text-center relative">
+      {/* Certificate link button in Top-Right Corner */}
       <a href={link} target="_blank" rel="noopener noreferrer" className="absolute top-4 right-4">
-        <button className="px-3 py-1.5 text-base font-bold text-[#37b54a] border-2 border-[#37b54a] bg-black rounded-lg shadow-[0_0_5px_#37b54a] transition-transform duration-200 hover:scale-105 hover:shadow-[0_0_10px_#37b54a]">
+        <button className="px-3 py-1.5 text-base font-bold text-[#37b54a] border border-white/30 bg-black rounded-lg transition-transform duration-200 hover:scale-105 hover:border-[#37b54a]">
           LINK
         </button>
       </a>
@@ -36,7 +36,7 @@ const CertificationCard = ({ index, name, description, link }) => (
       </div>
       
       <div className="mt-5">
-        <h3 className="text-white font-bold text-[22px] transition-all duration-300 neon-glow">
+        <h3 className="text-[#37b54a] font-bold text-[22px] transition-all duration-300">
           {name}
         </h3>
         <p className="mt-2 text-secondary text-[20px]">{description}</p>
@@ -53,9 +53,9 @@ const Certf = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.01 }}
-        className="mx-auto w-fit px-6 py-4 mt-10 bg-black/80 rounded-xl shadow-lg backdrop-blur-md"
+        className="mx-auto w-fit px-6 py-4 mt-10 bg-black/80 rounded-xl backdrop-blur-md"
       >
-        <p className={`${styles.sectionSubText} text-center text-[#ABF7B1]`}>
+        <p className={`${styles.sectionSubText} text-center text-[#37b54a]`}>
           My Certifications
         </p>
         <h2 className={`${styles.sectionHeadText} text-center text-white`}>

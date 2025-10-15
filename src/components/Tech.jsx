@@ -24,13 +24,14 @@ const Tech = () => {
   const getTechColor = (techName) => {
     const colorMap = {
       "JavaScript": "bg-[#F7DF1E]",
-      "PHP": "bg-[#777BB4]",
+      "Flask": "bg-[#CFCECF]",
       "MysQL": "bg-[#4479A1]",
       "TypeScript": "bg-[#3178C6]",
       "HTML 5": "bg-[#E34F26]",
       "CSS 3": "bg-[#1572B6]",
       "React JS": "bg-[#61DAFB]",
       "Tailwind CSS": "bg-[#06B6D4]",
+      "Docker": "bg-[#0096C7]",
       "Supabase": "bg-[#00FC00]",
       "Node JS": "bg-[#339933]",
       "Three JS": "bg-[#FFFFFF]",
@@ -40,8 +41,10 @@ const Tech = () => {
       "AWS": "bg-[#FFD700]",
       "Git": "bg-[#F05032]",
       "GitHub": "bg-[#FFFFFF]",
-      "MongoDB": "bg-[#47A248]",
-      "Express": "bg-[#9E3623]",
+      "Kafka": "bg-[#C0C0C0]",
+      "Redis": "bg-[#FF7045]",
+      "Clerk": "bg-[#703BE7]",
+      "Solidity": "bg-[#9771ED]",
       "PostmanAPI": "bg-[#FF6C37]",
       "Chart JS": "bg-[#FE777B]",
       "Next JS": "bg-[#B8B8B8]",
@@ -57,7 +60,7 @@ const Tech = () => {
   initial="hidden"
   whileInView="show"
   viewport={{ once: true, amount: 0.01 }}
-  className="mx-auto w-fit px-6 py-4 mt-10 bg-black/80 rounded-xl shadow-lg backdrop-blur-md"
+  className="mx-auto w-fit px-6 py-4 mt-10 bg-black/80 rounded-xl backdrop-blur-md"
 >
   <p className={`${styles.sectionSubText} text-center text-white`}>
     Technologies worked with
@@ -69,7 +72,7 @@ const Tech = () => {
 
 
       {/* Tech ball icons with hover effect */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-10 p-10 justify-center">
+      <div className="grid grid-cols-2 lg:grid-cols-8 gap-10 p-10 justify-center">
       {technologies.map((technology, index) => (
   <motion.div
     key={technology.name}

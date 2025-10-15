@@ -81,13 +81,13 @@ const Hero = ({ onHeroLoaded }) => {
   title: "Find Me Online",
   content: (
     <div className="space-y-3">
-      <a href="https://github.com/Soumilgit" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#34d680] transition-colors hover:underline font-semibold text-blue-200">
+      <a href="https://github.com/Soumilgit" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#37b54a] transition-colors hover:underline font-semibold text-blue-200">
         <FaGithub className="text-black bg-white rounded-full p-[2px]" size={20} /> GitHub <FiExternalLink />
       </a>
-      <a href="https://codolio.com/profile/uQSHdtbA" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#34d680] transition-colors hover:underline font-semibold text-blue-200">
+      <a href="https://codolio.com/profile/uQSHdtbA" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#37b54a] transition-colors hover:underline font-semibold text-blue-200">
         <img src="/codolio.svg" alt="Codolio" className="w-5 h-5" /> Codolio <FiExternalLink />
       </a>
-      <a href="https://www.linkedin.com/in/soumilm30/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#34d680] transition-colors hover:underline font-semibold text-blue-200">
+      <a href="https://www.linkedin.com/in/soumilm30/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#37b54a] transition-colors hover:underline font-semibold text-blue-200">
         <FaLinkedin className="text-[#0A66C2]" size={20} /> LinkedIn <FiExternalLink />
       </a>
     </div>
@@ -99,14 +99,14 @@ const Hero = ({ onHeroLoaded }) => {
         <div className="space-y-3">
           <button
             onClick={openTwitter}
-            className="flex items-center gap-2 hover:text-[#34d680] transition-colors hover:underline font-semibold text-blue-200"
+            className="flex items-center gap-2 hover:text-[#37b54a] transition-colors hover:underline font-semibold text-blue-200"
           >
             <FaTwitter className="text-[#1DA1F2]" size={20} /> Twitter <FiExternalLink />
           </button>
-          <a href="https://www.instagram.com/soumil_m.exe/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#34d680] transition-colors hover:underline font-semibold text-blue-200">
+          <a href="https://www.instagram.com/soumil_m.exe/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#37b54a] transition-colors hover:underline font-semibold text-blue-200">
             <FaInstagram className="text-[#E4405F]" size={20} /> Instagram <FiExternalLink />
           </a>
-          <a href="https://maps.app.goo.gl/QLHqDchdPjH6bQdb8?g_st=ac" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#34d680] transition-colors hover:underline font-semibold text-blue-200">
+          <a href="https://maps.app.goo.gl/QLHqDchdPjH6bQdb8?g_st=ac" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#37b54a] transition-colors hover:underline font-semibold text-blue-200">
             <FaMapMarkerAlt className="text-red-600" size={20} /> Google Maps <FiExternalLink />
           </a>
         </div>
@@ -123,7 +123,7 @@ const Hero = ({ onHeroLoaded }) => {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-2 border-[#34d680]/60 shadow-2xl shadow-black/30 flex-shrink-0 backdrop-blur-sm bg-black/10"
+          className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border border-white/30 flex-shrink-0 backdrop-blur-sm bg-black/10"
         >
           <img 
             src={icon} 
@@ -168,7 +168,7 @@ const Hero = ({ onHeroLoaded }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.025, duration: 0.25 }}
-                className="w-32 sm:w-36 h-10 border border-[#37b54a]/70 rounded-full bg-[#37b54a]/90 backdrop-blur-sm text-white flex items-center justify-center transition-all duration-300 hover:bg-white/90 hover:text-[#37b54a] shadow-lg hover:shadow-xl hover:shadow-black/20"
+                className="w-32 sm:w-36 h-10 border border-white/30 rounded-full bg-[#37b54a]/90 backdrop-blur-sm text-white flex items-center justify-center transition-all duration-300 hover:bg-white/90 hover:text-[#37b54a]"
               >
                 <DownloadCVMarquee />
               </motion.div>
@@ -187,10 +187,10 @@ const Hero = ({ onHeroLoaded }) => {
     initial="hidden"
     whileInView="show"
     viewport={{ once: true, amount: 0.01 }}
-    className="bg-black/80 backdrop-blur-sm rounded-xl p-5 border border-gray-700/50 hover:border-[#34d680]/70 transition-all duration-300 cursor-pointer hover:shadow-xl hover:shadow-black/20 flex flex-col"
+    className="bg-black/80 backdrop-blur-sm rounded-xl p-5 border border-white/30 transition-all duration-300 cursor-pointer hover:border-[#37b54a] flex flex-col"
     style={{ minHeight: "220px", minWidth: "100%" }}
   >
-    <h3 className="text-[#34d680] font-bold mb-4 text-lg">{card.title}</h3>
+    <h3 className="text-[#37b54a] font-bold mb-4 text-lg">{card.title}</h3>
     <div className="text-gray-200 flex-grow overflow-hidden">
       {card.content}
     </div>

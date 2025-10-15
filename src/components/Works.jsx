@@ -13,16 +13,16 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.01 }}
-      className="relative bg-black p-[2px] rounded-lg shadow-lg transition-transform neon-box"
+      className="relative bg-black p-[2px] rounded-lg transition-transform border border-white/30 hover:border-[#37b54a]"
       whileHover={{ scaleY: 1.05 }}
     >
-      <div className="bg-black p-5 rounded-lg shadow-md w-full">
+      <div className="bg-black p-5 rounded-lg w-full">
         <div className="relative w-full h-[230px] rounded-lg overflow-hidden">
           <img src={image} alt="project_image" className="w-full h-full object-cover rounded-lg" />
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
               onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-12 h-12 rounded-full flex justify-center items-center cursor-pointer neon-icon"
+              className="black-gradient w-12 h-12 rounded-full flex justify-center items-center cursor-pointer"
             >
               <img src={githubo} alt="source code" className="object-contain" />
             </div>
@@ -30,7 +30,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
         </div>
 
         <div className="mt-5 text-center">
-          <h3 className="text-white font-bold text-[22px] transition-all duration-300 neon-glow">
+          <h3 className="text-[#37b54a] font-bold text-[22px] transition-all duration-300">
             {name}
           </h3>
           <p className="mt-2 text-secondary text-[20px]">{description}</p>
@@ -57,9 +57,9 @@ const Works = () => {
   initial="hidden"
   whileInView="show"
   viewport={{ once: true, amount: 0.01 }}
-  className="mx-auto w-fit px-6 py-4 mt-10 bg-black/80 rounded-xl shadow-lg backdrop-blur-md"
+  className="mx-auto w-fit px-6 py-4 mt-10 bg-black/80 rounded-xl backdrop-blur-md"
 >
-  <p className={`${styles.sectionSubText} text-center text-[#ABF7B1]`}>
+  <p className={`${styles.sectionSubText} text-center text-[#37b54a]`}>
     My Work
   </p>
   <h2 className={`${styles.sectionHeadText} text-center text-white`}>
@@ -73,7 +73,7 @@ const Works = () => {
     initial="hidden"
     whileInView="show"
     viewport={{ once: true, amount: 0.01 }}
-    className="mt-6 text-secondary text-[21px] max-w-4xl leading-[30px] text-center bg-black/80 rounded-xl px-6 py-4 shadow-lg backdrop-blur-md"
+    className="mt-6 text-secondary text-[21px] max-w-4xl leading-[30px] text-center bg-black/80 rounded-xl px-6 py-4 backdrop-blur-md"
   >
     Following projects showcase my skills and experience through examples of my work.
   </motion.p>

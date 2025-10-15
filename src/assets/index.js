@@ -17,19 +17,22 @@ import tailwind from "./tech/tailwind.png";
 import threejs from "./tech/threejs.png";
 import jQuery from "./tech/jQuery.png";
 import cpp from "./tech/cpp.png";
-import php from "./tech/php.png";
+import flask from "./tech/flask.png";
 import sql from "./tech/sql.png";
 import typescript from "./tech/typescript.png";
 import git from "./tech/git.png";
 import github from "./tech/github.png";
-import mongodb from "./tech/mongodb.png";
-import express from "./tech/express.png";
+import clerk from "./tech/clerk.png";
+import solidity from "./tech/solidity.png";
 import postmanapi from "./tech/postmanapi.png";
 import chart from "./tech/chart.png";
 import latex from "./tech/latex.png";
 import aws from "./tech/aws.png";
 import next from "./tech/next.png"; 
 import supabase from "./tech/supabase.png";
+import docker from "./tech/docker.png";
+import kafka from "./tech/kafka.png";
+import redis from "./tech/redis.png";
 
 import emfinity from "./company/emfinity.png";
 import npcil from "./company/npcil.png";
@@ -37,13 +40,14 @@ import meshcraft from "./company/meshcraft.png";
 import marquee from "./company/marquee.png";
 import kjsce from "./company/kjsce.png";
 import oneplay from "./company/oneplay.png";
+import aminutemantech from "./company/aminuteman-tech.jpg";
 
 import boblob from "./boblob.png";
 import jasder from "./jasder.png";
 import smack from "./smack.png";
 import missing from "./missing.png";
-import gesture from "./gesture.png";
-import latexcheatsheet from "./latexcheatsheet.png";
+import scholarbridge from "./scholarbridge.png";
+import stakeligames from "./stakeligames.png";
 
 import googlecloud from "./googlecloud.png";
 import cp from "./cp.png";
@@ -78,7 +82,6 @@ export {
   threejs,
   jQuery,
   cpp,
-  php,
   sql,
   emfinity,
   npcil,
@@ -98,8 +101,9 @@ export {
   githubk,
   git,
   github,
-  mongodb,
-  express,
+  solidity,
+  flask,
+  clerk,
   postmanapi,
   chart,
   latex,
@@ -111,9 +115,13 @@ export {
   next,
   supabase,
   missing,
-  gesture,
-  latexcheatsheet,
+  scholarbridge,
+  stakeligames,
   cwc,
   terii,
-  techhunt
+  techhunt,
+  docker,
+  kafka,
+  redis,
+  aminutemantech,
 };
