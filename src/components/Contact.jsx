@@ -71,42 +71,40 @@ const Contact = () => {
 
   return (
     <div className="relative xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden">
+      <style>{`
+        .contact-card {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(10,10,25,1) 100%);
+          padding: 20px;
+          border-radius: 10px;
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          transition: border-color 0.3s ease;
+        }
+        .contact-card:hover {
+          border-color: #37b54a;
+        }
+      `}</style>
       <div className="relative flex-[0.75] bg-transparent w-full">
         {state.succeeded ? (
-          <motion.div variants={slideIn("left", "tween", 0.05, 0.1)}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "10px",
-              background: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(10,10,25,1) 100%)",
-              padding: "20px",
-              borderRadius: "10px",
-              boxShadow: "0px 0px 15px #34d680",
-              border: "2px solid #34d680",
-              textAlign: "center"
-            }}
+          <motion.div
+            variants={slideIn("left", "tween", 0.05, 0.1)}
+            className="contact-card"
           >
-            <p style={{ color: "lime", fontSize: "18px", textShadow: "0 0 10px lime" }}>
+            <p style={{ color: "lime", fontSize: "18px" }}>
               ✅ TRANSMISSION SUCCESSFUL! MESSAGE RECEIVED.
             </p>
           </motion.div>
         ) : (
-          <motion.div variants={slideIn("left", "tween", 0.05, 0.1)}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "10px",
-              background: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(10,10,25,1) 100%)",
-              padding: "20px",
-              borderRadius: "10px",
-              boxShadow: "0px 0px 15px #34d680",
-              border: "2px solid #34d680",
-            }}
+          <motion.div
+            variants={slideIn("left", "tween", 0.05, 0.1)}
+            className="contact-card"
           >
-            <p style={{ color: "#34d680", fontSize: "14px", fontWeight: "bold", fontFamily: "'Orbitron', sans-serif" }}>
+            <p style={{ color: "#37b54a", fontSize: "14px", fontWeight: "bold", fontFamily: "'Orbitron', sans-serif" }}>
               🔐 AUTHORIZED ACCESS REQUIRED
             </p>
-            <h3 style={{ color: "#34d680", fontSize: "24px", fontWeight: "bold", fontFamily: "'Orbitron', sans-serif" }}>
+            <h3 style={{ color: "#37b54a", fontSize: "24px", fontWeight: "bold", fontFamily: "'Orbitron', sans-serif" }}>
               CYBERNETIC CONTACT FORM
             </h3>
 
@@ -114,52 +112,52 @@ const Contact = () => {
               className="mt-6 flex flex-col gap-6"
             >
               <label className="flex flex-col">
-                <span style={{ color: "#34d680", fontWeight: "bold", fontFamily: "'Orbitron', sans-serif" }}>
+                <span style={{ color: "#37b54a", fontWeight: "bold", fontFamily: "'Orbitron', sans-serif" }}>
                   USERNAME <span style ={{ color: "red" }}>*</span>
                 </span>
                 <input type="text" name="name" value={form.name} onChange={handleChange} required
                   placeholder="Enter Codename..."
-                  style={{ background: "transparent", border: "2px solid #34d680", color: "#34d680", padding: "10px", borderRadius: "5px", outline: "none", fontFamily: "'Orbitron', sans-serif", width: "100%" }}
+                  style={{ background: "transparent", border: "1px solid #4b5563", color: "#e5e7eb", padding: "10px", borderRadius: "5px", outline: "none", fontFamily: "'Orbitron', sans-serif", width: "100%" }}
                 />
-                {errors.name && <p style={{ color: "red", fontSize: "12px", textShadow: "0 0 5px red" }}>{errors.name}</p>}
+                {errors.name && <p style={{ color: "red", fontSize: "12px" }}>{errors.name}</p>}
               </label>
 
               <label className="flex flex-col">
-                <span style={{ color: "#34d680", fontWeight: "bold", fontFamily: "'Orbitron', sans-serif" }}>
+                <span style={{ color: "#37b54a", fontWeight: "bold", fontFamily: "'Orbitron', sans-serif" }}>
                   EMAIL <span style={{ color: "red" }}>*</span>
                 </span>
                 <input type="email" name="email" value={form.email} onChange={handleChange} required
                   placeholder="Enter Secure Address..."
-                  style={{ background: "transparent", border: "2px solid #34d680", color: "#34d680", padding: "10px", borderRadius: "5px", outline: "none", fontFamily: "'Orbitron', sans-serif", width: "100%" }}
+                  style={{ background: "transparent", border: "1px solid #4b5563", color: "#e5e7eb", padding: "10px", borderRadius: "5px", outline: "none", fontFamily: "'Orbitron', sans-serif", width: "100%" }}
                 />
                 <ValidationError prefix="Email" field="email" errors={state.errors} />
-                {errors.email && <p style={{ color: "red", fontSize: "12px", textShadow: "0 0 5px red" }}>{errors.email}</p>}
+                {errors.email && <p style={{ color: "red", fontSize: "12px" }}>{errors.email}</p>}
               </label>
 
               <label className="flex flex-col">
-                <span style={{ color: "#34d680", fontWeight: "bold", fontFamily: "'Orbitron', sans-serif" }}>
+                <span style={{ color: "#37b54a", fontWeight: "bold", fontFamily: "'Orbitron', sans-serif" }}>
                   MOBILE (Optional)
                 </span>
                 <input type="text" name="mobile" value={form.mobile} onChange={handleChange}
                   placeholder="Enter Secure Line..."
-                  style={{ background: "transparent", border: "2px solid #34d680", color: "#34d680", padding: "10px", borderRadius: "5px", outline: "none", fontFamily: "'Orbitron', sans-serif", width: "100%" }}
+                  style={{ background: "transparent", border: "1px solid #4b5563", color: "#e5e7eb", padding: "10px", borderRadius: "5px", outline: "none", fontFamily: "'Orbitron', sans-serif", width: "100%" }}
                 />
-                {errors.mobile && <p style={{ color: "red", fontSize: "12px", textShadow: "0 0 5px red" }}>{errors.mobile}</p>}
+                {errors.mobile && <p style={{ color: "red", fontSize: "12px" }}>{errors.mobile}</p>}
               </label>
 
               <label className="flex flex-col">
-                <span style={{ color: "#34d680", fontWeight: "bold", fontFamily: "'Orbitron', sans-serif" }}>
+                <span style={{ color: "#37b54a", fontWeight: "bold", fontFamily: "'Orbitron', sans-serif" }}>
                   MESSAGE (Optional)
                 </span>
                 <textarea rows={4} name="message" value={form.message} onChange={handleChange}
                   placeholder="Enter Encrypted Transmission..."
-                  style={{ background: "transparent", border: "2px solid #34d680", color: "#34d680", padding: "10px", borderRadius: "5px", outline: "none", fontFamily: "'Orbitron', sans-serif", width: "100%" }}
+                  style={{ background: "transparent", border: "1px solid #4b5563", color: "#e5e7eb", padding: "10px", borderRadius: "5px", outline: "none", fontFamily: "'Orbitron', sans-serif", width: "100%" }}
                 />
                 <ValidationError prefix="Message" field="message" errors={state.errors} />
               </label>
 
-              <button type="submit" disabled={state.submitting} style={{ background: "transparent", border: "2px solid #34d680", padding: "10px 15px", color: "#d1ffbd", fontWeight: "bold", cursor: "pointer", transition: "0.3s" }}
-              onMouseEnter={(e) => e.target.style.background = "#34d680"}
+              <button type="submit" disabled={state.submitting} style={{ background: "transparent", border: "1px solid #4b5563", padding: "10px 15px", color: "#e5e7eb", fontWeight: "bold", cursor: "pointer", transition: "0.3s" }}
+              onMouseEnter={(e) => e.target.style.background = "#4b5563"}
               onMouseLeave={(e) => e.target.style.background = "transparent"}>TRANSMIT MESSAGE</button>
             </form>
           </motion.div>

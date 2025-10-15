@@ -36,11 +36,9 @@ const Heatmap = () => {
         {`
           .react-activity-calendar__rect {
             transition: all 0.25s ease-in-out;
-            filter: drop-shadow(0 0 1.5px rgba(46,160,67,0.3));
           }
           .react-activity-calendar__rect:hover {
             transform: scale(1.1);
-            filter: drop-shadow(0 0 4px rgba(61,220,132,0.6));
           }
 
           .heatmap-scrollbar {
@@ -60,12 +58,10 @@ const Heatmap = () => {
           .heatmap-scrollbar::-webkit-scrollbar-thumb {
             background: #25924a;
             border-radius: 4px;
-            box-shadow: 0 0 6px #25924a;
           }
           
           .heatmap-scrollbar::-webkit-scrollbar-thumb:hover {
             background: #2ea043;
-            box-shadow: 0 0 9px #25924a;
           }
           
           @media (max-width: 768px) {
@@ -86,7 +82,6 @@ const Heatmap = () => {
             .heatmap-scrollbar::-webkit-scrollbar-thumb {
               background: linear-gradient(90deg, #25924a, #2ea043);
               border-radius: 6px;
-              box-shadow: 0 0 10px #25924a;
             }
           }
         `}
@@ -98,9 +93,9 @@ const Heatmap = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.01 }}
-          className="mx-auto w-fit px-6 py-4 mt-10 bg-black/80 rounded-xl shadow-lg backdrop-blur-md"
+          className="mx-auto w-fit px-6 py-4 mt-10 bg-black/80 rounded-xl backdrop-blur-md"
         >
-          <p className={`${styles.sectionSubText} text-center text-[#ABF7B1]`}>
+          <p className={`${styles.sectionSubText} text-center text-[#37b54a]`}>
             My Activity
           </p>
         </motion.div>
@@ -125,7 +120,7 @@ const Heatmap = () => {
           className="mt-8 w-full flex justify-center"
         >
           <div className="w-full max-w-6xl">
-            <div className="rounded-3xl border border-[#34d680]/20 bg-black/50 backdrop-blur-sm shadow-xl w-full p-8">
+            <div className="rounded-3xl border border-[#37b54a]/40 bg-black/50 backdrop-blur-sm w-full p-8">
               <div className="w-full overflow-x-auto">
 
           <div className="min-w-[800px]">

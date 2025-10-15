@@ -22,17 +22,6 @@ const Navbar = () => {
       {/* Custom Styles (Inside JSX) */}
       <style>
         {`
-          .neon-glow {
-            box-shadow: 0 0 10px #37b54a, 0 0 40px #37b54a;
-            transition: all 0.3s ease-in-out;
-          }
-          .neon-icon {
-            filter: drop-shadow(0px 0px 8px #37b54a);
-          }
-          .neon-box {
-            border: 2px solid #37b54a;
-            box-shadow: 0 0 15px #37b54a;
-          }
           .nav-links, .navbar-title {
             display: flex;
             gap: 1rem;
@@ -52,7 +41,6 @@ const Navbar = () => {
               display: flex;
               flex-direction: column;
               gap: 1rem;
-              box-shadow: 0px 0px 10px #37b54a;
             }
           }
           @media (min-width: 600px) {
@@ -71,7 +59,7 @@ const Navbar = () => {
   transition={{ duration: 0.2, ease: "easeOut" }}
   className={`fixed top-0 w-full z-50 py-4 transition-all ${
     scrolled
-      ? "bg-black/90 shadow-xl border-b border-[#37b54a] neon-glow"
+      ? "bg-black/90"
       : "bg-transparent"
   }`}
 >
@@ -86,8 +74,8 @@ const Navbar = () => {
       }}
     >
       <motion.p
-        whileHover={{ scale: 1.1, textShadow: "0px 0px 20px #37b54a" }}
-        className="text-[#37b54a] font-extrabold cursor-pointer text-3xl tracking-wide drop-shadow-lg"
+        whileHover={{ scale: 1.05 }}
+        className="text-[#37b54a] font-extrabold cursor-pointer text-3xl tracking-wide"
       >
         Soumil Mukhopadhyay
       </motion.p>
@@ -101,11 +89,10 @@ const Navbar = () => {
           whileHover={{
             scale: 1.2,
             color: "#37b54a",
-            textShadow: "0px 0px 15px #37b54a",
           }}
           className={`text-xl font-semibold cursor-pointer transition-all ${
             active === nav.title
-              ? "text-[#37b54a] drop-shadow-lg"
+              ? "text-[#37b54a]"
               : "text-gray-300"
           }`}
           onClick={() => setActive(nav.title)}
@@ -121,7 +108,7 @@ const Navbar = () => {
         src={toggle ? close : menu}
         alt="menu"
         whileTap={{ scale: 0.8 }}
-        className="w-8 h-8 object-contain cursor-pointer neon-icon"
+        className="w-8 h-8 object-contain cursor-pointer"
         onClick={() => setToggle(!toggle)}
       />
 
@@ -130,11 +117,11 @@ const Navbar = () => {
           initial={{ y: -20, opacity: 0 }}
           animate={toggle ? { y: 0, opacity: 1 } : { y: -20, opacity: 0 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
-          className="mobile-menu neon-box"
+          className="mobile-menu"
         >
           <Link
             to="/"
-            className="text-[#37b54a] font-extrabold cursor-pointer text-3xl tracking-wide drop-shadow-lg text-center"
+            className="text-[#37b54a] font-extrabold cursor-pointer text-3xl tracking-wide text-center"
           >
             Soumil Mukhopadhyay
           </Link>
@@ -145,7 +132,6 @@ const Navbar = () => {
                 whileHover={{
                   scale: 1.1,
                   color: "#37b54a",
-                  textShadow: "0px 0px 10px #37b54a",
                 }}
                 className="text-white text-xl font-medium cursor-pointer transition-all"
                 onClick={() => {
