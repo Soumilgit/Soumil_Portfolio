@@ -16,19 +16,19 @@ import {
   tailwind,
   nodejs,
   cpp,
+  flask,
+  clerk,
+  solidity,
   boblob,
   jasder,
   smack,
   threejs,
   python,
-  php,
   sql,
   mypic,
   kjsce,
   git,
   github,
-  mongodb,
-  express,
   postmanapi,
   chart,
   oneplay,
@@ -37,7 +37,10 @@ import {
   next,
   missing,
   gesture,
-  latexcheatsheet,
+  stakeligames,
+  docker,
+  kafka,
+  redis,
 } from "../assets";
 
 
@@ -124,6 +127,9 @@ const technologies = [
     name: "Tailwind CSS",
     icon: tailwind,
   },
+  { name: "Docker", 
+    icon: docker, 
+  },
   {
     name: "Supabase",
     icon: supabase,
@@ -146,8 +152,8 @@ const technologies = [
     icon: cpp,
   },
   {
-    name: "PHP",
-    icon: php,
+    name: "Flask",
+    icon: flask,
   },
   {
     name: "MySQL",
@@ -170,12 +176,20 @@ const technologies = [
     icon: github,
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
+    name: "Kafka",
+    icon: kafka,
   },
   {
-    name: "Express",
-    icon: express,
+    name: "Redis",
+    icon: redis,
+  },
+  {
+    name: "Clerk",
+    icon: clerk,
+  },
+  {
+    name: "Solidity",
+    icon: solidity,
   },
   {
     name: "PostmanAPI",
@@ -273,7 +287,7 @@ const achievements = [
   {
     name: "Top 3.5% on Codolio, 1st rank in college",
     description:
-      "Stats: 470+ DSA problems solved, 7+ awards, 4000+ dev contributions & C-Score of 770+ among 19,300+ global users.",
+      "Stats: 480+ DSA problems solved, 14 awards, 4300+ dev contributions & C-Score of 775+ among 22,000+ global users.",
     link: "https://codolio.com/profile/uQSHdtbA", 
   },
   {
@@ -308,7 +322,7 @@ const projects = [
   {
     name: "SimulateRecruitAI",
     description:
-      "Gemini delivers interview feedback via Next, NeonDB, Docker, Clerk, Stripe, Tailwind & Radix UI across 50+ roles.",
+      "Tech stack: Next, NeonDB, Docker, Clerk, Stripe, Tailwind, JSON, Gemini AI, API routes & Radix UI; supports 50+ job roles.",
     tags: [
       {
         name: "next",
@@ -346,6 +360,27 @@ const projects = [
     ],
     image: smack,
     source_code_link: "https://github.com/Soumilgit/XYZ-Bank-Customer-Churn-Predictor",
+  },
+  {
+    name: "StakeLiGames",
+    description:
+      "On-chain staking protocol for LinkedIn Games on the Sepolia testnet, utilizing Next.js, TailWind, Python and Solidity.",
+    tags: [
+      {
+        name: "typescript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "python",
+        color: "green-text-gradient",
+      },
+      {
+        name: "solidity",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: stakeligames,
+    source_code_link: "https://github.com/Soumilgit/StakeLiGames",
   },
   {
     name: "Meditation App",
@@ -409,27 +444,6 @@ const projects = [
     ],
     image: gesture,
     source_code_link: "https://github.com/Soumilgit/Gesture-Sign-Language-Detection-using-Python",
-  },
-  {
-    name: "LaTeX Cheatsheet",
-    description:
-      "Built with HTML, CSS & JS, this covers 50+ LaTeX commands across 10+ categories with GitHub API support.",
-    tags: [
-      {
-        name: "html",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "css",
-        color: "green-text-gradient",
-      },
-      {
-        name: "javascript",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: latexcheatsheet,
-    source_code_link: "https://github.com/Soumilgit/LaTeX-CheatSheet",
   },
 ];
 
