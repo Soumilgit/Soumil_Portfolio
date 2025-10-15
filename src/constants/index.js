@@ -38,6 +38,9 @@ import {
   missing,
   gesture,
   latexcheatsheet,
+  docker,
+  kafka,
+  redis,
 } from "../assets";
 
 
@@ -124,6 +127,9 @@ const technologies = [
     name: "Tailwind CSS",
     icon: tailwind,
   },
+  { name: "Docker", 
+    icon: docker, 
+  },
   {
     name: "Supabase",
     icon: supabase,
@@ -168,6 +174,14 @@ const technologies = [
   {
     name: "GitHub",
     icon: github,
+  },
+  {
+    name: "Kafka",
+    icon: kafka,
+  },
+  {
+    name: "Redis",
+    icon: redis,
   },
   {
     name: "MongoDB",
@@ -273,7 +287,7 @@ const achievements = [
   {
     name: "Top 3.5% on Codolio, 1st rank in college",
     description:
-      "Stats: 470+ DSA problems solved, 7+ awards, 4000+ dev contributions & C-Score of 770+ among 19,300+ global users.",
+      "Stats: 475+ DSA problems solved, 7+ awards, 4200+ dev contributions & C-Score of 775+ among 21,000+ global users.",
     link: "https://codolio.com/profile/uQSHdtbA", 
   },
   {
@@ -308,7 +322,7 @@ const projects = [
   {
     name: "SimulateRecruitAI",
     description:
-      "Gemini delivers interview feedback via Next, NeonDB, Docker, Clerk, Stripe, Tailwind & Radix UI across 50+ roles.",
+      "Tech stack: Next, NeonDB, Docker, Clerk, Stripe, Tailwind, JSON, Gemini AI & Radix UI; supports 50+ job roles.",
     tags: [
       {
         name: "next",
