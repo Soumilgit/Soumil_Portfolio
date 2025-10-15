@@ -11,10 +11,10 @@ import googlecloud from "../assets/googlecloud.png";
 import codolio from "/codolio.svg";
 import cwc from "../assets/cwc.png";
 import terii from "../assets/terii.png";
-import techhunt from "../assets/techhunt.png";
+import emfinity from "../assets/emfinity-new.png";
 
 // Map images to achievements
-const icons = [cp, codolio, googlecloud, cwc, terii, techhunt];
+const icons = [cp, codolio, googlecloud, cwc, terii, emfinity];
 
 const AchievementCard = ({ index, name, description, link }) => (
   <motion.div

@@ -16,19 +16,19 @@ import {
   tailwind,
   nodejs,
   cpp,
+  flask,
+  clerk,
+  solidity,
   boblob,
   jasder,
   smack,
   threejs,
   python,
-  php,
   sql,
   mypic,
   kjsce,
   git,
   github,
-  mongodb,
-  express,
   postmanapi,
   chart,
   oneplay,
@@ -36,8 +36,11 @@ import {
   supabase,
   next,
   missing,
-  gesture,
-  latexcheatsheet,
+  scholarbridge,
+  stakeligames,
+  docker,
+  kafka,
+  redis,
 } from "../assets";
 
 
@@ -124,6 +127,9 @@ const technologies = [
     name: "Tailwind CSS",
     icon: tailwind,
   },
+  { name: "Docker", 
+    icon: docker, 
+  },
   {
     name: "Supabase",
     icon: supabase,
@@ -146,8 +152,8 @@ const technologies = [
     icon: cpp,
   },
   {
-    name: "PHP",
-    icon: php,
+    name: "Flask",
+    icon: flask,
   },
   {
     name: "MySQL",
@@ -170,12 +176,20 @@ const technologies = [
     icon: github,
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
+    name: "Kafka",
+    icon: kafka,
   },
   {
-    name: "Express",
-    icon: express,
+    name: "Redis",
+    icon: redis,
+  },
+  {
+    name: "Clerk",
+    icon: clerk,
+  },
+  {
+    name: "Solidity",
+    icon: solidity,
   },
   {
     name: "PostmanAPI",
@@ -273,7 +287,7 @@ const achievements = [
   {
     name: "Top 3.5% on Codolio, 1st rank in college",
     description:
-      "Stats: 470+ DSA problems solved, 7+ awards, 4000+ dev contributions & C-Score of 770+ among 19,300+ global users.",
+      "Stats: 480+ DSA problems solved, 14 awards, 4400+ dev contributions & C-Score of 775+ among 23,000+ global users.",
     link: "https://codolio.com/profile/uQSHdtbA", 
   },
   {
@@ -296,10 +310,10 @@ const achievements = [
     link: "https://drive.google.com/file/d/1MMaH0bnl2JTSsXKD6O3Rzv4r6biLkckB/view?usp=sharing", 
   },
   {
-    name: "Rank 1 in KJSCE Tech Hunt, Tech Shield '23",
+    name: "3rd place in National Mathematics Day Quiz",
     description:
-      "Part of a team of 4, which won first place, competing with 8+ other branch teams, in a tech clue treasure hunt in college.",
-    link: "https://in.linkedin.com/company/kjsce-students-council", 
+      "Scored 70% marks honestly in the 10-question event conducted by Emfinity KJSCE via a series of Instagram Stories.",
+    link: "https://drive.google.com/file/d/1JAcirOgAx8rPToVZM-ZV2dNubpZ2ms2t/view?usp=sharing", 
   },
   
 ];
@@ -308,7 +322,7 @@ const projects = [
   {
     name: "SimulateRecruitAI",
     description:
-      "Gemini delivers interview feedback via Next, NeonDB, Docker, Clerk, Stripe, Tailwind & Radix UI across 50+ roles.",
+      "Tech stack: Next, NeonDB, Docker, Clerk, Stripe, Tailwind, JSON, Gemini AI, API routes & Radix UI; achieved 65+ sign-ups.",
     tags: [
       {
         name: "next",
@@ -346,6 +360,48 @@ const projects = [
     ],
     image: smack,
     source_code_link: "https://github.com/Soumilgit/XYZ-Bank-Customer-Churn-Predictor",
+  },
+  {
+    name: "StakeLiGames",
+    description:
+      "On-chain staking protocol for LinkedIn Games on the Sepolia testnet, utilizing Next.js, TailWind, Python and Solidity.",
+    tags: [
+      {
+        name: "typescript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "python",
+        color: "green-text-gradient",
+      },
+      {
+        name: "solidity",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: stakeligames,
+    source_code_link: "https://github.com/Soumilgit/StakeLiGames",
+  },
+  {
+    name: "ScholarBridge",
+    description:
+      "Full-stack scholarship platform utilizing the PERN stack, TailWind, Cloudflare R2, JWT + Bcrypt; scalable & auditable.",
+    tags: [
+      {
+        name: "postgres",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "reactjs",
+        color: "green-text-gradient",
+      },
+      {
+        name: "nodejs",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: scholarbridge,
+    source_code_link: "https://github.com/Team-C49/ScholarBridge-backup",
   },
   {
     name: "Meditation App",
@@ -388,49 +444,7 @@ const projects = [
     ],
     image: missing,
     source_code_link: "https://github.com/Soumilgit/Real-Time-Missing-Persons-Detection",
-  },
-  {
-    name: "Gesture Detector",
-    description:
-      "Achieved 95% accuracy in gesture and sign detection with Python libraries, enabling 20–30 FPS real-time rendering.",
-    tags: [
-      {
-        name: "python",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "opencv",
-        color: "green-text-gradient",
-      },
-      {
-        name: "ml",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: gesture,
-    source_code_link: "https://github.com/Soumilgit/Gesture-Sign-Language-Detection-using-Python",
-  },
-  {
-    name: "LaTeX Cheatsheet",
-    description:
-      "Built with HTML, CSS & JS, this covers 50+ LaTeX commands across 10+ categories with GitHub API support.",
-    tags: [
-      {
-        name: "html",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "css",
-        color: "green-text-gradient",
-      },
-      {
-        name: "javascript",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: latexcheatsheet,
-    source_code_link: "https://github.com/Soumilgit/LaTeX-CheatSheet",
-  },
+  }
 ];
 
 const certificates = [
