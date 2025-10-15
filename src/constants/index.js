@@ -38,6 +38,9 @@ import {
   missing,
   gesture,
   latexcheatsheet,
+  docker,
+  kafka,
+  redis,
 } from "../assets";
 
 
@@ -124,6 +127,9 @@ const technologies = [
     name: "Tailwind CSS",
     icon: tailwind,
   },
+  { name: "Docker", 
+    icon: docker, 
+  },
   {
     name: "Supabase",
     icon: supabase,
@@ -168,6 +174,14 @@ const technologies = [
   {
     name: "GitHub",
     icon: github,
+  },
+  {
+    name: "Kafka",
+    icon: kafka,
+  },
+  {
+    name: "Redis",
+    icon: redis,
   },
   {
     name: "MongoDB",
@@ -273,7 +287,7 @@ const achievements = [
   {
     name: "Top 3.5% on Codolio, 1st rank in college",
     description:
-      "Stats: 470+ DSA problems solved, 7+ awards, 4000+ dev contributions & C-Score of 770+ among 19,300+ global users.",
+      "Stats: 475+ DSA problems solved, 7+ awards, 4000+ dev contributions & C-Score of 775+ among 20,000+ global users.",
     link: "https://codolio.com/profile/uQSHdtbA", 
   },
   {

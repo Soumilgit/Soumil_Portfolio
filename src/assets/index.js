@@ -30,6 +30,9 @@ import latex from "./tech/latex.png";
 import aws from "./tech/aws.png";
 import next from "./tech/next.png"; 
 import supabase from "./tech/supabase.png";
+import docker from "./tech/docker.png";
+import kafka from "./tech/kafka.png";
+import redis from "./tech/redis.png";
 
 import emfinity from "./company/emfinity.png";
 import npcil from "./company/npcil.png";
@@ -115,5 +118,8 @@ export {
   latexcheatsheet,
   cwc,
   terii,
-  techhunt
+  techhunt,
+  docker,
+  kafka,
+  redis
 };

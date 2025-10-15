@@ -31,6 +31,7 @@ const Tech = () => {
       "CSS 3": "bg-[#1572B6]",
       "React JS": "bg-[#61DAFB]",
       "Tailwind CSS": "bg-[#06B6D4]",
+      "Docker": "bg-[#0096C7]",
       "Supabase": "bg-[#00FC00]",
       "Node JS": "bg-[#339933]",
       "Three JS": "bg-[#FFFFFF]",
@@ -40,8 +41,10 @@ const Tech = () => {
       "AWS": "bg-[#FFD700]",
       "Git": "bg-[#F05032]",
       "GitHub": "bg-[#FFFFFF]",
+      "Kafka": "bg-[#C0C0C0]",
+      "Redis": "bg-[#FF7045]",
       "MongoDB": "bg-[#47A248]",
-      "Express": "bg-[#9E3623]",
+      "Express": "bg-[#FF8A66]",
       "PostmanAPI": "bg-[#FF6C37]",
       "Chart JS": "bg-[#FE777B]",
       "Next JS": "bg-[#B8B8B8]",
@@ -69,7 +72,7 @@ const Tech = () => {
 
 
       {/* Tech ball icons with hover effect */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-10 p-10 justify-center">
+      <div className="grid grid-cols-2 lg:grid-cols-8 gap-10 p-10 justify-center">
       {technologies.map((technology, index) => (
   <motion.div
     key={technology.name}
