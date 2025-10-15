@@ -12,15 +12,15 @@ const ServiceCard = ({ title, icon, index }) => (
   initial="hidden"
   whileInView="show"
   viewport={{ once: true, amount: 0.01 }}
-  className="relative bg-black p-[2px] rounded-lg shadow-lg transition-transform duration-150 neon-box"
+  className="relative bg-black p-[2px] rounded-lg transition-transform duration-150 border border-white/30 hover:border-[#37b54a]"
   whileHover={{ scaleY: 1.05 }} // Hover behavior remains!
 >
 
-    <div className="bg-black p-5 rounded-lg flex flex-col items-center shadow-md h-full">
-      <div className="w-30 h-30 bg-black rounded-full flex items-center justify-center p-3 shadow-lg neon-icon">
+    <div className="bg-black p-5 rounded-lg flex flex-col items-center h-full">
+      <div className="w-30 h-30 bg-black rounded-full flex items-center justify-center p-3">
         <img src={icon} alt={title} className="w-24 h-24 object-contain" />
       </div>
-      <h3 className="text-white text-xl font-bold mt-4 text-center neon-glow">
+      <h3 className="text-[#37b54a] text-xl font-bold mt-4 text-center">
         {title}
       </h3>
     </div>
@@ -34,42 +34,8 @@ const About = ({ setAboutLoaded }) => {
 
   return (
     <>
-      <style>
-        {`
-.bg-black-clean {
-  background-color: #000; /* solid dark background */
-  background-image: none !important; /* disables any starry or patterned background */
-  backdrop-filter: none !important;
-}
-
-          .neon-glow {
-            transition: all 0.3s ease-in-out;
-          }
-          .neon-glow:hover {
-            color: #37b54a;
-            text-shadow: 0 0 10px #37b54a, 0 0 40px #37b54a;
-          }
-          .neon-icon {
-            filter: drop-shadow(0px 0px 8px #37b54a);
-          }
-          .neon-box {
-            border: 2px solid #37b54a;
-            box-shadow: 0 0 15px #37b54a;
-          }
-          .hover-effect {
-            color: #50c878;
-            transition: all 0.3s ease-in-out;
-          }
-          .hover-effect:hover {
-            text-shadow: 0 0 8px #50c878, 0 0 12px #50c878;
-            transform: scale(1.05);
-        `}
-      </style>
-
-      
-
       {/* Scroll Animation for Title & Subtext */}
-      <div className="bg-black bg-opacity-80 rounded-lg p-6 backdrop-blur-sm shadow-md">
+      <div className="bg-black bg-opacity-80 rounded-lg p-6 backdrop-blur-sm">
   <motion.div
     variants={textVariant()}
     initial="hidden"
@@ -92,21 +58,6 @@ const About = ({ setAboutLoaded }) => {
   className="mt-2 text-white text-xl max-w-3xl leading-7 transition duration-300"
 > Computer Engineer building real-time AI tools, scalable apps, and learnt investment banking.
 </motion.p>
-
-<motion.p
-  variants={simpleFadeIn(0.05, 0.01)}
-  initial="hidden"
-  whileInView="show"
-  viewport={{ once: true, amount: 0.01 }}
-  className="mt-1 text-[#ABF7B1] text-xl max-w-3xl leading-7 duration-0 hover:text-[#37b54a] hover:shadow-[0_0_10px_#39FF14]"
->
-  Oh, and yes, experience neon glows while hovering on title elements below, just like on THIS exact sentence!
-</motion.p>
-
-
-
-
-
 
 </div>
 
