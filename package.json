@@ -11,6 +11,7 @@
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "@formspree/react": "^3.0.0",
+    "@fortawesome/fontawesome-free": "^7.2.0",
     "@gsap/react": "^2.1.2",
     "@react-three/drei": "^9.56.24",
     "@react-three/fiber": "^8.11.1",

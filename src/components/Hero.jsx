@@ -5,21 +5,14 @@ import { DownloadCVMarquee } from "../Marquees/downloadCVMarquee";
 import { hero } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { ScrambledText } from "./ScrambledText";
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
 import { simpleFadeIn } from "../utils/motion"; 
 
-const openTwitter = () => {
-  const appLink = "twitter://user?screen_name=SoumilMukh6476";
-  const webLink = "https://twitter.com/SoumilMukh6476";
-
-  const timeout = setTimeout(() => {
-    window.open(webLink, "_blank");
-  }, 300);
-
-  window.location.href = appLink;
-  window.addEventListener("blur", () => clearTimeout(timeout), { once: true });
+const openX = () => {
+  const webLink = "https://x.com/SoumilMukh6476";
+  window.open(webLink, "_blank");
 };
 
 const Hero = ({ onHeroLoaded }) => {
@@ -98,10 +91,12 @@ const Hero = ({ onHeroLoaded }) => {
       content: (
         <div className="space-y-3">
           <button
-            onClick={openTwitter}
+            onClick={openX}
             className="flex items-center gap-2 hover:text-[#37b54a] transition-colors hover:underline font-semibold text-blue-200"
           >
-            <FaTwitter className="text-[#1DA1F2]" size={20} /> Twitter <FiExternalLink />
+            <div className="flex items-center justify-center w-5 h-5 bg-white rounded-full text-black">
+              <i className="fa-brands fa-x-twitter text-xs"></i>
+            </div> X <FiExternalLink />
           </button>
           <a href="https://www.instagram.com/soumil_m.exe/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#37b54a] transition-colors hover:underline font-semibold text-blue-200">
             <FaInstagram className="text-[#E4405F]" size={20} /> Instagram <FiExternalLink />

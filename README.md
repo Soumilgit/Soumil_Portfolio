@@ -6,8 +6,7 @@ A modern, interactive portfolio website showcasing my skills, projects, and expe
 
 - **3D Computer Model** - Interactive Three.js scene
 - **Scrambled Text Animation** - Dynamic text effects
-- **Neon Glow UI** - Stylish hover effects throughout
-- **Drag & Drop Tech Skills** - Interactive technology showcase
+- **Hover & Expand Tech Skills** - Interactive technology showcase
 - **Project Showcase** - Animated project cards with GitHub links
 - **Responsive Design** - Works on all device sizes
 - **Smooth Animations** - Framer Motion transitions
@@ -30,9 +29,9 @@ A modern, interactive portfolio website showcasing my skills, projects, and expe
 ## Sections 
 
 1. **Hero Section** - Introduction with animated text, resume and info cards
-2. **About** - Overview with service cards and neon effects
+2. **About** - Overview with service cards
 3. **Experience** - Work history timeline
-4. **Skills** - Interactive tech stack with draggable elements
+4. **Skills** - Interactive tech stack with hover & expand effects
 5. **Achievements** - Honors and awards
 6. **Projects** - Showcase of featured work
 7. **Certifications** - Professional credentials
@@ -83,5 +82,5 @@ This project is licensed under the [MIT License](https://github.com/Soumilgit/So
 
 - [GitHub](https://github.com/Soumilgit)
 - [LinkedIn](https://www.linkedin.com/in/soumilm30/)
-- [Twitter](https://twitter.com/SoumilMukh6476)
+- [X](https://x.com/SoumilMukh6476)
 - [Instagram](https://www.instagram.com/soumil_m.exe/)
