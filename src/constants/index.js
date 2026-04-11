@@ -324,7 +324,7 @@ const projects = [
   {
     name: "SimulateRecruitAI",
     description:
-      "Tech stack: Next, NeonDB, Docker, Clerk, Stripe, Tailwind, JSON, Gemini AI, API routes & Radix UI; achieved 65+ sign-ups.",
+      "Tech stack: Next, NeonDB, Docker, Clerk, Stripe, Tailwind, JSON, Gemini AI, API routes & Radix UI; achieved 80+ sign-ups.",
     tags: [
       {
         name: "next",
