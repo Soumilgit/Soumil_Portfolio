@@ -209,7 +209,7 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Assistant Head Engineer",
+    title: "Associate Engineer (AI)",
     company_name: "Aminuteman Technologies",
     icon: aminutemantech,
     iconBg: "#E6DEDD",
