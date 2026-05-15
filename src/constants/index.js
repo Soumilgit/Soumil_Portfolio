@@ -213,10 +213,10 @@ const experiences = [
     company_name: "Aminuteman Technologies",
     icon: aminutemantech,
     iconBg: "#E6DEDD",
-    date: "Jan 2026 - Present",
+    date: "Jan 2026 - May 2026",
     points:[
-      "Working on Valley OS, InferArc and an AI-powered CRM, having previously worked on CA Authority.",
-      "Have worked on automation, scraper & analysis tools via Docker, Kafka, Redis, Next & Python.",
+      "Worked on Valley OS, InferArc and an AI-powered CRM, having previously worked on CA Authority.",
+      "Had worked on automation, scraper & analysis tools via Docker, Kafka, Redis, Next & Python.",
     ]
   },
   {
