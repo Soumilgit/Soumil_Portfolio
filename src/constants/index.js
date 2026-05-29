@@ -209,17 +209,6 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Associate Engineer (AI)",
-    company_name: "Aminuteman Technologies",
-    icon: aminutemantech,
-    iconBg: "#E6DEDD",
-    date: "Jan 2026 - May 2026",
-    points:[
-      "Worked on Valley OS, InferArc and an AI-powered CRM, having previously worked on CA Authority.",
-      "Had worked on automation, scraper & analysis tools via Docker, Kafka, Redis, Next & Python.",
-    ]
-  },
-  {
      title: "SWE Intern",
      company_name: "1 Play Global",
      icon: oneplay,
@@ -287,9 +276,9 @@ const achievements = [
     link: "https://drive.google.com/file/d/1hR8uerT5PpBbdq-92SsJzxEK4t_1Xn9E/view?usp=sharing", 
   },
   {
-    name: "Top 3.7% on Codolio, 1st rank in college",
+    name: "Top 3.9% on Codolio, 1st rank in college",
     description:
-      "Stats: 480+ DSA problems solved, 8 awards, ~2850 dev contributions & C-Score of 775+ among ~32,000 global users.",
+      "Stats: 480+ DSA problems solved, 8 awards, 2900+ dev contributions & C-Score of 775+ among ~34,000 global users.",
     link: "https://codolio.com/profile/uQSHdtbA", 
   },
   {
