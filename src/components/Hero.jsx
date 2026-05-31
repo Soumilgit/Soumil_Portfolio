@@ -64,7 +64,7 @@ const Hero = ({ onHeroLoaded }) => {
       content: (
         <div className="space-y-2">
           <p className="text-gray-100">📅 DOB: 30 October 2004</p>
-          <p className="text-gray-100">📧 Mail: msoumil69@gmail.com</p>
+          <p className="text-gray-100">📧 Mail: msoumil30@gmail.com</p>
           <p className="text-gray-100">📞 Phone: 9405727673</p>
           <p className="text-gray-100">✨ Hobby: Birdwatching</p>
         </div>
