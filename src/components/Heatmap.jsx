@@ -1,15 +1,73 @@
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../hoc";
 import { simpleFadeIn } from "../utils/motion";
 import { styles } from "../styles";
 import GitHubCalendar from "react-github-calendar";
 
+const BLOCK_SIZE = 16;
+const BLOCK_MARGIN = 4;
+const MOBILE_WEEKS = 16;
+const MOBILE_VIEWPORT_WIDTH =
+  MOBILE_WEEKS * (BLOCK_SIZE + BLOCK_MARGIN) - BLOCK_MARGIN;
+
 const Heatmap = () => {
+  const scrollRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
+
   const theme = {
     light: ["#23272f","#123d22","#25924a","#2ea043","#3ddc84",],
     dark: ["#18181b","#123d22","#25924a","#2ea043","#3ddc84",],
   };
+
+  const scrollToLatest = useCallback(() => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    const maxScroll = container.scrollWidth - container.clientWidth;
+    if (maxScroll <= 0) return;
+
+    const atEnd = maxScroll - container.scrollLeft < 8;
+    if (!container.dataset.initialScrolled || atEnd) {
+      container.scrollLeft = maxScroll;
+      container.dataset.initialScrolled = "true";
+    }
+  }, []);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    const handleChange = (event) => {
+      setIsMobile(event.matches);
+      if (!event.matches && scrollRef.current) {
+        delete scrollRef.current.dataset.initialScrolled;
+        scrollRef.current.scrollLeft = 0;
+      }
+    };
+
+    handleChange(mediaQuery);
+    mediaQuery.addEventListener("change", handleChange);
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
+
+  useEffect(() => {
+    if (!isMobile) return;
+
+    scrollToLatest();
+    const retryTimers = [100, 500, 1000, 2000].map((delay) =>
+      setTimeout(scrollToLatest, delay)
+    );
+
+    const container = scrollRef.current;
+    const observer = new MutationObserver(scrollToLatest);
+    if (container) {
+      observer.observe(container, { childList: true, subtree: true });
+    }
+
+    return () => {
+      retryTimers.forEach(clearTimeout);
+      observer.disconnect();
+    };
+  }, [isMobile, scrollToLatest]);
 
   useEffect(() => {
     const hideLegendGradient = () => {
@@ -120,21 +178,29 @@ const Heatmap = () => {
           className="mt-8 w-full flex justify-center"
         >
           <div className="w-full max-w-6xl">
-            <div className="rounded-3xl border border-[#37b54a]/40 bg-black/50 backdrop-blur-sm w-full p-8">
-              <div className="w-full overflow-x-auto">
-
-          <div className="min-w-[800px]">
-            <GitHubCalendar
-              username="Soumilgit"
-              blockSize={16}
-              blockRadius={4}
-              fontSize={14}
-              theme={theme}
-              hideTotalCount={true}
-              hideColorLegend={false}
-            />
-          </div>
-        </div>
+            <div className="rounded-3xl border border-[#37b54a]/40 bg-black/50 backdrop-blur-sm w-full p-4 sm:p-8">
+              <div
+                ref={scrollRef}
+                className="heatmap-scrollbar w-full overflow-x-auto"
+                style={
+                  isMobile
+                    ? { maxWidth: `${MOBILE_VIEWPORT_WIDTH}px`, marginInline: "auto" }
+                    : undefined
+                }
+              >
+                <div className={isMobile ? "w-max" : "min-w-[800px]"}>
+                  <GitHubCalendar
+                    username="Soumilgit"
+                    blockSize={BLOCK_SIZE}
+                    blockMargin={BLOCK_MARGIN}
+                    blockRadius={4}
+                    fontSize={14}
+                    theme={theme}
+                    hideTotalCount={true}
+                    hideColorLegend={false}
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </motion.div>
