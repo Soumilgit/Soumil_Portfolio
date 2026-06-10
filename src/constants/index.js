@@ -276,9 +276,9 @@ const achievements = [
     link: "https://drive.google.com/file/d/1hR8uerT5PpBbdq-92SsJzxEK4t_1Xn9E/view?usp=sharing", 
   },
   {
-    name: "Top 3.9% on Codolio, 1st rank in college",
+    name: "Top 4% on Codolio, 1st rank in college",
     description:
-      "Stats: 480+ DSA problems solved, 8 awards, 2900+ dev contributions & C-Score of 775+ among ~34,000 global users.",
+      "Stats: 480+ DSA problems solved, 8 awards, ~2950 dev contributions & C-Score of 775+ among ~35,000 global users.",
     link: "https://codolio.com/profile/uQSHdtbA", 
   },
   {
