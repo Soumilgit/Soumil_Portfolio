@@ -334,7 +334,7 @@ const projects = [
   {
     name: "Customer Churn",
     description:
-      "Analyzes 4,000 bank customer records via Python, Supabase, HTML/CSS & Qwen 32B, averaging 82.73% accuracy.",
+      "Analyzes 4,000 bank customer records via Python, Supabase, HTML/CSS & GPT OSS 120B, averaging 82.73% accuracy.",
     tags: [
       {
         name: "xgb",
