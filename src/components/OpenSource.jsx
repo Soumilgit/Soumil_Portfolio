@@ -21,6 +21,31 @@ const dateFormatter = new Intl.DateTimeFormat("en-US", {
 
 const formatDate = (date) => dateFormatter.format(new Date(date));
 
+const renderDescription = (contribution) => {
+  const linkedText = contribution.linkedText;
+
+  if (!linkedText || !contribution.description.includes(linkedText.text)) {
+    return contribution.description;
+  }
+
+  const [before, after] = contribution.description.split(linkedText.text);
+
+  return (
+    <>
+      {before}
+      <a
+        href={linkedText.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-[#37b54a] underline decoration-[#37b54a] underline-offset-4 transition-colors hover:text-[#37d67a] hover:decoration-[#37d67a]"
+      >
+        {linkedText.text}
+      </a>
+      {after}
+    </>
+  );
+};
+
 const OpenSourceCard = ({ contribution, index }) => {
   const [stats, setStats] = useState(contribution.fallback);
 
@@ -112,7 +137,7 @@ const OpenSourceCard = ({ contribution, index }) => {
           </div>
 
           <div className="pr-0 sm:pr-24">
-            <div className="flex flex-wrap items-center gap-3 text-secondary text-[18px] font-semibold">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-2 sm:gap-3 text-secondary text-[18px] font-semibold">
               <span className="text-white">{contribution.repo}</span>
               <span className="flex items-center gap-1">
                 <Star size={18} aria-hidden="true" />
@@ -125,7 +150,7 @@ const OpenSourceCard = ({ contribution, index }) => {
             </h3>
 
             <p className="mt-3 text-secondary text-[19px] leading-[30px]">
-              {contribution.description}
+              {renderDescription(contribution)}
             </p>
 
             <div className="mt-5 flex flex-wrap items-center gap-4 text-[17px] font-semibold">
