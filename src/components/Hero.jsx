@@ -173,7 +173,7 @@ const Hero = ({ onHeroLoaded }) => {
       </div>
 
       {/* Right Column - Info Cards */}
-      <div className={`w-full ${deviceType === 'tablet' ? 'mt-8' : 'xl:w-3/5'}`}>
+      <div className={`w-full ${deviceType === 'tablet' ? 'mt-8' : 'xl:w-3/5 xl:-ml-24 xl:pr-16'}`}>
         <div className={`grid ${deviceType === 'mobile' ? 'grid-cols-1' : 'grid-cols-2'} gap-5`}>
         {infoCards.map((card, index) => (
   <motion.div 

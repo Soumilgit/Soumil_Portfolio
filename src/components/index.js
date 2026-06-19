@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import About from "./About";
 import Tech from "./Tech";
 import Experience from "./Experience";
+import OpenSource from "./OpenSource";
 import Achieve from './Achieve';
 import Certf from './Certf';
 import Heatmap from './Heatmap';
@@ -18,6 +19,7 @@ export {
   About,
   Tech,
   Experience,
+  OpenSource,
   Achieve,
   Certf,
   Heatmap,

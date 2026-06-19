@@ -6,6 +6,7 @@ import {
   About,
   Contact,
   Experience,
+  OpenSource,
   Navbar,
   Tech,
   Achieve,
@@ -35,6 +36,7 @@ const App = () => {
             <div className='relative z-10'>
               <About setAboutLoaded={() => {}} />
               <Experience />
+              <OpenSource />
               <Tech />
               <Achieve />
               <Heatmap />
