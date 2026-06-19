@@ -56,7 +56,7 @@ const About = ({ setAboutLoaded }) => {
   whileInView="show"
   viewport={{ once: true, amount: 0.01 }}
   className="mt-2 text-white text-xl max-w-3xl leading-7 transition duration-300"
-> Computer Engineer building real-time AI tools, scalable apps, and learnt investment banking.
+> Software Engineer building real-time AI tools, scalable apps, and learnt investment banking.
 </motion.p>
 
 </div>
