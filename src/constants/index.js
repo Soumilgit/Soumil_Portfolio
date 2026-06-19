@@ -41,7 +41,9 @@ import {
   docker,
   kafka,
   redis,
-  aminutemantech
+  aminutemantech,
+  orchardcore,
+  aatmaj
 } from "../assets";
 
 
@@ -54,6 +56,10 @@ export const navLinks = [
   {
     id: "work",
     title: "Work",
+  },
+  {
+    id: "opensource",
+    title: "OSS",
   },
   {
     id: "technologies",
@@ -268,6 +274,52 @@ const experiences = [
   
 
 ];
+
+const openSourceContributions = [
+  {
+    repo: "OrchardCMS/OrchardCore",
+    repoApiUrl: "https://api.github.com/repos/OrchardCMS/OrchardCore",
+    languagesApiUrl: "https://api.github.com/repos/OrchardCMS/OrchardCore/languages",
+    pullApiUrl: "https://api.github.com/repos/OrchardCMS/OrchardCore/pulls/19348",
+    pullRequestLink: "https://github.com/OrchardCMS/OrchardCore/pull/19348",
+    title: "Fix admin root active menu state",
+    description:
+      "Resolved admin menu active state bugs by normalizing tenant URL prefixes and eliminating stale navigation hash fallbacks for SaaS environments.",
+    image: orchardcore,
+    fallback: {
+      stars: 8098,
+      additions: 92,
+      deletions: 2,
+      changedFiles: 3,
+      language: "C#",
+      status: "Merged",
+      createdAt: "2026-06-07T06:13:46Z",
+      mergedAt: "2026-06-09T20:28:50Z",
+    },
+  },
+  {
+    repo: "Aatmaj-Zephyr/KJSCE-CE",
+    repoApiUrl: "https://api.github.com/repos/Aatmaj-Zephyr/KJSCE-CE",
+    languagesApiUrl: "https://api.github.com/repos/Aatmaj-Zephyr/KJSCE-CE/languages",
+    pullApiUrl: "https://api.github.com/repos/Aatmaj-Zephyr/KJSCE-CE/pulls/2",
+    pullRequestLink: "https://github.com/Aatmaj-Zephyr/KJSCE-CE/pull/2",
+    title: "Update by adding my repository link to the table",
+    description:
+      "Added SY_Resources to the KJSCE CE materials table, linking Sem-III and Sem-IV Computer Engineering notes, writeups, and lab resources across ITVC, DS, DDL, DV, PSOT, AOA, ADS, and WPL.",
+    image: aatmaj,
+    fallback: {
+      stars: 16,
+      additions: 1,
+      deletions: 0,
+      changedFiles: 1,
+      language: "Markdown",
+      status: "Merged",
+      createdAt: "2024-07-02T12:34:45Z",
+      mergedAt: "2024-07-02T13:43:19Z",
+    },
+  },
+];
+
 const achievements = [
   {
     name: "TechGig Code Gladiators 2024 Finalist",
@@ -460,4 +512,4 @@ const certificates = [
 ];
 
 
-export { hero ,services, technologies, experiences, achievements, projects,certificates};
+export { hero ,services, technologies, experiences, openSourceContributions, achievements, projects,certificates};
