@@ -1,6 +1,6 @@
 # Soumil Mukhopadhyay | Personal Portfolio
 
-A modern, interactive portfolio website showcasing my skills, projects, and experience as a software engineer. Built with cutting-edge web technologies featuring 3D elements, smooth animations, and responsive design.
+A modern, interactive portfolio website showcasing my skills, projects, and experience as a software engineer. Built with cutting-edge web technologies featuring 3D elements, smooth animations and responsive design.
 
 ## Features 
 
@@ -32,7 +32,7 @@ A modern, interactive portfolio website showcasing my skills, projects, and expe
 2. **About** - Overview with service cards
 3. **Experience** - Work history timeline
 4. **Open Source** - Showcase of merged PRs / contributions made to prominent OSS
-5. **Skills** - Interactive tech stack with hover & expand effects
+5. **Skills** - Categorically classified tech stack
 6. **Achievements** - Honors and awards
 7. **Projects** - Showcase of featured work
 8. **Certifications** - Professional credentials
