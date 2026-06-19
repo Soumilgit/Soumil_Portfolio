@@ -1,57 +1,75 @@
-import React, { useState } from "react";
-import Ball from "./canvas/Ball"; 
+import React from "react";
 import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { textVariant, simpleFadeIn } from "../utils/motion"; 
+import { simpleFadeIn } from "../utils/motion"; 
+
+const skillGroups = [
+  {
+    title: "Languages",
+    skills: ["JavaScript", "TypeScript", "Python", "C++"],
+  },
+  {
+    title: "Web & Full Stack",
+    skills: ["HTML 5", "CSS 3", "React JS", "Next JS", "Node JS", "Flask"],
+  },
+  {
+    title: "AI, ML & Data",
+    skills: ["Python", "MySQL", "Chart JS", "Kafka", "Redis"],
+  },
+  {
+    title: "Cloud & DevOps",
+    skills: ["AWS", "Docker", "Git", "GitHub", "PostmanAPI"],
+  },
+  {
+    title: "Web3 & Platforms",
+    skills: ["Solidity", "Supabase", "Clerk", "Three JS"],
+  },
+];
+
+const SkillGroupCard = ({ title, skills, index }) => {
+  const groupSkills = skills
+    .map((skillName) => technologies.find((tech) => tech.name === skillName))
+    .filter(Boolean);
+
+  return (
+    <motion.div
+      variants={simpleFadeIn(index * 0.05, 0.1)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.01 }}
+      className="relative bg-black p-[2px] rounded-lg transition-transform border border-white/30 hover:border-[#37b54a]"
+      whileHover={{ scaleY: 1.05 }}
+    >
+      <div className="bg-black p-5 rounded-lg h-full">
+        <h3 className="text-[#37b54a] font-bold text-[22px] text-center transition-all duration-300">
+          {title}
+        </h3>
+
+        <div className="mt-5 grid grid-cols-2 gap-4">
+          {groupSkills.map((skill) => (
+            <div
+              key={`${title}-${skill.name}`}
+              className="flex min-h-[94px] flex-col items-center justify-center rounded-lg border border-white/20 bg-black/80 px-3 py-4 text-center transition-colors duration-200 hover:border-[#37b54a]/80"
+            >
+              <img
+                src={skill.icon}
+                alt={skill.name}
+                className="h-10 w-10 object-contain"
+              />
+              <p className="mt-3 text-sm font-bold leading-tight text-white">
+                {skill.name}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </motion.div>
+  );
+};
 
 const Tech = () => {
-  const [positions, setPositions] = useState(
-    technologies.map(() => ({ x: 0 }))
-  );
-
-  const handleDrag = (e, index) => {
-    const newX = e.clientX - e.target.clientWidth / 2;
-    setPositions((prev) => {
-      const newPositions = [...prev];
-      newPositions[index].x = newX;
-      return newPositions;
-    });
-  };
-
-  // Color mapping for each technology
-  const getTechColor = (techName) => {
-    const colorMap = {
-      "JavaScript": "bg-[#F7DF1E]",
-      "Flask": "bg-[#CFCECF]",
-      "MysQL": "bg-[#4479A1]",
-      "TypeScript": "bg-[#3178C6]",
-      "HTML 5": "bg-[#E34F26]",
-      "CSS 3": "bg-[#1572B6]",
-      "React JS": "bg-[#61DAFB]",
-      "Tailwind CSS": "bg-[#06B6D4]",
-      "Docker": "bg-[#0096C7]",
-      "Supabase": "bg-[#00FC00]",
-      "Node JS": "bg-[#339933]",
-      "Three JS": "bg-[#FFFFFF]",
-      "Python": "bg-[#3776AB]",
-      "C++": "bg-[#187BCD]",
-      "MySQL": "bg-[#4479A1]",
-      "AWS": "bg-[#FFD700]",
-      "Git": "bg-[#F05032]",
-      "GitHub": "bg-[#FFFFFF]",
-      "Kafka": "bg-[#C0C0C0]",
-      "Redis": "bg-[#FF7045]",
-      "Clerk": "bg-[#703BE7]",
-      "Solidity": "bg-[#9771ED]",
-      "PostmanAPI": "bg-[#FF6C37]",
-      "Chart JS": "bg-[#FE777B]",
-      "Next JS": "bg-[#B8B8B8]",
-    };
-    return colorMap[techName] || "bg-gray-600";
-  };
-
   return (
     <div>
       {/* Scroll animated section title with clear readable background */}
@@ -71,34 +89,11 @@ const Tech = () => {
 </motion.div>
 
 
-      {/* Tech ball icons with hover effect */}
-      <div className="grid grid-cols-2 lg:grid-cols-8 gap-10 p-10 justify-center">
-      {technologies.map((technology, index) => (
-  <motion.div
-    key={technology.name}
-    variants={simpleFadeIn(index * 0.05, 0.1)} 
-    initial="hidden"
-    whileInView="show"
-    viewport={{ once: true, amount: 0.01 }}
-    className="flex flex-col justify-center items-center relative group"
-    style={{ transform: `translateX(${positions[index].x}px)` }}
-  >
-    {/* Ball component */}
-    {technology.icon ? (
-      <Ball imgUrl={technology.icon} onDrag={(e) => handleDrag(e, index)} />
-    ) : (
-      <p className="text-red-500">Missing Icon</p>
-    )}
-
-    {/* Skill name */}
-    <div 
-      className={`mt-2 px-2 py-1 rounded-md ${getTechColor(technology.name)} text-black text-sm font-bold whitespace-nowrap`}
-    >
-      {technology.name}
-    </div>
-  </motion.div>
-))}
-
+      {/* Grouped skill cards */}
+      <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {skillGroups.slice(0, 5).map((group, index) => (
+          <SkillGroupCard key={group.title} index={index} {...group} />
+        ))}
       </div>
     </div>
   );
