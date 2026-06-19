@@ -304,8 +304,12 @@ const openSourceContributions = [
     pullApiUrl: "https://api.github.com/repos/Aatmaj-Zephyr/KJSCE-CE/pulls/2",
     pullRequestLink: "https://github.com/Aatmaj-Zephyr/KJSCE-CE/pull/2",
     title: "Update by adding my repository link to the table",
+    linkedText: {
+      text: "SY_Resources",
+      href: "https://github.com/Soumilgit/SY_Resources",
+    },
     description:
-      "Added SY_Resources to the KJSCE CE materials table, linking Sem-III and Sem-IV Computer Engineering notes, writeups, and lab resources across ITVC, DS, DDL, DV, PSOT, AOA, ADS, and WPL.",
+      "Added SY_Resources to the KJSCE CE materials table, linking Second-Year Computer Engineering notes, write-ups and lab resources across subjects.",
     image: aatmaj,
     fallback: {
       stars: 16,
