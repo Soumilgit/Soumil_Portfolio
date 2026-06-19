@@ -52,10 +52,10 @@ const Hero = ({ onHeroLoaded }) => {
       title: "Education & Passions",
       content: (
         <div className="space-y-2">
-          <p><span className="font-bold text-white">🎓 Degree:</span> Software Engineer</p>
-          <p><span className="font-bold text-white">🌐 First Passion:</span> Web Dev</p>
-          <p><span className="font-bold text-white">🧠 Second Passion:</span> AI-ML</p>
-          <p><span className="font-bold text-white">📈 Third Passion:</span> Algorithms</p>
+          <p><span className="font-bold text-white">- Degree:</span> Computer Engineer</p>
+          <p><span className="font-bold text-white">- First Passion:</span> Web Dev</p>
+          <p><span className="font-bold text-white">- Second Passion:</span> AI-ML</p>
+          <p><span className="font-bold text-white">- Third Passion:</span> Algorithms</p>
         </div>
       )
     },
@@ -63,10 +63,10 @@ const Hero = ({ onHeroLoaded }) => {
       title: "Personal Info",
       content: (
         <div className="space-y-2">
-          <p className="text-gray-100">📅 DOB: 30 October 2004</p>
-          <p className="text-gray-100">📧 Mail: msoumil30@gmail.com</p>
-          <p className="text-gray-100">📞 Phone: 9405727673</p>
-          <p className="text-gray-100">✨ Hobby: Birdwatching</p>
+          <p className="text-gray-100">- DOB: 30 October 2004</p>
+          <p className="text-gray-100">- Mail: msoumil30@gmail.com</p>
+          <p className="text-gray-100">- Phone: 9405727673</p>
+          <p className="text-gray-100">- Hobby: Birdwatching</p>
         </div>
       )
     },

@@ -31,11 +31,12 @@ A modern, interactive portfolio website showcasing my skills, projects, and expe
 1. **Hero Section** - Introduction with animated text, resume and info cards
 2. **About** - Overview with service cards
 3. **Experience** - Work history timeline
-4. **Skills** - Interactive tech stack with hover & expand effects
-5. **Achievements** - Honors and awards
-6. **Projects** - Showcase of featured work
-7. **Certifications** - Professional credentials
-8. **Contact** - 3D computer and contact form
+4. **Open Source** - Showcase of merged PRs / contributions made to prominent OSS
+5. **Skills** - Interactive tech stack with hover & expand effects
+6. **Achievements** - Honors and awards
+7. **Projects** - Showcase of featured work
+8. **Certifications** - Professional credentials
+9. **Contact** - 3D computer and contact form
 
 ## Installation
 

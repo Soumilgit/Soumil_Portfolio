@@ -93,7 +93,7 @@ const Contact = () => {
             className="contact-card"
           >
             <p style={{ color: "lime", fontSize: "18px" }}>
-              ✅ TRANSMISSION SUCCESSFUL! MESSAGE RECEIVED.
+              ✅ Transmission Successful! Message Received.
             </p>
           </motion.div>
         ) : (
@@ -101,11 +101,8 @@ const Contact = () => {
             variants={slideIn("left", "tween", 0.05, 0.1)}
             className="contact-card"
           >
-            <p style={{ color: "#37b54a", fontSize: "14px", fontWeight: "bold", fontFamily: "'Orbitron', sans-serif" }}>
-              🔐 AUTHORIZED ACCESS REQUIRED
-            </p>
             <h3 style={{ color: "#37b54a", fontSize: "24px", fontWeight: "bold", fontFamily: "'Orbitron', sans-serif" }}>
-              CYBERNETIC CONTACT FORM
+              Contact Form
             </h3>
 
             <form ref={formRef} onSubmit={handleFormSubmit} action="https://formspree.io/f/mdkgeenj" method="POST"
