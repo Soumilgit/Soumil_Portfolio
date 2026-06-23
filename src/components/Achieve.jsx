@@ -9,10 +9,14 @@ import { achievements } from "../constants";
 import { textVariant, simpleFadeIn } from "../utils/motion"; // Use simpleFadeIn
 
 import cp from "../assets/cp.png";
+import cpLight from "../assets/cp-light.png";
 import googlecloud from "../assets/googlecloud.png";
+import googlecloudLight from "../assets/googlecloud-light.png";
 
 import cwc from "../assets/cwc.png";
+import cwcLight from "../assets/cwc-light.png";
 import terii from "../assets/terii.png";
+import teriiLight from "../assets/terii-light.png";
 import emfinity from "../assets/emfinity-new.png";
 import emfinityOriginal from "../assets/company/emfinity.png";
 import { useTheme } from "../context/ThemeContext";
@@ -24,9 +28,14 @@ const AchievementCard = ({ index, name, description, link }) => {
   const { isLightMode } = useTheme();
   const activeIcons = [...icons];
 
-  // Replace codolioDark with light variant in light mode
+  // Replace dark variants with light variants in light mode
   if (isLightMode) {
-    activeIcons[1] = codolio; // index 1 corresponds to codolio
+    activeIcons[0] = cpLight;
+    activeIcons[1] = codolio;
+    activeIcons[2] = googlecloudLight;
+    activeIcons[3] = cwcLight;
+    activeIcons[4] = teriiLight;
+    activeIcons[5] = emfinityOriginal;
   }
 
   return (

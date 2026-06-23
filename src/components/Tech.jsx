@@ -4,6 +4,7 @@ import { technologies } from "../constants";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { simpleFadeIn } from "../utils/motion"; 
+import { useTheme } from "../context/ThemeContext";
 
 const skillGroups = [
   {
@@ -29,6 +30,7 @@ const skillGroups = [
 ];
 
 const SkillGroupCard = ({ title, skills, index }) => {
+  const { isLightMode } = useTheme();
   const groupSkills = skills
     .map((skillName) => technologies.find((tech) => tech.name === skillName))
     .filter(Boolean);
@@ -54,7 +56,7 @@ const SkillGroupCard = ({ title, skills, index }) => {
               className="flex min-h-[94px] flex-col items-center justify-center rounded-lg border border-white/20 bg-black/80 px-3 py-4 text-center transition-colors duration-200 hover:border-[#37b54a]/80"
             >
               <img
-                src={skill.icon}
+                src={isLightMode && skill.iconLight ? skill.iconLight : skill.icon}
                 alt={skill.name}
                 className="h-10 w-10 object-contain"
               />

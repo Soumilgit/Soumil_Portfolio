@@ -6,13 +6,23 @@ import { textVariant, simpleFadeIn } from "../utils/motion";
 import { styles } from "../styles";
 import { useTheme } from "../context/ThemeContext";
 import emfinityNew from "../assets/emfinity-new.png";
+import { meshcraftLight, marqueeDark, npcilDark, oneplayDark } from "../assets";
 
 const ExperienceCard = ({ experience, index }) => {
   const { isLightMode } = useTheme();
   let icon = experience.icon;
+  const company = experience.company_name.toLowerCase();
 
-  if (experience.company_name === "Emfinity" && !isLightMode) {
+  if (company === "emfinity" && !isLightMode) {
     icon = emfinityNew;
+  } else if (company === "meshcraft" && isLightMode) {
+    icon = meshcraftLight;
+  } else if (company === "marquee equity" && !isLightMode) {
+    icon = marqueeDark;
+  } else if (company === "npcil" && !isLightMode) {
+    icon = npcilDark;
+  } else if (company === "1 play global" && !isLightMode) {
+    icon = oneplayDark;
   }
 
   return (

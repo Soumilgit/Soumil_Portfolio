@@ -11,6 +11,7 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { openSourceContributions } from "../constants";
 import { simpleFadeIn } from "../utils/motion";
+import { useTheme } from "../context/ThemeContext";
 
 const numberFormatter = new Intl.NumberFormat("en-US");
 const dateFormatter = new Intl.DateTimeFormat("en-US", {
@@ -47,6 +48,7 @@ const renderDescription = (contribution) => {
 };
 
 const OpenSourceCard = ({ contribution, index }) => {
+  const { isLightMode } = useTheme();
   const [stats, setStats] = useState(contribution.fallback);
 
   useEffect(() => {
@@ -128,7 +130,7 @@ const OpenSourceCard = ({ contribution, index }) => {
         </a>
 
         <div className="grid grid-cols-1 lg:grid-cols-[190px_1fr] gap-6">
-          <div className="relative w-full max-w-[190px] aspect-square justify-self-start rounded-lg overflow-hidden border border-white/20 bg-[#161b22]">
+          <div className={`relative w-full max-w-[190px] aspect-square justify-self-start rounded-lg overflow-hidden border border-white/20 ${isLightMode ? "bg-transparent" : "bg-[#161b22]"}`}>
             <img
               src={contribution.image}
               alt={`${contribution.repo} logo`}

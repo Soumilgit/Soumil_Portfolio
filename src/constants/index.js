@@ -1,6 +1,7 @@
 import { color } from "framer-motion";
 import {
   app,
+  appLight,
   web,
   data,
   problem,
@@ -42,7 +43,25 @@ import {
   kafka,
   redis,
   orchardcore,
-  aatmaj
+  aatmaj,
+  htmlLight,
+  cssLight,
+  pythonLight,
+  threejsLight,
+  cppLight,
+  flaskLight,
+  sqlLight,
+  githubLight,
+  clerkLight,
+  solidityLight,
+  postmanapiLight,
+  chartLight,
+  awsLight,
+  nextLight,
+  supabaseLight,
+  dockerLight,
+  kafkaLight,
+  redisLight
 } from "../assets";
 
 
@@ -109,6 +128,7 @@ const services = [
   {
     title: "App Developer",
     icon: app,
+    iconLight: appLight,
   },
 ];
 
@@ -398,10 +418,12 @@ const technologies = [
   {
     name: "HTML 5",
     icon: html,
+    iconLight: htmlLight,
   },
   {
     name: "CSS 3",
     icon: css,
+    iconLight: cssLight,
   },
   {
     name: "JavaScript",
@@ -417,10 +439,12 @@ const technologies = [
   },
   { name: "Docker", 
     icon: docker, 
+    iconLight: dockerLight,
   },
   {
     name: "Supabase",
     icon: supabase,
+    iconLight: supabaseLight,
   },
 
   {
@@ -430,22 +454,27 @@ const technologies = [
   {
     name: "Three JS",
     icon: threejs,
+    iconLight: threejsLight,
   },
   {
     name: "Python",
     icon: python,
+    iconLight: pythonLight,
   },
   {
     name: "C++",
     icon: cpp,
+    iconLight: cppLight,
   },
   {
     name: "Flask",
     icon: flask,
+    iconLight: flaskLight,
   },
   {
     name: "MySQL",
     icon: sql,
+    iconLight: sqlLight,
   },
   {
    name: "TypeScript",
@@ -454,6 +483,7 @@ const technologies = [
   {
    name: "AWS",
    icon: aws,
+   iconLight: awsLight,
   },
   {
     name: "Git",
@@ -462,34 +492,42 @@ const technologies = [
   {
     name: "GitHub",
     icon: github,
+    iconLight: githubLight,
   },
   {
     name: "Kafka",
     icon: kafka,
+    iconLight: kafkaLight,
   },
   {
     name: "Redis",
     icon: redis,
+    iconLight: redisLight,
   },
   {
     name: "Clerk",
     icon: clerk,
+    iconLight: clerkLight,
   },
   {
     name: "Solidity",
     icon: solidity,
+    iconLight: solidityLight,
   },
   {
     name: "PostmanAPI",
     icon: postmanapi,
+    iconLight: postmanapiLight,
   },
   {
     name: "Chart JS",
     icon: chart,
+    iconLight: chartLight,
   },
   {
     name: "Next JS",
     icon: next,
+    iconLight: nextLight,
   },
 
 ];

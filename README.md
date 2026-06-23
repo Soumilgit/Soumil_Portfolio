@@ -33,10 +33,10 @@ A modern, interactive portfolio website showcasing my skills, projects, and expe
 2. **About** - Overview with service cards
 3. **Experience** - Work history timeline
 4. **Open Source** - Showcase of merged PRs / contributions made to prominent OSS
-5. **Skills** - Categorically classified tech stack
-6. **Achievements** - Honors and awards
+5. **Achievements** - Honors and awards
+6. **Projects** - Showcase of featured work
 7. **Heatmap** - Dynamically updating GitHub heatmap showcase
-8. **Projects** - Showcase of featured work
+8. **Skills** - Categorically classified tech stack
 9. **Certifications** - Professional credentials
 10. **Contact** - 3D computer and contact form
 
@@ -72,10 +72,11 @@ To personalize this portfolio:
 
 ## Recent Updates
 
- - **Dual-Theme Support (Light & Dark)**: Full implementation of light and dark mode toggles with customized CSS themes. Light mode includes a custom grayscale-processed aurora background.
+ - **Dual-Theme Support (Light & Dark)**: Full implementation of light and dark mode toggles with customized CSS themes. Light mode includes a custom grayscale-processed aurora background and white-bg versions of images.
  - **Asset Preprocessing Script**: Added a Python script (`scripts/preprocess_light_assets.py`) that handles grayscale mapping of image/animation frame elements, specifically adjusting contrast for the background sky, aurora waves, and star particles.
  - **Theme-Aware Media Assets**: Dynamic asset loading in components like Hero and Achievements (e.g., swapping between `codolio.png` / `codolio-dark.png` and light/dark circular logo variants for Emfinity).
  - **ESM & SSR Interop Optimization**: Resolved production-minified React Error #130 crashes by introducing robust interop checks to handle double-default wrapped CommonJS libraries (`react-fast-marquee` and `react-github-calendar`) in ESM/Vite environments.
+ - **Re-ordered positioning of components for better UX**: First, I swapped the positions of Skillset with Achievements, then, further swapped the positions of Skillset with Projects. Finally, applied the same reordering across the navlinks as well.
 
 ## Performance
 

@@ -8,8 +8,9 @@ import { useTheme } from "../context/ThemeContext";
 
 // Added fadeIn
 
-const ServiceCard = ({ title, icon, index }) => {
-  const activeIcon = icon;
+const ServiceCard = ({ title, icon, iconLight, index }) => {
+  const { isLightMode } = useTheme();
+  const activeIcon = isLightMode && iconLight ? iconLight : icon;
 
   return (
   <motion.div
