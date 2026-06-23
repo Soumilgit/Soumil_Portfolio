@@ -1,4 +1,6 @@
-import Marquee from "react-fast-marquee";
+import _Marquee from "react-fast-marquee";
+
+const Marquee = _Marquee.default || _Marquee;
 
 export function DownloadCVMarquee() {
   return (
@@ -11,3 +13,4 @@ export function DownloadCVMarquee() {
     </div>
   );
 }
+

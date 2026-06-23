@@ -10,7 +10,7 @@ A modern, interactive portfolio website showcasing my skills, projects, and expe
 - **Project Showcase** - Animated project cards with GitHub links
 - **Responsive Design** - Works on all device sizes
 - **Smooth Animations** - Framer Motion transitions
-- **Dark Mode Aesthetic** - Easy-on-the-eyes design
+- **Dual Mode Aesthetic** - Easy-on-the-eyes design
 - **Starry Background** - Particle-like, with **3** hooks utilized
 
 ## Technologies Used
@@ -25,6 +25,7 @@ A modern, interactive portfolio website showcasing my skills, projects, and expe
 ### Backend & Deployment
 - **Vite** - Build tool
 - **Vercel** - Deployment platform
+- **Python** - For preprocessing & displaying light-mode 3D animations
 
 ## Sections 
 
@@ -34,9 +35,10 @@ A modern, interactive portfolio website showcasing my skills, projects, and expe
 4. **Open Source** - Showcase of merged PRs / contributions made to prominent OSS
 5. **Skills** - Categorically classified tech stack
 6. **Achievements** - Honors and awards
-7. **Projects** - Showcase of featured work
-8. **Certifications** - Professional credentials
-9. **Contact** - 3D computer and contact form
+7. **Heatmap** - Dynamically updating GitHub heatmap showcase
+8. **Projects** - Showcase of featured work
+9. **Certifications** - Professional credentials
+10. **Contact** - 3D computer and contact form
 
 ## Installation
 
@@ -67,6 +69,13 @@ To personalize this portfolio:
 2. Replace 3D model in `public/desktop_pc/`
 3. Adjust colors in `tailwind.config.cjs`, `src/index.css` and `src/styles.js`
 4. Add your own flavour in existing files under folders `Marquees`, `svg`, `utils` etc.
+
+## Recent Updates
+
+ - **Dual-Theme Support (Light & Dark)**: Full implementation of light and dark mode toggles with customized CSS themes. Light mode includes a custom grayscale-processed aurora background.
+ - **Asset Preprocessing Script**: Added a Python script (`scripts/preprocess_light_assets.py`) that handles grayscale mapping of image/animation frame elements, specifically adjusting contrast for the background sky, aurora waves, and star particles.
+ - **Theme-Aware Media Assets**: Dynamic asset loading in components like Hero and Achievements (e.g., swapping between `codolio.png` / `codolio-dark.png` and light/dark circular logo variants for Emfinity).
+ - **ESM & SSR Interop Optimization**: Resolved production-minified React Error #130 crashes by introducing robust interop checks to handle double-default wrapped CommonJS libraries (`react-fast-marquee` and `react-github-calendar`) in ESM/Vite environments.
 
 ## Performance
 

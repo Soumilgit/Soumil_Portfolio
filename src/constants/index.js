@@ -333,7 +333,7 @@ const achievements = [
   {
     name: "Top 4% on Codolio, 1st rank in college",
     description:
-      "Stats: 480+ DSA problems solved, 8 awards, 2500+ dev contributions & C-Score of 775+ among 35,000+ global users.",
+      "Stats: 480+ DSA problems solved, 8 awards, 2550+ dev contributions & C-Score of 775+ among 35,700+ global users.",
     link: "https://codolio.com/profile/uQSHdtbA", 
   },
   {

@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 import { SectionWrapper } from "../hoc";
 import { simpleFadeIn } from "../utils/motion";
 import { styles } from "../styles";
-import GitHubCalendar from "react-github-calendar";
+import _GitHubCalendar from "react-github-calendar";
+const GitHubCalendar = _GitHubCalendar.default || _GitHubCalendar;
 import { useTheme } from "../context/ThemeContext";
 
 const BLOCK_SIZE = 16;
