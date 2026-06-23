@@ -8,13 +8,6 @@ import { useTheme } from "../context/ThemeContext";
 
 // Added fadeIn
 
-const lightServiceIcons = {
-  "Web Developer": webLight,
-  "Data Analyst": dataLight,
-  "Problem Solver": problemLight,
-  "App Developer": appLight,
-};
-
 const ServiceCard = ({ title, icon, index }) => {
   const activeIcon = icon;
 
