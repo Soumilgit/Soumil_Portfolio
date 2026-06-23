@@ -12,7 +12,7 @@ import jsi from "../assets/jsi.png";
 import { useTheme } from "../context/ThemeContext";
 
 const icons = [oods, postman, jsi];
-const lightIcons = [oodsLight, postmanLight, jsiLight];
+
 
 const CertificationCard = ({ index, name, description, link }) => {
   const activeIcons = icons;
