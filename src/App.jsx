@@ -39,10 +39,10 @@ const App = () => {
               <About setAboutLoaded={() => {}} />
               <Experience />
               <OpenSource />
-              <Tech />
               <Achieve />
-              <Heatmap />
               <Works />
+              <Heatmap />
+              <Tech />
               <Certf />
               <Contact />
             </div>

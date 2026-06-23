@@ -61,20 +61,20 @@ export const navLinks = [
     title: "OSS",
   },
   {
-    id: "technologies",
-    title: "Tech",
-  },
-  {
     id: "achievement",
     title: "Feats",
+  },
+  {
+    id: "projects",
+    title: "Projects",
   },
   {
     id: "heatmap",
     title: "Heatmap",
   },
   {
-    id: "projects",
-    title: "Projects",
+    id: "technologies",
+    title: "Tech",
   },
   {
     id: "certf",
@@ -110,106 +110,6 @@ const services = [
     title: "App Developer",
     icon: app,
   },
-];
-
-const technologies = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  { name: "Docker", 
-    icon: docker, 
-  },
-  {
-    name: "Supabase",
-    icon: supabase,
-  },
-
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "Python",
-    icon: python,
-  },
-  {
-    name: "C++",
-    icon: cpp,
-  },
-  {
-    name: "Flask",
-    icon: flask,
-  },
-  {
-    name: "MySQL",
-    icon: sql,
-  },
-  {
-   name: "TypeScript",
-   icon: typescript,
-  },
-  {
-   name: "AWS",
-   icon: aws,
-  },
-  {
-    name: "Git",
-    icon: git,
-  },
-  {
-    name: "GitHub",
-    icon: github,
-  },
-  {
-    name: "Kafka",
-    icon: kafka,
-  },
-  {
-    name: "Redis",
-    icon: redis,
-  },
-  {
-    name: "Clerk",
-    icon: clerk,
-  },
-  {
-    name: "Solidity",
-    icon: solidity,
-  },
-  {
-    name: "PostmanAPI",
-    icon: postmanapi,
-  },
-  {
-    name: "Chart JS",
-    icon: chart,
-  },
-  {
-    name: "Next JS",
-    icon: next,
-  },
-
 ];
 
 const experiences = [
@@ -491,6 +391,107 @@ const projects = [
     image: missing,
     source_code_link: "https://github.com/Soumilgit/Real-Time-Missing-Persons-Detection",
   }
+];
+
+
+const technologies = [
+  {
+    name: "HTML 5",
+    icon: html,
+  },
+  {
+    name: "CSS 3",
+    icon: css,
+  },
+  {
+    name: "JavaScript",
+    icon: javascript,
+  },
+  {
+    name: "React JS",
+    icon: reactjs,
+  },
+  {
+    name: "Tailwind CSS",
+    icon: tailwind,
+  },
+  { name: "Docker", 
+    icon: docker, 
+  },
+  {
+    name: "Supabase",
+    icon: supabase,
+  },
+
+  {
+    name: "Node JS",
+    icon: nodejs,
+  },
+  {
+    name: "Three JS",
+    icon: threejs,
+  },
+  {
+    name: "Python",
+    icon: python,
+  },
+  {
+    name: "C++",
+    icon: cpp,
+  },
+  {
+    name: "Flask",
+    icon: flask,
+  },
+  {
+    name: "MySQL",
+    icon: sql,
+  },
+  {
+   name: "TypeScript",
+   icon: typescript,
+  },
+  {
+   name: "AWS",
+   icon: aws,
+  },
+  {
+    name: "Git",
+    icon: git,
+  },
+  {
+    name: "GitHub",
+    icon: github,
+  },
+  {
+    name: "Kafka",
+    icon: kafka,
+  },
+  {
+    name: "Redis",
+    icon: redis,
+  },
+  {
+    name: "Clerk",
+    icon: clerk,
+  },
+  {
+    name: "Solidity",
+    icon: solidity,
+  },
+  {
+    name: "PostmanAPI",
+    icon: postmanapi,
+  },
+  {
+    name: "Chart JS",
+    icon: chart,
+  },
+  {
+    name: "Next JS",
+    icon: next,
+  },
+
 ];
 
 const certificates = [

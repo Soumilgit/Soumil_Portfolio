@@ -84,7 +84,7 @@ const Navbar = () => {
     </Link>
 
     {/* Desktop Navbar */}
-    <div className="hidden md:flex items-center" style={{ marginRight: "82.5px" }}>
+    <div className="hidden md:flex items-center" style={{ marginRight: "82.45px" }}>
       <ThemeToggle />
       <ul className="nav-links" style={{ marginLeft: "36px" }}> 
         {navLinks.map((nav) => (
