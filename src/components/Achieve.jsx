@@ -2,13 +2,15 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
+import codolio from "../assets/codolio.png";
+import codolioDark from "../assets/codolio-dark.png";
 import { SectionWrapper } from "../hoc";
 import { achievements } from "../constants";
 import { textVariant, simpleFadeIn } from "../utils/motion"; // Use simpleFadeIn
 
 import cp from "../assets/cp.png";
 import googlecloud from "../assets/googlecloud.png";
-import codolio from "/codolio.svg";
+
 import cwc from "../assets/cwc.png";
 import terii from "../assets/terii.png";
 import emfinity from "../assets/emfinity-new.png";
@@ -16,14 +18,15 @@ import emfinityOriginal from "../assets/company/emfinity.png";
 import { useTheme } from "../context/ThemeContext";
 
 // Map images to achievements
-const icons = [cp, codolio, googlecloud, cwc, terii, emfinity];
+const icons = [cp, codolioDark, googlecloud, cwc, terii, emfinity];
 
 const AchievementCard = ({ index, name, description, link }) => {
   const { isLightMode } = useTheme();
   const activeIcons = [...icons];
 
+  // Replace codolioDark with light variant in light mode
   if (isLightMode) {
-    activeIcons[5] = emfinityOriginal;
+    activeIcons[1] = codolio; // index 1 corresponds to codolio
   }
 
   return (

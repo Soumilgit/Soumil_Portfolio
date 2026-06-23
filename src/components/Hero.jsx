@@ -8,7 +8,12 @@ import { ScrambledText } from "./ScrambledText";
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
+import codolio from "../assets/codolio.png";
+import codolioDark from "../assets/codolio-dark.png";
+import { useTheme } from "../context/ThemeContext";
 import { simpleFadeIn } from "../utils/motion"; 
+
+// DEFAULT_ASSETS moved to preprocessing script
 
 const openX = () => {
   const webLink = "https://x.com/SoumilMukh6476";
@@ -18,6 +23,7 @@ const openX = () => {
 const Hero = ({ onHeroLoaded }) => {
   const { title, icon } = hero[0];
   const [deviceType, setDeviceType] = useState('desktop');
+  const { isLightMode } = useTheme();
 
   useEffect(() => {
     const handleResize = () => {
@@ -78,7 +84,7 @@ const Hero = ({ onHeroLoaded }) => {
         <FaGithub className="text-black bg-white rounded-full p-[2px]" size={20} /> GitHub <FiExternalLink />
       </a>
       <a href="https://codolio.com/profile/uQSHdtbA" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#37b54a] transition-colors hover:underline font-semibold text-blue-200">
-        <img src="/codolio.svg" alt="Codolio" className="w-5 h-5" /> Codolio <FiExternalLink />
+        <img src={isLightMode ? codolio : codolioDark} alt="Codolio" className="w-5 h-5" /> Codolio <FiExternalLink />
       </a>
       <a href="https://www.linkedin.com/in/soumilm30/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#37b54a] transition-colors hover:underline font-semibold text-blue-200">
         <FaLinkedin className="text-[#0A66C2]" size={20} /> LinkedIn <FiExternalLink />

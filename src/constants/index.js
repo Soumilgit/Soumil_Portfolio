@@ -41,7 +41,6 @@ import {
   docker,
   kafka,
   redis,
-  aminutemantech,
   orchardcore,
   aatmaj
 } from "../assets";

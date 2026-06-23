@@ -11,19 +11,6 @@ except ImportError:
 
 
 DEFAULT_ASSETS = [
-    "src/assets/cp.png",
-    "src/assets/googlecloud.png",
-    "src/assets/cwc.png",
-    "src/assets/terii.png",
-    "src/assets/emfinity-new.png",
-    "src/assets/oods.png",
-    "src/assets/postman.png",
-    "src/assets/jsi.png",
-    "src/assets/app.png",
-    "src/assets/web.png",
-    "src/assets/data.png",
-    "src/assets/problemsolver.png",
-    "src/assets/company/meshcraft.png",
     "src/assets/what.avifs",
 ]
 
