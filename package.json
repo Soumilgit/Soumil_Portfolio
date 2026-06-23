@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "preprocess:light": "python scripts/preprocess_light_assets.py",
     "preview": "vite preview"
   },
   "dependencies": {

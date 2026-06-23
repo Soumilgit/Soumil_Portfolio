@@ -12,11 +12,21 @@ import codolio from "/codolio.svg";
 import cwc from "../assets/cwc.png";
 import terii from "../assets/terii.png";
 import emfinity from "../assets/emfinity-new.png";
+import emfinityOriginal from "../assets/company/emfinity.png";
+import { useTheme } from "../context/ThemeContext";
 
 // Map images to achievements
 const icons = [cp, codolio, googlecloud, cwc, terii, emfinity];
 
-const AchievementCard = ({ index, name, description, link }) => (
+const AchievementCard = ({ index, name, description, link }) => {
+  const { isLightMode } = useTheme();
+  const activeIcons = [...icons];
+
+  if (isLightMode) {
+    activeIcons[5] = emfinityOriginal;
+  }
+
+  return (
   <motion.div
     variants={simpleFadeIn(index * 0.05, 0.1)} 
     initial="hidden"
@@ -34,7 +44,7 @@ const AchievementCard = ({ index, name, description, link }) => (
       </a>
       
       <div className="w-20 h-20 bg-black rounded-full flex items-center justify-center p-3">
-        <img src={icons[index]} alt={name} className="w-16 h-16 object-contain" />
+        <img src={activeIcons[index]} alt={name} className="w-16 h-16 object-contain" />
       </div>
       
       <h3 className="text-[#37b54a] text-xl font-bold mt-4 text-center">
@@ -43,7 +53,8 @@ const AchievementCard = ({ index, name, description, link }) => (
       <p className="mt-2 text-secondary text-lg text-center">{description}</p>
     </div>
   </motion.div>
-);
+  );
+};
 const Achieve = () => {
   return (
     <>

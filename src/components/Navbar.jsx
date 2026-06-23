@@ -3,11 +3,14 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { navLinks } from "../constants";
 import { menu, close } from "../assets";
+import ThemeToggle from "./ThemeToggle";
+import { useTheme } from "../context/ThemeContext";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { isLightMode } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,7 +46,7 @@ const Navbar = () => {
               gap: 1rem;
             }
           }
-          @media (min-width: 600px) {
+          @media (min-width: 768px) {
             .mobile-menu {
               display: none !important;
             }
@@ -59,15 +62,14 @@ const Navbar = () => {
   transition={{ duration: 0.2, ease: "easeOut" }}
   className={`fixed top-0 w-full z-50 py-4 transition-all ${
     scrolled
-      ? "bg-black/90"
+      ? "nav-scrolled bg-black/90"
       : "bg-transparent"
   }`}
 >
   <div className="w-full flex justify-between items-center max-w-7xl mx-auto px-6">
-  <Link
-  to="/"
-  className="navbar-title flex items-center gap-2 ml-2 sm:ml-2.4"
-
+    <Link
+      to="/"
+      className="navbar-title flex items-center gap-2 ml-2 sm:ml-2.4 sm:pl-28"
       onClick={() => {
         setActive("");
         window.scrollTo(0, 0);
@@ -77,33 +79,35 @@ const Navbar = () => {
         whileHover={{ scale: 1.05 }}
         className="text-[#37b54a] font-extrabold cursor-pointer text-3xl tracking-wide"
       >
-        Soumil Mukhopadhyay
+        Soumil M
       </motion.p>
     </Link>
 
     {/* Desktop Navbar */}
-    <ul className="nav-links ml-12" style={{ marginRight: "82.4px" }}> 
-      {navLinks.map((nav) => (
-        <motion.li
-          key={nav.id}
-          whileHover={{
-            scale: 1.2,
-            color: "#37b54a",
-          }}
-          className={`text-xl font-semibold cursor-pointer transition-all ${
-            active === nav.title
-              ? "text-[#37b54a]"
-              : "text-gray-300"
-          }`}
-          onClick={() => setActive(nav.title)}
-        >
-          <a href={`#${nav.id}`}>{nav.title}</a>
-        </motion.li>
-      ))}
-    </ul>
+    <div className="hidden md:flex items-center" style={{ marginRight: "82.5px" }}>
+      <ThemeToggle />
+      <ul className="nav-links" style={{ marginLeft: "36px" }}> 
+        {navLinks.map((nav) => (
+          <motion.li
+            key={nav.id}
+            whileHover={{
+              scale: 1.2,
+            }}
+            className={`text-xl font-semibold cursor-pointer transition-all ${
+              active === nav.title
+                ? "text-[#37b54a]"
+                : "text-gray-300"
+            }`}
+            onClick={() => setActive(nav.title)}
+          >
+            <a href={`#${nav.id}`}>{nav.title}</a>
+          </motion.li>
+        ))}
+      </ul>
+    </div>
 
     {/* Mobile Navbar */}
-    <div className="sm:hidden flex items-center">
+    <div className="md:hidden flex items-center gap-3">
       <motion.img
         src={toggle ? close : menu}
         alt="menu"
@@ -111,6 +115,7 @@ const Navbar = () => {
         className="w-8 h-8 object-contain cursor-pointer"
         onClick={() => setToggle(!toggle)}
       />
+      <ThemeToggle />
 
       {toggle && (
         <motion.div
@@ -123,7 +128,7 @@ const Navbar = () => {
             to="/"
             className="text-[#37b54a] font-extrabold cursor-pointer text-3xl tracking-wide text-center"
           >
-            Soumil Mukhopadhyay
+            Soumil M
           </Link>
           <ul>
             {navLinks.map((nav) => (
@@ -131,7 +136,6 @@ const Navbar = () => {
                 key={nav.id}
                 whileHover={{
                   scale: 1.1,
-                  color: "#37b54a",
                 }}
                 className="text-white text-xl font-medium cursor-pointer transition-all"
                 onClick={() => {

@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from "react";
+import { useTheme } from "../../context/ThemeContext";
 
 const StarsCanvas = () => {
   const canvasRef = useRef(null);
   const [visible, setVisible] = useState(false);
+  const { isLightMode } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,8 +53,8 @@ const StarsCanvas = () => {
         const y = Math.random() * canvas.height;
         const speedX = (Math.random() - 0.4) * 0.25;
         const speedY = (Math.random() - 0.4) * 0.25;
-        const grey = 240; 
-        const alpha = Math.random() * 0.3 + 0.25; 
+        const grey = isLightMode ? 90 : 240; 
+        const alpha = isLightMode ? Math.random() * 0.25 + 0.2 : Math.random() * 0.3 + 0.25; 
 
         const color = `rgba(${grey}, ${grey}, ${grey}, ${alpha})`;
 
@@ -90,7 +92,7 @@ const StarsCanvas = () => {
       window.removeEventListener("resize", resizeCanvas);
       cancelAnimationFrame(animationFrameId);
     };
-  }, [visible]);
+  }, [visible, isLightMode]);
 
   // Return nothing if not visible
   if (!visible) return null;

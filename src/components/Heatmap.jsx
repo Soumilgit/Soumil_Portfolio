@@ -4,6 +4,7 @@ import { SectionWrapper } from "../hoc";
 import { simpleFadeIn } from "../utils/motion";
 import { styles } from "../styles";
 import GitHubCalendar from "react-github-calendar";
+import { useTheme } from "../context/ThemeContext";
 
 const BLOCK_SIZE = 16;
 const BLOCK_MARGIN = 4;
@@ -14,9 +15,10 @@ const MOBILE_VIEWPORT_WIDTH =
 const Heatmap = () => {
   const scrollRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
+  const { isLightMode } = useTheme();
 
   const theme = {
-    light: ["#23272f","#123d22","#25924a","#2ea043","#3ddc84",],
+    light: ["#e5e7eb","#c7f0d3","#80d49c","#45b96b","#188a42",],
     dark: ["#18181b","#123d22","#25924a","#2ea043","#3ddc84",],
   };
 
@@ -178,7 +180,7 @@ const Heatmap = () => {
           className="mt-8 w-full flex justify-center"
         >
           <div className="w-full max-w-6xl">
-            <div className="rounded-3xl border border-[#37b54a]/40 bg-black/50 backdrop-blur-sm w-full p-4 sm:p-8">
+            <div className="heatmap-container rounded-3xl border border-[#37b54a]/40 bg-black/50 backdrop-blur-sm w-full p-4 sm:p-8">
               <div
                 ref={scrollRef}
                 className="heatmap-scrollbar w-full overflow-x-auto"
@@ -196,6 +198,7 @@ const Heatmap = () => {
                     blockRadius={4}
                     fontSize={14}
                     theme={theme}
+                    colorScheme={isLightMode ? "light" : "dark"}
                     hideTotalCount={true}
                     hideColorLegend={false}
                   />

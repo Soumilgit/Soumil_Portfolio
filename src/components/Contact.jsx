@@ -4,6 +4,7 @@ import { useForm, ValidationError } from "@formspree/react";
 import { slideIn } from "../utils/motion";
 import { ComputersCanvas } from "./canvas"; 
 import { SectionWrapper } from "../hoc"; 
+import { useTheme } from "../context/ThemeContext";
 
 const Contact = () => {
   const formRef = useRef();
@@ -15,6 +16,7 @@ const Contact = () => {
   });
   const [errors, setErrors] = useState({});
   const [shouldAnimateComputer, setShouldAnimateComputer] = useState(false);
+  const { isLightMode } = useTheme();
   
   const [state, handleSubmit] = useForm("mdkgeenj");  
 
@@ -92,7 +94,7 @@ const Contact = () => {
             variants={slideIn("left", "tween", 0.05, 0.1)}
             className="contact-card"
           >
-            <p style={{ color: "lime", fontSize: "18px" }}>
+            <p style={{ color: "#39b54a", fontSize: "18px" }}>
               ✅ Transmission Successful! Message Received.
             </p>
           </motion.div>
@@ -165,7 +167,7 @@ const Contact = () => {
          variants={slideIn("right", "tween", 0.05, 0.1)}
          className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
        >
-         <ComputersCanvas shouldAutoRotate={shouldAnimateComputer} />
+         <ComputersCanvas shouldAutoRotate={shouldAnimateComputer} isLightMode={isLightMode} />
        </motion.div>
     </div>
   );

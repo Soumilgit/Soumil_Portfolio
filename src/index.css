@@ -13,6 +13,196 @@
   color-scheme: dark;
 }
 
+:root {
+  --theme-accent: #37b54a;
+  --theme-accent-strong: #16853a;
+  --theme-bg: #000000;
+  --theme-panel: #000000;
+  --theme-panel-soft: rgba(0, 0, 0, 0.8);
+  --theme-text: #ffffff;
+  --theme-muted: #e5e7eb;
+  --theme-border: rgba(255, 255, 255, 0.3);
+  --theme-button-bg: #000000;
+  --theme-button-text: #37b54a;
+}
+
+html.light-mode {
+  --theme-bg: #f6f7f6;
+  --theme-panel: #f6f7f6;
+  --theme-panel-soft: #f6f7f6;
+  --theme-text: #121512;
+  --theme-muted: #3f463f;
+  --theme-border: rgba(42, 50, 43, 0.22);
+  --theme-button-bg: #e8ebe8;
+  --theme-button-text: #1f6f35;
+  color-scheme: light;
+}
+
+html.light-mode body,
+html.light-mode .app-shell,
+html.light-mode .bg-primary {
+  background: var(--theme-bg) !important;
+  color: var(--theme-text);
+}
+
+html.light-mode .hero-backdrop {
+  background-image: linear-gradient(rgba(246, 247, 246, 0.35), rgba(246, 247, 246, 0.55)),
+                    url("./assets/light-mode/what.avifs") !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-color: transparent !important;
+}
+
+html.light-mode .hero-backdrop h1,
+html.light-mode .hero-backdrop h1 * {
+  color: #1f6f35 !important;
+}
+
+html.light-mode .hero-backdrop p.text-white-100 {
+  color: #3f463f !important;
+}
+
+html.light-mode .hero-backdrop a .text-white,
+html.light-mode .hero-backdrop a .text-white * {
+  color: #ffffff !important;
+}
+
+html.light-mode .nav-scrolled {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-bottom: 1px solid rgba(42, 50, 43, 0.16);
+}
+
+html.light-mode .mobile-menu {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border: 1px solid var(--theme-border);
+  box-shadow: 0 16px 40px rgba(21, 28, 22, 0.14);
+}
+
+html.light-mode .theme-toggle {
+  background: #e6e9e6 !important;
+  color: #1f6f35 !important;
+  border-color: rgba(42, 50, 43, 0.24) !important;
+  box-shadow: 0 8px 22px rgba(21, 28, 22, 0.12);
+}
+
+html.light-mode [class*="bg-black"] {
+  background-color: var(--theme-panel-soft) !important;
+}
+
+html.light-mode .bg-transparent {
+  background-color: transparent !important;
+}
+
+html.light-mode [class*="text-white"],
+html.light-mode [class*="text-secondary"],
+html.light-mode [class*="text-gray-100"],
+html.light-mode [class*="text-gray-200"],
+html.light-mode [class*="text-gray-300"],
+html.light-mode .react-activity-calendar,
+html.light-mode .react-activity-calendar text {
+  color: var(--theme-text) !important;
+  fill: var(--theme-text) !important;
+}
+
+html.light-mode [class*="text-blue-200"]:not(:hover) {
+  color: #2563eb !important;
+}
+
+html.light-mode .border-white\/30:not(:hover),
+html.light-mode .border-white\/20:not(:hover) {
+  border-color: var(--theme-border) !important;
+}
+
+html.light-mode button,
+html.light-mode a button {
+  background-color: var(--theme-button-bg) !important;
+  border-color: rgba(42, 50, 43, 0.28) !important;
+  color: var(--theme-button-text) !important;
+}
+
+html.light-mode button:hover,
+html.light-mode a button:hover {
+  background-color: #dce0dc !important;
+}
+
+html.light-mode .contact-card {
+  background: #f6f7f6 !important;
+  box-shadow: 0 20px 60px rgba(22, 31, 22, 0.12);
+}
+
+html.light-mode .contact-card:not(:hover) {
+  border-color: rgba(55, 181, 74, 0.55) !important;
+}
+
+html.light-mode .contact-card input,
+html.light-mode .contact-card textarea {
+  background: #ffffff !important;
+  color: #151815 !important;
+  border-color: #b8c0b8 !important;
+}
+
+html.light-mode .contact-card input::placeholder,
+html.light-mode .contact-card textarea::placeholder {
+  color: #697169 !important;
+}
+
+html.light-mode .contact-card button[type="submit"] {
+  background: #e4e8e4 !important;
+  color: #202620 !important;
+  border-color: #b8c0b8 !important;
+}
+
+html.light-mode .heatmap-scrollbar {
+  scrollbar-color: #6f9f7b #eef1ee !important;
+}
+
+html.light-mode .heatmap-scrollbar::-webkit-scrollbar-track {
+  background: #eef1ee !important;
+}
+
+html.light-mode .heatmap-scrollbar::-webkit-scrollbar-thumb {
+  background: #9aa69a !important;
+}
+
+html.light-mode .react-activity-calendar__legend svg {
+  background: #ffffff !important;
+}
+
+html.light-mode .react-activity-calendar__rect[data-level="0"] {
+  fill: #e5e7eb !important;
+}
+
+html.light-mode .heatmap-container {
+  background-color: #f6f7f6 !important;
+  border-color: rgba(42, 50, 43, 0.22) !important;
+}
+
+html.light-mode img[alt="menu"] {
+  filter: invert(0.8) !important;
+}
+
+html.light-mode [class*="text-[#c9a7ff]"] {
+  color: #522b94 !important;
+}
+
+html.light-mode [class*="bg-[#6f42c1]/20"] {
+  background-color: rgba(111, 66, 193, 0.15) !important;
+}
+
+html.light-mode [class*="border-[#6f42c1]/50"] {
+  border-color: rgba(111, 66, 193, 0.4) !important;
+}
+
+html.light-mode .text-\[\#37d67a\] {
+  color: #1a7f37 !important;
+}
+
+html.light-mode .text-\[\#ff6b6b\] {
+  color: #cf222e !important;
+}
+
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;
@@ -152,4 +342,19 @@
   87.5% {
     box-shadow: none;
   }
+}
+
+/* Navbar Hover Colors */
+.nav-links li:hover,
+.nav-links li:hover a,
+.mobile-menu ul li:hover,
+.mobile-menu ul li:hover a {
+  color: #37b54a !important;
+}
+
+html.light-mode .nav-links li:hover,
+html.light-mode .nav-links li:hover a,
+html.light-mode .mobile-menu ul li:hover,
+html.light-mode .mobile-menu ul li:hover a {
+  color: #37b54a !important;
 }

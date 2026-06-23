@@ -4,8 +4,17 @@ import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant, simpleFadeIn } from "../utils/motion"; 
 import { styles } from "../styles";
+import { useTheme } from "../context/ThemeContext";
+import emfinityNew from "../assets/emfinity-new.png";
 
 const ExperienceCard = ({ experience, index }) => {
+  const { isLightMode } = useTheme();
+  let icon = experience.icon;
+
+  if (experience.company_name === "Emfinity" && !isLightMode) {
+    icon = emfinityNew;
+  }
+
   return (
     <motion.div
       variants={simpleFadeIn(index * 0.05, 0.1)} 
@@ -17,7 +26,7 @@ const ExperienceCard = ({ experience, index }) => {
     >
       <div className="flex items-center gap-4">
         <div className="w-16 h-16 bg-black flex justify-center items-center rounded-full">
-          <img src={experience.icon} alt={experience.company_name} className="w-30 h-30 object-contain" />
+          <img src={icon} alt={experience.company_name} className="w-30 h-30 object-contain" />
         </div>
         <div>
           <h3 className="text-[#37b54a] text-2xl font-bold pb-1">{experience.title}</h3>

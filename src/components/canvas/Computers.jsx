@@ -1,11 +1,22 @@
 import React, { Suspense, useEffect, useState, useMemo } from "react";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useThree } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 
 import CanvasLoader from "../Loader";
 
-const Computers = ({ isMobile, shouldAutoRotate }) => {
+const SceneBackground = ({ isLightMode }) => {
+  const { gl, invalidate } = useThree();
+
+  useEffect(() => {
+    gl.setClearColor(isLightMode ? "#f6f7f6" : "#000000", isLightMode ? 1 : 0);
+    invalidate();
+  }, [gl, invalidate, isLightMode]);
+
+  return null;
+};
+
+const Computers = ({ isMobile, shouldAutoRotate, isLightMode }) => {
   const { scene } = useGLTF("./desktop_pc/scene1.gltf");
   const [rotation, setRotation] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -26,13 +37,13 @@ const Computers = ({ isMobile, shouldAutoRotate }) => {
 
       // If it's the "black slab" mesh, make it grey
       if (child.material.color.getHexString() === "000000") {
-        child.material.color.set("#3b3b3b"); 
+        child.material.color.set(isLightMode ? "#f5f5f5" : "#3b3b3b"); 
       }
     }
   });
 
   return cloned;
-}, [scene]);
+}, [scene, isLightMode]);
 
 
   // Subtle auto-rotation animation
@@ -99,7 +110,7 @@ const Computers = ({ isMobile, shouldAutoRotate }) => {
   );
 };
 
-const ComputersCanvas = ({ shouldAutoRotate }) => {
+const ComputersCanvas = ({ shouldAutoRotate, isLightMode = false }) => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -120,6 +131,7 @@ const ComputersCanvas = ({ shouldAutoRotate }) => {
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
+        <SceneBackground isLightMode={isLightMode} />
         <OrbitControls
           enableZoom
           enableRotate
@@ -127,7 +139,7 @@ const ComputersCanvas = ({ shouldAutoRotate }) => {
           minDistance={8}
           maxDistance={60}
         />
-        <Computers isMobile={isMobile} shouldAutoRotate={shouldAutoRotate} />
+        <Computers isMobile={isMobile} shouldAutoRotate={shouldAutoRotate} isLightMode={isLightMode} />
       </Suspense>
       <Preload all />
     </Canvas>

@@ -1,5 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react"; // Displays web analytics once deployed!
+import { ThemeProvider } from "./context/ThemeContext";
 
 import {
   Hero,
@@ -19,10 +20,11 @@ import {
 const App = () => {
   return (
     <>
+      <ThemeProvider>
       <BrowserRouter>
-        <div className='relative z-0 bg-primary'>
+        <div className='app-shell relative z-0 bg-primary'>
           <div
-            className='bg-hero-pattern bg-cover bg-fixed bg-no-repeat bg-center'
+            className='hero-backdrop bg-hero-pattern bg-cover bg-fixed bg-no-repeat bg-center'
             style={{
               backgroundBlendMode: "overlay",
               backgroundColor: "rgba(255, 255, 255,0)",
@@ -47,6 +49,7 @@ const App = () => {
           </div>
         </div>
       </BrowserRouter>
+      </ThemeProvider>
       <Analytics />
     </>
   );

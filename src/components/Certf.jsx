@@ -9,10 +9,15 @@ import { textVariant, simpleFadeIn } from "../utils/motion"; // Use simpleFadeIn
 import oods from "../assets/oods.png";
 import postman from "../assets/postman.png";
 import jsi from "../assets/jsi.png"; 
+import { useTheme } from "../context/ThemeContext";
 
 const icons = [oods, postman, jsi];
+const lightIcons = [oodsLight, postmanLight, jsiLight];
 
-const CertificationCard = ({ index, name, description, link }) => (
+const CertificationCard = ({ index, name, description, link }) => {
+  const activeIcons = icons;
+
+  return (
   <motion.div
     variants={simpleFadeIn(index * 0.05, 0.1)} 
     initial="hidden"
@@ -31,7 +36,7 @@ const CertificationCard = ({ index, name, description, link }) => (
       
       <div className="flex items-center justify-center">
         <div className="w-16 h-16 bg-white p-2 rounded-full flex items-center justify-center">
-          <img src={icons[index]} alt={name} className="w-10 h-10 object-contain" />
+          <img src={activeIcons[index]} alt={name} className="w-10 h-10 object-contain" />
         </div>
       </div>
       
@@ -43,7 +48,8 @@ const CertificationCard = ({ index, name, description, link }) => (
       </div>
     </div>
   </motion.div>
-);
+  );
+};
 
 const Certf = () => {
   return (

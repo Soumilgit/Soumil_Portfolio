@@ -4,9 +4,21 @@ import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { simpleFadeIn, textVariant } from "../utils/motion"; // import simpleFadeIn instead of fadeIn
+import { useTheme } from "../context/ThemeContext";
+
 // Added fadeIn
 
-const ServiceCard = ({ title, icon, index }) => (
+const lightServiceIcons = {
+  "Web Developer": webLight,
+  "Data Analyst": dataLight,
+  "Problem Solver": problemLight,
+  "App Developer": appLight,
+};
+
+const ServiceCard = ({ title, icon, index }) => {
+  const activeIcon = icon;
+
+  return (
   <motion.div
   variants={simpleFadeIn(index * 0.05, 0.1)} 
   initial="hidden"
@@ -18,14 +30,15 @@ const ServiceCard = ({ title, icon, index }) => (
 
     <div className="bg-black p-5 rounded-lg flex flex-col items-center h-full">
       <div className="w-30 h-30 bg-black rounded-full flex items-center justify-center p-3">
-        <img src={icon} alt={title} className="w-24 h-24 object-contain" />
+        <img src={activeIcon} alt={title} className="w-24 h-24 object-contain" />
       </div>
       <h3 className="text-[#37b54a] text-xl font-bold mt-4 text-center">
         {title}
       </h3>
     </div>
   </motion.div>
-);
+  );
+};
 
 const About = ({ setAboutLoaded }) => {
   useEffect(() => {
