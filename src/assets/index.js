@@ -16,7 +16,6 @@ import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import tailwind from "./tech/tailwind.png";
 import threejs from "./tech/threejs.png";
-import jQuery from "./tech/jQuery.png";
 import cpp from "./tech/cpp.png";
 import flask from "./tech/flask.png";
 import sql from "./tech/sql.png";
@@ -27,7 +26,6 @@ import clerk from "./tech/clerk.png";
 import solidity from "./tech/solidity.png";
 import postmanapi from "./tech/postmanapi.png";
 import chart from "./tech/chart.png";
-import latex from "./tech/latex.png";
 import aws from "./tech/aws.png";
 import next from "./tech/next.png"; 
 import supabase from "./tech/supabase.png";
@@ -42,7 +40,6 @@ import meshcraft from "./company/meshcraft.png";
 import meshcraftLight from "./company/meshcraft-light.png";
 import marquee from "./company/marquee.png";
 import marqueeDark from "./company/marquee-dark.png";
-import kjsce from "./company/kjsce.png";
 import oneplay from "./company/oneplay.png";
 import oneplayDark from "./company/oneplay-dark.png";
 
@@ -63,12 +60,9 @@ import postman from "./postman.png";
 import githubo from "./githubo.png";
 import mypic from "./mypic.png";
 import githubk from "./githubk.png";
-import emertxe from "./emertxe.png";
-import hackerrank from "./hackerrank.png";
 
 import cwc from "./cwc.png";
 import terii from "./terii.png";
-import techhunt from "./techhunt.png";
 
 import htmlLight from "./tech/html-light.png";
 import cssLight from "./tech/css-light.png";
@@ -106,7 +100,6 @@ export {
   reactjs,
   tailwind,
   threejs,
-  jQuery,
   cpp,
   sql,
   emfinity,
@@ -114,7 +107,6 @@ export {
   npcilDark,
   marquee,
   marqueeDark,
-  emertxe,
   meshcraft,
   meshcraftLight,
   boblob,
@@ -135,10 +127,7 @@ export {
   clerk,
   postmanapi,
   chart,
-  latex,
   mypic,
-  kjsce,
-  hackerrank,
   oneplay,
   oneplayDark,
   aws,
@@ -151,7 +140,6 @@ export {
   aatmaj,
   cwc,
   terii,
-  techhunt,
   docker,
   kafka,
   redis,

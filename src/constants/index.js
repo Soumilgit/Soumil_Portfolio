@@ -27,7 +27,6 @@ import {
   python,
   sql,
   mypic,
-  kjsce,
   git,
   github,
   postmanapi,
