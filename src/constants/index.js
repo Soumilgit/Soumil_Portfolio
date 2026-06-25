@@ -252,7 +252,7 @@ const achievements = [
   {
     name: "Top 4% on Codolio, 1st rank in college",
     description:
-      "Stats: 480+ DSA problems solved, 8 awards, 2600+ dev contributions & C-Score of 775+ among 35,700+ global users.",
+      "Stats: 480+ DSA problems solved, 8 awards, 2700+ dev contributions & C-Score of 780+ among ~36,000 global users.",
     link: "https://codolio.com/profile/uQSHdtbA", 
   },
   {
@@ -287,7 +287,7 @@ const projects = [
   {
     name: "SimulateRecruitAI",
     description:
-      "Tech stack: Next, NeonDB, Docker, Clerk, Stripe, Tailwind, JSON, Gemini AI, API routes & Radix UI; achieved 80+ sign-ups.",
+      "Tech stack: Next, NeonDB, Docker, Clerk, Stripe, Tailwind, JSON, Gemini AI, API routes & Radix UI; achieved ~90 sign-ups.",
     tags: [
       {
         name: "next",
@@ -345,6 +345,7 @@ const projects = [
       },
     ],
     image: stakeligames,
+    imageClass: "object-contain bg-white",
     source_code_link: "https://github.com/Soumilgit/StakeLiGames",
   },
   {

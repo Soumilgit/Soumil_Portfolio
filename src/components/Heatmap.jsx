@@ -19,8 +19,9 @@ const Heatmap = () => {
   const { isLightMode } = useTheme();
 
   const theme = {
-    light: ["#e5e7eb","#c7f0d3","#80d49c","#45b96b","#188a42",],
-    dark: ["#18181b","#123d22","#25924a","#2ea043","#3ddc84",],
+    // GitHub's exact official contribution graph colors
+    light: ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"],
+    dark:  ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
   };
 
   const scrollToLatest = useCallback(() => {

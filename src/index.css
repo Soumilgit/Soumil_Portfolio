@@ -358,3 +358,16 @@ html.light-mode .mobile-menu ul li:hover,
 html.light-mode .mobile-menu ul li:hover a {
   color: #37b54a !important;
 }
+
+/* Slightly reduce vertical spacing between Tech (Skillset) and Certifications sections */
+section:has(#technologies) {
+  padding-bottom: 40px !important;
+}
+section:has(#certf) {
+  padding-top: 40px !important;
+}
+
+/* Transiton skill label color to neon green on card/icon hover in both themes */
+.group:hover .skill-name {
+  color: #37b54a !important;
+}

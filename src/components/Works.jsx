@@ -6,7 +6,7 @@ import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { textVariant, simpleFadeIn } from "../utils/motion"; // Use simpleFadeIn!
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
+const ProjectCard = ({ index, name, description, tags, image, source_code_link, imageClass }) => {
   return (
     <motion.div
       variants={simpleFadeIn(index * 0.05, 0.1)} 
@@ -18,7 +18,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
     >
       <div className="bg-black p-5 rounded-lg w-full">
         <div className="relative w-full h-[230px] rounded-lg overflow-hidden">
-          <img src={image} alt="project_image" className="w-full h-full object-cover rounded-lg" />
+          <img src={image} alt="project_image" className={`w-full h-full ${imageClass || "object-cover"} rounded-lg`} />
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
               onClick={() => window.open(source_code_link, "_blank")}
