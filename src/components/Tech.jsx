@@ -13,7 +13,7 @@ const skillGroups = [
   },
   {
     title: "Web & Full Stack",
-    skills: ["HTML 5", "CSS 3", "React JS", "Next JS", "Node JS", "Flask"],
+    skills: ["HTML 5", "CSS 3", "Tailwind CSS", "React JS", "Next JS", "Node JS", "Flask"],
   },
   {
     title: "AI, ML & Data",
@@ -29,7 +29,7 @@ const skillGroups = [
   },
 ];
 
-const SkillGroupCard = ({ title, skills, index }) => {
+const SkillGroup = ({ title, skills, index, isLast }) => {
   const { isLightMode } = useTheme();
   const groupSkills = skills
     .map((skillName) => technologies.find((tech) => tech.name === skillName))
@@ -41,31 +41,32 @@ const SkillGroupCard = ({ title, skills, index }) => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.01 }}
-      className="relative bg-black p-[2px] rounded-lg transition-transform border border-white/30 hover:border-[#37b54a]"
-      whileHover={{ scaleY: 1.05 }}
+      className="w-full"
     >
-      <div className="bg-black p-5 rounded-lg h-full">
-        <h3 className="text-[#37b54a] font-bold text-[22px] text-center transition-all duration-300">
-          {title}
-        </h3>
+      {/* Domain Subheading with mode-compatible underline color */}
+      <h3 className={`text-[#37b54a] font-bold text-[22px] text-left border-b pb-2 mb-6 ${isLightMode ? "border-[#2a322b]/20" : "border-white/30"}`}>
+        {title}
+      </h3>
 
-        <div className="mt-5 grid grid-cols-2 gap-4">
-          {groupSkills.map((skill) => (
-            <div
-              key={`${title}-${skill.name}`}
-              className="flex min-h-[94px] flex-col items-center justify-center rounded-lg border border-white/20 bg-black/80 px-3 py-4 text-center transition-colors duration-200 hover:border-[#37b54a]/80"
-            >
+      {/* Wrapping flex row of skill icons with responsive gap and spacing */}
+      <div className={`flex flex-wrap gap-x-4 sm:gap-x-8 gap-y-6 justify-start ${isLast ? "mb-2" : "mb-8"}`}>
+        {groupSkills.map((skill) => (
+          <div
+            key={`${title}-${skill.name}`}
+            className="flex flex-col items-center justify-center text-center w-20 sm:w-24 group cursor-pointer"
+          >
+            <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
               <img
                 src={isLightMode && skill.iconLight ? skill.iconLight : skill.icon}
                 alt={skill.name}
-                className="h-10 w-10 object-contain"
+                className="h-12 w-12 object-contain"
               />
-              <p className="mt-3 text-sm font-bold leading-tight text-white">
-                {skill.name}
-              </p>
             </div>
-          ))}
-        </div>
+            <p className="mt-2 text-sm font-semibold leading-tight text-white/80 skill-name transition-colors duration-300">
+              {skill.name}
+            </p>
+          </div>
+        ))}
       </div>
     </motion.div>
   );
@@ -74,27 +75,26 @@ const SkillGroupCard = ({ title, skills, index }) => {
 const Tech = () => {
   return (
     <div>
-      {/* Scroll animated section title with clear readable background */}
+      {/* Section Title Heading with reduced top margin */}
       <motion.div
-  variants={simpleFadeIn(0.05, 0.1)} 
-  initial="hidden"
-  whileInView="show"
-  viewport={{ once: true, amount: 0.01 }}
-  className="mx-auto w-fit px-6 py-4 mt-10 bg-black/80 rounded-xl backdrop-blur-md"
->
-  <p className={`${styles.sectionSubText} text-center text-white`}>
-    Technologies worked with
-  </p>
-  <h2 className={`${styles.sectionHeadText} text-center text-white`}>
-    Skillset
-  </h2>
-</motion.div>
+        variants={simpleFadeIn(0.05, 0.1)} 
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.01 }}
+        className="mx-auto w-fit px-6 py-4 mt-6 bg-black bg-opacity-80 rounded-xl backdrop-blur-md"
+      >
+        <p className={`${styles.sectionSubText} text-center text-white`}>
+          Technologies worked with
+        </p>
+        <h2 className={`${styles.sectionHeadText} text-center text-white`}>
+          Skillset
+        </h2>
+      </motion.div>
 
-
-      {/* Grouped skill cards */}
-      <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Grouped Skills stacked vertically with reduced gap and margins */}
+      <div className="mt-8 bg-black bg-opacity-80 rounded-lg p-8 backdrop-blur-sm max-w-5xl mx-auto flex flex-col gap-2">
         {skillGroups.slice(0, 5).map((group, index) => (
-          <SkillGroupCard key={group.title} index={index} {...group} />
+          <SkillGroup key={group.title} index={index} isLast={index === 4} {...group} />
         ))}
       </div>
     </div>

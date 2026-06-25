@@ -59,7 +59,7 @@ const Certf = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.01 }}
-        className="mx-auto w-fit px-6 py-4 mt-10 bg-black/80 rounded-xl backdrop-blur-md"
+        className="mx-auto w-fit px-6 py-4 mt-6 bg-black/80 rounded-xl backdrop-blur-md"
       >
         <p className={`${styles.sectionSubText} text-center text-[#37b54a]`}>
           My Certifications
