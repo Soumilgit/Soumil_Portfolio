@@ -32,6 +32,8 @@ import {
   postmanapi,
   chart,
   oneplay,
+  edelweisslife,
+  
   aws,
   supabase,
   next,
@@ -132,6 +134,18 @@ const services = [
 ];
 
 const experiences = [
+  {
+     title: "Assoc. SDE",
+     company_name: "Edelweiss LI",
+     icon: edelweisslife,
+     iconBg: "#E6DEDD",
+     date: "July 2026 - Present",
+     points: [
+       "Onboarded as a full-stack .NET engineer, configuring development environments and agile workflows.",
+       "Attended domain sessions, preparing to build secure RESTful APIs and frontend portals.",
+     ],
+
+  },
   {
      title: "SWE Intern",
      company_name: "1 Play Global",

@@ -42,6 +42,7 @@ import marquee from "./company/marquee.png";
 import marqueeDark from "./company/marquee-dark.png";
 import oneplay from "./company/oneplay.png";
 import oneplayDark from "./company/oneplay-dark.png";
+import edelweisslife from "./company/edelweisslifeinsurance.png";
 
 import boblob from "./boblob.png";
 import jasder from "./jasder.png";
@@ -82,6 +83,7 @@ import supabaseLight from "./tech/supabase-light.png";
 import dockerLight from "./tech/docker-light.png";
 import kafkaLight from "./tech/kafka-light.png";
 import redisLight from "./tech/redis-light.png";
+import edelweisslifelight from "./company/edelweisslifeinsurance-light.png";
 
 
 export {
@@ -130,6 +132,8 @@ export {
   mypic,
   oneplay,
   oneplayDark,
+  edelweisslife,
+  edelweisslifelight,
   aws,
   next,
   supabase,
