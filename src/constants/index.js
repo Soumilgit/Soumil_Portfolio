@@ -292,7 +292,7 @@ const achievements = [
     name: "3rd place in National Mathematics Day Quiz",
     description:
       "Scored 70% marks honestly in the 10-question event conducted by Emfinity KJSCE via a series of Instagram Stories.",
-    link: "https://drive.google.com/file/d/1JAcirOgAx8rPToVZM-ZV2dNubpZ2ms2t/view?usp=sharing", 
+    link: "https://drive.google.com/file/d/1T3t1_EneMJ4WlKyC0wHLp9OpeMKrJZON/view?usp=sharing", 
   },
   
 ];
