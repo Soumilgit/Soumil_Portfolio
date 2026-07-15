@@ -318,6 +318,7 @@ const projects = [
     ],
     image: jasder,
     source_code_link: "https://github.com/Soumilgit/Soumilgit-AI-Interview-SAAS",
+    demo_link: "https://soumilgit-ai-interview-saas.vercel.app/",
   },
   {
     name: "Customer Churn",
@@ -339,6 +340,7 @@ const projects = [
     ],
     image: smack,
     source_code_link: "https://github.com/Soumilgit/XYZ-Bank-Customer-Churn-Predictor",
+    demo_link: "https://cust-churn-pred-bank.streamlit.app/",
   },
   {
     name: "StakeLiGames",
@@ -361,6 +363,7 @@ const projects = [
     image: stakeligames,
     imageClass: "object-contain bg-white",
     source_code_link: "https://github.com/Soumilgit/StakeLiGames",
+    demo_link: "https://stake-li-games.vercel.app/",
   },
   {
     name: "ScholarBridge",
@@ -382,6 +385,7 @@ const projects = [
     ],
     image: scholarbridge,
     source_code_link: "https://github.com/Team-C49/ScholarBridge-backup",
+    demo_link: "https://tinyurl.com/2m7ae4n4",
   },
   {
     name: "Meditation App",
@@ -403,6 +407,7 @@ const projects = [
     ],
     image: boblob,
     source_code_link: "https://github.com/Soumilgit/Meditation-App_React-Native",
+    demo_link: "https://youtu.be/3r5finsx_Iw",
   },
   {
     name: "Missing Finder",
@@ -424,6 +429,7 @@ const projects = [
     ],
     image: missing,
     source_code_link: "https://github.com/Soumilgit/Real-Time-Missing-Persons-Detection",
+    demo_link: "https://youtu.be/QA1EuvTgKeA",
   }
 ];
 
