@@ -7,7 +7,7 @@ A modern, interactive portfolio website showcasing my skills, projects, and expe
 - **3D Computer Model** - Interactive Three.js scene
 - **Scrambled Text Animation** - Dynamic text effects
 - **Hover & Expand Tech Skills** - Interactive technology showcase
-- **Project Showcase** - Animated project cards with GitHub links
+- **Project Showcase** - Animated project cards with demo and GitHub repository links
 - **Responsive Design** - Works on all device sizes
 - **Smooth Animations** - Framer Motion transitions
 - **Dual Mode Aesthetic** - Easy-on-the-eyes design
@@ -77,6 +77,7 @@ To personalize this portfolio:
  - **Theme-Aware Media Assets**: Dynamic asset loading in components like Hero and Achievements (e.g., swapping between `codolio.png` / `codolio-dark.png` and light/dark circular logo variants for Emfinity).
  - **ESM & SSR Interop Optimization**: Resolved production-minified React Error #130 crashes by introducing robust interop checks to handle double-default wrapped CommonJS libraries (`react-fast-marquee` and `react-github-calendar`) in ESM/Vite environments.
  - **Re-ordered positioning of components for better UX**: First, I swapped the positions of Skillset with Achievements, then, further swapped the positions of Skillset with Projects. Finally, applied the same reordering across the navlinks as well.
+ - **Replacing GitHub icon in Projects with buttons for demo & repo**: Replaced the GitHub repository link - containing icon under Projects with 2 buttons each for demo & GitHub repo links with their respective icons.
 
 ## Performance
 
