@@ -17,7 +17,6 @@ import {
   tailwind,
   nodejs,
   cpp,
-  flask,
   clerk,
   solidity,
   boblob,
@@ -50,7 +49,6 @@ import {
   pythonLight,
   threejsLight,
   cppLight,
-  flaskLight,
   sqlLight,
   githubLight,
   clerkLight,
@@ -62,7 +60,10 @@ import {
   supabaseLight,
   dockerLight,
   kafkaLight,
-  redisLight
+  redisLight,
+  csharp,
+  dotnet,
+  streamlit
 } from "../assets";
 
 
@@ -487,11 +488,6 @@ const technologies = [
     iconLight: cppLight,
   },
   {
-    name: "Flask",
-    icon: flask,
-    iconLight: flaskLight,
-  },
-  {
     name: "MySQL",
     icon: sql,
     iconLight: sqlLight,
@@ -549,7 +545,18 @@ const technologies = [
     icon: next,
     iconLight: nextLight,
   },
-
+  {
+    name: "C#",
+    icon: csharp,
+  },
+  {
+    name: ".NET",
+    icon: dotnet,
+  },
+  {
+    name: "Streamlit",
+    icon: streamlit,
+  },
 ];
 
 const certificates = [

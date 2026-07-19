@@ -9,15 +9,15 @@ import { useTheme } from "../context/ThemeContext";
 const skillGroups = [
   {
     title: "Languages",
-    skills: ["JavaScript", "TypeScript", "Python", "C++"],
+    skills: ["JavaScript", "TypeScript", "Python", "C++", "C#"],
   },
   {
     title: "Web & Full Stack",
-    skills: ["HTML 5", "CSS 3", "Tailwind CSS", "React JS", "Next JS", "Node JS", "Flask"],
+    skills: ["HTML 5", "CSS 3", "Tailwind CSS", "React JS", "Next JS", "Node JS", ".NET"],
   },
   {
     title: "AI, ML & Data",
-    skills: ["Python", "MySQL", "Chart JS", "Kafka", "Redis"],
+    skills: ["Python", "MySQL", "Chart JS", "Kafka", "Redis", "Streamlit"],
   },
   {
     title: "Cloud & DevOps",

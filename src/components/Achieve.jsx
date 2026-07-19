@@ -15,11 +15,10 @@ import googlecloudLight from "../assets/googlecloud-light.png";
 
 import cwc from "../assets/cwc.png";
 import cwcLight from "../assets/cwc-light.png";
-import terii from "../assets/terii.png";
-import teriiLight from "../assets/terii-light.png";
+import { useTheme } from "../context/ThemeContext";
+import { terii } from "../assets";
 import emfinity from "../assets/emfinity-new.png";
 import emfinityOriginal from "../assets/company/emfinity.png";
-import { useTheme } from "../context/ThemeContext";
 
 // Map images to achievements
 const icons = [cp, codolioDark, googlecloud, cwc, terii, emfinity];
@@ -34,7 +33,7 @@ const AchievementCard = ({ index, name, description, link }) => {
     activeIcons[1] = codolio;
     activeIcons[2] = googlecloudLight;
     activeIcons[3] = cwcLight;
-    activeIcons[4] = teriiLight;
+    activeIcons[4] = terii;
     activeIcons[5] = emfinityOriginal;
   }
 

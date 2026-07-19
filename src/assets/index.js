@@ -7,9 +7,9 @@ import problem from "./problemsolver.png";
 
 import menu from "./menu.svg";
 import close from "./close.svg";
-import html from "./tech/html.png";
-import css from "./tech/css.png";
-import python from "./tech/python.png";
+import html from "./tech/HTML5.png";
+import css from "./tech/CSS3.png";
+import python from "./tech/python_logo_icon_168886.png";
 
 import javascript from "./tech/javascript.png";
 import nodejs from "./tech/nodejs.png";
@@ -17,21 +17,23 @@ import reactjs from "./tech/reactjs.png";
 import tailwind from "./tech/tailwind.png";
 import threejs from "./tech/threejs.png";
 import cpp from "./tech/cpp.png";
-import flask from "./tech/flask.png";
-import sql from "./tech/sql.png";
+import sql from "./tech/MySQL.png";
 import typescript from "./tech/typescript.png";
 import git from "./tech/git.png";
 import github from "./tech/github.png";
-import clerk from "./tech/clerk.png";
-import solidity from "./tech/solidity.png";
-import postmanapi from "./tech/postmanapi.png";
-import chart from "./tech/chart.png";
+import clerk from "./tech/clerk-removebg-preview.png";
+import solidity from "./tech/solidity-removebg-preview.png";
+import postmanapi from "./tech/Postman.png";
+import chart from "./tech/chart-removebg-preview.png";
 import aws from "./tech/aws.png";
 import next from "./tech/next.png"; 
-import supabase from "./tech/supabase.png";
-import docker from "./tech/docker.png";
+import supabase from "./tech/supabase-removebg-preview.png";
+import docker from "./tech/Docker.png";
 import kafka from "./tech/kafka.png";
-import redis from "./tech/redis.png";
+import redis from "./tech/redis-icon.png";
+import csharp from "./tech/csharp.png";
+import dotnet from "./tech/dotnet.png";
+import streamlit from "./tech/Streamlit.png";
 
 import emfinity from "./company/emfinity.png";
 import npcil from "./company/npcil.png";
@@ -63,26 +65,25 @@ import mypic from "./mypic.png";
 import githubk from "./githubk.png";
 
 import cwc from "./cwc.png";
-import terii from "./terii.png";
+import terii from "./tech/terii-removebg-preview.png";
 
-import htmlLight from "./tech/html-light.png";
-import cssLight from "./tech/css-light.png";
-import pythonLight from "./tech/python-light.png";
+import htmlLight from "./tech/HTML5.png";
+import cssLight from "./tech/CSS3.png";
+import pythonLight from "./tech/python_logo_icon_168886.png";
 import threejsLight from "./tech/threejs-light.png";
-import cppLight from "./tech/cpp-light.png";
-import flaskLight from "./tech/flask-light.png";
-import sqlLight from "./tech/sql-light.png";
+import cppLight from "./tech/cpp.png";
+import sqlLight from "./tech/MySQL.png";
 import githubLight from "./tech/github-light.png";
-import clerkLight from "./tech/clerk-light.png";
-import solidityLight from "./tech/solidity-light.png";
-import postmanapiLight from "./tech/postmanapi-light.png";
-import chartLight from "./tech/chart-light.png";
+import clerkLight from "./tech/clerk-removebg-preview.png";
+import solidityLight from "./tech/solidity-removebg-preview.png";
+import postmanapiLight from "./tech/Postman.png";
+import chartLight from "./tech/chart-removebg-preview.png";
 import awsLight from "./tech/aws-light.png";
-import nextLight from "./tech/next-light.png";
-import supabaseLight from "./tech/supabase-light.png";
-import dockerLight from "./tech/docker-light.png";
+import nextLight from "./tech/next.png";
+import supabaseLight from "./tech/supabase-removebg-preview.png";
+import dockerLight from "./tech/Docker.png";
 import kafkaLight from "./tech/kafka-light.png";
-import redisLight from "./tech/redis-light.png";
+import redisLight from "./tech/redis-icon.png";
 import edelweisslifelight from "./company/edelweisslifeinsurance-light.png";
 
 
@@ -125,7 +126,6 @@ export {
   git,
   github,
   solidity,
-  flask,
   clerk,
   postmanapi,
   chart,
@@ -152,7 +152,6 @@ export {
   pythonLight,
   threejsLight,
   cppLight,
-  flaskLight,
   sqlLight,
   githubLight,
   clerkLight,
@@ -165,4 +164,7 @@ export {
   dockerLight,
   kafkaLight,
   redisLight,
+  csharp,
+  dotnet,
+  streamlit,
 };

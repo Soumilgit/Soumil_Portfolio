@@ -16,6 +16,8 @@ const icons = [oods, postman, jsi];
 
 const CertificationCard = ({ index, name, description, link }) => {
   const activeIcons = icons;
+  const { isLightMode } = useTheme();
+  const isOodsDark = index === 0 && !isLightMode;
 
   return (
   <motion.div
@@ -35,8 +37,8 @@ const CertificationCard = ({ index, name, description, link }) => {
       </a>
       
       <div className="flex items-center justify-center">
-        <div className="w-16 h-16 bg-white p-2 rounded-full flex items-center justify-center">
-          <img src={activeIcons[index]} alt={name} className="w-10 h-10 object-contain" />
+        <div className="w-16 h-16 bg-black p-2 rounded-full flex items-center justify-center">
+          <img src={activeIcons[index]} alt={name} className={`w-10 h-10 object-contain ${isOodsDark ? "invert" : ""}`} />
         </div>
       </div>
       

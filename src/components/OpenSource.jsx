@@ -117,30 +117,34 @@ const OpenSourceCard = ({ contribution, index }) => {
       whileHover={{ scaleY: 1.03 }}
     >
       <div className="relative bg-black p-5 rounded-lg w-full overflow-hidden">
-        <a
-          href={contribution.pullRequestLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="absolute top-4 right-4 z-10"
-        >
-          <button className="flex items-center gap-2 px-3 py-1.5 text-base font-bold text-[#37b54a] border border-white/30 bg-black rounded-lg transition-transform duration-200 hover:scale-105 hover:border-[#37b54a]">
-            LINK
-            <ExternalLink size={16} aria-hidden="true" />
-          </button>
-        </a>
-
         <div className="grid grid-cols-1 lg:grid-cols-[190px_1fr] gap-6">
-          <div className={`relative w-full max-w-[190px] aspect-square justify-self-start rounded-lg overflow-hidden border border-white/20 ${isLightMode ? "bg-transparent" : "bg-[#161b22]"}`}>
+          <div className={`relative w-full max-w-[190px] aspect-square justify-self-start rounded-lg overflow-hidden border border-white/20 ${
+            isLightMode ? "bg-transparent" : (contribution.repo.includes("Aatmaj") ? "bg-transparent" : "bg-black/40")
+          }`}>
             <img
               src={contribution.image}
               alt={`${contribution.repo} logo`}
-              className="w-full h-full object-cover"
+              className={`w-full h-full ${
+                contribution.repo.includes("Aatmaj") ? "object-cover" : "object-contain p-4"
+              }`}
             />
           </div>
 
-          <div className="pr-0 sm:pr-24">
-            <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-2 sm:gap-3 text-secondary text-[18px] font-semibold">
-              <span className="text-white">{contribution.repo}</span>
+          <div className="w-full">
+            <div className="flex flex-col items-start sm:flex-row sm:items-center gap-2 sm:gap-3 text-secondary text-[18px] font-semibold">
+              <a
+                href={contribution.pullRequestLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-[#37b54a] text-[#37b54a] text-[16px] font-bold transition-all duration-300 cursor-pointer ${
+                  isLightMode 
+                    ? "bg-white hover:bg-[#37b54a] hover:text-white" 
+                    : "bg-black hover:bg-[#37b54a] hover:text-black"
+                }`}
+              >
+                <span>{contribution.repo}</span>
+                <ExternalLink size={16} />
+              </a>
               <span className="flex items-center gap-1">
                 <Star size={18} aria-hidden="true" />
                 {numberFormatter.format(stats.stars)}

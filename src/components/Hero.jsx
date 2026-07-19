@@ -160,7 +160,7 @@ const Hero = ({ onHeroLoaded }) => {
         <div className="mt-2 w-full flex justify-center xl:justify-start">
           <div className="relative w-fit">
             <a
-              href="/SoumilM_KJSCE_Resume.pdf"
+              href="./SoumilM_KJSCE_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="group block w-fit mx-auto"
