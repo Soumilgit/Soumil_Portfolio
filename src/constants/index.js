@@ -436,11 +436,11 @@ const technologies = [
     icon: javascript,
   },
   {
-    name: "React JS",
+    name: "React",
     icon: reactjs,
   },
   {
-    name: "Tailwind CSS",
+    name: "TailWind",
     icon: tailwind,
   },
   { name: "Docker", 
@@ -452,11 +452,11 @@ const technologies = [
   },
 
   {
-    name: "Node JS",
+    name: "Node",
     icon: nodejs,
   },
   {
-    name: "Three JS",
+    name: "ThreeJS",
     icon: threejs,
     iconLight: threejsLight,
   },
@@ -508,15 +508,15 @@ const technologies = [
     icon: solidity,
   },
   {
-    name: "PostmanAPI",
+    name: "Postman",
     icon: postmanapi,
   },
   {
-    name: "Chart JS",
+    name: "ChartJS",
     icon: chart,
   },
   {
-    name: "Next JS",
+    name: "Next",
     icon: next,
   },
   {

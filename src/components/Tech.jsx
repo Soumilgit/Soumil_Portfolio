@@ -13,19 +13,19 @@ const skillGroups = [
   },
   {
     title: "Web & Full Stack",
-    skills: ["HTML 5", "CSS 3", "Tailwind CSS", "React JS", "Next JS", "Node JS", ".NET"],
+    skills: ["HTML 5", "CSS 3", "TailWind", "React", "Next", "Node", ".NET"],
   },
   {
     title: "AI, ML & Data",
-    skills: ["Python", "MySQL", "Chart JS", "Kafka", "Redis", "Streamlit"],
+    skills: ["Python", "MySQL", "ChartJS", "Kafka", "Redis", "Streamlit"],
   },
   {
     title: "Cloud & DevOps",
-    skills: ["AWS", "Docker", "Git", "GitHub", "PostmanAPI"],
+    skills: ["AWS", "Docker", "Git", "GitHub", "Postman"],
   },
   {
     title: "Web3 & Platforms",
-    skills: ["Solidity", "Supabase", "Clerk", "Three JS"],
+    skills: ["Solidity", "Supabase", "Clerk", "ThreeJS"],
   },
 ];
 
