@@ -62,7 +62,6 @@ import oods from "./oods.png";
 import postman from "./postman.png";
 import githubo from "./githubo.png";
 import mypic from "./mypic.png";
-import githubk from "./githubk.png";
 
 import cwc from "./cwc.png";
 import terii from "./tech/terii-removebg-preview.png";
@@ -109,7 +108,6 @@ export {
   oods,
   postman,
   githubo,
-  githubk,
   git,
   github,
   solidity,
