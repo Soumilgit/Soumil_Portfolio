@@ -67,23 +67,10 @@ import githubk from "./githubk.png";
 import cwc from "./cwc.png";
 import terii from "./tech/terii-removebg-preview.png";
 
-import htmlLight from "./tech/HTML5.png";
-import cssLight from "./tech/CSS3.png";
-import pythonLight from "./tech/python_logo_icon_168886.png";
 import threejsLight from "./tech/threejs-light.png";
-import cppLight from "./tech/cpp.png";
-import sqlLight from "./tech/MySQL.png";
 import githubLight from "./tech/github-light.png";
-import clerkLight from "./tech/clerk-removebg-preview.png";
-import solidityLight from "./tech/solidity-removebg-preview.png";
-import postmanapiLight from "./tech/Postman.png";
-import chartLight from "./tech/chart-removebg-preview.png";
 import awsLight from "./tech/aws-light.png";
-import nextLight from "./tech/next.png";
-import supabaseLight from "./tech/supabase-removebg-preview.png";
-import dockerLight from "./tech/Docker.png";
 import kafkaLight from "./tech/kafka-light.png";
-import redisLight from "./tech/redis-icon.png";
 import edelweisslifelight from "./company/edelweisslifeinsurance-light.png";
 
 
@@ -147,23 +134,10 @@ export {
   docker,
   kafka,
   redis,
-  htmlLight,
-  cssLight,
-  pythonLight,
   threejsLight,
-  cppLight,
-  sqlLight,
   githubLight,
-  clerkLight,
-  solidityLight,
-  postmanapiLight,
-  chartLight,
   awsLight,
-  nextLight,
-  supabaseLight,
-  dockerLight,
   kafkaLight,
-  redisLight,
   csharp,
   dotnet,
   streamlit,

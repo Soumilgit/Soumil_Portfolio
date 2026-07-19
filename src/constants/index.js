@@ -44,23 +44,10 @@ import {
   redis,
   orchardcore,
   aatmaj,
-  htmlLight,
-  cssLight,
-  pythonLight,
   threejsLight,
-  cppLight,
-  sqlLight,
   githubLight,
-  clerkLight,
-  solidityLight,
-  postmanapiLight,
-  chartLight,
   awsLight,
-  nextLight,
-  supabaseLight,
-  dockerLight,
   kafkaLight,
-  redisLight,
   csharp,
   dotnet,
   streamlit
@@ -439,12 +426,10 @@ const technologies = [
   {
     name: "HTML 5",
     icon: html,
-    iconLight: htmlLight,
   },
   {
     name: "CSS 3",
     icon: css,
-    iconLight: cssLight,
   },
   {
     name: "JavaScript",
@@ -460,12 +445,10 @@ const technologies = [
   },
   { name: "Docker", 
     icon: docker, 
-    iconLight: dockerLight,
   },
   {
     name: "Supabase",
     icon: supabase,
-    iconLight: supabaseLight,
   },
 
   {
@@ -480,17 +463,14 @@ const technologies = [
   {
     name: "Python",
     icon: python,
-    iconLight: pythonLight,
   },
   {
     name: "C++",
     icon: cpp,
-    iconLight: cppLight,
   },
   {
     name: "MySQL",
     icon: sql,
-    iconLight: sqlLight,
   },
   {
    name: "TypeScript",
@@ -518,32 +498,26 @@ const technologies = [
   {
     name: "Redis",
     icon: redis,
-    iconLight: redisLight,
   },
   {
     name: "Clerk",
     icon: clerk,
-    iconLight: clerkLight,
   },
   {
     name: "Solidity",
     icon: solidity,
-    iconLight: solidityLight,
   },
   {
     name: "PostmanAPI",
     icon: postmanapi,
-    iconLight: postmanapiLight,
   },
   {
     name: "Chart JS",
     icon: chart,
-    iconLight: chartLight,
   },
   {
     name: "Next JS",
     icon: next,
-    iconLight: nextLight,
   },
   {
     name: "C#",
