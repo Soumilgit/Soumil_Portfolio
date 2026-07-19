@@ -28,7 +28,7 @@ import chart from "./tech/chart-removebg-preview.png";
 import aws from "./tech/aws.png";
 import next from "./tech/next.png"; 
 import supabase from "./tech/supabase-removebg-preview.png";
-import docker from "./tech/Docker.png";
+import docker from "./tech/docker.png";
 import kafka from "./tech/kafka.png";
 import redis from "./tech/redis-icon.png";
 import csharp from "./tech/csharp.png";
