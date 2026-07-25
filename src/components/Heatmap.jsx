@@ -131,6 +131,8 @@ const Heatmap = () => {
           .heatmap-scrollbar {
             -ms-overflow-style: none !important;
             scrollbar-width: none !important;
+            -webkit-overflow-scrolling: touch !important;
+            overscroll-behavior-x: contain !important;
           }
           
           .heatmap-scrollbar::-webkit-scrollbar {
@@ -143,6 +145,8 @@ const Heatmap = () => {
             .heatmap-scrollbar {
               -ms-overflow-style: none !important;
               scrollbar-width: none !important;
+              -webkit-overflow-scrolling: touch !important;
+              overscroll-behavior-x: contain !important;
             }
             .heatmap-scrollbar::-webkit-scrollbar {
               display: none !important;
@@ -212,10 +216,10 @@ const Heatmap = () => {
 
               <div
                 ref={scrollRef}
-                className="heatmap-scrollbar w-full overflow-x-auto"
+                className="heatmap-scrollbar w-full overflow-x-scroll select-none"
                 onScroll={handleScroll}
               >
-                <div className="min-w-[800px]">
+                <div className="w-max">
                   <GitHubCalendar
                     username="Soumilgit"
                     blockSize={BLOCK_SIZE}
