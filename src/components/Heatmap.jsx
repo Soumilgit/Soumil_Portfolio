@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../hoc";
 import { simpleFadeIn } from "../utils/motion";
@@ -9,14 +9,14 @@ import { useTheme } from "../context/ThemeContext";
 
 const BLOCK_SIZE = 16;
 const BLOCK_MARGIN = 4;
-const MOBILE_WEEKS = 16;
-const MOBILE_VIEWPORT_WIDTH =
-  MOBILE_WEEKS * (BLOCK_SIZE + BLOCK_MARGIN) - BLOCK_MARGIN;
 
 const Heatmap = () => {
   const scrollRef = useRef(null);
-  const [isMobile, setIsMobile] = useState(false);
+  const outerContainerRef = useRef(null);
   const { isLightMode } = useTheme();
+
+  const [showLeft, setShowLeft] = useState(false);
+  const [showRight, setShowRight] = useState(false);
 
   const theme = {
     // GitHub's exact official contribution graph colors
@@ -24,54 +24,78 @@ const Heatmap = () => {
     dark:  ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
   };
 
-  const scrollToLatest = useCallback(() => {
-    const container = scrollRef.current;
-    if (!container) return;
-
-    const maxScroll = container.scrollWidth - container.clientWidth;
-    if (maxScroll <= 0) return;
-
-    const atEnd = maxScroll - container.scrollLeft < 8;
-    if (!container.dataset.initialScrolled || atEnd) {
-      container.scrollLeft = maxScroll;
-      container.dataset.initialScrolled = "true";
-    }
-  }, []);
-
+  // IntersectionObserver to only show arrows when scrolled into view
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 768px)");
-    const handleChange = (event) => {
-      setIsMobile(event.matches);
-      if (!event.matches && scrollRef.current) {
-        delete scrollRef.current.dataset.initialScrolled;
-        scrollRef.current.scrollLeft = 0;
-      }
-    };
-
-    handleChange(mediaQuery);
-    mediaQuery.addEventListener("change", handleChange);
-    return () => mediaQuery.removeEventListener("change", handleChange);
-  }, []);
-
-  useEffect(() => {
-    if (!isMobile) return;
-
-    scrollToLatest();
-    const retryTimers = [100, 500, 1000, 2000].map((delay) =>
-      setTimeout(scrollToLatest, delay)
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          const container = scrollRef.current;
+          if (container) {
+            const scrollLeft = container.scrollLeft;
+            const maxScroll = container.scrollWidth - container.clientWidth;
+            
+            if (scrollLeft < 15) {
+              setShowLeft(true);
+            }
+            if (maxScroll - scrollLeft < 15) {
+              setShowRight(true);
+            }
+          } else {
+            setShowLeft(true);
+          }
+        } else {
+          setShowLeft(false);
+          setShowRight(false);
+        }
+      },
+      { threshold: 0.15 }
     );
 
-    const container = scrollRef.current;
-    const observer = new MutationObserver(scrollToLatest);
-    if (container) {
-      observer.observe(container, { childList: true, subtree: true });
+    const currentEl = outerContainerRef.current;
+    if (currentEl) {
+      observer.observe(currentEl);
     }
 
     return () => {
-      retryTimers.forEach(clearTimeout);
-      observer.disconnect();
+      if (currentEl) {
+        observer.unobserve(currentEl);
+      }
     };
-  }, [isMobile, scrollToLatest]);
+  }, []);
+
+  useEffect(() => {
+    if (showLeft) {
+      const timer = setTimeout(() => setShowLeft(false), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [showLeft]);
+
+  useEffect(() => {
+    if (showRight) {
+      const timer = setTimeout(() => setShowRight(false), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [showRight]);
+
+  const handleScroll = (e) => {
+    const container = e.currentTarget;
+    const scrollLeft = container.scrollLeft;
+    const maxScroll = container.scrollWidth - container.clientWidth;
+
+    // Show left arrow if at start
+    if (scrollLeft < 15) {
+      if (!showLeft) setShowLeft(true);
+    } else {
+      setShowLeft(false);
+    }
+
+    // Show right arrow if at end
+    if (maxScroll - scrollLeft < 15) {
+      if (!showRight) setShowRight(true);
+    } else {
+      setShowRight(false);
+    }
+  };
 
   useEffect(() => {
     const hideLegendGradient = () => {
@@ -93,7 +117,7 @@ const Heatmap = () => {
   }, []);
 
   return (
-    <div className="relative">
+    <div className="relative" ref={outerContainerRef}>
       <style>
         {`
           .react-activity-calendar__rect {
@@ -103,48 +127,36 @@ const Heatmap = () => {
             transform: scale(1.1);
           }
 
+          /* Hide scrollbar across all devices and browsers */
           .heatmap-scrollbar {
-            -webkit-overflow-scrolling: touch;
-            scrollbar-color: #25924a #1a1a1a;
+            -ms-overflow-style: none !important;
+            scrollbar-width: none !important;
           }
           
           .heatmap-scrollbar::-webkit-scrollbar {
-            height: 10px; 
-          }
-          
-          .heatmap-scrollbar::-webkit-scrollbar-track {
-            background: #1a1a1a;
-            border-radius: 4px;
-          }
-          
-          .heatmap-scrollbar::-webkit-scrollbar-thumb {
-            background: #25924a;
-            border-radius: 4px;
-          }
-          
-          .heatmap-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: #2ea043;
+            display: none !important;
+            height: 0 !important;
+            width: 0 !important;
           }
           
           @media (max-width: 768px) {
             .heatmap-scrollbar {
-              scrollbar-width: auto;
-              scrollbar-color: #25924a #0a0a0a;
+              -ms-overflow-style: none !important;
+              scrollbar-width: none !important;
             }
-            
             .heatmap-scrollbar::-webkit-scrollbar {
-              height: 12px;
+              display: none !important;
+              height: 0 !important;
+              width: 0 !important;
             }
-            
-            .heatmap-scrollbar::-webkit-scrollbar-track {
-              background: #0a0a0a;
-              border-radius: 6px;
-            }
-            
-            .heatmap-scrollbar::-webkit-scrollbar-thumb {
-              background: linear-gradient(90deg, #25924a, #2ea043);
-              border-radius: 6px;
-            }
+          }
+
+          @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.15; }
+          }
+          .flicker-arrow {
+            animation: flicker 0.6s infinite;
           }
         `}
       </style>
@@ -182,17 +194,28 @@ const Heatmap = () => {
           className="mt-8 w-full flex justify-center"
         >
           <div className="w-full max-w-6xl">
-            <div className="heatmap-container rounded-3xl border border-[#37b54a]/40 bg-black/50 backdrop-blur-sm w-full p-4 sm:p-8">
+            <div className="heatmap-container rounded-3xl border border-[#37b54a]/40 bg-black/50 backdrop-blur-sm w-full p-4 sm:p-8 relative">
+              
+              {/* Blinking Left Arrow pointing Rightwards on smaller devices */}
+              {showLeft && (
+                <div className="md:hidden absolute left-0 -translate-x-1/2 top-1/2 -translate-y-1/2 z-20 pointer-events-none text-[#37b54a] font-extrabold text-[24px] tracking-tighter bg-black/40 px-1 rounded flicker-arrow">
+                  &gt;&gt;
+                </div>
+              )}
+
+              {/* Blinking Right Arrow pointing Leftwards on smaller devices */}
+              {showRight && (
+                <div className="md:hidden absolute right-0 translate-x-1/2 top-1/2 -translate-y-1/2 z-20 pointer-events-none text-[#37b54a] font-extrabold text-[24px] tracking-tighter bg-black/40 px-1 rounded flicker-arrow">
+                  &lt;&lt;
+                </div>
+              )}
+
               <div
                 ref={scrollRef}
                 className="heatmap-scrollbar w-full overflow-x-auto"
-                style={
-                  isMobile
-                    ? { maxWidth: `${MOBILE_VIEWPORT_WIDTH}px`, marginInline: "auto" }
-                    : undefined
-                }
+                onScroll={handleScroll}
               >
-                <div className={isMobile ? "w-max" : "min-w-[800px]"}>
+                <div className="min-w-[800px]">
                   <GitHubCalendar
                     username="Soumilgit"
                     blockSize={BLOCK_SIZE}
