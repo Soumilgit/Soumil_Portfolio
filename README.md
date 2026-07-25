@@ -35,7 +35,7 @@ A modern, interactive portfolio website showcasing my skills, projects, and expe
 4. **Open Source** - Showcase of merged PRs / contributions made to prominent OSS
 5. **Achievements** - Honors and awards
 6. **Projects** - Showcase of featured work
-7. **Heatmap** - Dynamically updating GitHub heatmap showcase
+7. **Heatmap** - GitHub contribution heatmap with side chevrons for small devices
 8. **Skills** - Categorically classified tech stack
 9. **Certifications** - Professional credentials
 10. **Contact** - 3D computer and contact form
@@ -78,6 +78,7 @@ To personalize this portfolio:
  - **ESM & SSR Interop Optimization**: Resolved production-minified React Error #130 crashes by introducing robust interop checks to handle double-default wrapped CommonJS libraries (`react-fast-marquee` and `react-github-calendar`) in ESM/Vite environments.
  - **Re-ordered positioning of components for better UX**: First, I swapped the positions of Skillset with Achievements, then, further swapped the positions of Skillset with Projects. Finally, applied the same reordering across the navlinks as well.
  - **Replacing GitHub icon in Projects with buttons for demo & repo**: Replaced the GitHub repository link - containing icon under Projects with 2 buttons each for demo & GitHub repo links with their respective icons.
+ - **GitHub Activity Heatmap Layout & Indicators**: Restored standard horizontal overflow scrolling showing the full year's activity. Added viewport-triggered indicators (`>>` and `<<`) that blink and fade after 3 seconds on scroll entry, with the scrollbar hidden across all devices.
 
 ## Performance
 
