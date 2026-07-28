@@ -10,10 +10,8 @@ import {
   OpenSource,
   Navbar,
   Tech,
-  Achieve,
   Heatmap,
   Works,
-  Certf,
   StarsCanvas,
 } from "./components";
 
@@ -39,11 +37,9 @@ const App = () => {
               <About setAboutLoaded={() => {}} />
               <Experience />
               <OpenSource />
-              <Achieve />
-              <Works />
               <Heatmap />
+              <Works />
               <Tech />
-              <Certf />
               <Contact />
             </div>
           </div>

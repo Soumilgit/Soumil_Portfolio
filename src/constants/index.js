@@ -1,10 +1,4 @@
-import { color } from "framer-motion";
 import {
-  app,
-  appLight,
-  web,
-  data,
-  problem,
   javascript,
   html,
   css,
@@ -53,8 +47,6 @@ import {
   streamlit
 } from "../assets";
 
-
-
 export const navLinks = [
   {
     id: "about",
@@ -69,24 +61,16 @@ export const navLinks = [
     title: "OSS",
   },
   {
-    id: "achievement",
-    title: "Feats",
+    id: "heatmap",
+    title: "Heatmap",
   },
   {
     id: "projects",
     title: "Projects",
   },
   {
-    id: "heatmap",
-    title: "Heatmap",
-  },
-  {
     id: "technologies",
     title: "Tech",
-  },
-  {
-    id: "certf",
-    title: "Certs",
   },
   {
     id: "contact",
@@ -98,26 +82,6 @@ const hero = [
   {
     title : "Soumil Mukhopadhyay",
     icon : mypic,
-  },
-  
-]
-const services = [
-  {
-    title: "Web Developer",
-    icon: web,
-  },
-  {
-    title: "Data Analyst",
-    icon: data,
-  },
-  {
-    title: "Problem Solver",
-    icon: problem,
-  },
-  {
-    title: "App Developer",
-    icon: app,
-    iconLight: appLight,
   },
 ];
 
@@ -223,7 +187,7 @@ const openSourceContributions = [
     languagesApiUrl: "https://api.github.com/repos/Squidex/squidex/languages",
     pullApiUrl: "https://api.github.com/repos/Squidex/squidex/pulls/1323",
     pullRequestLink: "https://github.com/Squidex/squidex/pull/1323",
-    title: "Add SQL OpenIddict login regression coverage",
+    title: "SQL OpenIddict login coverage",
     description:
       "Added shared EF OpenIddict regression coverage to verify token row saving without application reference, fixing the cannot login after setup issue.",
     image: squidex,
@@ -240,46 +204,6 @@ const openSourceContributions = [
   },
 ];
 
-const achievements = [
-  {
-    name: "TechGig Code Gladiators 2024 Finalist",
-    description:
-      "Solved competitive programming problems within a stipulated duration. Finished among the top 3% of participants.",
-    link: "https://drive.google.com/file/d/1hR8uerT5PpBbdq-92SsJzxEK4t_1Xn9E/view?usp=sharing", 
-  },
-  {
-    name: "Top 4% on Codolio, 1st rank in college",
-    description:
-      "Stats: 480+ DSA problems solved, 8 awards, 2700+ dev contributions & C-Score of 780+ among ~36,000 global users.",
-    link: "https://codolio.com/profile/uQSHdtbA", 
-  },
-  {
-    name: "Standard Milestone in Google Cloud Arcade '24",
-    description:
-      "Completed 25+ badges on topics like Prompt Design and deployment, achieved 15+ Arcade pts. & 4 Google swags.",
-    link: "https://www.cloudskillsboost.google/public_profiles/cff658e9-f40a-4f6b-9ba4-c6709f008956", 
-  },
-  {
-    name: "Joint rank 1st in CWC '25 coding contest",
-    description:
-      "Held via HackerRank platform, the total number of participants were 47, and I solved all 7 questions in C++ within 1 hour.",
-    link: "https://www.hackerrank.com/contests/coffeewithcodecell-on-26th-august/challenges", 
-  },
-  
-  {
-    name: "School rank 1st in Terii Green Olympiad 2019",
-    description:
-      "Got awarded a merit certificate for achieving 60-75 % score, finishing first in my school, AECS-2, as a result of this.",
-    link: "https://drive.google.com/file/d/1MMaH0bnl2JTSsXKD6O3Rzv4r6biLkckB/view?usp=sharing", 
-  },
-  {
-    name: "3rd place in National Mathematics Day Quiz",
-    description:
-      "Scored 70% marks honestly in the 10-question event conducted by Emfinity KJSCE via a series of Instagram Stories.",
-    link: "https://drive.google.com/file/d/1T3t1_EneMJ4WlKyC0wHLp9OpeMKrJZON/view?usp=sharing", 
-  },
-  
-];
 
 const projects = [
   {
@@ -528,27 +452,4 @@ const technologies = [
     icon: streamlit,
   },
 ];
-
-const certificates = [
-  {
-    name: "Object-Oriented Data Structures in C++",
-    description:
-      "Learnt about C Language Family, Object-Oriented Programming(OOP) and gained insights on Theoretical Computer Science.",
-    link: "https://coursera.org/share/50a5c6e76904b3933cdad727410557f3",
-  },
-  {
-    name: "Postman API Fundamentals Student Expert",
-    description:
-      "Became proficient in using Postman to work with APIs, making GET, POST, PATCH and DELETE requests, basic scripting and applications.",
-    link: "https://api.badgr.io/public/assertions/Icc9D88_SV-iLyVKVf7Zeg?identity__email=soumil.m%40somaiya.edu",
-  },
-  {
-    name: "JavaScript Algorithms and Data Structures(Beta)",
-    description:
-      "In the duration of this course, I learnt about JavaScript, Regular Expressions, Data Structures and Algorithms, OOP and built 5 projects.",
-    link: "https://www.freecodecamp.org/certification/fcc5d3e895f-c402-4487-8450-9735997f3ac7/javascript-algorithms-and-data-structures-v8",
-  },
-];
-
-
-export { hero ,services, technologies, experiences, openSourceContributions, achievements, projects,certificates};
+export { hero, technologies, experiences, openSourceContributions, projects };

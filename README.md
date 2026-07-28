@@ -30,15 +30,13 @@ A modern, interactive portfolio website showcasing my skills, projects, and expe
 ## Sections 
 
 1. **Hero Section** - Introduction with animated text, resume and info cards
-2. **About** - Overview with service cards
+2. **About** - Overview
 3. **Experience** - Work history timeline
 4. **Open Source** - Showcase of merged PRs / contributions made to prominent OSS
-5. **Achievements** - Honors and awards
+5. **Heatmap** - GitHub contribution heatmap with side chevrons for small devices
 6. **Projects** - Showcase of featured work
-7. **Heatmap** - GitHub contribution heatmap with side chevrons for small devices
-8. **Skills** - Categorically classified tech stack
-9. **Certifications** - Professional credentials
-10. **Contact** - 3D computer and contact form
+7. **Skills** - Categorically classified tech stack
+8. **Contact** - 3D computer and contact form
 
 ## Installation
 

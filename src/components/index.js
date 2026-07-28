@@ -5,8 +5,6 @@ import About from "./About";
 import Tech from "./Tech";
 import Experience from "./Experience";
 import OpenSource from "./OpenSource";
-import Achieve from './Achieve';
-import Certf from './Certf';
 import Heatmap from './Heatmap';
 import Works from "./Works";
 import Contact from "./Contact";
@@ -20,8 +18,6 @@ export {
   Tech,
   Experience,
   OpenSource,
-  Achieve,
-  Certf,
   Heatmap,
   Works,
   Contact,
