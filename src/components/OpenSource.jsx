@@ -119,14 +119,12 @@ const OpenSourceCard = ({ contribution, index }) => {
       <div className="relative bg-black p-5 rounded-lg w-full overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-[190px_1fr] gap-6">
           <div className={`relative w-full max-w-[190px] aspect-square justify-self-start rounded-lg overflow-hidden border border-white/20 ${
-            isLightMode ? "bg-transparent" : (contribution.repo.includes("Aatmaj") ? "bg-transparent" : "bg-black/40")
+            isLightMode ? "bg-transparent" : "bg-black/40"
           }`}>
             <img
               src={contribution.image}
               alt={`${contribution.repo} logo`}
-              className={`w-full h-full ${
-                contribution.repo.includes("Aatmaj") ? "object-cover" : "object-contain p-4"
-              }`}
+              className="w-full h-full object-contain p-4"
             />
           </div>
 

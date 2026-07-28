@@ -53,7 +53,7 @@ import missing from "./missing.png";
 import scholarbridge from "./scholarbridge.png";
 import stakeligames from "./stakeligames.png";
 import orchardcore from "./OrchardCore.png";
-import aatmaj from "./Aatmaj.jpg";
+import squidex from "./Squidex.png";
 
 import googlecloud from "./googlecloud.png";
 import cp from "./cp.png";
@@ -126,7 +126,7 @@ export {
   scholarbridge,
   stakeligames,
   orchardcore,
-  aatmaj,
+  squidex,
   cwc,
   terii,
   docker,
