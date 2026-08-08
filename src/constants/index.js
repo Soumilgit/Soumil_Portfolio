@@ -94,7 +94,7 @@ const experiences = [
      date: "July 2026 - Present",
      points: [
        "Onboarded as a full-stack .NET engineer, configured development environments and agile workflows.",
-       "Currently working on full-stack platforms like CMSs using C#, .NET, MVC, CRUD, REST APIs & RBAC.",
+       "Currently working on .NET platforms like CMSs using C#, MVC, CRUD, REST APIs & RBAC.",
      ],
 
   },
