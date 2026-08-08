@@ -93,8 +93,8 @@ const experiences = [
      iconBg: "#E6DEDD",
      date: "July 2026 - Present",
      points: [
-       "Onboarded as a full-stack .NET engineer, configuring development environments and agile workflows.",
-       "Attended domain sessions, preparing to build secure RESTful APIs and frontend portals.",
+       "Onboarded as a full-stack .NET engineer, configured development environments and agile workflows.",
+       "Currently working on full-stack platforms like CMSs using C#, .NET, MVC, CRUD, REST APIs & RBAC.",
      ],
 
   },
@@ -171,7 +171,7 @@ const openSourceContributions = [
       "Resolved admin menu active state bugs by normalizing tenant URL prefixes and eliminating stale navigation hash fallbacks for SaaS environments.",
     image: orchardcore,
     fallback: {
-      stars: 8098,
+      stars: 8148,
       additions: 92,
       deletions: 2,
       changedFiles: 3,
@@ -192,10 +192,10 @@ const openSourceContributions = [
       "Added shared EF OpenIddict regression coverage to verify token row saving without application reference, fixing the cannot login after setup issue.",
     image: squidex,
     fallback: {
-      stars: 650,
-      additions: 66,
-      deletions: 11,
-      changedFiles: 2,
+      stars: 2509,
+      additions: 51,
+      deletions: 0,
+      changedFiles: 1,
       language: "C#",
       status: "Merged",
       createdAt: "2026-06-07T06:13:46Z",
