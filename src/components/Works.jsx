@@ -21,7 +21,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
       whileHover={{ scaleY: 1.05 }}
     >
       <div className="bg-black p-5 rounded-lg w-full">
-        <div className="relative w-full h-[230px] rounded-lg overflow-hidden">
+        <div className="relative w-full h-[230px] rounded-lg overflow-hidden border border-white/20">
           <img src={image} alt="project_image" className={`w-full h-full ${imageClass || "object-cover"} rounded-lg`} />
         </div>
 
