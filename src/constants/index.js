@@ -225,7 +225,7 @@ const projects = [
       },
     ],
     image: jasder,
-    imageClass: "object-contain bg-[#101018]",
+    imageClass: "object-contain bg-[#0d0c12]",
     source_code_link: "https://github.com/Soumilgit/Soumilgit-AI-Interview-SAAS",
     demo_link: "https://soumilgit-ai-interview-saas.vercel.app/",
   },
@@ -299,7 +299,7 @@ const projects = [
     demo_link: "https://tinyurl.com/2m7ae4n4",
   },
   {
-    name: "Meditation App",
+    name: "Dhyan-Adhyaksh",
     description:
       "Developed using React Native and Expo, useful for tracking one's meditation habits and keep a record with affirmations.",
     tags: [
@@ -316,7 +316,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    imageClass: "object-contain bg-[#e6e6e6]",
+    imageClass: "object-contain bg-[#e0e0e0]",
     image: boblob,
     source_code_link: "https://github.com/Soumilgit/Meditation-App_React-Native",
     demo_link: "https://youtu.be/3r5finsx_Iw",
