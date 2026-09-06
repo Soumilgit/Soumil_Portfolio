@@ -8,8 +8,25 @@ import { textVariant, simpleFadeIn } from "../utils/motion"; // Use simpleFadeIn
 
 import { useTheme } from "../context/ThemeContext";
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link, demo_link, imageClass }) => {
+const ProjectCard = ({
+  index,
+  name,
+  description,
+  tags,
+  image,
+  imageDark,
+  imageLight,
+  source_code_link,
+  demo_link,
+  imageClass,
+  imageClassDark,
+  imageClassLight,
+}) => {
   const { isLightMode } = useTheme();
+  const projectImage = isLightMode ? imageLight || image : imageDark || image;
+  const projectImageClass = isLightMode
+    ? imageClassLight || imageClass
+    : imageClassDark || imageClass;
 
   return (
     <motion.div
@@ -22,7 +39,11 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
     >
       <div className="bg-black p-5 rounded-lg w-full">
         <div className="relative w-full h-[230px] rounded-lg overflow-hidden border border-white/20">
-          <img src={image} alt="project_image" className={`w-full h-full ${imageClass || "object-cover"} rounded-lg`} />
+          <img
+            src={projectImage}
+            alt={`${name} project preview`}
+            className={`w-full h-full ${projectImageClass || "object-cover"} rounded-lg`}
+          />
         </div>
 
         <div className="mt-5 text-center flex flex-col items-center">

@@ -48,10 +48,14 @@ import edelweisslife from "./company/edelweisslifeinsurance.png";
 
 import boblob from "./boblob.png";
 import jasder from "./jasder.png";
+import jasderLight from "./jasder-light.png";
 import smack from "./smack.png";
+import smackLight from "./smack-light.png";
 import missing from "./missing.png";
 import scholarbridge from "./scholarbridge.png";
+import scholarbridgeDark from "./scholarbridge-dark.png";
 import stakeligames from "./stakeligames.png";
+import stakeligamesDark from "./stakeligames-dark.png";
 import orchardcore from "./OrchardCore.png";
 import squidex from "./Squidex.png";
 
@@ -100,7 +104,9 @@ export {
   meshcraftLight,
   boblob,
   jasder,
+  jasderLight,
   smack,
+  smackLight,
   typescript,
   googlecloud,
   cp,
@@ -124,7 +130,9 @@ export {
   supabase,
   missing,
   scholarbridge,
+  scholarbridgeDark,
   stakeligames,
+  stakeligamesDark,
   orchardcore,
   squidex,
   cwc,

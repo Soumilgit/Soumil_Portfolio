@@ -11,6 +11,7 @@ A modern, interactive portfolio website showcasing my skills, projects, and expe
 - **Responsive Design** - Works on all device sizes
 - **Smooth Animations** - Framer Motion transitions
 - **Dual Mode Aesthetic** - Easy-on-the-eyes design
+- **Theme-Aware Assets** - Assets switch with light and dark mode
 - **Starry Background** - Particle-like, with **3** hooks utilized
 
 ## Technologies Used
@@ -25,17 +26,17 @@ A modern, interactive portfolio website showcasing my skills, projects, and expe
 ### Backend & Deployment
 - **Vite** - Build tool
 - **Vercel** - Deployment platform
-- **Python** - For preprocessing & displaying light-mode 3D animations
+- **Python** - Preprocesses theme-aware visual assets
 
 ## Sections 
 
-1. **Hero Section** - Introduction with animated text, resume and info cards
+1. **Hero** - Introduction with animated text, resume and info cards
 2. **About** - Overview
-3. **Experience** - Work history timeline
-4. **Open Source** - Showcase of merged PRs / contributions made to prominent OSS
+3. **Work** - Experience timeline
+4. **Open Source** - Merged PRs and contributions
 5. **Heatmap** - GitHub contribution heatmap with side chevrons for small devices
-6. **Projects** - Showcase of featured work
-7. **Skills** - Categorically classified tech stack
+6. **Projects** - Featured work
+7. **Tech** - Categorized tech stack
 8. **Contact** - 3D computer and contact form
 
 ## Installation
@@ -71,10 +72,10 @@ To personalize this portfolio:
 ## Recent Updates
 
  - **Dual-Theme Support (Light & Dark)**: Full implementation of light and dark mode toggles with customized CSS themes. Light mode includes a custom grayscale-processed aurora background and white-bg versions of images.
- - **Asset Preprocessing Script**: Added a Python script (`scripts/preprocess_light_assets.py`) that handles grayscale mapping of image/animation frame elements, specifically adjusting contrast for the background sky, aurora waves, and star particles.
- - **Theme-Aware Media Assets**: Dynamic asset loading in components like Hero and Achievements (e.g., swapping between `codolio.png` / `codolio-dark.png` and light/dark circular logo variants for Emfinity).
+ - **Asset Preprocessing Script**: Python tool generates the light-mode aurora and other assets with contrast-aware grayscale mapping.
+ - **Theme-Aware Media Assets**: Visuals across the portfolio load matching light/dark assets.
  - **ESM & SSR Interop Optimization**: Resolved production-minified React Error #130 crashes by introducing robust interop checks to handle double-default wrapped CommonJS libraries (`react-fast-marquee` and `react-github-calendar`) in ESM/Vite environments.
- - **Re-ordered positioning of components for better UX**: First, I swapped the positions of Skillset with Achievements, then, further swapped the positions of Skillset with Projects. Finally, applied the same reordering across the navlinks as well.
+ - **Section Flow Synced**: Navigation follows the current order: About, Work, OSS, Heatmap, Projects, Tech, and Contact.
  - **Replacing GitHub icon in Projects with buttons for demo & repo**: Replaced the GitHub repository link - containing icon under Projects with 2 buttons each for demo & GitHub repo links with their respective icons.
  - **GitHub Activity Heatmap Layout & Indicators**: Restored standard horizontal overflow scrolling showing the full year's activity. Added viewport-triggered indicators (`>>` and `<<`) that blink and fade after 3 seconds on scroll entry, with the scrollbar hidden across all devices.
  - **Resume Cache Busting**: Appended dynamic timestamp parameters to the resume URL to prevent aggressive browser caching across devices.
