@@ -5,11 +5,9 @@ import { DownloadCVMarquee } from "../Marquees/downloadCVMarquee";
 import { hero } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { ScrambledText } from "./ScrambledText";
-import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram, FaKaggle } from 'react-icons/fa';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
-import codolio from "../assets/codolio.png";
-import codolioDark from "../assets/codolio-dark.png";
 import { useTheme } from "../context/ThemeContext";
 import { simpleFadeIn } from "../utils/motion"; 
 
@@ -83,8 +81,8 @@ const Hero = ({ onHeroLoaded }) => {
       <a href="https://github.com/Soumilgit" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#37b54a] transition-colors hover:underline font-semibold text-blue-200">
         <FaGithub className="text-black bg-white rounded-full p-[2px]" size={20} /> GitHub <FiExternalLink />
       </a>
-      <a href="https://codolio.com/profile/uQSHdtbA" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#37b54a] transition-colors hover:underline font-semibold text-blue-200">
-        <img src={isLightMode ? codolio : codolioDark} alt="Codolio" className="w-5 h-5" /> Codolio <FiExternalLink />
+      <a href="https://www.kaggle.com/soumilmukhopadhyay" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#37b54a] transition-colors hover:underline font-semibold text-blue-200">
+        <FaKaggle className="text-[#20BEFF]" size={20} /> Kaggle <FiExternalLink />
       </a>
       <a href="https://www.linkedin.com/in/soumilm30/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-[#37b54a] transition-colors hover:underline font-semibold text-blue-200">
         <FaLinkedin className="text-[#0A66C2]" size={20} /> LinkedIn <FiExternalLink />

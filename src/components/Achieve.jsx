@@ -2,8 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import codolio from "../assets/codolio.png";
-import codolioDark from "../assets/codolio-dark.png";
+import kaggle from "../assets/kaggle.png";
 import { SectionWrapper } from "../hoc";
 import { achievements } from "../constants";
 import { textVariant, simpleFadeIn } from "../utils/motion"; // Use simpleFadeIn
@@ -21,7 +20,7 @@ import emfinity from "../assets/emfinity-new.png";
 import emfinityOriginal from "../assets/company/emfinity.png";
 
 // Map images to achievements
-const icons = [cp, codolioDark, googlecloud, cwc, terii, emfinity];
+const icons = [cp, kaggle, googlecloud, cwc, terii, emfinity];
 
 const AchievementCard = ({ index, name, description, link }) => {
   const { isLightMode } = useTheme();
@@ -30,7 +29,7 @@ const AchievementCard = ({ index, name, description, link }) => {
   // Replace dark variants with light variants in light mode
   if (isLightMode) {
     activeIcons[0] = cpLight;
-    activeIcons[1] = codolio;
+    activeIcons[1] = kaggle;
     activeIcons[2] = googlecloudLight;
     activeIcons[3] = cwcLight;
     activeIcons[4] = terii;
