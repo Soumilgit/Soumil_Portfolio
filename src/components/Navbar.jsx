@@ -58,7 +58,7 @@ const Navbar = () => {
               margin-right: 219.6px;
             }
             .navbar-title {
-              padding-left: 9rem;
+              padding-left: 8.65rem;
             }
             .nav-links {
               margin-left: 36px;
