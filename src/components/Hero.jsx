@@ -142,7 +142,7 @@ const Hero = ({ onHeroLoaded }) => {
   viewport={{ once: true, amount: 0.01 }}
   className={`${styles.heroHeadText} h-[84px] overflow-hidden`}
 >
-  <ScrambledText text="I'm Soumil!" />
+  <ScrambledText text="Hi! I'm" />
 </motion.h1>
 
 <motion.p
@@ -152,7 +152,7 @@ const Hero = ({ onHeroLoaded }) => {
   viewport={{ once: true, amount: 0.01 }}
   className={`${styles.heroSubText} text-white-100 mt-2 h-[30px] overflow-hidden`}
 >
-  <ScrambledText text="I like exploring." />
+  <ScrambledText text="Soumil Mukhopadhyay." />
 </motion.p>
 
 

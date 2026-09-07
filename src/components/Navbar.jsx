@@ -51,6 +51,42 @@ const Navbar = () => {
               display: none !important;
             }
           }
+
+          /* Responsive spacing for Desktop Navbar & Title to give breathing room on tablet & mobile desktop views */
+          @media (min-width: 1280px) {
+            .desktop-navbar {
+              margin-right: 219.6px;
+            }
+            .navbar-title {
+              padding-left: 9rem;
+            }
+            .nav-links {
+              margin-left: 36px;
+            }
+          }
+          @media (min-width: 1024px) and (max-width: 1279px) {
+            .desktop-navbar {
+              margin-right: 1.5rem;
+            }
+            .navbar-title {
+              padding-left: 7.5rem;
+            }
+            .nav-links {
+              margin-left: 24px;
+            }
+          }
+          @media (min-width: 768px) and (max-width: 1023px) {
+            .desktop-navbar {
+              margin-right: 0;
+            }
+            .navbar-title {
+              padding-left: 6.5rem;
+            }
+            .nav-links {
+              margin-left: 16px;
+              gap: 0.75rem;
+            }
+          }
         `}
       </style>
 
@@ -66,10 +102,10 @@ const Navbar = () => {
       : "bg-transparent"
   }`}
 >
-  <div className="w-full flex justify-between items-center max-w-7xl mx-auto px-6">
+  <div className="w-full flex justify-between items-center max-w-7xl mx-auto px-6 gap-4">
     <Link
       to="/"
-      className="navbar-title flex items-center gap-2 ml-2 sm:ml-2.4 sm:pl-28"
+      className="navbar-title flex items-center gap-2 ml-2 sm:ml-2.4 shrink-0"
       onClick={() => {
         setActive("");
         window.scrollTo(0, 0);
@@ -77,16 +113,16 @@ const Navbar = () => {
     >
       <motion.p
         whileHover={{ scale: 1.05 }}
-        className="text-[#37b54a] font-extrabold cursor-pointer text-3xl tracking-wide"
+        className="text-[#37b54a] font-extrabold cursor-pointer text-3xl tracking-wide whitespace-nowrap"
       >
-        Soumil M
+        Soumil
       </motion.p>
     </Link>
 
     {/* Desktop Navbar */}
-    <div className="hidden md:flex items-center" style={{ marginRight: "219.6px" }}>
+    <div className="hidden md:flex items-center desktop-navbar shrink-0">
       <ThemeToggle />
-      <ul className="nav-links" style={{ marginLeft: "36px" }}> 
+      <ul className="nav-links"> 
         {navLinks.map((nav) => (
           <motion.li
             key={nav.id}
@@ -128,7 +164,7 @@ const Navbar = () => {
             to="/"
             className="text-[#37b54a] font-extrabold cursor-pointer text-3xl tracking-wide text-center"
           >
-            Soumil M
+            Soumil
           </Link>
           <ul>
             {navLinks.map((nav) => (
