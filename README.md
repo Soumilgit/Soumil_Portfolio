@@ -79,7 +79,7 @@ To personalize this portfolio:
  - **Replacing GitHub icon in Projects with buttons for demo & repo**: Replaced the GitHub repository link - containing icon under Projects with 2 buttons each for demo & GitHub repo links with their respective icons.
  - **GitHub Activity Heatmap Layout & Indicators**: Restored standard horizontal overflow scrolling showing the full year's activity. Added viewport-triggered indicators (`>>` and `<<`) that blink and fade after 3 seconds on scroll entry, with the scrollbar hidden across all devices.
  - **Resume Cache Busting**: Appended dynamic timestamp parameters to the resume URL to prevent aggressive browser caching across devices.
-  - **Fixed a couple of vulnerabilities**: Resolved uncaught crash / prototype write & fflate DDoS vulnerabilities by updating versions of relevant packages.
+  - **Fixed a couple of vulnerabilities**: Resolved uncaught crash / prototype write, `fflate` DDoS, `browserslist` & `react-router-dom` vulnerabilities by updating versions of relevant packages.
 
 ## Performance
 
