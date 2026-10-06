@@ -47,6 +47,7 @@ import oneplayDark from "./company/oneplay-dark.png";
 import edelweisslife from "./company/edelweisslifeinsurance.png";
 
 import boblob from "./boblob.png";
+import boblobDark from "./boblob-dark.png";
 import jasder from "./jasder.png";
 import jasderLight from "./jasder-light.png";
 import smack from "./smack.png";
@@ -103,6 +104,7 @@ export {
   meshcraft,
   meshcraftLight,
   boblob,
+  boblobDark,
   jasder,
   jasderLight,
   smack,
