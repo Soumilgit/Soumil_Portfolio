@@ -34,7 +34,7 @@
     "react-vertical-timeline-component": "^3.6.0",
     "three": "^0.149.0",
     "typewriter-effect": "^2.21.0",
-    "vercel": "^52.2.0"
+    "vercel": "^62.4.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",
